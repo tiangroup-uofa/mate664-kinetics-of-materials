@@ -1,6 +1,6 @@
-# CHE 318 — Mass Transfer
+# MATE 664 — Kinetics of Materials
 
-This repository contains **open-source course materials** for **CHE 318 (Mass Transfer)** at University of Alberta
+This repository contains **open-source course materials** for **MATE 664 (Kinetics of Materials)** at University of Alberta
 
 The course website, lecture notes, and slides are built using
 [**Quarto**](https://quarto.org) and interactive computing tools such as
