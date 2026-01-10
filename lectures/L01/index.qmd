@@ -350,6 +350,14 @@ margin: 0 auto;"
 
 ## Arrhenius Plot Demo
 
+<iframe
+  width="100%"
+  height="800px"
+  src="../../scripts/L01_ea.html"
+  >
+</iframe>
+
+
 ## Where Does Entropy $S$ Come From?
 
 - Claussius (1865) **Classical thermodynamics**.
