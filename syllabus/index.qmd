@@ -1,0 +1,8 @@
+---
+title: "Course Syllabus"
+toc: false
+format:
+  html
+---
+
+The syllabus for WS 2026 can be downloaded [here](./assets/CHE318-winter-2026-course-syllabus.pdf)

@@ -1,0 +1,16 @@
+---
+title: "Lectures"
+toc: false
+author: "Dr. Tian Tian"
+date: "2026-01-09"
+format:
+  html: {}
+listing:
+  contents:
+    - "L**/index.qmd"
+  type: table
+  max-description-length: 80
+  image-height: "0"
+---
+
+

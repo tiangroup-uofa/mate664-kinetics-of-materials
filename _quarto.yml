@@ -1,0 +1,63 @@
+project:
+  type: website
+  output-dir: _site
+  preview:
+    port: 7777
+  post-render: 
+    - _marimo_export.py
+
+website:
+  title: "MATE 664 Kinetics of Materials (UofA)"
+  page-navigation: true
+  back-to-top-navigation: true
+  navbar:
+    left:
+      - href: index.qmd
+        text: About Course
+      - href: syllabus/
+        text: Syllabus
+      - href: lectures/
+        text: Lectures
+  
+  sidebar:
+    title: false
+    style: "docked"
+    search: true
+    background: "#f8f9fa"
+    id: get-started
+    contents:
+      - href: index.qmd
+        id: guide
+      - section: "Syllabus"
+        contents:
+          - syllabus/index.qmd
+      - section: "Lectures"
+        contents:
+          - lectures/L01/index.qmd
+          - lectures/L02/index.qmd
+
+
+format:
+  revealjs:
+    #theme: [simple, reveal-course.scss]
+    theme: [default]
+    slide-number: true
+    chalkboard: false
+    preview-links: auto
+    transition: none
+    navigation-mode: linear
+    incremental: false
+    center: false
+    footer: "MATE 664 · Kinetics of Materials · WS 2026"
+    title-slide-attributes:
+      data-background-color: "#efefef"
+    number-sections: false
+    width: 1600
+    height: 900
+    
+  html:
+    theme: cosmo
+    toc: true
+    code-tools: true
+    code-fold: true
+    code-summary: "Show the code"

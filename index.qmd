@@ -1,0 +1,74 @@
+---
+title: MATE 664 Kinetics of Materials
+format: html
+toc: false
+---
+
+## Course Information
+
+- **Course Number**: MATE 664
+- **Instructor**: Dr. Tian Tian
+- **Semester**: Winter 2026
+- **Office**: DICE 12-245
+- **Office Hour**: by appointment
+
+## Course Description
+
+MAT E 664 is a graduate-level core course for Materials Engineering
+students, and is also relevant to graduate students in Chemical
+Engineering, Mechanical Engineering, Chemistry, and related
+disciplines interested in kinetic and transport phenomena in
+materials. 
+
+The course introduces the fundamental theory of
+irreversible thermodynamics and key concepts from statistical
+mechanics to explain driving forces and rates of non-equilibrium
+processes. Emphasis is placed on both theoretical and numerical
+approaches, with examples drawn from hard and soft materials
+systems. 
+
+By the end of the course, students will develop a unified
+perspective on modeling processes such as phase transformations,
+nucleation, diffusion, sintering, and aggregation.
+
+## Textbook
+
+Our primary textbooks for this course are listed below. (Cover images are linked externally and are **not** stored in this repository.)
+
+1) **R. W. Balluffi, S. M. Allen, W. C. Carter** *Kinetics of Materials* (Wiley)
+
+![](https://books.google.com/books/content?id=aKKX_yVlBZMC&printsec=frontcover&img=1&zoom=1&source=gbs_api){width=100}
+
+- [Access link (requires UofA login)](https://onlinelibrary.wiley.com/doi/book/10.1002/0471749311)
+
+2) **John C. Mauro** *Materials Kinetics: Transport and Rate Phenomena* (Elsevier)
+
+![](https://dynamic.indigoimages.ca/v1/books/books/0128239077/1.jpg){width=100}
+
+- [Access link (requires UofA login)](https://search.library.ualberta.ca/view/action/uresolver.do?operation=resolveService&package_service_id=13025963840009116&institutionId=9116&customerId=9115&VE=true)
+
+
+### Additional references
+
+Additional readings (papers, review articles, and supplementary notes) will be posted throughout the term (on our website and Canvas) as the course progresses.
+
+
+## Lecture Notes
+
+Thanks to recent developments in scientific typesetting and
+interactive computing enabled by tools such as
+[**Quarto**](https://quarto.org) and
+[**Marimo**](https://docs.marimo.io), the course materials are
+presented in different ways. You can view the course notes in the following ways:
+
+- Directly browsing the webpage of individual lectures
+- Open the slide presentations for lectures (powered by `reveal.js`)
+
+In either way we have included interactive demonstrations of some
+numerical solution to a few key problems, and we hope you enjoy
+reading and interacting with the course materials!
+
+📙**Access all lectures here:**  
+[Lecture notes and slides](lectures/)
+
+

@@ -1,0 +1,261 @@
+---
+title: "MATE 664 Lecture 01"
+subtitle: "Thermodynamics and Kinetics"
+author: "Dr. Tian Tian"
+date: "2026-01-05"
+format:
+  html: {}
+  revealjs:
+    output-file: slides.html
+---
+
+::: {.content-visible when-format="html" unless-format="revealjs"}
+
+::: {.callout-note}
+Slides 👉  [Open presentation🗒️](./slides.html)
+:::
+
+:::
+
+## Land Acknowledgement {.center}
+
+#### The University of Alberta acknowledges that we are located on Treaty 6 territory, and respects the histories, languages, and cultures of the First Nations, Métis, Inuit, and all First Peoples of Canada, whose presence continues to enrich our vibrant community.
+
+
+## Learning Outcomes
+
+After today's lecture, you will be able to:
+
+- **Identify** the key components of the course syllabus, content and grading schemes.
+- **Recall** common interaction methods and resources available in the course.
+- **Recall** basic concepts in thermodynamics and kinetics
+- **State** assumptions of equilibrium
+- **Describe** the influence of entropy in kinetic systems
+
+## Course Information
+
+- **Course:** MAT E 664 – Kinetics of Materials
+- **Term:** Winter 2026
+- **Lectures:** Mon & Wed
+- **Time:** 14:00 – 15:20
+- **Location:** HC 2-14
+
+## Meet the Instructor
+
+- **Office**: DICE 12-245
+
+- **Email**: tian.tian@ualberta.ca
+
+- **Office hour**: by appointment
+
+- I joined CME in 2025 as assistant professor.
+- Research fields: machine learning, multiscale materials simulations, computational tools
+- Let’s enjoy learning together!
+
+## TAs & Seminar Sessions
+
+- **Teaching Assistant**
+  - Hanlin Wang — hanlin7@ualberta.ca
+
+- **Course & Assignment Questions**
+  - No formal seminar or lab sessions
+  - Questions related to course content or assignments
+  - Please book an appointment with the TA (and instructor) as needed
+
+- **Support Format**
+  - One-on-one or small-group discussions
+  - Concept clarification and guidance
+  
+## Course Grading
+- **Assignments:** 25%
+  - 4 assignments (best 3 counted)
+  - Submission via Canvas
+
+- **Final Project:** 30%
+  - Research-related topic
+  - In-class oral presentation
+
+- **Final Exam:** 45%
+  - In person, open book
+  - **Apr 20, 2026 · 1:00 p.m.**
+
+_Details please see the [course syllabus](../../syllabus/assets/MATE664-winter-2026-course-syllabus.pdf)_
+
+## Textbook and References
+
+Our primary textbooks for this course are:
+
+:::{.columns}
+:::{.column width="50%"}
+- **Kinetics of Materials** by R.W. Balluffi, S.M. Allen, and W.C. Carter.
+
+<div style="width: 60%;">
+  <img
+    src="public/balluffi.jpg"
+    style="
+      width: 100%;
+      max-height: 80vh;
+      object-fit: cover;
+      display: block;
+    "
+  />
+</div>
+:::
+
+:::{.column width="50%"}
+- **Materials Kinetics: Transport and Rate Phenomena** by John C. Mauro.
+
+<div style="width: 60%;">
+  <img
+    src="public/mauro.jpg"
+    style="
+      width: 100%;
+      max-height: 80vh;
+      object-fit: cover;
+      display: block;
+    "
+  />
+</div>
+
+:::
+:::
+
+---
+
+## What Will We Learn in MAT E 664 (1)?
+
+Theory: irreversible thermodynamics & driving forces
+
+$$
+    \text{Flux} = \text{Kinetic coefficients} \times \text{Driving Force}
+$$
+
+<div style="width: 100%;">
+<img
+src="https://www.ntnu.edu/documents/1412485/1277516986/Onsager_heading.jpg"
+style="
+width: 100%;
+max-height: 80vh;
+object-fit: cover;
+display: block;"
+/>
+</div>
+   
+---
+
+## What Will We Learn in MAT E 664 (2)?
+
+Mass transport on solid material interfaces: $v_{step} = \beta (c - c_{eq})$
+
+<div style="width: 100%;">
+<img
+src="public/SiC-spiral.png"
+style="
+width: 100%;
+max-height: 80vh;
+object-fit: cover;
+display: block;"
+/>
+</div>
+^[_Image credit: A.R. Verma_]
+
+---
+
+ ## What Will We Learn in MAT E 664 (3)?
+
+Nucleation theory: $r_{c} = -\dfrac{2\gamma}{\Delta G_v}$
+
+<div style="width: 100%;">
+<img
+src="public/copper-sulfate-impurities-header.jpg"
+style="
+width: 100%;
+	max-height: 80vh;
+	object-fit: cover;
+display: block;
+"
+/>
+</div>
+^[_Image credit: crystalverse.com_]
+
+---
+
+## What Will We Learn in MAT E 664 (4)?
+
+Spinodal Decomposition (Pattern Formation)
+$$
+    \dfrac{\partial c}{\partial t}
+    =
+    \nabla \cdot
+    \left(
+    M \nabla
+    \left[
+    \dfrac{\partial f(c)}{\partial c}
+    -
+    \kappa \nabla^{2} c
+    \right]
+    \right)
+$$
+
+<div style="width: 100%;">
+<img
+src="https://pmc.polytechnique.fr/~mp/spide.GIF"
+style="
+width: 100%;
+	max-height: 80vh;
+object-fit: cover;
+display: block;
+"
+/>
+</div>
+^[_Image credit: Mathis Plapp, École Polytechnique (FR)_]
+
+---
+
+## Interaction Time!
+
+We will use Wooclap in this course for real-time interactions.
+
+Participation link 👉 [https://app.wooclap.com/664L01?from=instruction-slide](https://app.wooclap.com/664L01?from=instruction-slide)
+
+*Results to be published after the class*
+  
+---
+
+## Thermodynamics vs. Kinetics
+
+| Feature          | Thermodynamics                           | Kinetics                                |
+|:-----------------|:-----------------------------------------|:----------------------------------------|
+| **Greek Name**   | *Therme* (heat) + *dynamis* (power)      | *Kinetikos* (of motion)                 |
+| **Focus**        | **Eventually**: Predicts the final state | **Rate**: How fast a process occurs     |
+| **General Form** | Free energy change ($\Delta G$)          | Reaction rates, flux, activation energy |
+| **Condition**    | Equilibrium                              | Non-equilibrium                         |
+
+--- 
+
+## Brief Introduction to Course AI Helper
+
+- A Socratic Gemini chatbot aiming to help course learning and key concepts
+- **Access the AI helper here:**
+👉 [https://gemini.google.com/gem/1c118102b2d1](https://gemini.google.com/gem/1c118102b2d1)
+<div style="width: 100%; text-align: center;">
+<img
+        src="https://quickchart.io/qr?text=https://gemini.google.com/gem/1c118102b2d1&size=150"
+        alt="QR Code for AI Helper"
+        style="width: 150px; height: 150px; display: block; margin: 0 auto;"
+      />
+</div>
+
+## Summary
+
+What we learned today:
+
+- Syllabus / course contents of MATE 664
+- Kinetic rate and equilibrium
+- Concept of entropy revisited
+- Laws of thermodynamics revisited
+
+**See you next time!**
+
+
+

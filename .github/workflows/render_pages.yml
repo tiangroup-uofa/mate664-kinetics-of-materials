@@ -1,5 +1,5 @@
 # Builds marimo page (wasm)
-name: Deploy Marimo Slides to GH_PAGES
+name: Deploy Slides to GH_PAGES
 
 on:
   # Runs on pushes targeting the default branch
@@ -15,12 +15,6 @@ permissions:
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
 jobs:
   # Build job
   build:
@@ -35,18 +29,18 @@ jobs:
       - name: Setup marimo packages
         run: |
           pip install marimo
+      - name: Setup quarto
+        uses: quarto-dev/quarto-actions/setup@v2
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
-      - name: Export with marimo
-        run: |
-          mkdir _build
-          marimo export html-wasm --mode run --no-show-code mate374_guest_lecture_Tian.py -o _build/
+      - name: Quarto render
+        uses: quarto-dev/quarto-actions/render@v2
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v4
         with:
-          path: _build/
+          path: _site/
           name: github-pages
         
 
