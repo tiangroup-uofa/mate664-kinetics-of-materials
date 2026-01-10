@@ -233,6 +233,224 @@ Participation link 👉 [https://app.wooclap.com/664L01?from=instruction-slide](
 
 --- 
 
+## The True Meaning of Equilibrium
+
+Equilibrium is a balance of time scales:
+$$
+\tau_{\text{observation}} \gg \tau_{\text{process}}
+$$
+
+- **Thermodynamic descriptions** are relevant when the observation time scale is much larger than the time scale of the processes reaching equilibrium.
+- It's about **specific processes** reaching a steady state, not necessarily the entire system.
+
+<div style="width: 100%; text-align: center;">
+<img
+src="public/mauro-coffee-eq.png"
+alt="Coffee reaching equilibrium"
+style="
+width: 100%;
+max-height: 80vh;
+object-fit: cover;
+display: block;
+margin: 0 auto;"
+/>
+</div>
+^[_Image credit: John C. Mauro_]
+
+--- 
+
+## Kinetic Processes
+
+Kinetic processes are distinct from thermodynamic equilibrium:
+
+1.  **Conditions:** Occur away from equilibrium.
+2.  **Cause** Require a thermodynamic **driving force**.
+3.  **Rate:** Coupled with a **rate parameter** or **coefficient**.
+
+**Irreversible Thermodynamics** is key to understanding these processes ([Lecture 2](../L02/)).
+
+--- 
+
+## Classical Thermodynamics Revisited
+
+<div style="width: 80%; text-align: center;">
+<img
+src="public/mauro-thermo-card.png"
+alt="thermodynamics memory card"
+style="
+width: 80%;
+max-height: 80vh;
+object-fit: cover;
+display: block;
+margin: 0 auto;"
+/>
+</div>
+^[_Image credit: John C. Mauro_]
+
+--- 
+
+## ## Thermodynamic Interplay Between $H$ and $S$
+
+Whether a process from A → B is **spontaneous** or **non-spontaneous** depends on the sign of free energy difference, $\Delta G = G_{B} - G_{A}$.
+
+<div style="width: 80%; text-align: center;">
+<img
+src="public/mauro-spontaneous-vs.png"
+alt="H vs S"
+style="
+width: 80%;
+max-height: 80vh;
+object-fit: cover;
+display: block;
+margin: 0 auto;"
+/>
+</div>
+^[_Image credit: John C. Mauro_]
+
+- What is $\Delta G$ for a reversible process at equilibrium?: $\Delta G = 0$,
+- How can we check the stability of a certain material at $P, T$?: Use the phase diagram!
+
+## How Stable Is Diamond?
+
+- Which phase is the most stable at r.t. & 1 atm?
+- Should we worry our diamond rings turn into pencil?
+
+<div style="width: 100%; text-align: center;">
+<img
+src="public/diamond-phase.png"
+alt="diamond"
+style="
+width: 100%;
+max-height: 80vh;
+object-fit: cover;
+display: block;
+margin: 0 auto;"
+/>
+</div>
+
+## Two-State model of Thermodynamics vs Kinetics
+
+- $\Delta G^0$: Free energy of **reaction** → will reaction happen? (**Thermodynamics**)
+- $\Delta G^*$: Free energy of **activation** → how likely / fast? (**Kinetics**)
+
+<div style="width: 100%; text-align: center;">
+<img
+src="public/mauro-2state.png"
+alt="2 state system"
+style="
+width: 100%;
+max-height: 80vh;
+object-fit: cover;
+display: block;
+margin: 0 auto;"
+/>
+</div>
+
+
+
+## Arrhenius Plot Demo
+
+## Where Does Entropy $S$ Come From?
+
+- Claussius (1865) **Classical thermodynamics**.
+  - Entropy is a state variable of internal energy.
+  - $dU(S, V) = TdS - pdV$
+
+- Boltzmann (1877) **Statistical mechanics**.
+  - Entropy is a measure of accessible microstates (atoms + probability!)
+  - $S = k_B \log(\Omega)$
+
+<div style="width: 100%; text-align: center;">
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Zentralfriedhof_Vienna_-_Boltzmann.JPG/960px-Zentralfriedhof_Vienna_-_Boltzmann.JPG"
+alt="2 state system"
+style="
+width: 50%;
+max-height: 80vh;
+object-fit: cover;
+display: block;
+margin: 0 auto;"
+/>
+</div>
+	
+## Why The Logarithm?
+
+- $S$ as an **extensive** quantity → **Additive** $S_T = S_1 + S_2$
+- $\Omega$ as microstates is **multiplicative** → $\Omega_T = \Omega_1 \cdot \Omega_2$
+- If $S = f(\Omega)$, then
+      $S_T = f(\Omega_T) = f(\Omega_1 \cdot \Omega_2)$
+      →
+      $f(\Omega_1 \cdot \Omega_2) = f(\Omega_1) + f(\Omega_2)$
+- $f(x) = C \log(x)$ is the unique solution using Cauchy's functional equation results
+
+## Entropy *IS NOT* Disorder!
+
+- Common statement of entropy is measure of *disorder*
+- Boltzmann equation measures **how many possibilities** of arrangement
+- Disorder is not uniquely linked to number of microstates!
+
+<div style="width: 100%; text-align: center;">
+<img
+src="public/disorder-compare.png"
+alt="messy-book"
+style="
+width: 100%;
+max-height: 80vh;
+object-fit: cover;
+display: block;
+margin: 0 auto;"
+/>
+</div>
+
+## Entropy *IS NOT* Disorder -- II!
+
+- **High entropy alloys** (**HEAs**): Example of high configurational entropy material
+- Many HEAs have much more ordered lattice than binary alloys
+
+<div style="width: 100%; text-align: center;">
+<img
+src="public/smll202311929-fig-0002-m.jpg"
+alt="hea"
+style="
+width: 100%;
+max-height: 80vh;
+object-fit: cover;
+display: block;
+margin: 0 auto;"
+/>
+</div>
+^[_Small_ **2024**, 20, 2311929]
+
+## What Should We Really Think of Entropy
+
+- **Arrow of time**: mixed cream and coffee cannot be demixed
+  - Newtonian dynamics is time-reversible
+  - We cannot rewind to low entropy state from Newtonian dynamics!
+
+- **Loss of information**:
+  - **Shannon entropy**: $S_{info} = -k_B \sum_i p_i \log(p_i)$
+  - Shannon entropy **can be measured** on the exact state!
+
+- **Uncertainty**:
+  - Link to Heisenberg's principle $\Delta x \Delta p \leq \hbar/2$
+  -  See Hirschman *Am. J. Math.*, **1957** 79, 152
+  
+## Where Can We Go From Here?
+
+- **Irreversible thermodynamics**
+  
+  Real processes occur away from equilibrium, where entropy is **produced**.
+
+- **Entropy generation as a driving force**
+  
+  **Gradients** in temperature, concentration, and chemical potential drive fluxes by increasing total entropy.
+
+- **From equilibrium to dynamics**
+  
+  Entropy provides the unifying language for diffusion, heat flow, chemical reactions, and transport phenomena.
+
+**Stay Tuned!**
+
 ## Brief Introduction to Course AI Helper
 
 - A Socratic Gemini chatbot aiming to help course learning and key concepts
