@@ -1,0 +1,441 @@
+---
+title: "MATE 664 Lecture 03"
+subtitle: "Driving Forces in Irreversible Thermodynamics"
+author: "Dr. Tian Tian"
+date: "2026-01-12"
+format:
+  html: {}
+  revealjs:
+    output-file: slides.html
+---
+
+::: {.content-visible when-format="html" unless-format="revealjs"}
+
+::: {.callout-note}
+Slides 👉  [Open presentation🗒️](./slides.html)
+:::
+
+:::
+
+::: {.content-visible when-format="revealjs"}
+
+::: {.callout-note}
+- **Course Website Updated!**
+
+[https://tiangroup-uofa.github.io/mate664-kinetics-of-materials/](https://tiangroup-uofa.github.io/mate664-kinetics-of-materials/)
+
+<div style="width: 100%; text-align: center;">
+  <img
+    src="https://quickchart.io/qr?text=https://tiangroup-uofa.github.io/mate664-kinetics-of-materials//&size=250"
+    alt="QR Code"
+    style="width: 150px; height: 150px; display: block; margin: 0 auto;"
+  />
+</div>
+:::
+
+:::
+
+
+## Recap of Lecture 02 {.center}
+Key ideas from last lecture:
+
+- Crash course on statistical mechanics
+  - Microstate in phase space ⇔ macroscopic property with probability
+  - Measurement of microstate ⟹ entropy ⟹ Boltzmann formula
+  - Explain Boltzmann distribution
+  - Explain entropy maximizing principle
+  
+- Introduction to irreversible thermodynamics
+  - Postulate 1: local equilibrium assumption
+  - Postulate 2: rate of entropy production is non-zero
+  - Postulate 3: linear coupling between flux and forces
+  - Postulate 4: symmetry between coupling coefficients
+
+---
+
+## Learning Outcomes {.center}
+
+After today's lecture, you will be able to:
+
+- **Recall** the entropy production equation and link to rate
+- **Analyze** the formula for entropy production the driving force expression
+- **Derive** general equation for driving forces in system
+- **Formulate** relationship between reciprocal driving force situations
+
+---
+
+## Entropy Balance Equation
+
+General form:
+$$
+\frac{dS}{dt} = \left(\frac{dS}{dt}\right)_{\text{exchange}} + \left(\frac{dS}{dt}\right)_{\text{production}}
+$$
+
+- Exchange: entropy flow across system boundaries
+- Production: entropy generated internally
+- Entropy **can flow** and **can be generated**
+
+## Entropy Production In Microscopic Cells
+
+When applying local equilibrium, we generally consider **entropy density** $s = S_i / V_i$ for a certain _microscopic cell_.
+
+Using _Balluffi book_ notations, entropy balance equation looks like:
+
+$$
+\frac{\partial s}{\partial t} = -\nabla\cdot\vec{J}_{s} + \dot{\sigma}
+$$
+
+- $\vec{J}_{s}$: flux of entropy (exchange)
+- $\dot{\sigma}$: entropy generation rate
+
+![Scheme of microcell and entropy balance](./public/microcell-entropy.svg){width=80%}
+
+---
+
+## Irreversible Thermodynamics
+
+Central law:
+
+$$
+\dot{\sigma} = \frac{\partial s}{\partial t} + \nabla\cdot\vec{J}_{s} \geq 0
+$$
+
+- This is the local form of the second law.
+- Equilibrium $\dot{\sigma} = 0$
+- Can we have $\frac{\partial s}{\partial t} = 0$?
+
+---
+
+## Entropy Balance: Solving $\dot{\sigma}$ and $\vec{J}_{s}$
+
+Chain rule again! For any thermodynamic quantity $\xi_{i}$:
+
+```{=tex}
+\begin{align}
+  \frac{\partial s}{\partial t} &= \sum_i \frac{\partial s}{\partial \xi_i} \frac{\partial \xi_i}{\partial t} \\
+  &=  \sum_i \frac{\partial s}{\partial \xi_i} (- \nabla \cdot \vec{J}_{\xi_i})
+\end{align}
+```
+
+- What quantities $\xi_i$ can be used?
+- How do we solve $\frac{\partial s}{\partial \xi_i}$?
+
+--- 
+
+## Entropy Flux and Production: Results
+
+After arranging the formula for entropy balance and apply laws in vector operations, we get:
+
+```{=tex}
+\begin{align}
+  \vec{J}_s &= \sum_i \frac{\partial s}{\partial \xi_i} \vec{J}_{\xi_i} \\
+  \dot{\sigma} &= \sum_i \vec{J}_{\xi_i} \cdot \nabla \left(\frac{\partial s}{\partial \xi_i}\right)
+\end{align}
+```
+
+- It seems everything has relation with:
+  - A flux $\vec{J}_{\xi_i}$
+  - An coefficient $\frac{\partial s}{\partial \xi_i}$ (Onsager's affinity)
+- Non-negative entropy production 👉 $\vec{J}_{\xi_i}$ and gradient (vector) $\nabla \left(\frac{\partial s}{\partial \xi_i}\right)$ have an angle no more than 90 degrees!
+
+---
+
+## What Are The Affinities, Anyway?
+
+Consider generalized 1st law of thermodynamics:
+```{=tex}
+\begin{align}
+  d s = \frac{1}{T} du - \sum_i \frac{\psi_i}{T} d\xi_i 
+\end{align}
+```
+
+It requires:
+
+- $\xi_i$ is an **extensive property**
+- $\psi_i$ in an **intensitve property** often called **potential**
+- $\xi_i$ is **conjugate** to $\psi_i$
+
+---
+
+## What are $\psi$ and $\xi$?
+
+- General entropy differential (extended variables):
+$$
+ds = \frac{1}{T}du - \frac{p}{T}dv - \sum_i \frac{\psi_i}{T} d\xi_i
+$$
+
+::: columns
+::: {.column width="50%"}
+- $\xi_i$: **extensive variables**
+  - volume $v$
+  - charge $q$
+  - concentration $c$
+  - surface area $A$
+  - dipole moment $\mathbf{p}$
+  - magnetic moment $\mathbf{b}$
+:::
+::: {.column width="50%"}
+- $\psi_i$: **conjugate intensive variables**
+  - pressure $p$
+  - electric potential $\phi$
+  - chemical potential $\mu$
+  - surface energy $\gamma$
+  - external electric field $\mathbf{E}$
+  - magnetic field $\mathbf{H}$
+:::
+:::
+Each $(\psi_i,\xi_i)$ pair contributes to entropy change.
+
+---
+
+## Entropy Flux and Production In Driving Force Terms
+
+We can rewrite the entropy balance equation using individual fluxes:
+
+```{=tex}
+\begin{align}
+\vec{J}_s
+&= - \sum_i \frac{\psi_i}{T}\,\vec{J}_{\xi_i}
+= \frac{1}{T}\,\vec{J}_u
+- \sum_i \frac{\psi_i}{T}\,\vec{J}_{\xi_i}
+\\
+\dot{\sigma}
+&= - \sum_i \vec{J}_{\xi_i}\cdot \nabla\!\left(\frac{\psi_i}{T}\right)
+= \vec{J}_u \cdot \nabla\!\left(\frac{1}{T}\right)
+- \sum_i \vec{J}_{\xi_i}\cdot \nabla\!\left(\frac{\psi_i}{T}\right)
+\end{align}
+```
+
+- If $u$ also have an corresponding potential, what will it be?
+
+---
+
+## Entropy Production: With Flux of Heat Term
+
+Often we wanted to write entropy generation using flux of heat $\vec{J}_{Q} = T \vec{J}_s$:
+
+```{=tex}
+\begin{align}
+  T\dot{\sigma}
+= - \frac{\vec{J}_u}{T}\cdot \nabla T
+- \sum_i \vec{J}_{\xi_i}\cdot \nabla \psi_i
+\end{align}
+```
+
+- Why is there a negative sign before each term?
+- Can you generalize this term?
+
+---
+
+## General Formula for Entropy Production
+
+```{=tex}
+\begin{align}
+\boxed{
+T\dot{\sigma}
+= - \sum_i \left[\text{flux of } \xi_i\right]
+  \cdot \left[\nabla(\text{conjugate potential } \psi_i)\right]
+  }
+  \end{align}
+```
+
+- $\xi_i$ must be **extensive** $\Rightarrow$ scales with system size $V_i$
+- $\psi_i$ is the **conjugate intensive potential**
+  - does *not* scale with $V_i$
+- $\nabla \psi_i$ acts as the **thermodynamic driving force**
+
+This compact form unifies all irreversible transport processes.
+
+---
+
+## What Are The Driving Forces (From Irreversible Thermodynamics)?
+
+Some quantities and their driving forces, see _Balluffi Table 2.1_
+
+| Extensive quantity $\xi_i$ | Flux $\vec{J}_{\xi_i}$ | Conjugate force | Potential $\psi_i$ |
+|---|---|---|---|
+| Heat $Q$ | $\vec{J}_Q$ | $-\frac{1}{T}\nabla\!T$ | $\dfrac{1}{T}$ |
+| Chemical component $i$ | $\vec{J}_i$ | $-\nabla \mu_i$ | $\mu_i$ |
+| Electric charge $q$ | $\vec{J}_q$ | $-\nabla \phi$ | $\phi$ |
+
+- Each row represents one irreversible transport process
+- Force $=$ gradient of the conjugate intensive potential
+- Flux $\cdot$ Force contributes to entropy production
+
+-- 
+
+## Empirical Laws of Fluxes
+
+We also know that fluxes are having empirical relation to the driving force (in a gradient form):
+
+$$
+\text{Flux} = (\text{transport coefficient}) \times (\text{driving force})
+$$
+
+**Fourier’s law (heat conduction)**
+$$
+\vec{J}_Q
+= -k \nabla T
+= -k T^2 \nabla\!\left(\frac{1}{T}\right)
+$$
+
+**Fick’s law (mass diffusion)**
+$$
+\vec{J}_i
+= -D_i \nabla c_i
+= -\mu_i c_i \nabla \mu_i
+$$
+
+**Ohm’s law (electrical conduction)**
+$$
+\vec{J}_q
+= -\rho \nabla \phi
+$$
+
+---
+
+## Entropy Production in the Uncoupled Case
+
+If each flux is influenced by only **one dominant driving force (D.F.)**:
+
+$$
+\text{entropy production}
+= (\text{flux}) \cdot (\text{driving force})
+$$
+
+Using linear response:
+$$
+\vec{J} = (\text{coefficient}) \times (\text{D.F.})
+$$
+
+we obtain
+$$
+\boxed{
+T \dot{sigma}
+= (\text{coefficient}) \, \lVert \text{D.F.} \rVert^2
+}
+$$
+
+---
+
+## Consequences of Irreversible Dynamics (Uncoupled Driving Force)
+
+- Empirically, all transport coefficients are **positive** from irreversible thermodynamics
+
+- Therefore:
+$$
+\sigma \ge 0
+$$
+- Entropy production vanishes only when:
+$$
+\vec{\sigma} = 0
+\quad \Longleftrightarrow \quad
+\lVert \text{D.F.} \rVert = 0
+$$
+
+- The second law constrains transport coefficients
+- Positivity of entropy production $\Rightarrow$ positivity of coefficients
+- This reasoning will be generalized when **fluxes are coupled**
+
+---
+
+## Linear Irreversible Thermodynamics: Coupled Fluxes
+
+- Extensive quantities: $\xi_i$
+- Conjugate driving forces:
+$$
+\vec{F}_i \equiv - \nabla \psi_i
+$$
+- Associated fluxes: $\vec{J}_i$
+
+We write them in a matrix form as shown in [Lecture 2](../L02)
+
+$$
+\vec{J} = \mathbf{L}\,\vec{F}
+$$
+
+or, component-wise,
+$$
+\vec{J}_i = \sum_j L_{ij}\,\vec{F}_j
+$$
+
+---
+
+## Entropy Production with Coupling
+
+$$
+\sigma
+= \sum_i \vec{J}_i \cdot \vec{F}_i
+= \sum_{i,j} L_{ij}\,\vec{F}_i \cdot \vec{F}_j
+$$
+
+- Second law requires:
+$$
+\sigma \ge 0
+$$
+- $\mathbf{L}$ must be **positive semi-definite**
+
+---
+
+## Onsager Reciprocity (Again!)
+
+Under microscopic reversibility:
+$$
+\boxed{
+L_{ij} = L_{ji}
+}
+$$
+
+- Symmetry of $\mathbf{L}$ reduces number of independent coefficients
+- Fundamental constraint linking kinetics and thermodynamics
+
+---
+
+## Physical Examples of Coupling
+
+- Thermoelectric effects (Seebeck / Peltier)
+- Thermodiffusion (Sorret / Dufour)
+- Electrokinetic transport
+
+---
+
+## Coupling: Mass ↔ Thermal -- Sorret / Dufour Effects
+
+**Coupled flux–force relations**
+
+- Mass flux driven by temperature gradient (Soret effect)
+- Heat flux driven by concentration gradient (Dufour effect)
+![](./public/sorret.png){width="100%"}
+
+## Coupling: Charge ↔ Thermal -- Seebeck / Peltier Effects
+
+**Coupled flux–force relations**
+- Electric current driven by temperature gradient (Seebeck effect)
+- Heat flux driven by electric field (Peltier effect)
+
+![](./public/thermoelectro.jpg){width="100%"}
+
+## Coupling: Charge ↔ Mass -- Electrokinetic Phenomena
+
+**Coupled flux–force relations**
+- Charge and mass transport are interdependent in ionic systems
+
+![](./public/electrokinetic.png){width="100%"}
+
+
+
+
+
+
+
+
+
+
+
+## Summary
+
+- Entropy balance equation 👉 solutions for flux of entropy and entropy production
+- Entropy production rate 👉 flux of quantity ✖️ driving force
+- Flux of quantity 👉 Coefficient ✖️ Driving Force
+- Examples of reciprocal relation in transport phenomena
+- Brief introduction of diffusion

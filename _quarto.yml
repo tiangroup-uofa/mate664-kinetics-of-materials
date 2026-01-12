@@ -35,6 +35,9 @@ website:
         contents:
           - lectures/L01/index.qmd
           - lectures/L02/index.qmd
+          - lectures/L03/index.qmd
+          - lectures/L04/index.qmd
+          
 
 
 format:
