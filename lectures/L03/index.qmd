@@ -217,7 +217,7 @@ Often we wanted to write entropy generation using flux of heat $\vec{J}_{Q} = T 
 ```{=tex}
 \begin{align}
   T\dot{\sigma}
-= - \frac{\vec{J}_u}{T}\cdot \nabla T
+= - \frac{\vec{J}_Q}{T}\cdot \nabla T
 - \sum_i \vec{J}_{\xi_i}\cdot \nabla \psi_i
 \end{align}
 ```
@@ -232,7 +232,7 @@ Often we wanted to write entropy generation using flux of heat $\vec{J}_{Q} = T 
 ```{=tex}
 \begin{align}
 \boxed{
-T\dot{\sigma}
+\dot{\sigma}
 = - \sum_i \left[\text{flux of } \xi_i\right]
   \cdot \left[\nabla(\text{conjugate potential } \psi_i)\right]
   }
@@ -311,7 +311,7 @@ $$
 we obtain
 $$
 \boxed{
-T \dot{sigma}
+T \dot{\sigma}
 = (\text{coefficient}) \, \lVert \text{D.F.} \rVert^2
 }
 $$
@@ -326,6 +326,7 @@ $$
 $$
 \sigma \ge 0
 $$
+
 - Entropy production vanishes only when:
 $$
 \vec{\sigma} = 0
@@ -348,7 +349,7 @@ $$
 $$
 - Associated fluxes: $\vec{J}_i$
 
-We write them in a matrix form as shown in [Lecture 2](../L02)
+We write them in a matrix form as shown in [Lecture 2](../L02/)
 
 $$
 \vec{J} = \mathbf{L}\,\vec{F}
@@ -364,14 +365,14 @@ $$
 ## Entropy Production with Coupling
 
 $$
-\sigma
+\dot{sigma}
 = \sum_i \vec{J}_i \cdot \vec{F}_i
 = \sum_{i,j} L_{ij}\,\vec{F}_i \cdot \vec{F}_j
 $$
 
 - Second law requires:
 $$
-\sigma \ge 0
+\dot{sigma} \ge 0
 $$
 - $\mathbf{L}$ must be **positive semi-definite**
 
@@ -394,17 +395,20 @@ $$
 ## Physical Examples of Coupling
 
 - Thermoelectric effects (Seebeck / Peltier)
-- Thermodiffusion (Sorret / Dufour)
+- Thermodiffusion (Soret / Dufour)
 - Electrokinetic transport
 
 ---
 
-## Coupling: Mass ↔ Thermal -- Sorret / Dufour Effects
+## Coupling: Mass ↔ Thermal -- Soret / Dufour Effects
 
 **Coupled flux–force relations**
 
 - Mass flux driven by temperature gradient (Soret effect)
 - Heat flux driven by concentration gradient (Dufour effect)
+
+_Derivation of Sorret thermal conductivity please see [lecture handwritten notes](./public/L03-notes_annotated.pdf)_
+
 ![](./public/sorret.png){width="100%"}
 
 ## Coupling: Charge ↔ Thermal -- Seebeck / Peltier Effects
@@ -422,12 +426,26 @@ $$
 
 ![](./public/electrokinetic.png){width="100%"}
 
+## General Matrix for Coupling Effects
+
+Example coupling effect matrix given in _J. Phase Equilib. Diffus._ **2022** 43, 640
+
+![](./public/coupling-matrix.png){width="60%"}
 
 
+## Some Additional Consequence of Onsager Reciprocity
 
+There are some consequences of Onsager's reciprocity. As Curie's symmetry principle (1894,  _Pierre_ Curie, _not Marie_) stated,
+the cause of an effect needs to follow tensor rank selection rule,
+that:
 
+Flux -- Driving Force pair can only be induced when they have the same tensor rank, or differ by 2.
 
+![Tensor rank coupling from Griskey Book 2002](./public/griskey-tensor-order.png){width="60%"}
 
+The coupling of momentum-transfer (fluid, 2nd-order) and chemical
+reaction (0th-order) has only been recently proposed! See
+_J. Chem. Phys._ **2022**, 157, 084901.
 
 
 

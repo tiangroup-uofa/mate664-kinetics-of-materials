@@ -51,7 +51,7 @@ format:
     navigation-mode: linear
     incremental: false
     center: false
-    footer: "MATE 664 · Kinetics of Materials · WS 2026"
+    footer: <a href="./index.qmd">MATE 664 · Kinetics of Materials · WS 2026 ↰</a>
     title-slide-attributes:
       data-background-color: "#efefef"
     number-sections: false
