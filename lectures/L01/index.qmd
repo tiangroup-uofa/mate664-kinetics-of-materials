@@ -13,6 +13,7 @@ format:
 
 ::: {.callout-note}
 Slides 👉  [Open presentation🗒️](./slides.html)
+- Handwritten notes 👉 [Open in pdf](./public/L05_annotated.pdf)
 :::
 
 :::
