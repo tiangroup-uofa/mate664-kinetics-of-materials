@@ -311,7 +311,7 @@ $v_{m} = 10^{-3} \mathrm{m/s}$
 :::
 
 ::: {.column width="50%"}
-![](natrup-glass-diff.png){width="75%"}
+![](./public/natrup-glass-diff.png){width="75%"}
 ^[_Solid. State Ionics_ **2006**, 177, 2839]
 :::
 :::
@@ -334,7 +334,7 @@ $v_{m} = 10^{-3} \mathrm{m/s}$
 :::
 
 :::{.column width="50"}
-![](kom-diffusion-jump.png){width="75%"}
+![](./public/kom-diffusion-jump.png){width="75%"}
 :::
 
 :::
@@ -342,7 +342,7 @@ $v_{m} = 10^{-3} \mathrm{m/s}$
 
 ## Multiple Diffusion Mechanisms
 
-![Intrinsic and extrinsic mechanism in doped halides](kom-multi-mechanism.png){width="50%"}
+![Intrinsic and extrinsic mechanism in doped halides](./public/kom-multi-mechanism.png){width="50%"}
 
 - Different diffusion paths
 - Different activation energies
@@ -380,53 +380,78 @@ $v_{m} = 10^{-3} \mathrm{m/s}$
 - Diffusion in solids is much more complex!
 - Discrete lattice sites
 - Mechanisms (non-exhaustive)
-  - vacancy
-  - interstitial
-- strong temperature dependence
+  - Vacancy
+  - Ring mechanism
+  - Push-out mechanism
+  - Interstitial
+- Strong temperature dependence
 
 ---
 
 ## Vacancy Diffusion Mechanism
 
-- atoms exchange with vacancies
-- jump only if vacancy is adjacent
-- vacancy sources:
-  - surfaces
-  - grain boundaries
-  - dislocations
+- Atoms exchange with vacancies
+- Jump only if vacancy is adjacent
+- Vacancy sources:
+  - Surfaces
+  - Grain boundaries
+  - Dislocations
 
----
 
 ## Types of Diffusivity
 
-- self-diffusivity $D$
-- intrinsic diffusivity $D_i$ (lattice frame)
-- inter-diffusivity $\tilde{D}$ (laboratory frame)
+As the previous example of diffusion + convection video shows, the
+measurement of diffusivity really depends on which reference frame we
+use.
+
+- Self-diffusivity $D^*$
+- Intrinsic diffusivity $D_i$ (lattice frame / C-frame; $\mathtt{C}$ 👉crystal)
+- Inter-diffusivity $\tilde{D}$ (laboratory frame / V-frame; $\mathtt{V}$ 👉volume-fixed)
 
 ---
 
 ## Measuring Self-Diffusion
 
-- isotope tracer experiments
-- lattice constraint:
+:::{.column}
+:::{.column width="50%"}
+- Isotope tracer experiments
+- Lattice constraint:
   $$
   c_i + c_i^* + c_v = \text{const}
   $$
-- vacancy concentration often at equilibrium
+
+  - General "network-constrained" problem
+- Vacancy concentration often at equilibrium
+  - Vacancy balance with the source (surface / grain boundary / dislocation)
+:::
+
+:::{.column width="50%"}
+![Setup for isotope diffusion](./public/isotope-diff.svg){width="100%"}
+:::
+:::
 
 ---
 
 ## Flux Relations in Network-Constrained Systems
 
-- flux driven by chemical potential differences
-- 1D example:
+- Flux driven by chemical potential differences (1D)
+  - Non-radioactive species:
   $$
-  J_i = -L_{ii}\frac{\partial (\mu_i - \mu_v)}{\partial x}
+	J_i = -L_{ii}\frac{\partial (\mu_i - \mu_v)}{\partial x} -L_{i{i}^*}\frac{\partial (\mu_{i^*} - \mu_v)}{\partial x} 
   $$
-- vacancy flux:
+
+  - Radioactive species:
   $$
-  J_v = -L_{vv}\frac{\partial (\mu_v - \mu_i)}{\partial x}
+	J_{i^*} = -L_{{i^*}{i}}\frac{\partial (\mu_{i} - \mu_v)}{\partial x}
+	-L_{{i^*}{i^*}}\frac{\partial (\mu_{i^*} - \mu_v)}{\partial x}
   $$
+
+  - Vacancy (zero-flux, why?):
+  $$
+  J_v = 0
+  $$
+  
+ 
 
 ---
 
@@ -443,34 +468,34 @@ $v_{m} = 10^{-3} \mathrm{m/s}$
 
 ## Resulting Self-Diffusion Flux
 
-- chemical potential gradient:
+- Chemical potential gradient:
   $$
-  \frac{\partial \mu_i}{\partial x}
+  \frac{\partial \mu_{i^*}}{\partial x}
   = k_B T \frac{1}{c_i}\frac{\partial c_i}{\partial x}
   $$
-- self-diffusion coefficient:
+- Self-diffusion coefficient:
   $$
-  D = k_B T\left(\frac{L_{ii}}{c_i} + \frac{L_{ii^*}}{c_{i^*}}\right)
+  D^{*} = k_B T\left(\frac{L_{ii}}{c_i} + \frac{L_{ii^*}}{c_{i^*}}\right)
   $$
 
 ---
 
 ## Why Self-Diffusion Occurs
 
-- no macroscopic concentration gradient
-- chemical potential varies locally
-- random walk lowers free energy
-- entropy maximization drives motion
+- **No** macroscopic concentration gradient!
+- Chemical potential varies locally
+- Random walk lowers free energy
+- Entropy maximization drives motion
 
 ---
 
 ## Summary
 
-- diffusion is driven by chemical potential gradients
+- Diffusion is driven by chemical potential gradients
 - Fick’s laws follow from irreversible thermodynamics
 - Laplace operator reflects curvature and smoothing
-- diffusivity varies strongly with phase and temperature
-- self-diffusion exists even in homogeneous systems
+- Diffusivity varies strongly with phase and temperature
+- Self-diffusion exists even in homogeneous systems
 
 
 
