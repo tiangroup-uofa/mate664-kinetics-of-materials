@@ -7,13 +7,16 @@ format:
   html: {}
   revealjs:
     output-file: slides.html
+  pdf:	 
+    output-file: L01.pdf
 ---
 
 ::: {.content-visible when-format="html" unless-format="revealjs"}
 
 ::: {.callout-note}
-Slides 👉  [Open presentation🗒️](./slides.html)
-- Handwritten notes 👉 [Open in pdf](./public/L05_annotated.pdf)
+- Slides 👉  [Open presentation🗒️](./slides.html)
+- PDF version of course note  👉 [Open in pdf](./L01.pdf)
+- Handwritten notes 👉 [Open in pdf](./public/L01_annotated.pdf)
 :::
 
 :::

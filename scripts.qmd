@@ -1,0 +1,23 @@
+---
+title: "Interactive Demos"
+toc: false
+format:
+  html
+---
+
+### Why this?
+
+This page contains a collection of the interactive demonstrations written as playable [Marimo notebooks](https://docs.marimo.io). 
+
+These examples are designed to complement analytical derivations in mass transfer, by turning mathematical models into interactive components.
+
+### Examples in lecture notes
+
+- [(L01) Activation Energy](./scripts/L01_ea.html)
+- [(L04) Comparison of diffusivity in gas / solid / liquid](./scripts/L04_diffusivity_demo.html)
+- [(L04) Comparison between diffusion and convection length scales](./scripts/L04_diffusion_length.html)
+
+
+
+### Examples in assignments
+

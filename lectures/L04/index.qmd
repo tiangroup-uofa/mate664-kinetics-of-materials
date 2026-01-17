@@ -7,12 +7,15 @@ format:
   html: {}
   revealjs:
     output-file: slides.html
+  pdf:	 
+    output-file: L04.pdf
 ---
 
 ::: {.content-visible when-format="html" unless-format="revealjs"}
 
 ::: {.callout-note}
 - Slides 👉  [Open presentation🗒️](./slides.html)
+- PDF version of course note  👉 [Open in pdf](./L04.pdf)
 - Handwritten notes 👉 [Open in pdf](./public/L04_annotated.pdf)
 :::
 
@@ -80,7 +83,7 @@ We will show one example that has non-trivial solution to $\dot{\sigma} = 0$
 :::
 
 :::{.column width="50%"}
-![Hall effect scheme](https://upload.wikimedia.org/wikipedia/commons/1/19/Hall_Effect_Measurement_Setup_for_Electrons.png){width="80%"}
+![Hall effect scheme](./public/Hall_Effect_Measurement_Setup_for_Electrons.png){width="80%"}
 :::
 :::
 

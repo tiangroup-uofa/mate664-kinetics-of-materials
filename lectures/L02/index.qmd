@@ -7,12 +7,16 @@ format:
   html: {}
   revealjs:
     output-file: slides.html
+  pdf:	 
+    output-file: L02.pdf
 ---
 
 ::: {.content-visible when-format="html" unless-format="revealjs"}
 
 ::: {.callout-note}
-Slides 👉  [Open presentation🗒️](./slides.html)
+- Slides 👉  [Open presentation🗒️](./slides.html)
+- PDF version of course note  👉 [Open in pdf](./L02.pdf)
+- Handwritten notes 👉 [Open in pdf](./public/L02_annotated.pdf)
 :::
 
 :::
@@ -75,7 +79,9 @@ What is the alternative?
 - Deterministic → Probablistic
 - *How much computation* is enough?
 
+::: {.content-visible when-format="html"}
 ![](https://miro.medium.com/v2/resize:fit:720/format:webp/1*oA63oJ2qoBYiIQ4Wzy8YKw.png){.absolute bottom=50 right=50 width=600px}
+:::
 
 ## Crash Course on Statistical Mechanics (3)
 
