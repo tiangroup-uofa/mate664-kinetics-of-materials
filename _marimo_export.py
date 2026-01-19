@@ -9,13 +9,27 @@ from pathlib import Path
 
 
 def contains_import_marimo(py_path: Path) -> bool:
+    """Heuristic: only export notebooks that look like marimo apps."""
     try:
         for line in py_path.read_text(encoding="utf-8", errors="ignore").splitlines():
-            if "marimo" in line.strip():
+            if "marimo" in line:
                 return True
         return False
     except OSError:
         return False
+
+
+def export_mode_and_outstem(py_file: Path) -> tuple[str, str]:
+    """
+    Filename convention:
+
+      foo.py       -> mode="run",  outstem="foo"
+      foo.edit.py  -> mode="edit", outstem="foo"
+    """
+    stem = py_file.stem
+    if stem.endswith(".edit"):
+        return "edit", stem.removesuffix(".edit")
+    return "run", stem
 
 
 def main() -> None:
@@ -34,26 +48,42 @@ def main() -> None:
 
     temp_dir_path = Path(tempfile.mkdtemp(prefix="marimo_export_"))
 
-    # Only .py files directly under scripts/ (no subfolders)
+    # Only .py files directly under scripts/
     py_files = sorted(p for p in scripts_dir.iterdir() if p.is_file() and p.suffix == ".py")
 
     for py_file in py_files:
         if not contains_import_marimo(py_file):
             continue
 
-        out_html = temp_dir_path / f"{py_file.stem}.html"
-        cmd = [
-            "marimo",
-            "export",
-            "html-wasm",
-            "--no-show-code",
-            "--mode",
-            "run",
-            "-f",
-            str(py_file),
-            "-o",
-            str(out_html),
-        ]
+        mode, outstem = export_mode_and_outstem(py_file)
+        out_html = temp_dir_path / f"{outstem}.html"
+
+        if mode == "run":
+            cmd = [
+                "marimo",
+                "export",
+                "html-wasm",
+                "--no-show-code",
+                "--mode",
+                "run",
+                "-f",
+                str(py_file),
+                "-o",
+                str(out_html),
+            ]
+        else:  # edit mode
+            cmd = [
+                "marimo",
+                "export",
+                "html-wasm",
+                "--mode",
+                "edit",
+                "-f",
+                str(py_file),
+                "-o",
+                str(out_html),
+            ]
+
         print(f"Run {' '.join(cmd)}...")
         subprocess.run(cmd, check=True, cwd=project_root)
 

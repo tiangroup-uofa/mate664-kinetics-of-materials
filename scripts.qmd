@@ -20,4 +20,5 @@ These examples are designed to complement analytical derivations in mass transfe
 
 
 ### Examples in assignments
+- [(EX01) ODE solution to kinetics](./scripts/EX01_ode.html)
 
