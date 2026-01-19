@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="92.899452mm"
+   height="57.842216mm"
+   viewBox="0 0 92.899452 57.842216"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (b0a84865, 2022-12-01)"
+   sodipodi:docname="EX01-cstr.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.8655885"
+     inkscape:cx="229.95424"
+     inkscape:cy="100.23647"
+     inkscape:window-width="1600"
+     inkscape:window-height="972"
+     inkscape:window-x="1437"
+     inkscape:window-y="143"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-26.713239,-11.376209)">
+    <path
+       id="rect3184"
+       style="fill:#c1e3f0;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:0.5;stroke-dasharray:none;stroke-opacity:1"
+       d="m 69.372072,29.403633 v 29.067113 c 0,5.709916 -4.596792,10.306708 -10.306708,10.306708 h -21.604445 c -5.709916,0 -10.306708,-4.596792 -10.306708,-10.306708 v -29.067113 z"
+       sodipodi:nodetypes="csssscc" />
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#2a2a2a;stroke-width:0.881944"
+       id="rect2444"
+       width="42.217861"
+       height="52.326363"
+       x="27.154211"
+       y="16.451092"
+       ry="10.306708" />
+    <g
+       id="g3094"
+       transform="translate(-1.6870119e-7,3.175)">
+      <g
+         id="g3182"
+         transform="translate(-49.496929,3.175)">
+        <ellipse
+           style="fill:none;fill-rule:evenodd;stroke:#2a2a2a;stroke-width:0.881944"
+           id="path2498"
+           cx="91.967545"
+           cy="32.10936"
+           rx="5.3515596"
+           ry="1.5856473" />
+        <ellipse
+           style="fill:none;fill-rule:evenodd;stroke:#2a2a2a;stroke-width:0.881944"
+           id="ellipse2610"
+           cx="103.5526"
+           cy="32.10936"
+           rx="5.3515596"
+           ry="1.5856473" />
+        <circle
+           id="path3159"
+           style="fill:#000000;stroke:none;stroke-width:0.264583"
+           cx="98.201035"
+           cy="32.10936"
+           r="0.39687499" />
+        <circle
+           id="path3161"
+           style="fill:#000000;stroke:none;stroke-width:0.264583"
+           cx="98.201035"
+           cy="31.712484"
+           r="0.39687499" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1.05833;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+           d="m 97.804159,31.712484 -0.04408,-26.6854007"
+           id="path3175" />
+      </g>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="35.172668"
+       y="56.805809"
+       id="text3337"><tspan
+         sodipodi:role="line"
+         id="tspan3335"
+         style="stroke-width:0.264583"
+         x="35.172668"
+         y="56.805809">A ⇌ B</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:8.46667px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="74.087105"
+       y="57.85429"
+       id="text3341"><tspan
+         sodipodi:role="line"
+         id="tspan3339"
+         style="font-size:8.46667px;stroke-width:0.264583"
+         x="74.087105"
+         y="57.85429">A → B: <tspan
+   style="font-style:italic"
+   id="tspan3393">κ</tspan><tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan3395">+</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:8.46667px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="74.087105"
+       y="65.719856"
+       id="text3403"><tspan
+         sodipodi:role="line"
+         id="tspan3401"
+         style="font-size:8.46667px;stroke-width:0.264583"
+         x="74.087105"
+         y="65.719856">B → A: <tspan
+   style="font-style:italic"
+   id="tspan3397">κ-</tspan><tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan3399" /></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:6.35px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="73.686096"
+       y="22.293976"
+       id="text3407"><tspan
+         sodipodi:role="line"
+         id="tspan3405"
+         style="font-size:6.35px;stroke-width:0.264583"
+         x="73.686096"
+         y="22.293976">CSTR</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:6.35px;stroke-width:0.264583"
+         x="73.686096"
+         y="30.231476"
+         id="tspan4182">Const (<tspan
+   style="font-style:italic;font-size:6.35px"
+   id="tspan4186">T</tspan>, <tspan
+   style="font-style:italic;font-size:6.35px"
+   id="tspan4184">P</tspan>) </tspan><tspan
+         sodipodi:role="line"
+         style="font-size:6.35px;stroke-width:0.264583"
+         x="73.686096"
+         y="38.168976"
+         id="tspan3409">No spatial </tspan><tspan
+         sodipodi:role="line"
+         style="font-size:6.35px;stroke-width:0.264583"
+         x="73.686096"
+         y="46.106476"
+         id="tspan4137">variation of c</tspan></text>
+  </g>
+</svg>

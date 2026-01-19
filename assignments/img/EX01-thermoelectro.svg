@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="171.95459mm"
+   height="106.8346mm"
+   viewBox="0 0 171.95459 106.8346"
+   version="1.1"
+   id="svg4221"
+   sodipodi:docname="EX01-thermoelectro.svg"
+   inkscape:version="1.2.2 (b0a84865, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview4223"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.1911899"
+     inkscape:cx="457.10596"
+     inkscape:cy="287.94738"
+     inkscape:window-width="1600"
+     inkscape:window-height="972"
+     inkscape:window-x="1440"
+     inkscape:window-y="143"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs4218">
+    <inkscape:path-effect
+       effect="skeletal"
+       id="path-effect9694"
+       is_visible="true"
+       lpeversion="1"
+       pattern="m 0,4.9921384 c 0,-2.7556604 2.236478,-4.9921384 4.9921384,-4.9921384 2.7556604,0 4.9921384,2.236478 4.9921384,4.9921384 0,2.7556604 -2.236478,4.9921384 -4.9921384,4.9921384 -2.7556604,0 -4.9921384,-2.236478 -4.9921384,-4.9921384 z"
+       copytype="single_stretched"
+       prop_scale="1"
+       scale_y_rel="false"
+       spacing="0"
+       normal_offset="0"
+       tang_offset="0"
+       prop_units="false"
+       vertical_pattern="false"
+       hide_knot="false"
+       fuse_tolerance="0" />
+    <inkscape:path-effect
+       effect="simplify"
+       id="path-effect9692"
+       is_visible="true"
+       lpeversion="1"
+       steps="1"
+       threshold="0.00961538"
+       smooth_angles="360"
+       helper_size="0"
+       simplify_individual_paths="false"
+       simplify_just_coalesce="false" />
+    <marker
+       style="overflow:visible"
+       id="TriangleStart"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="5.3244081"
+       markerHeight="6.155385"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="m 5.77,0 -8.65,5 v -10 z"
+         id="path135" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-8.5970245,2.9148515)">
+    <rect
+       style="fill:#8acce5;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:0.499999"
+       id="rect6350"
+       width="13.208803"
+       height="55.198891"
+       x="25.305286"
+       y="16.684805"
+       ry="0" />
+    <rect
+       style="fill:#e8c581;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:0.499999"
+       id="rect6352"
+       width="13.208803"
+       height="55.198891"
+       x="49.498253"
+       y="16.684805"
+       ry="0" />
+    <rect
+       style="fill:#868686;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.499999"
+       id="rect6886"
+       width="37.651768"
+       height="3.6150413"
+       x="25.055288"
+       y="13.069764" />
+    <rect
+       style="fill:#868686;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.499999"
+       id="rect9124"
+       width="37.651768"
+       height="3.6150413"
+       x="25.055288"
+       y="72.022743" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:6.35px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="33.754505"
+       y="1.7143233"
+       id="text9128"><tspan
+         sodipodi:role="line"
+         id="tspan9126"
+         style="font-size:6.35px;stroke-width:0.264583"
+         x="33.754505"
+         y="1.7143233"><tspan
+   style="font-style:italic;font-size:6.35px"
+   id="tspan9130">T</tspan> = <tspan
+   style="font-style:italic;font-size:6.35px"
+   id="tspan9132">T</tspan><tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan9499">2</tspan></tspan><tspan
+         sodipodi:role="line"
+         style="font-size:6.35px;stroke-width:0.264583"
+         x="33.754505"
+         y="9.651823"
+         id="tspan9469"><tspan
+   style="font-style:italic;font-size:6.35px"
+   id="tspan9473">φ</tspan> = <tspan
+   style="font-style:italic;font-size:6.35px"
+   id="tspan9471">φ</tspan><tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan9581">2</tspan></tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleStart)"
+       d="m 17.797125,72.133695 v -20.688882"
+       id="path9150" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:6.35px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="15.701474"
+       y="48.385937"
+       id="text9459"><tspan
+         sodipodi:role="line"
+         id="tspan9457"
+         style="font-style:italic;font-size:6.35px;stroke-width:0.264583"
+         x="15.701474"
+         y="48.385937">z</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:6.35px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="29.256966"
+       y="47.182713"
+       id="text9463"><tspan
+         sodipodi:role="line"
+         id="tspan9461"
+         style="font-style:normal;font-size:6.35px;stroke-width:0.264583"
+         x="29.256966"
+         y="47.182713">A</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:6.35px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="53.334347"
+       y="47.11319"
+       id="text9467"><tspan
+         sodipodi:role="line"
+         id="tspan9465"
+         style="font-style:normal;font-size:6.35px;stroke-width:0.264583"
+         x="53.334347"
+         y="47.11319">B</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:6.35px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="33.754505"
+       y="80.156006"
+       id="text9493"><tspan
+         sodipodi:role="line"
+         id="tspan9483"
+         style="font-size:6.35px;stroke-width:0.264583"
+         x="33.754505"
+         y="80.156006"><tspan
+   style="font-style:italic;font-size:6.35px"
+   id="tspan9477">T</tspan> = <tspan
+   style="font-style:italic;font-size:6.35px"
+   id="tspan9479">T</tspan><tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan9503">1</tspan></tspan><tspan
+         sodipodi:role="line"
+         style="font-size:6.35px;stroke-width:0.264583"
+         x="33.754505"
+         y="88.093506"
+         id="tspan9491"><tspan
+   style="font-style:italic;font-size:6.35px"
+   id="tspan9485">φ</tspan> = <tspan
+   style="font-style:italic;font-size:6.35px"
+   id="tspan9487">φ</tspan><tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan9507">1</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:6.35px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="8.324173"
+       y="28.920326"
+       id="text9511"><tspan
+         sodipodi:role="line"
+         id="tspan9509"
+         style="font-size:6.35px;stroke-width:0.264583"
+         x="8.324173"
+         y="28.920326"><tspan
+   style="font-style:italic;font-size:6.35px"
+   id="tspan9513">T</tspan><tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan9515">A</tspan>(<tspan
+   style="font-style:italic"
+   id="tspan9517">z</tspan>)</tspan><tspan
+         sodipodi:role="line"
+         style="baseline-shift:baseline;stroke-width:0.264583"
+         x="8.324173"
+         y="36.857826"
+         id="tspan9519">φ<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan9525">A</tspan>(<tspan
+   style="font-style:italic"
+   id="tspan9527">z</tspan>)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:6.35px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="65.052505"
+       y="28.920326"
+       id="text9543"><tspan
+         sodipodi:role="line"
+         id="tspan9535"
+         style="font-size:6.35px;stroke-width:0.264583"
+         x="65.052505"
+         y="28.920326"><tspan
+   style="font-style:italic;font-size:6.35px"
+   id="tspan9529">T</tspan><tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan9549">B</tspan>(<tspan
+   style="font-style:italic"
+   id="tspan9533">z</tspan>)</tspan><tspan
+         sodipodi:role="line"
+         style="baseline-shift:baseline;stroke-width:0.264583"
+         x="65.052505"
+         y="36.857826"
+         id="tspan9541">φ<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan9553">B</tspan>(<tspan
+   style="font-style:italic"
+   id="tspan9539">z</tspan>)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="91.322945"
+       y="15.063441"
+       id="text9559"><tspan
+         sodipodi:role="line"
+         style="font-size:6.35px;stroke-width:0.264583"
+         x="91.322945"
+         y="15.063441"
+         id="tspan9571">a) Seebeck effect</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:6.35px;stroke-width:0.264583"
+         x="91.322945"
+         y="28.292566"
+         id="tspan9577">Constant T1 and T2</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:6.35px;stroke-width:0.264583"
+         x="91.322945"
+         y="41.52169"
+         id="tspan9583">observe potential difference</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:6.35px;stroke-width:0.264583"
+         x="91.322945"
+         y="54.750816"
+         id="tspan9595">b) Peltier effect</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:6.35px;stroke-width:0.264583"
+         x="91.322945"
+         y="67.979942"
+         id="tspan9597">Constant φ1 and φ2</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:6.35px;stroke-width:0.264583"
+         x="91.322945"
+         y="81.209061"
+         id="tspan9599">observe heat flux</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:6.35px;stroke-width:0.264583"
+         x="91.322945"
+         y="94.438187"
+         id="tspan9591" /></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="13.934837"
+       y="-6.7185822"
+       id="text9603"><tspan
+         sodipodi:role="line"
+         id="tspan9601"
+         style="stroke-width:0.264583"
+         x="13.934837"
+         y="-6.7185822" /></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 31.909689,16.684805 3.756525,-1.80752 5.453499,1.55752 4.065336,-1.55752 4.313203,1.80752 3.222543,-1.80752 3.381857,1.80752"
+       id="path9765" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="27.656101"
+       y="14.237651"
+       id="text9769"><tspan
+         sodipodi:role="line"
+         id="tspan9767"
+         style="font-size:4.23333px;stroke-width:0.264583"
+         x="27.656101"
+         y="14.237651">Conducting wire</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 25.055288,73.830263 -7.63919,9.189506 5.028395,8.02786 c 4.869498,2.248722 6.625991,4.041389 8.982883,6.726938"
+       id="path9771"
+       sodipodi:nodetypes="cccc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 62.707054,73.830263 9.249722,10.289575 -10.411227,12.484102 -8.527291,1.883937"
+       id="path9773" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:5.64444px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="32.47971"
+       y="99.40844"
+       id="text9777"><tspan
+         sodipodi:role="line"
+         id="tspan9775"
+         style="font-size:5.64444px;stroke-width:0.264583"
+         x="32.47971"
+         y="99.40844">Device</tspan></text>
+    <rect
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.750001;stroke-dasharray:none;stroke-opacity:1"
+       id="rect9831"
+       width="21.46291"
+       height="12.481152"
+       x="31.526806"
+       y="91.063599"
+       ry="2.5780182" />
+  </g>
+</svg>

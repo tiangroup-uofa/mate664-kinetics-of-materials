@@ -1,0 +1,738 @@
+---
+title: "MATE 664 Assignment 1"
+subtitle: "Irreversible Thermodynamics"
+format:
+  pdf:	 
+    output-file: MAT664-WS2026-EX01.pdf
+    include-in-header:
+      - text: |
+          \usepackage{mathtools}
+          \usepackage{cancel}
+<!-- meta: -->
+<!--   answer: true -->
+---
+
+:::{.center}
+# **Due Date: 2026-02-02 (Mon) 12:00 PM**
+:::
+
+This assignment is intended for you to get some deepened understanding
+about irreversible thermodynamics and use an eample that we already
+know from undergraduate chemistry class to check a few concepts we learned in kinetics lectures.
+
+## 1. Chemical Reaction at Equilibrium (15 pt)
+
+In this question, we will revisit the equilibrium of a simple chemical
+reaction using the concepts in kinetics. Assume we
+are observing an reversible reaction between species A and B in a
+continuous stirred tank reactor (CSTR). The reaction is
+
+```{=tex}
+\begin{align*}
+A \;\xrightleftharpoons[\kappa_-]{\kappa_+}\; B
+\end{align*}
+```
+
+with concentration of A and B as $c_{\mathrm{A}}$ and
+$c_{\mathrm{B}}$ under constant temperature and pressure. The total concentration $c_{\mathrm{T}} =
+c_{\mathrm{A}} + c_{\mathrm{B}}$ is constant. In CSTR, the continuous stirring ensures concentrations for A and B everywhere are uniform. The rate of reaction A -> B follows $r_{+} = \kappa_+ c_A$, while the reverse reaction rate follows $r_{-} = \kappa_+ c_B$.
+
+![System setup](./img/Ex01-cstr.svg){width="50%"}
+
+1. At equilibrium, $c_{\mathrm{A}}$ and $c_{\mathrm{B}}$ are both non-zero. This means $r_{+}$ and $r_{-}$ are also non-zero. Does this violates our definition of equilibrium?
+
+:::{.content-hidden unless-meta="answer"}
+
+**Answer**:
+
+No. At equilibrium we have $\frac{d c_{\mathrm{A}}}{d t}=\frac{d
+c_{\mathrm{B}}}{d t} = 0$, this simply means the forward reaction rate
+$r_{+}$ matches the reverse reaction rate $r_{-}$. Recall in Lecture
+01 we redefine the equilirbium as one time scale (observing the change of $c_{\mathrm{A}}$ and $c_{\mathrm{B}}$ over time) is much longer than the time scale of the transient fluctuation of $c_{\mathrm{A}}$ and $c_{\mathrm{B}}$ caused by atomistic reactions steps.
+
+:::
+
+2. Show that, at equilibrium we have
+
+```{=tex}
+\begin{align*}
+\kappa_{+}c_{\mathrm{A}}^{\mathrm{eq}} = \kappa_{-}c_{\mathrm{B}}^{\mathrm{eq}}
+\end{align*}
+```
+
+where $c_{\mathrm{A}}^{\mathrm{eq}}$ and $c_{\mathrm{B}}^{\mathrm{eq}}$ are the equilibrium concentrations for A and B, respectively. This is known as the _detailed balance_ between A and B.
+
+:::{.content-hidden unless-meta="answer"}
+
+**Answer**:
+
+At equilibrium we have 
+
+```{=tex}
+\begin{align*}
+\frac{d c_{\mathrm{A}}}{dt} &= r_{+}^{\mathrm{eq}} - r_{-}^{\mathrm{eq}} \\
+&= - \kappa_{+}c_{\mathrm{A}}^{\mathrm{eq}} + \kappa_{-}c_{\mathrm{B}}^{\mathrm{eq}} \\
+&= 0
+\end{align*}
+```
+
+which yields $\kappa_{+}c_{\mathrm{A}}^{\mathrm{eq}} = \kappa_{-}c_{\mathrm{B}}^{\mathrm{eq}}$
+
+:::
+
+
+3. For this reaction, the concentration ratio between A and B at
+equilibrium, $c_{\mathrm{B}}^{\mathrm{eq}} /
+c_{\mathrm{A}}^{\mathrm{eq}}$, is called the equilibrium constant
+$K$. Express $K$ using $r_{-}$ and $r_{+}$. Also express
+$c_{\mathrm{A}}^{\mathrm{eq}}$ and $c_{\mathrm{B}}^{\mathrm{eq}}$
+using $K$ and $c_{\mathrm{T}}$
+
+:::{.content-hidden unless-meta="answer"}
+
+**Answer**:
+
+From 2) we know directly:
+
+```{=tex}
+\begin{align*}
+K = \frac{c_{\mathrm{B}}^{\mathrm{eq}}}{c_{\mathrm{A}}^{\mathrm{eq}}} = \frac{\kappa_{+}}{\kappa_{-}}
+\end{align*}
+```
+
+From the definition of $K$, we have $c_{\mathrm{B}}^{\mathrm{eq}} = {K} c_{\mathrm{B}}^{\mathrm{eq}}$, that gives:
+
+```{=tex}
+\begin{align*}
+c_{\mathrm{A}}^{\mathrm{eq}} &= \frac{1}{1 + K} c_{\mathrm{T}} \\
+c_{\mathrm{B}}^{\mathrm{eq}} &= \frac{K}{1 + K} c_{\mathrm{T}}
+\end{align*}
+```
+
+:::
+
+
+4. At equilibrium, the Gibbs free energy of the total system is
+   minimized (with respect to $c_{\mathrm{A}}$ or
+   $c_{\mathrm{B}}$). Show that the chemical potential of A and B at
+   equilibrium $\mu_{\mathrm{A}}^{\mathrm{eq}}$ and
+   $\mu_{\mathrm{B}}^{\mathrm{eq}}$ are equal. We can assume that exchange between A and B does not alter the total volume of the system.
+   (_Hint: the derivation
+   is similar to what we derive for equilibrium temperature in Lecture
+   02_)
+
+:::{.content-hidden unless-meta="answer"}
+
+**Answer**:
+
+For a binary system the minimization of total Gibbes free energy $G_{\mathrm{T}}$ with respect to $c_{\mathrm{A}}$ is:
+
+```{=tex}
+\begin{align*}
+\frac{\partial G_{\mathrm{T}}}{\partial c_{\mathrm{A}}}\vert_{\mathrm{eq}}
+&= \frac{\partial G_{\mathrm{A}}}{\partial c_{\mathrm{A}}}\vert_{\mathrm{eq}} + \frac{\partial G_{\mathrm{B}}}{\partial c_{\mathrm{A}}}\vert_{\mathrm{eq}} \\
+&= \frac{\partial G_{\mathrm{A}}}{\partial c_{\mathrm{A}}}\vert_{\mathrm{eq}} - \frac{\partial G_{\mathrm{B}}}{\partial c_{\mathrm{B}}}\vert_{\mathrm{eq}} \\
+&= 0
+\end{align*}
+```
+where we use the fact $\partial c_{\mathrm{A}} = -\partial c_{\mathrm{B}}$. This gives:
+
+```{=tex}
+\begin{align*}
+\frac{\partial G_{\mathrm{A}}}{\partial c_{\mathrm{A}}}\vert_{\mathrm{eq}} &= \frac{\partial G_{\mathrm{B}}}{\partial c_{\mathrm{B}}}\vert_{\mathrm{eq}} \\
+\frac{1}{V} \frac{\partial G_{\mathrm{A}}}{\partial c_{\mathrm{A}}}\vert_{\mathrm{eq}} &= \frac{1}{V} \frac{\partial G_{\mathrm{B}}}{\partial c_{\mathrm{B}}}\vert_{\mathrm{eq}} \\
+\frac{\partial G_{\mathrm{A}}}{\partial N_{\mathrm{A}}}\vert_{\mathrm{eq}} &= \frac{\partial G_{\mathrm{B}}}{\partial N_{\mathrm{B}}}\vert_{\mathrm{eq}} \\
+\mu_{\mathrm{A}}^{\mathrm{eq}} &= \mu_{\mathrm{B}}^{\mathrm{eq}}
+\end{align*}
+```
+:::
+
+
+5. Use your results in 4), show that the equilibrium constant $K$ follows:
+
+```{=tex}
+\begin{align*}
+K = \exp\!\left(-\frac{\Delta \mu^0}{k_{\mathrm{B}} T}\right)
+\end{align*}
+```
+where $\Delta \mu^0 = \mu_{\mathrm{B}}^0 - \mu_{\mathrm{A}}^0$, the difference between chemical potentials for A and B at standard states, and $k_{\mathrm{B}}$ is the Boltzmann constant. You can see that the chemical potential difference _under standard conditions_ defines the equilibrium balance.
+
+:::{.content-hidden unless-meta="answer"}
+
+**Answer**:
+
+Under ideal mixing, we have 
+
+```{=tex}
+\begin{align*}
+\mu_{\mathrm{A}} &= \mu_{\mathrm{A}}^0 + k_{\mathrm{B}}T\ln\!\frac{c_{\mathrm{A}}}{c_0} \\
+\mu_{\mathrm{B}} &= \mu_{\mathrm{B}}^0 + k_{\mathrm{B}}T\ln\!\frac{c_{\mathrm{B}}}{c_0}
+\end{align*}
+```
+
+At equilibrium, 
+```{=tex}
+\begin{align*}
+\mu_{\mathrm{A}}^{\mathrm{eq}} &= \mu_{\mathrm{B}}^{\mathrm{eq}} \\
+\mu_{\mathrm{A}}^0 + k_{\mathrm{B}}T\ln\!\frac{c_{\mathrm{A}}^{\mathrm{eq}}}{c_{\mathrm{A}}^{0}} &= \mu_{\mathrm{B}}^0 + k_{\mathrm{B}}T\ln\!\frac{c_{\mathrm{B}}^{\mathrm{eq}}}{c_{\mathrm{A}}^{0}}
+\end{align*}
+```
+
+Rearranging that gives:
+```{=tex}
+\begin{align*}
+K &= \frac{c_{\mathrm{B}}^{\mathrm{eq}}}{c_{\mathrm{A}}^{\mathrm{eq}}} \\
+  &= \exp\!\left(\frac{\mu_{\mathrm{B}}^{0} - \mu_{\mathrm{A}}^{0}}{k_\mathrm{B} T}\right)
+\end{align*}
+```
+:::
+
+## 2. Irreversible Thermodynamics for Chemical Reaction Kinetics (30 pt)
+
+We will consider the same setup in Problem 1, but this time we consider the reaction to be slightly away from equilibrium. As Any deviation of $c_{\mathrm{A}}$ or $c_{\mathrm{B}}$  from the equilibrium values will cause the
+system to go back to the equilirbium state. We will try to answer two main questions:
+
+  - What is the driving force moving the reaction back to equilibrium?
+  - How fast will the reaction revert to equilibrium?
+  
+For these non-equilibrium problems, we are interested in the excess
+concentration of A and B from their corresponding equilibrium states, i.e.
+$y_{\mathrm{A}} = c_{\mathrm{A}} - c_{\mathrm{A}}^{\mathrm{eq}}$ and  $y_{\mathrm{B}} = c_{\mathrm{B}} - c_{\mathrm{B}}^{\mathrm{eq}}$. Please see _Kinetics of Materials (Balluffi, Allen & Carter)_ Ch 2.2.4 and Probem 2.5 for more general version of this problem.
+
+1. Show that the rate equations for $y_{\mathrm{A}}$ and $y_{\mathrm{B}}$ still follows:
+
+```{=tex}
+\begin{align*}
+\frac{d y_{\mathrm{A}}}{d t} &= -\kappa_{+}y_{\mathrm{A}} + \kappa_{-}y_{\mathrm{B}} \\
+\frac{d y_{\mathrm{B}}}{d t} &= \kappa_{+}y_{\mathrm{A}} - \kappa_{-}y_{\mathrm{B}}
+\end{align*}
+```
+
+:::{.content-hidden unless-meta="answer"}
+
+**Answer**:
+
+Use the relations $d y_{\mathrm{A}} = d (c_{\mathrm{A}} - c_{\mathrm{A}}^{\mathrm{eq}}) = d c_{\mathrm{A}}$, we have:
+
+```{=tex}
+\begin{align*}
+\frac{\mathrm{d} y_{\mathrm{A}}}{\mathrm{d} t}
+&= -\kappa_{+}\!\left( y_{\mathrm{A}} - c_{\mathrm{A}}^{\mathrm{eq}} \right)
+   + \kappa_{-}\!\left( y_{\mathrm{B}} - c_{\mathrm{B}}^{\mathrm{eq}} \right) \\
+&= -\kappa_{+} y_{\mathrm{A}} + \kappa_{-} y_{\mathrm{B}}
+   \cancel{+ \kappa_{+} c_{\mathrm{A}}^{\mathrm{eq}}}
+   \cancel{- \kappa_{-} c_{\mathrm{B}}^{\mathrm{eq}}} \\
+&= -\kappa_{+} y_{\mathrm{A}} + \kappa_{-} y_{\mathrm{B}}
+\end{align*}
+```
+
+Use the symmetry to derive the equaton for $d y_{\mathrm{B}}/dt$:
+
+```{=tex}
+\begin{align*}
+\frac{\mathrm{d} y_{\mathrm{B}}}{\mathrm{d} t}
+= \kappa_{+} y_{\mathrm{A}} - \kappa_{-} y_{\mathrm{B}}
+\end{align*}
+```
+:::
+
+
+2. If the system is not far from equilibrium, show that the deviation of chemical potential from equilibrium $\Delta \mu_{\mathrm{A}}^{\mathrm{eq}} = \mu_{\mathrm{A}} - \mu_{\mathrm{A}}^{\mathrm{eq}}$ follows:
+
+```{=tex}
+\begin{align*}
+\Delta \mu_{\mathrm{A}}^{\mathrm{eq}} \approx \frac{k_\mathrm{B}T y_{\mathrm{A}}}{c_{\mathrm{A}}^{\mathrm{eq}}}
+\end{align*}
+```
+and similarly for B.
+
+:::{.content-hidden unless-meta="answer"}
+
+**Answer**:
+
+Under ideal mixing, express $\Delta \mu_{\mathrm{A}}^{\mathrm{eq}}$ using the definition of chemical potential, and utilize the Taylor expansion $\ln(1+u) \approx u$:
+
+```{=tex}
+\begin{align*}
+\mu_{\mathrm{A}}^{\mathrm{eq}} &= \mu_{\mathrm{A}}^{\mathrm{eq}} + k_{\mathrm{B}}T \ln\!\frac{c_{\mathrm{A}}}{c_{\mathrm{A}}^{\mathrm{eq}}} \\
+\Delta \mu_{\mathrm{A}}^{\mathrm{eq}} &= k_{\mathrm{B}}T \ln\!\left(\frac{c_{\mathrm{A}}^{\mathrm{eq}} + y_{\mathrm{A}}}{c_{\mathrm{A}}^{\mathrm{eq}}}\right) \\
+\Delta \mu_{\mathrm{A}}^{\mathrm{eq}} &\approx k_{\mathrm{B}}T \frac{y_{\mathrm{A}}}{c_{\mathrm{A}}^{\mathrm{eq}}}
+\end{align*}
+```
+
+:::
+
+
+3. Use the approximation in 2) to rewrite your expressions in 1) for $\frac{d y_{\mathrm{A}}}{d t}$ and $\frac{d y_{\mathrm{B}}}{d t}$ as functions of $\Delta \mu_{\mathrm{A}}^{\mathrm{eq}}$ and $\Delta \mu_{\mathrm{B}}^{\mathrm{eq}}$.
+
+:::{.content-hidden unless-meta="answer"}
+
+**Answer**:
+
+Use the relation $\Delta \mu_{\mathrm{A}}^{\mathrm{eq}} =
+\frac{k_{\mathrm{B}} T y_{\mathrm{A}}}{c_{\mathrm{A}}^{\mathrm{eq}}}$,
+we get $y_{\mathrm{A}} = \frac{\Delta \mu_{\mathrm{A}}^{\mathrm{eq}} c_{\mathrm{A}}^{\mathrm{eq}} }{k_{\mathrm{B}} T}$, plug it into
+the previous expression for $\frac{d y_{\mathrm{A}}}{d t}$:
+
+```{=tex}
+\begin{align*}
+\frac{d y_{\mathrm{A}}}{d t} &= -\frac{\kappa_{+} c_{\mathrm{A}}^{\mathrm{eq}}}{k_{\mathrm{B}} T} \Delta \mu_{\mathrm{A}}^{\mathrm{eq}} + \frac{\kappa_{-} c_{\mathrm{B}}^{\mathrm{eq}}}{k_{\mathrm{B}} T} \Delta \mu_{\mathrm{B}}^{\mathrm{eq}} \\
+&= - \frac{\kappa_{+} \frac{1}{1 + K} c_{\mathrm{T}}}{k_{\mathrm{B}} T} \Delta \mu_{\mathrm{A}}^{\mathrm{eq}}
++ \frac{\kappa_{-} \frac{K}{1 + K} c_{\mathrm{T}}}{k_{\mathrm{B}} T} \Delta \mu_{\mathrm{B}}^{\mathrm{eq}} \\
+&= - \frac{\kappa^* c_{\mathrm{T}}}{k_{\mathrm{B}} T} \Delta \mu_{\mathrm{A}}^{\mathrm{eq}}
++ \frac{\kappa^* c_{\mathrm{T}}}{k_{\mathrm{B}} T} \Delta \mu_{\mathrm{B}}^{\mathrm{eq}} \\
+&= \frac{\kappa^* c_{\mathrm{T}}}{k_{\mathrm{B}} T} 
+\left[-\Delta \mu_{\mathrm{A}}^{\mathrm{eq}} + \Delta \mu_{\mathrm{B}}^{\mathrm{eq}}\right]
+\end{align*}
+```
+where $\kappa^* = \frac{\kappa_{+}\kappa_{-}}{\kappa_{+}+\kappa_{-}}$
+
+Similarly, we have 
+
+```{=tex}
+\begin{align*}
+\frac{d y_{\mathrm{B}}}{d t} =  \frac{\kappa^* c_{\mathrm{T}}}{k_{\mathrm{B}} T} 
+\left[\Delta \mu_{\mathrm{A}}^{\mathrm{eq}} - \Delta \mu_{\mathrm{B}}^{\mathrm{eq}}\right]
+\end{align*}
+```
+
+:::
+
+
+4. For such 0D system, $\frac{d y_{\mathrm{A}}}{d t}$ and $\frac{d y_{\mathrm{B}}}{d t}$ are the fluxes for A and B ($J_{\mathrm{A}}$ and $J_{\mathrm{B}}$). What are the conjugate driving forces for them ($F_{\mathrm{A}}$, $F_{\mathrm{B}}$), respectively? 
+
+:::{.content-hidden unless-meta="answer"}
+
+**Answer**:
+
+```{=tex}
+\begin{align*}
+F_{\mathrm{A}} &= -\Delta \mu_{\mathrm{A}}^{\mathrm{eq}} \\
+F_{\mathrm{B}} &= -\Delta \mu_{\mathrm{B}}^{\mathrm{eq}}
+\end{align*}
+```
+
+
+Alternatively, you may also express them as 
+```{=tex}
+\begin{align*}
+F_{\mathrm{A}} &= -\frac{\Delta \mu_{\mathrm{A}}^{\mathrm{eq}}}{T} \\
+F_{\mathrm{B}} &= -\frac{\Delta \mu_{\mathrm{B}}^{\mathrm{eq}}}{T}
+\end{align*}
+```
+
+The negative sign is to ensure that \textrm{[Flux]}$\times$\textrm{[Force]} is non-negative.
+:::
+
+
+
+5. Write $J_{\mathrm{A}}$ and $J_{\mathrm{B}}$ using the driving forces $F_{\mathrm{A}}$ and $F_{\mathrm{B}}$ and coefficients $L_{\mathrm{AA}}$, $L_{\mathrm{BA}}$, $L_{\mathrm{AB}}$ and $L_{\mathrm{BB}}$. Do you observer $L_{\mathrm{AB}} = L_{\mathrm{BA}}$?
+
+:::{.content-hidden unless-meta="answer"}
+
+**Answer**:
+
+If we choose $F_{\mathrm{A}} = -\Delta \mu_{\mathrm{A}}^{\mathrm{eq}}$, from last question it's easy to show that 
+
+```{=tex}
+\begin{align*}
+L_{\mathrm{AA}} &= \frac{\kappa^* c_{\mathrm{T}}}{k_{\mathrm{B}} T} \\
+L_{\mathrm{AB}} &= -\frac{\kappa^* c_{\mathrm{T}}}{k_{\mathrm{B}} T} \\
+L_{\mathrm{BA}} &= -\frac{\kappa^* c_{\mathrm{T}}}{k_{\mathrm{B}} T} \\
+L_{\mathrm{BB}} &= \frac{\kappa^* c_{\mathrm{T}}}{k_{\mathrm{B}} T}
+\end{align*}
+```
+
+We have $L_{\mathrm{AB}} = L_{\mathrm{BA}}$.
+:::
+
+## 3. Simulating the Reaction Kinetics (35 pt)
+
+In this problem we will try to understand the time-dependent behavior
+of the reaction system using previous results using both analytical
+derivation and numerical simulations. You will see how fast the system
+can evolve itself back to the equilibrium based on the irreversible
+thermodynamics.
+
+1. Use your results in Problem 2, write the expression for the rate of entropy production $\dot{\sigma}$ for this system. Could you check whether $\dot{\sigma}\geq 0$?
+
+:::{.content-hidden unless-meta="answer"}
+
+**Answer**:
+
+<!-- As the system does not have spatial variation of concentration and -->
+<!-- potential, we have $\frac{d s}{dt} = \dot{\sigma}$ (no entropy -->
+<!-- exchange flux, only production). We would expect $\frac{d s}{dt} \geq -->
+<!-- 0$. -->
+
+From the entropy production equation, we have
+```{=tex}
+\begin{align*}
+\dot{\sigma} &= \frac{\kappa^* c_{\mathrm{T}}}{k_{\mathrm{B}} T^2} \left[ (-\Delta \mu_{\mathrm{A}}^{\mathrm{eq}} + \Delta \mu_{\mathrm{B}}^{\mathrm{eq}} )\cdot(-\Delta \mu_{\mathrm{A}}^{\mathrm{eq}}) 
++ (\Delta \mu_{\mathrm{A}}^{\mathrm{eq}} - \Delta \mu_{\mathrm{B}}^{\mathrm{eq}} )\cdot(-\Delta \mu_{\mathrm{B}}^{\mathrm{eq}}) \right] \\
+&= \frac{\kappa^* c_{\mathrm{T}}}{k_{\mathrm{B}} T^2}
+\left[(\Delta \mu_{\mathrm{A}}^{\mathrm{eq}})^2 - 2(\Delta \mu_{\mathrm{A}}^{\mathrm{eq}}\Delta \mu_{\mathrm{B}}^{\mathrm{eq}}) + (\Delta \mu_{\mathrm{B}}^{\mathrm{eq}})^2 \right] \\
+&= \frac{\kappa^* c_{\mathrm{T}}}{k_{\mathrm{B}} T^2}
+\left(\Delta \mu_{\mathrm{A}}^{\mathrm{eq}} - \Delta \mu_{\mathrm{B}}^{\mathrm{eq}}\right)^2
+\end{align*}
+```
+
+<!-- The last expression uses the relation $\Delta \mu_{\mathrm{A}} = \mu_{\mathrm{A}} - \mu_{\mathrm{A}}^{\mathrm{eq}}$, $\Delta \mu_{\mathrm{B}} = \mu_{\mathrm{B}} - \mu_{\mathrm{B}}^{\mathrm{eq}}$ and $\mu_{\mathrm{A}}^{\mathrm{eq}} = \mu_{\mathrm{B}}^{\mathrm{eq}}$ -->
+
+You can verify tha $\dot{\sigma} \geq 0$. Note you will get the same $\dot{\sigma}$ expression if the driving force is $-\Delta \mu / T$
+
+:::
+
+
+
+2. Calculate the total entropy generation $\Delta s$ when the system starts at $t=t_0$ from non-equilibrium driving forces of $\Delta \mu_{\mathrm{A}}^{t_0}$ and $\Delta \mu_{\mathrm{B}}^{t_0}$  until it reaches equilibrium.  (_Hint: first derive the relation between $\Delta \mu_{\mathrm{A}}^{t_0}$ and $\Delta \mu_{\mathrm{B}}^{t_0}$_)
+
+:::{.content-hidden unless-meta="answer"}
+
+**Answer**:
+
+For any moment the constraints within the system follow:
+
+```{=tex}
+\begin{align*}
+\frac{\Delta \mu_{\mathrm{A}}^{\mathrm{eq}}}{\Delta \mu_{\mathrm{B}}^{\mathrm{eq}}} &= \frac{
+\frac{k_{\mathrm{B}} T y_{\mathrm{A}} }{c_{\mathrm{A}}^{\mathrm{eq}}}
+}{
+\frac{k_{\mathrm{B}} T y_{\mathrm{B}} }{c_{\mathrm{B}}^{\mathrm{eq}}}
+}
+\\
+&= -\frac{c_{\mathrm{B}}^{\mathrm{eq}}}{c_{\mathrm{A}}^{\mathrm{eq}}} \\
+&= -K
+\end{align*}
+```
+which uses the fact $y_{\mathrm{A}} = -y_{\mathrm{B}}$
+
+There fore $\Delta \mu_{\mathrm{A}}^{\mathrm{eq}}=-K\Delta \mu_{\mathrm{B}}^{\mathrm{eq}}$ and $\Delta
+\mu_{\mathrm{A}}^{t_0}=-K\Delta \mu_{\mathrm{B}}^{t_0}$
+
+We can do a integration of $ds/dt$ over $t$ to get $\Delta s$:
+
+```{=tex}
+\begin{align*}
+\Delta s &= \int_0^{\infty} \dot{\sigma} dt \\
+         &= \int_0^{\infty} \frac{\kappa^* c_{\mathrm{T}}}{k_{\mathrm{B}} T^2}
+\left(\Delta \mu_{\mathrm{A}}^{\mathrm{eq}} - \Delta \mu_{\mathrm{B}}^{\mathrm{eq}} \right)^2 dt \\
+&= \int_0^{\infty} \frac{\kappa^* c_{\mathrm{T}}}{k_{\mathrm{B}} T^2}
+(1 + K^{-1})^2 (\Delta \mu_{\mathrm{A}}^{\mathrm{eq}})^2 dt
+\end{align*}
+```
+
+We want the R.H.S. to have $d \Delta \mu_{\mathrm{A}}^{\mathrm{eq}}$ as the integrant. We know that 
+
+```{=tex}
+\begin{align*}
+\frac{d \Delta \mu_{\mathrm{A}}^{\mathrm{eq}}}{dt}
+&= \frac{d}{dt}\left(
+\frac{k_{\mathrm{B}} T y_{\mathrm{A}}}{c_{\mathrm{A}}^{\mathrm{eq}}}\right) \\
+&= \frac{k_{\mathrm{B}} T }{c_{\mathrm{A}}^{\mathrm{eq}}}
+\frac{d y_{\mathrm{A}}}{dt} \\
+&= \frac{\cancel{k_{\mathrm{B}} T} }{c_{\mathrm{A}}^{\mathrm{eq}}}
+ \frac{\kappa^* c_{\mathrm{T}}}{\cancel{k_{\mathrm{B}} T}} 
+\left[-\Delta \mu_{\mathrm{A}}^{\mathrm{eq}} - K^{-1}\Delta \mu_{\mathrm{A}}^{\mathrm{eq}}\right]\\
+&= -\frac{\kappa^* c_{\mathrm{T}}}{c_{\mathrm{A}}^{\mathrm{eq}}}(1 + K^{-1}) \Delta \mu_{\mathrm{A}}^{\mathrm{eq}} \\
+\left[-\frac{\kappa^* c_{\mathrm{T}}}{c_{\mathrm{A}}^{\mathrm{eq}}}(1 + K^{-1}) \Delta \mu_{\mathrm{A}}^{\mathrm{eq}}\right]^{-1} d \Delta \mu_{\mathrm{A}}^{\mathrm{eq}}
+&= dt
+\end{align*}
+```
+
+Replace $dt$ on the R.H.S with the expression above, we get:
+
+```{=tex}
+\begin{align*}
+\Delta s 
+&= \int_0^{\infty} \frac{\kappa^* c_{\mathrm{T}}}{k_{\mathrm{B}} T^2}
+(1 + K^{-1})^2 (\Delta \mu_{\mathrm{A}}^{\mathrm{eq}})^2 \, dt \\
+&= \int_{\Delta \mu_{\mathrm{A}}^{t_0}}^{0}
+\frac{\kappa^* c_{\mathrm{T}}}{k_{\mathrm{B}} T^2}
+(1 + K^{-1})^2 (\Delta \mu_{\mathrm{A}}^{\mathrm{eq}})^2
+\left[
+-\frac{c_{\mathrm{A}}^{\mathrm{eq}}}{\kappa^* c_{\mathrm{T}}(1+K^{-1})}
+\frac{d\Delta \mu_{\mathrm{A}}^{\mathrm{eq}}}{\Delta \mu_{\mathrm{A}}^{\mathrm{eq}}}
+\right] \\
+&= -\frac{c_{\mathrm{A}}^{\mathrm{eq}}}{k_{\mathrm{B}} T^2}(1+K^{-1})
+\int_{\Delta \mu_{\mathrm{A}}^{t_0}}^{0}
+\Delta \mu_{\mathrm{A}}^{\mathrm{eq}} \, d\Delta \mu_{\mathrm{A}}^{\mathrm{eq}} \\
+&= \frac{c_{\mathrm{A}}^{\mathrm{eq}}}{k_{\mathrm{B}} T^2}(1+K^{-1})
+\int_{0}^{\Delta \mu_{\mathrm{A}}^{t_0}}
+\Delta \mu_{\mathrm{A}}^{\mathrm{eq}} \, d\Delta \mu_{\mathrm{A}}^{\mathrm{eq}} \\
+&= \frac{c_{\mathrm{A}}^{\mathrm{eq}}}{k_{\mathrm{B}} T^2}(1+K^{-1})
+\left[\frac{(\Delta \mu_{\mathrm{A}}^{t_0})^2}{2}\right] \\
+&= \frac{c_{\mathrm{A}}^{\mathrm{eq}}}{2k_{\mathrm{B}} T^2}(1+K^{-1})
+(\Delta \mu_{\mathrm{A}}^{t_0})^2
+\end{align*}
+```
+
+Optionally, substitute $c_{\mathrm{A}}^{\mathrm{eq}}=\frac{1}{1+K}c_{\mathrm{T}}$:
+
+```{=tex}
+\begin{align*}
+\Delta s
+&= \frac{1}{2k_{\mathrm{B}} T^2}
+\left(\frac{c_{\mathrm{T}}}{1+K}\right)\left(\frac{1+K}{K}\right)
+(\Delta \mu_{\mathrm{A}}^{t_0})^2 \\
+&= \frac{c_{\mathrm{T}}}{2k_{\mathrm{B}} T^2 K}(\Delta \mu_{\mathrm{A}}^{t_0})^2 .
+\end{align*}
+```
+
+This means the final entropy change is related with the squared driving force, $\Delta \mu_{\mathrm{A}}^{t_0})^2$. An analog is the energy dissipation in Joule heating, that $\dot{Q} = U^2/R$.
+
+:::
+
+3. The CSTR reaction is at thermal equilibrium with an external heat
+   bath to maintain the temperature, and relaxing from a
+   non-equilibrium state to equilibrium state typiclly involves some
+   heat exchange between the reactor and bath. Please comment on
+   relation between total entropy change within the reactor $\Delta s^{\mathrm{CSTR}}$ and the total entropy production $\Delta s$. Can $\Delta s^{\mathrm{CSTR}}$ become negative?
+   
+:::{.content-hidden unless-meta="answer"}
+
+**Answer**:
+
+For each time step we have
+
+$$
+\frac{ds^{\mathrm{CSTR}}}{dt} = \frac{1}{T}\frac{dQ}{dt} + \dot{sigma}
+$$
+
+and over the relaxation to equilibrium:
+
+$$
+\Delta s^{\mathrm{CSTR}} = \frac{1}{T} Q + \Delta s
+$$
+
+where $Q$ is the heat transferred from the bath to the
+reactor. Depending on the actual reaction enthalpy, we may have
+$\Delta s^{\mathrm{CSTR}} < 0$ due to exchange of heat.
+
+:::
+
+
+4. We will use numerical integration to solve the quantities
+   $c_{\mathrm{A}}(t)$, $c_{\mathrm{B}}(t)$, $\Delta
+   \mu_{\mathrm{A}}^{\mathrm{eq}}(t)$, $\Delta
+   \mu_{\mathrm{B}}^{\mathrm{eq}}(t)$, $\dot{\sigma}(t)$ and $\Delta
+   s(t)$. At constant $T$, $P$ and under ideal mixing conditions, each of them can be written in an ordinary differential equation (ODE) form. 
+   Please do the following:
+   i) write all the ODEs for these time-dependent quantities 
+   ii) what boundary conditions at $t=t_0$ do we need to specify?
+   
+   These are all the information we need to perform a numerical ODE integration.
+   
+:::{.content-hidden unless-meta="answer"}
+
+**Answer**:
+
+i) The ODE forms are straightforward from previous results:
+
+```{=tex}
+\begin{align*}
+\frac{\mathrm{d}c_{\mathrm{A}}}{\mathrm{d}t} &= -\kappa_{+}c_{\mathrm{A}}+\kappa_{-}c_{\mathrm{B}} \\
+\frac{\mathrm{d}c_{\mathrm{B}}}{\mathrm{d}t} &= \kappa_{+}c_{\mathrm{A}}-\kappa_{-}c_{\mathrm{B}} \\
+\Delta\mu_{\mathrm{A}}^{\mathrm{eq}}(t) &= k_{\mathrm{B}}T\ln\!\left(\frac{c_{\mathrm{A}}(t)}{c_{\mathrm{A}}^{\mathrm{eq}}}\right) \\
+\Delta\mu_{\mathrm{B}}^{\mathrm{eq}}(t) &= k_{\mathrm{B}}T\ln\!\left(\frac{c_{\mathrm{B}}(t)}{c_{\mathrm{B}}^{\mathrm{eq}}}\right) \\
+\dot{\sigma}(t) &=-\frac{1}{T} \left[\frac{\mathrm{d}c_{\mathrm{A}}}{\mathrm{d}t}\Delta\mu_{\mathrm{A}}^{\mathrm{eq}}(t) + \frac{\mathrm{d}c_{\mathrm{B}}}{\mathrm{d}t}\Delta\mu_{\mathrm{B}}^{\mathrm{eq}}(t) \right] \\
+\Delta s(t) &= \int_{t_0}^{t} \dot{\sigma}(t) dt'
+\end{align*}
+```
+
+These forms use the exact expressions for the chemical potential. You can also write them using the linear driving force near equilibrium.
+
+ii) Since this system is constrained between $c_{\mathrm{A}}$ and
+$c_{\mathrm{B}}$, as well as between $\mu_{\mathrm{A}}$ and
+$\mu_{\mathrm{B}}$, we only need 1 boundary condition at $t=t_0$, for
+example $c_{\mathrm{A}}(t=t_0)$ or $\Delta \mu_{\mathrm{A}}(t=t_0)$.
+
+
+:::
+
+5. We have provided a playable implementation of the ODE solver for the current system in [https://tiangroup-uofa.github.io/mate664-kinetics-of-materials/scripts/EX01_ode.html](https://tiangroup-uofa.github.io/mate664-kinetics-of-materials/scripts/EX01_ode.html).
+
+**Note:** the interactive notebook may take a while to load depending on your local connection. If you encounter problems please contact the instructor and/or TA.
+
+Please comment on several observations:
+
+i) Take a look at how $c_{\mathrm{A}}(t)$ and $c_{\mathrm{B}}(t)$ relax to equilibrium. What type of function do $c(t)$ look like? 
+
+ii) Now look again at $\dot{\sigma}(t)$. What type of function do you think it is? 
+
+iii) Set equilibrium $c_{\mathrm{A}}^{\mathrm{eq}} = \frac{1}{2}c_{\mathrm{T}}$ so that $K=1$. Compare the plots when $c_{\mathrm{A}}(t)$ when $c_{\mathrm{A}}^0$ are $0.55\,c_{\mathrm{T}}$, $0.75\,c_{\mathrm{T}}$ and $0.95\,c_{\mathrm{T}}$ using the exact solution and linear approximations. Comment on the applicability of the linear flux--force relation.
+
+:::{.content-hidden unless-meta="answer"}
+
+**Answer**:
+
+i) The concentrations should show an exponential decay when $\Delta \mu^{\mathrm{eq}}$ is small. Using $c_{\mathrm{B}}=c_{\mathrm{T}}-c_{\mathrm{A}}$,
+
+$$
+\frac{\mathrm{d}c_{\mathrm{A}}}{\mathrm{d}t}
+= -\kappa_{+}c_{\mathrm{A}}+\kappa_{-}(c_{\mathrm{T}}-c_{\mathrm{A}})
+= -(\kappa_{+}+\kappa_{-})c_{\mathrm{A}}+\kappa_{-}c_{\mathrm{T}}.
+$$
+
+The equilibrium condition $\kappa_{+}c_{\mathrm{A}}^{\mathrm{eq}}=\kappa_{-}c_{\mathrm{B}}^{\mathrm{eq}}$ gives
+$c_{\mathrm{A}}^{\mathrm{eq}}=\frac{\kappa_{-}}{\kappa_{+}+\kappa_{-}}c_{\mathrm{T}}$.
+Define $y_{\mathrm{A}}=c_{\mathrm{A}}-c_{\mathrm{A}}^{\mathrm{eq}}$, then
+
+$$
+\frac{\mathrm{d}y_{\mathrm{A}}}{\mathrm{d}t}
+=-(\kappa_{+}+\kappa_{-})y_{\mathrm{A}},
+\qquad
+y_{\mathrm{A}}(t)=y_{\mathrm{A}}(t_0)\exp\!\left[-(\kappa_{+}+\kappa_{-})(t-t_0)\right].
+$$
+
+Thus $c_{\mathrm{A}}(t)$ and $c_{\mathrm{B}}(t)$ approach equilibrium exponentially.
+
+ii) Near equilibrium, $\Delta \mu(t)\propto y_{\mathrm{A}}(t)$, so $\Delta \mu(t)$ is also exponential in time.
+Since $\dot{\sigma}(t)\propto (\Delta \mu(t))^2$, it follows that $\dot{\sigma}(t)$ decays approximately as an exponential squared, i.e. another exponential with twice the decay rate:
+
+$$
+\dot{\sigma}(t)\sim \exp\!\left[-2(\kappa_{+}+\kappa_{-})(t-t_0)\right].
+$$
+
+Farther from equilibrium, the exact $\Delta \mu(t)=k_{\mathrm{B}}T\ln\!\left(\frac{c_{\mathrm{B}}(t)}{c_{\mathrm{A}}(t)}\right)$ is nonlinear in $c$, so $\dot{\sigma}(t)$ is not a perfect exponential, but it still rapidly decays to zero as the system approaches equilibrium.
+
+iii) When $K=1$, $c_{\mathrm{A}}^{\mathrm{eq}}=c_{\mathrm{B}}^{\mathrm{eq}}=\frac{1}{2}c_{\mathrm{T}}$ and the concentration relaxation remains exponential (same ODE as above with $\kappa_{+}=\kappa_{-}$).
+
+The exact driving force is
+$$
+\Delta \mu(t)=k_{\mathrm{B}}T\ln\!\left(\frac{c_{\mathrm{B}}(t)}{c_{\mathrm{A}}(t)}\right).
+$$
+
+Linearizing near equilibrium ($c_{\mathrm{A}}=\frac{1}{2}c_{\mathrm{T}}+y_{\mathrm{A}}$, $c_{\mathrm{B}}=\frac{1}{2}c_{\mathrm{T}}-y_{\mathrm{A}}$) gives
+$$
+\Delta \mu(t)
+= k_{\mathrm{B}}T\ln\!\left(\frac{\frac{1}{2}c_{\mathrm{T}}-y_{\mathrm{A}}}{\frac{1}{2}c_{\mathrm{T}}+y_{\mathrm{A}}}\right)
+\approx -\frac{4k_{\mathrm{B}}T}{c_{\mathrm{T}}}\,y_{\mathrm{A}}(t),
+\qquad
+(|y_{\mathrm{A}}|\ll c_{\mathrm{T}}).
+$$
+
+Therefore the linear flux--force relation (Onsager form) is accurate
+when the initial deviation is small
+(e.g. $c_{\mathrm{A}}^0=0.55c_{\mathrm{T}}$), and becomes
+progressively worse for larger deviations (e.g. $0.75c_{\mathrm{T}}$
+and especially $0.95c_{\mathrm{T}}$), where the logarithmic form of
+$\Delta \mu$ must be used.
+
+:::
+   
+   
+## 4 Unified picture of Seebeck and Peltier effects in irreversible thermodynamics (20 pt)
+
+We have studied so far that coupled transport between charge carriers
+and heat can lead to two related effects: the Seebeck and Peltier
+effects. In this exercise, we show that both effects can be described
+using the same linear irreversible-thermodynamics framework with an
+Onsager coefficient matrix. The apparent difference between Seebeck
+and Peltier effects arises from different experimental constraints and
+boundary conditions.
+
+![Unified picture of Seebeck and Peltier effects.](./img/EX01-thermoelectro.svg){width="80%"}
+
+Consider two homogeneous bars (material A and material B) connected in
+parallel along the $z$ direction. Within each
+material, assume steady state and constant transport coefficients. The two bars are connected by a conducting wire at the top (2), while a device is connected to both A and B at (1)
+
+For each material, we have
+
+- charge flux (current density): $J_{\mathrm{q}}$
+- heat flux: $J_{\mathrm{Q}}$
+
+and the fields:
+
+- electric potential $\phi(z)$
+- temperature $T(z)$
+
+1) In each material $i\in\{\mathrm{A},\mathrm{B}\}$, write the linear
+Onsager relations relating the fluxes $\{J_{\mathrm{q}}^{(i)},
+J_{\mathrm{Q}}^{(i)}\}$ to the driving forces $F_{\mathrm{q}} = -\frac{d \phi}{dz}$ and $F_{\mathrm{Q}} = -\frac{1}{T}\frac{d T}{dz}$. Write the coefficients in the $\mathbf{L}$ matrix for this question.
+
+:::{.content-hidden unless-meta="answer"}
+
+**Answer**:
+
+For each material $i\in\{\mathrm{A},\mathrm{B}\}$,
+```{=tex}
+\begin{align*}
+\begin{pmatrix}
+J_{\mathrm{q}}^{(i)} \\
+J_{\mathrm{Q}}^{(i)}
+\end{pmatrix}
+=
+\begin{pmatrix}
+L_{\mathrm{qq}}^{(i)} & L_{\mathrm{qQ}}^{(i)} \\
+L_{\mathrm{Qq}}^{(i)} & L_{\mathrm{QQ}}^{(i)}
+\end{pmatrix}
+\begin{pmatrix}
+-\dfrac{d\phi}{dz} \\
+-\dfrac{1}{T}\dfrac{dT}{dz}
+\end{pmatrix}
+\end{align*}
+```
+
+The same driving forces act in both A and B because the two bars share
+the same boundary values of $\phi$ and $T$, but the resulting fluxes
+differ due to different transport coefficients.
+
+2) Explain the physical meaning of $L_{\mathrm{qq}}^{(i)}$ and
+$L_{\mathrm{QQ}}^{(i)}$ for a single homogeneous material.
+
+:::{.content-hidden unless-meta=“answer”}
+
+**Answer**:
+- $L_{\mathrm{qq}}^{(i)}$ is related to the electrical conductivity
+- $L_{\mathrm{QQ}}^{(i)}$ is related to the thermal conductivity
+
+The off-diagonal coefficient $L_{\mathrm{qQ}}^{(i)}$ quantifies
+thermoelectric coupling.
+:::
+
+3)	Atomistically, what types of materials tend to have large
+$L_{\mathrm{qQ}}^{(i)}$ (equivalently $L_{\mathrm{Qq}}^{(i)}$)? You can search literature for the answer and cite any relevant ones.
+
+:::{.content-hidden unless-meta=“answer”}
+
+**Answer**:
+
+$L_{\mathrm{qQ}}^{(i)}$ characterizes the strength a charged carrier in a material also transports entropy. Narrow band semiconductors are typically used materials for harnessing $L_{\mathrm{qQ}}^{(i)}$ coupling (like the n-p junction).
+
+:::
+
+4) In the Seebeck effect experiment, the A and B bars are placed
+between temperature zones with $T=T_1$ at bottom and $T=T_2$ at top. A
+potential meter measures the potential difference at position 1. Write
+the steady-state equation for $J_{\mathrm{q}}$ in each material. Also
+write the equation that can be used to solve the potential difference
+measure by the potentialmeter $\Delta \phi$.
+
+:::{.content-hidden unless-meta=“answer”}
+
+**Answer**:
+
+See _Balluffi, Allen, Carter_ Problem 2.3.
+
+:::
+
+5) In the Peltier effect experiment, a constant temperature is kept
+within the system, however a battery is connected between A and B to
+maintain a constant $\phi=\phi_1$ and $\phi=\phi_2$ at both
+ends. Write the steady-state equation again for $J_{\mathrm{Q}}$ again
+for A and B, respectively. Explain why the Peltier effect may be used
+to move heat from a surface (cooling) using electric current.
+
+:::{.content-hidden unless-meta=“answer”}
+
+**Answer**:
+
+See _Balluffi, Allen, Carter_ Problem 2.4.
+
+:::
+
+
+
+
