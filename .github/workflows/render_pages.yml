@@ -31,6 +31,8 @@ jobs:
           pip install marimo
       - name: Setup quarto
         uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          tinytex: true
       - name: Install librsvg-convert
         run: sudo apt-get update && sudo apt-get install -y librsvg2-bin
       - name: Setup Pages
@@ -38,8 +40,6 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Quarto render
         uses: quarto-dev/quarto-actions/render@v2
-        with:
-          tinytex: true
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v4
