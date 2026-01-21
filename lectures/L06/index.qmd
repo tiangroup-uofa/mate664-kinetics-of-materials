@@ -1,0 +1,140 @@
+---
+title: "MATE 664 Lecture 06"
+subtitle: "Solution to Diffusion Equations (I)"
+author: "Dr. Tian Tian"
+date: "2026-01-21"
+format:
+  html: {}
+  revealjs:
+    output-file: slides.html
+  pdf:	 
+    output-file: L06.pdf
+---
+
+::: {.content-visible when-format="html" unless-format="revealjs"}
+
+::: {.callout-note}
+- Slides 👉  [Open presentation🗒️](./slides.html)
+- PDF version of course note  👉 [Open in pdf](./L06.pdf)
+- Handwritten notes 👉 [Open in pdf](./public/L06_annotated.pdf)
+:::
+
+:::
+
+
+## Recap of Lecture 05 {.center}
+Key ideas from last lecture:
+
+- Different forms of diffusivities
+- Deriving diffusivity from driving force terms
+- Differentiate reference frames used for diffusion equations
+
+## Recap: Intrinsic Diffusivity Expression
+
+For component $i$ (notation from notes)
+
+$$
+D_i^* = k_B T \left(\frac{L_{ii}}{c_i} - \frac{L_{ij}}{c_j}\right)
+$$
+
+
+$$
+D_i = k_B T\left(\frac{L_{ii}}{c_i}-\frac{L_{ij}}{c_j}\right)
+\left(1+\frac{\partial \ln \gamma_i}{\partial \ln c_i}\right)
+$$
+
+whereas
+
+$$
+\Phi(c) = 1+\frac{\partial \ln \gamma_i}{\partial \ln c_i}
+$$
+
+## Recap: Interdiffusivity (Binary)
+
+Binary mixture
+
+$$
+\tilde D_{12} = D_1 c_2 \Omega_2 + D_2 c_1 \Omega_1
+$$
+
+- $\Omega_i$: partial molar volume factor in your notation
+- Both C-frame and V-frame still lead to Fick-type equations
+
+---
+
+## Learning Outcomes {.center}
+
+After today's lecture, you will be able to:
+
+- Interpret Kirkendall effect using lattice (C-frame) vs lab (V-frame)
+- Solve steady-state diffusion (Laplace equation) in common geometries
+- Use non-steady solutions: Gaussian / error function / superposition
+- Use separation of variables and Laplace transform as solution strategies
+
+
+## Remaining Question 1: Kirkendall Effect
+
+![Kirkendall effect demo](./public/kirkendall.png){width="100%"}
+
+Key observation
+
+- In diffusion couple, markers move relative to lab frame
+- Indicates unequal intrinsic fluxes in lattice frame
+
+---
+
+## C-frame vs V-frame Fluxes
+
+**C-frame** (lattice frame)
+
+- net lattice flux can be nonzero: $J_V^*\neq 0$
+
+**V-frame** (lab frame)
+
+$$
+J_A^V = -J_B^V,\qquad J_V^V = 0
+$$
+
+Interpretation
+
+- $J_V^*\neq 0$ but $J_V^V=0$ implies defect accumulation / depletion
+
+---
+
+## Kirkendall Effect: Physical Meaning
+
+Experimentally measured lattice shift
+
+- Markers track lattice (or marker plane)
+- Unequal intrinsic fluxes $\Rightarrow$ vacancy flux
+- Vacancy imbalance $\Rightarrow$ defect accumulation in control volume
+- Can produce porosity (Kirkendall voids)
+
+---
+
+## Kirkendall Effect: Analog
+
+![](./public/kirkendall-analog.svg){width="80%"}
+
+- A diffuse faster than B across the membrane
+- $p_i = c_i RT$
+- Fixed membrane 👉 expanding voids
+
+
+## Kirkendall Effect: Simulations
+
+See [simulation of vacancy mechanism](https://www.doitpoms.ac.uk/tlplib/diffusion/HTML5/kirkendall.html)
+
+__
+
+
+
+
+
+
+
+
+
+
+
+

@@ -18,7 +18,7 @@ website:
         text: Syllabus
       - href: lectures/
         text: Lectures
-      - href: scripts/
+      - href: scripts.qmd
         text: Interactive Demos
   
   sidebar:
@@ -39,6 +39,8 @@ website:
           - lectures/L02/index.qmd
           - lectures/L03/index.qmd
           - lectures/L04/index.qmd
+          - lectures/L05/index.qmd
+          - lectures/L06/index.qmd
       - section: "Interactive Demos"
         contents:
           - scripts.qmd
