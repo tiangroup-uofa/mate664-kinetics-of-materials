@@ -426,6 +426,44 @@ also satisfies (with compatible IC/BC decomposition).
 
 ---
 
+## Inifinite Space: Half-Half Situation 
+
+Geometry: $x\ge 0$
+
+I.C.
+
+- $c(x<0,t=0)=c_L$
+- $c(x>0,t=0)=c_R$
+
+Solution form
+
+$$
+c(x,t)=\frac{c_L + c_R}{2} + \frac{c_L-c_R}{2}\,\operatorname{erf}\left(\frac{x}{\sqrt{2Dt}}\right)
+$$
+
+How do we get here?
+
+---
+
+## Limits and Checks
+
+- $t\to 0^+$: $\operatorname{erfc}(x/(2\sqrt{Dt}))\to 0$ for $x>0$ ⇒ $c\to c_B$
+- $x\to 0$: $\operatorname{erfc}(0)=1$ ⇒ $c(0,t)=c_A$
+- $x\to\infty$: $\operatorname{erfc}(\infty)=0$ ⇒ $c\to c_B$
+
+---
+
+## Line Source as Superposition
+
+Notes: “line source” can be built from two semi-infinite problems
+
+<!-- ![](./public/placeholder-image-2.png) -->
+
+Idea
+
+- decompose initial profile into steps
+- add corresponding erfc solutions
+
 ## Infinite Domain: Point Source (1D)
 
 Initial conditions
@@ -472,44 +510,6 @@ $$
 
 These appear in semi-infinite diffusion solutions.
 
----
-
-## Semi-infinite Space: Constant Surface Concentration
-
-Geometry: $x\ge 0$
-
-B.C. / I.C.
-
-- $c(0,t)=c_A$ (constant surface)
-- $c(x\to\infty,t)=c_B$
-- $c(x,0)=c_B$
-
-Solution form
-
-$$
-c(x,t)=c_B+(c_A-c_B)\,\operatorname{erfc}\left(\frac{x}{2\sqrt{Dt}}\right)
-$$
-
----
-
-## Limits and Checks
-
-- $t\to 0^+$: $\operatorname{erfc}(x/(2\sqrt{Dt}))\to 0$ for $x>0$ ⇒ $c\to c_B$
-- $x\to 0$: $\operatorname{erfc}(0)=1$ ⇒ $c(0,t)=c_A$
-- $x\to\infty$: $\operatorname{erfc}(\infty)=0$ ⇒ $c\to c_B$
-
----
-
-## Line Source as Superposition
-
-Notes: “line source” can be built from two semi-infinite problems
-
-<!-- ![](./public/placeholder-image-2.png) -->
-
-Idea
-
-- decompose initial profile into steps
-- add corresponding erfc solutions
 
 ---
 
