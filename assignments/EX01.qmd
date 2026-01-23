@@ -16,15 +16,15 @@ format:
 # **Due Date: 2026-02-02 (Mon) 12:00 PM**
 :::
 
-This assignment is intended for you to get some deepened understanding
-about irreversible thermodynamics and use an eample that we already
-know from undergraduate chemistry class to check a few concepts we learned in kinetics lectures.
+This assignment is intended for you to get some deeper understanding
+about irreversible thermodynamics and use an example that we already
+know from undergraduate chemistry to check a few concepts we learned in kinetics lectures.
 
 ## 1. Chemical Reaction at Equilibrium (15 pt)
 
 In this question, we will revisit the equilibrium of a simple chemical
 reaction using the concepts in kinetics. Assume we
-are observing an reversible reaction between species A and B in a
+are observing a reversible reaction between species A and B in a
 continuous stirred tank reactor (CSTR). The reaction is
 
 ```{=tex}
@@ -35,11 +35,11 @@ A \;\xrightleftharpoons[\kappa_-]{\kappa_+}\; B
 
 with concentration of A and B as $c_{\mathrm{A}}$ and
 $c_{\mathrm{B}}$ under constant temperature and pressure. The total concentration $c_{\mathrm{T}} =
-c_{\mathrm{A}} + c_{\mathrm{B}}$ is constant. In CSTR, the continuous stirring ensures concentrations for A and B everywhere are uniform. The rate of reaction A -> B follows $r_{+} = \kappa_+ c_A$, while the reverse reaction rate follows $r_{-} = \kappa_+ c_B$.
+c_{\mathrm{A}} + c_{\mathrm{B}}$ is constant. In CSTR, the continuous stirring ensures concentrations for A and B everywhere are uniform. The rate of reaction A -> B follows $r_{+} = \kappa_+ c_{\mathrm{A}}$, while the reverse reaction rate follows $r_{-} = \kappa_- c_{\mathrm{B}}$.
 
 ![System setup](./img/Ex01-cstr.svg){width="50%"}
 
-1. At equilibrium, $c_{\mathrm{A}}$ and $c_{\mathrm{B}}$ are both non-zero. This means $r_{+}$ and $r_{-}$ are also non-zero. Does this violates our definition of equilibrium?
+1. At equilibrium, $c_{\mathrm{A}}$ and $c_{\mathrm{B}}$ are both non-zero. This means $r_{+}$ and $r_{-}$ are also non-zero. Does this violate our definition of equilibrium?
 
 :::{.content-hidden unless-meta="answer"}
 
@@ -84,7 +84,7 @@ which yields $\kappa_{+}c_{\mathrm{A}}^{\mathrm{eq}} = \kappa_{-}c_{\mathrm{B}}^
 3. For this reaction, the concentration ratio between A and B at
 equilibrium, $c_{\mathrm{B}}^{\mathrm{eq}} /
 c_{\mathrm{A}}^{\mathrm{eq}}$, is called the equilibrium constant
-$K$. Express $K$ using $r_{-}$ and $r_{+}$. Also express
+$K$. Express $K$ using $\kappa_{-}$ and $\kappa_{+}$. Also express
 $c_{\mathrm{A}}^{\mathrm{eq}}$ and $c_{\mathrm{B}}^{\mathrm{eq}}$
 using $K$ and $c_{\mathrm{T}}$
 
@@ -151,11 +151,16 @@ where we use the fact $\partial c_{\mathrm{A}} = -\partial c_{\mathrm{B}}$. This
 5. Use your results in 4), show that the equilibrium constant $K$ follows:
 
 ```{=tex}
-\begin{align*}
-K = \exp\!\left(-\frac{\Delta \mu^0}{k_{\mathrm{B}} T}\right)
-\end{align*}
+\begin{align*} K = \exp\!\left(-\frac{\Delta
+\mu^0}{k_{\mathrm{B}} T}\right) \end{align*}
 ```
-where $\Delta \mu^0 = \mu_{\mathrm{B}}^0 - \mu_{\mathrm{A}}^0$, the difference between chemical potentials for A and B at standard states, and $k_{\mathrm{B}}$ is the Boltzmann constant. You can see that the chemical potential difference _under standard conditions_ defines the equilibrium balance.
+
+where $\Delta \mu^0 =
+\mu_{\mathrm{B}}^0 - \mu_{\mathrm{A}}^0$, the difference between
+chemical potentials for A and B at standard concentration $c_0$, and
+$k_{\mathrm{B}}$ is the Boltzmann constant. You can see that the
+chemical potential difference _under standard conditions_ defines the
+equilibrium balance.
 
 :::{.content-hidden unless-meta="answer"}
 
@@ -182,22 +187,29 @@ Rearranging that gives:
 ```{=tex}
 \begin{align*}
 K &= \frac{c_{\mathrm{B}}^{\mathrm{eq}}}{c_{\mathrm{A}}^{\mathrm{eq}}} \\
-  &= \exp\!\left(\frac{\mu_{\mathrm{B}}^{0} - \mu_{\mathrm{A}}^{0}}{k_\mathrm{B} T}\right)
+  &= \exp\!\left(- \frac{\mu_{\mathrm{B}}^{0} - \mu_{\mathrm{A}}^{0}}{k_\mathrm{B} T}\right)
 \end{align*}
 ```
 :::
 
 ## 2. Irreversible Thermodynamics for Chemical Reaction Kinetics (30 pt)
 
-We will consider the same setup in Problem 1, but this time we consider the reaction to be slightly away from equilibrium. As Any deviation of $c_{\mathrm{A}}$ or $c_{\mathrm{B}}$  from the equilibrium values will cause the
-system to go back to the equilirbium state. We will try to answer two main questions:
+We will consider the same setup in Problem 1, but this time we
+consider the reaction to be slightly away from equilibrium. Any
+deviation of $c_{\mathrm{A}}$ or $c_{\mathrm{B}}$ from the equilibrium
+values will cause the system to go back to the equilibrium state. We
+will try to answer two main questions:
 
   - What is the driving force moving the reaction back to equilibrium?
   - How fast will the reaction revert to equilibrium?
   
 For these non-equilibrium problems, we are interested in the excess
-concentration of A and B from their corresponding equilibrium states, i.e.
-$y_{\mathrm{A}} = c_{\mathrm{A}} - c_{\mathrm{A}}^{\mathrm{eq}}$ and  $y_{\mathrm{B}} = c_{\mathrm{B}} - c_{\mathrm{B}}^{\mathrm{eq}}$. Please see _Kinetics of Materials (Balluffi, Allen & Carter)_ Ch 2.2.4 and Probem 2.5 for more general version of this problem.
+concentration of A and B from their corresponding equilibrium states,
+i.e.  $y_{\mathrm{A}} = c_{\mathrm{A}} - c_{\mathrm{A}}^{\mathrm{eq}}$
+and $y_{\mathrm{B}} = c_{\mathrm{B}} -
+c_{\mathrm{B}}^{\mathrm{eq}}$. Please see _Kinetics of Materials
+(Balluffi, Allen & Carter)_ Ch 2.2.4 and Problem 2.5 for more general
+version of this problem.
 
 1. Show that the rate equations for $y_{\mathrm{A}}$ and $y_{\mathrm{B}}$ still follows:
 
@@ -299,7 +311,10 @@ Similarly, we have
 :::
 
 
-4. For such 0D system, $\frac{d y_{\mathrm{A}}}{d t}$ and $\frac{d y_{\mathrm{B}}}{d t}$ are the fluxes for A and B ($J_{\mathrm{A}}$ and $J_{\mathrm{B}}$). What are the conjugate driving forces for them ($F_{\mathrm{A}}$, $F_{\mathrm{B}}$), respectively? 
+4. For this 0D system, $\frac{d y_{\mathrm{A}}}{d t}$ and $\frac{d
+y_{\mathrm{B}}}{d t}$ are the fluxes for A and B ($J_{\mathrm{A}}$ and
+$J_{\mathrm{B}}$). What are the conjugate driving forces for them
+($F_{\mathrm{A}}$, $F_{\mathrm{B}}$), respectively?
 
 :::{.content-hidden unless-meta="answer"}
 
@@ -326,7 +341,10 @@ The negative sign is to ensure that \textrm{[Flux]}$\times$\textrm{[Force]} is n
 
 
 
-5. Write $J_{\mathrm{A}}$ and $J_{\mathrm{B}}$ using the driving forces $F_{\mathrm{A}}$ and $F_{\mathrm{B}}$ and coefficients $L_{\mathrm{AA}}$, $L_{\mathrm{BA}}$, $L_{\mathrm{AB}}$ and $L_{\mathrm{BB}}$. Do you observer $L_{\mathrm{AB}} = L_{\mathrm{BA}}$?
+5. Write $J_{\mathrm{A}}$ and $J_{\mathrm{B}}$ using the driving
+forces $F_{\mathrm{A}}$ and $F_{\mathrm{B}}$ and coefficients
+$L_{\mathrm{AA}}$, $L_{\mathrm{BA}}$, $L_{\mathrm{AB}}$ and
+$L_{\mathrm{BB}}$. Do you observe $L_{\mathrm{AB}} = L_{\mathrm{BA}}$?
 
 :::{.content-hidden unless-meta="answer"}
 
@@ -349,12 +367,12 @@ We have $L_{\mathrm{AB}} = L_{\mathrm{BA}}$.
 ## 3. Simulating the Reaction Kinetics (35 pt)
 
 In this problem we will try to understand the time-dependent behavior
-of the reaction system using previous results using both analytical
+of the reaction system using previous results by both analytical
 derivation and numerical simulations. You will see how fast the system
-can evolve itself back to the equilibrium based on the irreversible
+can relax back to the equilibrium based on the irreversible
 thermodynamics.
 
-1. Use your results in Problem 2, write the expression for the rate of entropy production $\dot{\sigma}$ for this system. Could you check whether $\dot{\sigma}\geq 0$?
+1. Use your results in Problem 2, write the expression for the rate of entropy production $\dot{\sigma}$ for this system. Show that $\dot{\sigma}\geq 0$.
 
 :::{.content-hidden unless-meta="answer"}
 
@@ -385,7 +403,11 @@ You can verify tha $\dot{\sigma} \geq 0$. Note you will get the same $\dot{\sigm
 
 
 
-2. Calculate the total entropy generation $\Delta s$ when the system starts at $t=t_0$ from non-equilibrium driving forces of $\Delta \mu_{\mathrm{A}}^{t_0}$ and $\Delta \mu_{\mathrm{B}}^{t_0}$  until it reaches equilibrium.  (_Hint: first derive the relation between $\Delta \mu_{\mathrm{A}}^{t_0}$ and $\Delta \mu_{\mathrm{B}}^{t_0}$_)
+2. Calculate the total entropy generation $\Delta s$ when the system
+starts at $t=t_0$ from non-equilibrium driving forces of $\Delta
+\mu_{\mathrm{A}}^{t_0}$ and $\Delta \mu_{\mathrm{B}}^{t_0}$ until it
+reaches equilibrium.  (_Hint: first derive the relation between
+$\Delta \mu_{\mathrm{A}}^{t_0}$ and $\Delta \mu_{\mathrm{B}}^{t_0}$_)
 
 :::{.content-hidden unless-meta="answer"}
 
@@ -485,9 +507,11 @@ This means the final entropy change is related with the squared driving force, $
 
 3. The CSTR reaction is at thermal equilibrium with an external heat
    bath to maintain the temperature, and relaxing from a
-   non-equilibrium state to equilibrium state typiclly involves some
+   non-equilibrium state to an equilibrium state typically involves some
    heat exchange between the reactor and bath. Please comment on
-   relation between total entropy change within the reactor $\Delta s^{\mathrm{CSTR}}$ and the total entropy production $\Delta s$. Can $\Delta s^{\mathrm{CSTR}}$ become negative?
+   relation between total entropy change within the reactor $\Delta
+   s^{\mathrm{CSTR}}$ and the total entropy production $\Delta s$. Can
+   $\Delta s^{\mathrm{CSTR}}$ become negative?
    
 :::{.content-hidden unless-meta="answer"}
 
@@ -516,10 +540,10 @@ $\Delta s^{\mathrm{CSTR}} < 0$ due to exchange of heat.
    $c_{\mathrm{A}}(t)$, $c_{\mathrm{B}}(t)$, $\Delta
    \mu_{\mathrm{A}}^{\mathrm{eq}}(t)$, $\Delta
    \mu_{\mathrm{B}}^{\mathrm{eq}}(t)$, $\dot{\sigma}(t)$ and $\Delta
-   s(t)$. At constant $T$, $P$ and under ideal mixing conditions, each of them can be written in an ordinary differential equation (ODE) form. 
+   s(t)$. At constant $T$, $P$ and under ideal mixing conditions, the system can be written as a set of ordinary differential equations (ODE)
    Please do the following:
-   i) write all the ODEs for these time-dependent quantities 
-   ii) what boundary conditions at $t=t_0$ do we need to specify?
+   i) write all the ODEs for these time-dependent quantities that you need to simulate the system
+   ii) what initial conditions at the start time $t=t_0$ do we need to specify?
    
    These are all the information we need to perform a numerical ODE integration.
    
@@ -560,7 +584,13 @@ i) Take a look at how $c_{\mathrm{A}}(t)$ and $c_{\mathrm{B}}(t)$ relax to equil
 
 ii) Now look again at $\dot{\sigma}(t)$. What type of function do you think it is? 
 
-iii) Set equilibrium $c_{\mathrm{A}}^{\mathrm{eq}} = \frac{1}{2}c_{\mathrm{T}}$ so that $K=1$. Compare the plots when $c_{\mathrm{A}}(t)$ when $c_{\mathrm{A}}^0$ are $0.55\,c_{\mathrm{T}}$, $0.75\,c_{\mathrm{T}}$ and $0.95\,c_{\mathrm{T}}$ using the exact solution and linear approximations. Comment on the applicability of the linear flux--force relation.
+iii) Set equilibrium $c_{\mathrm{A}}^{\mathrm{eq}} =
+\frac{1}{2}c_{\mathrm{T}}$ so that $K=1$. Compare the plots of
+$c_{\mathrm{A}}(t)$ when initial concentration $c_{\mathrm{A}}^0$ is
+$0.55\,c_{\mathrm{T}}$, $0.75\,c_{\mathrm{T}}$ or
+$0.95\,c_{\mathrm{T}}$ using the exact solution and linear
+approximations. Comment on the applicability of the linear flux--force
+relation.
 
 :::{.content-hidden unless-meta="answer"}
 
@@ -635,8 +665,10 @@ boundary conditions.
 ![Unified picture of Seebeck and Peltier effects.](./img/EX01-thermoelectro.svg){width="80%"}
 
 Consider two homogeneous bars (material A and material B) connected in
-parallel along the $z$ direction. Within each
-material, assume steady state and constant transport coefficients. The two bars are connected by a conducting wire at the top (2), while a device is connected to both A and B at (1)
+parallel along the $z$ direction. Within each material, assume steady
+state and constant transport coefficients. The two bars are connected
+by a conducting wire at the top (2), while a device (voltmeter in Seebeck effect and battery in Peltier effect) is connected to
+both A and B at (1).
 
 For each material, we have
 
@@ -678,6 +710,7 @@ L_{\mathrm{Qq}}^{(i)} & L_{\mathrm{QQ}}^{(i)}
 The same driving forces act in both A and B because the two bars share
 the same boundary values of $\phi$ and $T$, but the resulting fluxes
 differ due to different transport coefficients.
+:::
 
 2) Explain the physical meaning of $L_{\mathrm{qq}}^{(i)}$ and
 $L_{\mathrm{QQ}}^{(i)}$ for a single homogeneous material.
@@ -692,7 +725,7 @@ The off-diagonal coefficient $L_{\mathrm{qQ}}^{(i)}$ quantifies
 thermoelectric coupling.
 :::
 
-3)	Atomistically, what types of materials tend to have large
+3) Atomistically, what types of materials tend to have large
 $L_{\mathrm{qQ}}^{(i)}$ (equivalently $L_{\mathrm{Qq}}^{(i)}$)? You can search literature for the answer and cite any relevant ones.
 
 :::{.content-hidden unless-meta=“answer”}
@@ -705,10 +738,11 @@ $L_{\mathrm{qQ}}^{(i)}$ characterizes the strength a charged carrier in a materi
 
 4) In the Seebeck effect experiment, the A and B bars are placed
 between temperature zones with $T=T_1$ at bottom and $T=T_2$ at top. A
-potential meter measures the potential difference at position 1. Write
-the steady-state equation for $J_{\mathrm{q}}$ in each material. Also
-write the equation that can be used to solve the potential difference
-measure by the potentialmeter $\Delta \phi$.
+voltmeter measures the potential difference at position 1. There is no
+current through the system at steady state. Write the steady-state
+equation for $J_{\mathrm{q}}$ in each material. Also write the
+equation that can be used to solve the potential difference measured $\Delta \phi$. (See _Balluffi, Allen, Carter_
+Problem 2.3.)
 
 :::{.content-hidden unless-meta=“answer”}
 
@@ -718,12 +752,11 @@ See _Balluffi, Allen, Carter_ Problem 2.3.
 
 :::
 
-5) In the Peltier effect experiment, a constant temperature is kept
+5) In the Peltier effect experiment, a constant temperature $T$ is kept
 within the system, however a battery is connected between A and B to
 maintain a constant $\phi=\phi_1$ and $\phi=\phi_2$ at both
-ends. Write the steady-state equation again for $J_{\mathrm{Q}}$ again
-for A and B, respectively. Explain why the Peltier effect may be used
-to move heat from a surface (cooling) using electric current.
+ends.Explain why the Peltier effect may be used
+to move heat from a surface (cooling) using electric current. (See _Balluffi, Allen, Carter_ Problem 2.4.)
 
 :::{.content-hidden unless-meta=“answer”}
 
