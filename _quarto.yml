@@ -6,6 +6,7 @@ project:
   post-render: 
     - _marimo_export.py
   render:
+    - "*.qmd"
     - "!assignments/"
 
 website:
