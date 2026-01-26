@@ -33,9 +33,13 @@ Key ideas from last lecture:
 
 Just to solve Laplace equation $\nabla^2 c = 0$. But $\nabla^2$ terms depend on the coordinate system!
 
-- Cartesian:
-- Cylindrical:
-- Spherical:
+- Cartesian: $c(x)=k_1x + k_2$
+- Cylindrical: $c(r)=k_1\ln r+k_2$
+- Spherical: $c(r)=k_1/r+k_2$
+
+$k_1, k_2$ are determined by the boundary conditions.
+
+- _Can we determine $D$ using steady state profile?_
 
 ## Influence of Geometry on S.S. Solutions
 

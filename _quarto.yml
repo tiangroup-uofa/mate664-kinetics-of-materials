@@ -5,6 +5,8 @@ project:
     port: 7777
   post-render: 
     - _marimo_export.py
+  render:
+    - "!assignments/"
 
 website:
   title: "MATE 664 Kinetics of Materials (UofA)"
