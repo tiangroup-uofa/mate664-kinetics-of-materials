@@ -1,0 +1,458 @@
+---
+title: "MATE 664 Lecture 07"
+subtitle: "Solution to Diffusion Equations (II)"
+author: "Dr. Tian Tian"
+date: "2026-01-26"
+format:
+  html: {}
+  revealjs:
+    output-file: slides.html
+  pdf:	 
+    output-file: L07.pdf
+---
+
+::: {.content-visible when-format="html" unless-format="revealjs"}
+
+::: {.callout-note}
+- Slides 👉  [Open presentation🗒️](./slides.html)
+- PDF version of course note  👉 [Open in pdf](./L07.pdf)
+- Handwritten notes 👉 [Open in pdf](./public/L07_annotated.pdf)
+:::
+
+:::
+
+
+## Recap of Lecture 06 {.center}
+Key ideas from last lecture:
+
+- Governing equation for diffusion problems
+- Steady state solutions to diffusion problems (without convection)
+- Introduction to nonsteady state diffusion solutions
+
+## Recap: Steady-State Solutions to Diffusion Equations
+
+Just to solve Laplace equation $\nabla^2 c = 0$. But $\nabla^2$ terms depend on the coordinate system!
+
+- Cartesian:
+- Cylindrical:
+- Spherical:
+
+## Influence of Geometry on S.S. Solutions
+
+```{=html}
+<iframe width="100%" height="900"
+		src="../../scripts/L07-steady-state-diff.html" title="Webpage example"></iframe>
+```
+
+## Part II: Non-steady State Diffusion
+
+Different strategies
+
+- superposition with known “source” solutions
+- separation of variables (finite domains)
+- Laplace transform (initial condition handling)
+- numerical methods (general geometry / $D(c)$)
+
+---
+
+## Method 1: Superposition of Known Solutions
+
+Use linearity of diffusion equation
+
+If $c_a$ and $c_b$ satisfy the PDE and BCs, then
+
+$$
+c = c_a + c_b
+$$
+
+also satisfies (with compatible IC/BC decomposition).
+
+---
+
+## Inifinite Space: Half-Half Situation 
+
+Geometry: $x\ge 0$
+
+I.C.
+
+- $c(x<0,t=0)=c_L$
+- $c(x>0,t=0)=c_R$
+
+Solution form
+
+$$
+c(x,t)=\frac{c_L + c_R}{2} + \frac{c_L-c_R}{2}\,\operatorname{erf}\left(\frac{x}{\sqrt{2Dt}}\right)
+$$
+
+How do we get here?
+
+---
+
+## Limits and Checks
+
+- $t\to 0^+$: $\operatorname{erfc}(x/(2\sqrt{Dt}))\to 0$ for $x>0$ ⇒ $c\to c_B$
+- $x\to 0$: $\operatorname{erfc}(0)=1$ ⇒ $c(0,t)=c_A$
+- $x\to\infty$: $\operatorname{erfc}(\infty)=0$ ⇒ $c\to c_B$
+
+---
+
+## Line Source as Superposition
+
+Notes: “line source” can be built from two semi-infinite problems
+
+<!-- ![](./public/placeholder-image-2.png) -->
+
+Idea
+
+- decompose initial profile into steps
+- add corresponding erfc solutions
+
+## Infinite Domain: Point Source (1D)
+
+Initial conditions
+
+$$
+c(x,0)=N\,\delta(x)
+$$
+
+Solution
+
+$$
+c(x,t)=\frac{N}{\sqrt{4\pi Dt}}
+\exp\left(-\frac{x^2}{4Dt}\right)
+$$
+
+---
+
+## Gaussian Interpretation
+
+- point source spreads as a Gaussian
+- variance grows linearly with time
+
+$$
+\sigma^2 = 2Dt
+$$
+
+So width $\sigma\sim\sqrt{2Dt}$.
+
+---
+
+## Error Function and Gaussian Integral
+
+Define
+
+$$
+\operatorname{erf}(z)=\frac{2}{\sqrt{\pi}}\int_0^{z}e^{-s^2}\,ds
+$$
+
+and
+
+$$
+\operatorname{erfc}(z)=1-\operatorname{erf}(z)
+$$
+
+These appear in semi-infinite diffusion solutions.
+
+
+---
+
+## Step Source
+
+Finite step (width $\Delta x$) can be treated as
+
+- difference of two semi-infinite step solutions
+- in the limit $\Delta x\to 0$ recovers point source Gaussian
+
+---
+
+## 3D Point Source
+
+$c$ is separabile across axes!
+
+For 3D infinite space
+
+$$
+c(x,y,z,t)=\frac{N}{(4\pi Dt)^{3/2}}
+\exp\left(-\frac{x^2+y^2+z^2}{4Dt}\right)
+$$
+
+---
+
+## General Principle: Linear PDE → Build Solutions
+
+Because diffusion equation is linear (for constant $D$)
+
+- complex IC can be decomposed into simpler components
+- solutions are sums (or integrals) of known kernels
+
+Hard part
+
+- enforcing boundary conditions in finite domains
+
+---
+
+## Method 2: Separation of Variables
+
+Used often for finite domains
+
+Assume product form
+
+$$
+c(x,t)=X(x)\,T(t)
+$$
+
+Substitute into
+
+$$
+\frac{\partial c}{\partial t}=D\frac{\partial^2 c}{\partial x^2}
+$$
+
+gives
+
+$$
+\frac{1}{DT}\frac{dT}{dt}=\frac{1}{X}\frac{d^2X}{dx^2}=-\lambda^2
+$$
+
+---
+
+## Time Part and Spatial Eigenfunctions
+
+Time ODE
+
+$$
+\frac{dT}{dt}=-\lambda^2 D\,T
+\Rightarrow
+T(t)=\exp(-\lambda^2 Dt)
+$$
+
+Space ODE
+
+$$
+\frac{d^2X}{dx^2}+\lambda^2 X=0
+$$
+
+Solutions depend on BCs (sine/cosine, etc.).
+
+---
+
+## Eigenvalues from Boundary Conditions
+
+- Dirichlet BC ⇒ $\lambda_n = n\pi/L$
+- Neumann BC ⇒ $\lambda_n = n\pi/L$ with different eigenfunctions
+- Mixed BC ⇒ different transcendental conditions
+
+Physical meaning in notes
+
+- $\lambda$ sets spatial wavelength $\sim 1/\lambda$
+- higher $n$ modes decay faster (via $e^{-\lambda^2Dt}$)
+
+---
+
+## General Series Solution Form
+
+Superposition over modes
+
+$$
+c(x,t)=\sum_{n=0}^{\infty} A_n X_n(x)\,e^{-\lambda_n^2Dt}
+$$
+
+Coefficients $A_n$ from initial condition projection.
+
+---
+
+## Modal Picture: What Decays First?
+
+- high spatial-frequency components (large $\lambda_n$) vanish quickly
+- long-wavelength components persist longer
+- diffusion acts as a low-pass filter on concentration profiles
+
+---
+
+## Method 3: Laplace Transform (Time Domain)
+
+Notes: convert time-dependence into algebraic parameter $p$
+
+Define
+
+$$
+\hat c(x,p)=\mathcal{L}\{c(x,t)\}
+=\int_{0}^{\infty} e^{-pt}c(x,t)\,dt
+$$
+
+Laplace transform replaces time derivative with initial-value term.
+
+---
+
+## Key Property: Transform of $\partial c/\partial t$
+
+Using integration by parts (as in notes)
+
+$$
+\mathcal{L}\left\{\frac{\partial c}{\partial t}\right\}
+= p\hat c(x,p) - c(x,0)
+$$
+
+Spatial derivatives remain derivatives in $x$:
+
+$$
+\mathcal{L}\left\{\frac{\partial^2 c}{\partial x^2}\right\}
+=\frac{\partial^2 \hat c}{\partial x^2}
+$$
+
+---
+
+## Fick’s 2nd Law in Laplace Space
+
+Transform
+
+$$
+\frac{\partial c}{\partial t}=D\frac{\partial^2 c}{\partial x^2}
+$$
+
+becomes
+
+$$
+p\hat c(x,p)-c(x,0)=D\frac{\partial^2 \hat c}{\partial x^2}
+$$
+
+Now an ODE in $x$ (parameter $p$).
+
+---
+
+## Example Setup: Semi-infinite with Fixed Surface
+
+From notes example
+
+- $c(x,0)=0$ for $x>0$
+- $c(0,t)=c_0$
+- $c(\infty,t)=0$
+
+Boundary conditions in Laplace domain
+
+$$
+\hat c(0,p)=\frac{c_0}{p},
+\qquad
+\hat c(\infty,p)=0
+$$
+
+---
+
+## Solve ODE in $x$
+
+With $c(x,0)=0$, equation reduces to
+
+$$
+D\frac{\partial^2 \hat c}{\partial x^2}-p\hat c=0
+$$
+
+General solution
+
+$$
+\hat c(x,p)=A e^{+\sqrt{p/D}\,x}+B e^{-\sqrt{p/D}\,x}
+$$
+
+Semi-infinite boundedness ⇒ $A=0$.
+
+---
+
+## Apply BC at $x=0$
+
+At $x=0$
+
+$$
+\hat c(0,p)=B=\frac{c_0}{p}
+$$
+
+So
+
+$$
+\hat c(x,p)=\frac{c_0}{p}\exp\left(-\sqrt{\frac{p}{D}}\,x\right)
+$$
+
+---
+
+## Back-transform: Error Function Result
+
+Inverse Laplace yields the erfc solution (notes)
+
+$$
+c(x,t)=c_0\,\operatorname{erfc}\left(\frac{x}{2\sqrt{Dt}}\right)
+$$
+
+Interpretation
+
+- Laplace method packaged IC automatically into transformed equation
+- remaining work: solve ODE in $x$ + apply BCs
+
+---
+
+## General Laplace Workflow (Notes Summary)
+
+1) Write PDE and IC/BC  
+2) Laplace in time: $c\to \hat c(x,p)$  
+3) Solve ODE in $x$ (parameter $p$)  
+4) Fit BCs (Dirichlet / Neumann) to get coefficients  
+5) Invert transform (analytic or numeric)
+
+---
+
+## Meaning of the $p$-space Parameter
+
+From your sketch (page 17)
+
+- $\hat c(x,p)$ is a weighted time integral of $c(x,t)$
+- large $p$ emphasizes early-time behavior
+- small $p$ emphasizes long-time behavior
+
+Conceptual plots
+
+- $c(x,t)$ evolves in $t$
+- $\hat c(x,p)$ “compresses” time into the $p$ axis
+
+---
+
+## When to Use Which Method?
+
+- Known source solutions + superposition
+  - infinite / semi-infinite, simple BCs
+- Separation of variables
+  - finite domains, classical BCs, eigenfunction expansions
+- Laplace transform
+  - strong control over initial conditions, semi-infinite problems
+- Numerical
+  - complex geometry, nonlinear $D(c)$, complicated BCs
+
+---
+
+## Summary
+
+- Steady state ⇒ Laplace equation $\nabla^2 c=0$ (solve by geometry)
+- Non-steady constant-$D$ diffusion is linear
+- Key kernels: Gaussian (point source) and erfc (semi-infinite boundary)
+- Separation of variables: eigenmodes decay as $e^{-\lambda_n^2Dt}$
+- Laplace transform: time derivative becomes $p\hat c - c(x,0)$, ODE in $x$
+
+---
+
+## Next Steps
+
+- Apply these solutions to real diffusion experiments
+- Extract $D$ by fitting measured $c(x,t)$
+- Extend to variable $D(c)$ and coupled diffusion (later)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
