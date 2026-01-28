@@ -1,0 +1,218 @@
+---
+title: "MATE 664 Lecture 08"
+subtitle: "Numerical Solution To Diffusion Problems & Atomic Models for Diffusion"
+author: "Dr. Tian Tian"
+date: "2026-01-28"
+format:
+  html: {}
+  revealjs:
+    output-file: slides.html
+  pdf:	 
+    output-file: L08.pdf
+---
+
+::: {.content-visible when-format="html" unless-format="revealjs"}
+
+::: {.callout-note}
+- Slides 👉  [Open presentation🗒️](./slides.html)
+- PDF version of course note  👉 [Open in pdf](./L08.pdf)
+- Handwritten notes 👉 [Open in pdf](./public/L08_annotated.pdf)
+:::
+
+:::
+
+
+## Recap of Lecture 07 {.center}
+Key ideas from last lecture:
+
+- Analytical solution to diffusion problems (infinite domain)
+  - Semi-infinite (half-half) solution
+  - Line / point source solution
+  - Superimposition method
+- Separation of variables method (finite / bounded domain)
+- Laplace transform (will not be covered in exam)
+
+
+## Learning Outcomes {.center}
+
+After today's lecture, you will be able to:
+
+- **Describe** detail ideas behind the numerical / finite-difference solution to diffusion problems
+- **Recall** basic formalism of discrete differential equation
+- **Apply** numerical methods for diffusion problems and diffusivity extraction
+- **Analyze** atomic origin of diffusion
+
+## Numerical Method For Diffusion Equation
+
+In many cases the analytical solutions to a diffusion equation is hard / impossible to obtain, due to:
+
+- complicated B.C. I.C.s
+- non-uniform or anisotropic diffusivities
+- existing of multiple phases during diffusion
+- inhomogeneous temperature distribution
+- ... other experimental conditions you can think of
+
+We need numerical methods for these situations!
+
+## Finite Difference Method
+
+For 1D problem 👉 use the **finite difference** (FD) method first proposed by Euler.
+
+![](./public/euler_meme.png){width="80%"}
+
+## FD In A Nutshell
+
+To solve the diffusion equation, we need to **discretize** spatial and
+temporal domains into "grids".
+
+![](./public/fd-grid-2d.svg){width="80%"}
+
+
+## Derivatives By Finite Difference
+
+In Fick's second law, the required derivatives and their finite-difference
+approximations are summarized below.
+The concentration on grid is $c(i,j)$, where 
+$i$ indexes space and $j$ indexes time.
+
+| derivative | finite-difference approximation | scheme |
+|-----------|----------------------------------|--------|
+| $\displaystyle \frac{\partial c}{\partial t}$ | $\displaystyle \frac{c(i,\,j+1) - c(i,\,j)}{\Delta t}$ | forward (time) |
+| $\displaystyle \frac{\partial c}{\partial x}$ | $\displaystyle \frac{c(i+1,\,j) - c(i-1,\,j)}{2\Delta x}$ | central (space) |
+| $\displaystyle \frac{\partial^2 c}{\partial x^2}$ | $\displaystyle \frac{c(i+1,\,j) - 2c(i,\,j) + c(i-1,\,j)}{(\Delta x)^2}$ | central (space) |
+
+## Solving Diffusion Equation: Method of Lines (MOL)
+
+Fick's second law is PDE which is hard to integrate directly. Method of lines use the following strategies:
+
+- Discretize space only
+- Keep time continuous
+- Convert PDE into a system of ODEs in time
+
+
+After spatial discretization 👉 ODE in temporal domain
+
+```{=tex}
+\begin{align}
+\frac{d c(i,t)}{d t}
+=
+D \frac{c(i+1,t) - 2c(i,t) + c(i-1,t)}{(\Delta x)^2}
+\end{align}
+```
+
+Each spatial node $i$ (line) corresponds to one ODE, hence the name.
+
+## MOL Algorithm (Explicit Time Marching)
+
+
+1. Define spatial grid with $x_i$ ($N$ points), choose $\Delta x$
+2. Apply boundary conditions at $i=0$ and $i=N$
+3. Discretize spatial derivatives using central difference
+4. Obtain ODE system for $c(i,t)$
+5. Choose time step $\Delta t$
+6. Advance solution in time using forward Euler:
+   
+```{=tex}
+\begin{align}
+c(i,j+1)
+&=
+c(i,j)
++
+\Delta t \,
+\frac{d c(i,t)}{d t} \\
+&= c(i,j) + \Delta t \cdot D \frac{c(i+1,t) - 2c(i,t) + c(i-1,t)}{(\Delta x)^2}
+\end{align}
+```
+
+## Things To Check In FD Scheme
+
+- Grid stability condition  
+
+  $$\Delta t \le \frac{(\Delta x)^2}{2D}$$
+  
+
+- Convergence: are $\Delta t$ and $\Delta x$ small enough?
+
+- Numerical precision: stiff diffusion problems (e.g. Nernst-Planck) may require higher numerical precision
+
+- Boundary condition implementation
+
+- Conservation 
+
+- Solving steady state problem (Laplace problem) can be non-trivial
+
+## Implementation and Multi-Dimensional Extensions
+
+- Open-source implementation (FD + MOL)
+  - Python + NumPy for spatial discretization
+  - `scipy.integrate.solve_ivp` for time integration
+
+- Open-source PDE solvers
+  - Finite volume method (FVM): OpenFOAM (C++), FiPy (Python)
+  - Finite element method (FEM) FEniCS (Python)
+
+- Commercial multiphysics solvers
+  - FEM: COMSOL Multiphysics
+  - FVM: ANSYS
+
+- Development of solvers is a hot field for engineering!
+
+## FD Numerical Method Demo
+
+How do FD compare with analytical solution?
+
+```{=html}
+<iframe width="100%" height="900"
+		src="../../scripts/L08_fd_comparison.html" title="Webpage example"></iframe>
+```
+
+## Estimating Diffusivity: Example 1
+
+The first diffusivity in metal was presented in 1894 by Roberts-Austen using diffusion of Au in liquid Pb. (See review by _Mehrer and Stolwijk, Diffusion Fundamentals, 2008, 1, 1-32_).
+
+The experiment is basically a solid Au-Pd alloy cylinder diffusing
+into semi-infinite molten Pd at $T$=492 ℃, as the geometry
+below. Experiment weight fraction of Au was determined by precision scales on sections of cylinder after $t=6.96$ days. Can we verify his results of diffusivity ($\tilde{D}=3.00$ cm$^2$d$^{-1}$?
+
+![](./public/roberts-austen-exp-setup.svg){width="50%"}
+
+## Roberts-Austen Experiment: Fitting
+
+```{=html}
+<iframe width="100%" height="900"
+		src="../../scripts/L08_pb_au_diff_fit.html" title="Webpage example"></iframe>
+```
+
+
+## Summary
+
+<!-- - Steady state ⇒ Laplace equation $\nabla^2 c=0$ (solve by geometry) -->
+<!-- - Non-steady constant-$D$ diffusion is linear -->
+<!-- - Key kernels: Gaussian (point source) and erfc (semi-infinite boundary) -->
+<!-- - Separation of variables: eigenmodes decay as $e^{-\lambda_n^2Dt}$ -->
+<!-- - Laplace transform: time derivative becomes $p\hat c - c(x,0)$, ODE in $x$ -->
+
+---
+
+<!-- ## Next Steps -->
+
+<!-- - Numerical solutions to diffusion problems -->
+<!-- - Estimation of diffusivity from solutions -->
+<!-- - Introduction to atomic model of diffusion -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

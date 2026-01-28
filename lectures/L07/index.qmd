@@ -48,30 +48,60 @@ $k_1, k_2$ are determined by the boundary conditions.
 		src="../../scripts/L07-steady-state-diff.html" title="Webpage example"></iframe>
 ```
 
+## Learning Outcomes {.center}
+
+After today's lecture, you will be able to:
+
+- **Recall** analytical solutions to diffusion problems
+- **Analyze** superposition of the source method in diffusion problems
+- **Analyze** the diffusion length scale in $\sqrt{4Dt}$ and its implications
+- **Describe** the key process in separation of variables method
+- **Apply** Laplace transform in initial value problems
+
 ## Part II: Non-steady State Diffusion
 
-Different strategies
+Different strategies (review)
 
-- superposition with known “source” solutions
-- separation of variables (finite domains)
+- Superposition with known “source” solutions
+- Separation of variables (finite domains)
 - Laplace transform (initial condition handling)
-- numerical methods (general geometry / $D(c)$)
+- Numerical methods (general geometry / $D(c)$)
 
 ---
 
-## Method 1: Superposition of Known Solutions
+## Dimensionless Transform of Diffusion
 
-Use linearity of diffusion equation
+- Analysis of many diffusion problems will benefit by transforming into dimensionless forms
+- Diffusion length scale $\sqrt{Dt}$ (or $\sqrt{4Dt}$)
+- Dimensionless variable $\eta = \frac{x}{\sqrt{Dt}}$
+- Transform from ODE to PDE
 
-If $c_a$ and $c_b$ satisfy the PDE and BCs, then
+  ```{=tex}
+  \begin{align}
+  \frac{\partial c}{\partial t} &= D \frac{\partial^2 c}{\partial x^2} \\
+  \frac{\partial c}{\partial \eta} &= -\frac{\eta}{2}\frac{\partial^2 c}{\partial \eta^2}
+  \end{align}
+  ```
 
-$$
-c = c_a + c_b
-$$
+## Solution to Dimensionless Diffusion Problem
 
-also satisfies (with compatible IC/BC decomposition).
+- Step 1: Let $u = \frac{\partial c}{\partial \eta}$
 
----
+  $$
+  u = C_1 \exp(-\frac{1}{4} \eta^2)
+  $$
+
+- Step 2: integrate $u = \frac{\partial c}{\partial \eta}$
+
+  $$
+  c(\eta) = K_1 + K_2 \operatorname{erf}(\frac{\eta}{2}) \\ 
+  $$
+
+  where $\operatorname{erf}(\xi) = \frac{2}{\sqrt{\pi}} \int_0^\xi e^{-x^2} dx$ is the **error function**
+
+- Step 3: fit initial condition and boundary conditions (**the hardest part**!)
+
+- How do the solution look like?
 
 ## Inifinite Space: Half-Half Situation 
 
@@ -85,7 +115,7 @@ I.C.
 Solution form
 
 $$
-c(x,t)=\frac{c_L + c_R}{2} + \frac{c_L-c_R}{2}\,\operatorname{erf}\left(\frac{x}{\sqrt{2Dt}}\right)
+c(x,t)=\frac{c_L + c_R}{2} + \frac{c_L-c_R}{2}\,\operatorname{erf}\left(\frac{x}{\sqrt{4Dt}}\right)
 $$
 
 How do we get here?
@@ -94,22 +124,83 @@ How do we get here?
 
 ## Limits and Checks
 
-- $t\to 0^+$: $\operatorname{erfc}(x/(2\sqrt{Dt}))\to 0$ for $x>0$ ⇒ $c\to c_B$
-- $x\to 0$: $\operatorname{erfc}(0)=1$ ⇒ $c(0,t)=c_A$
-- $x\to\infty$: $\operatorname{erfc}(\infty)=0$ ⇒ $c\to c_B$
+- $t\to 0^+$: $\operatorname{erfc}(x/(\sqrt{4Dt}))\to 0$ for $x>0$ ⇒ $c\to c_R$
+- $t\to 0^+$: $\operatorname{erfc}(x/(\sqrt{4Dt}))\to 0$ for $x>0$ ⇒ $c\to c_L$
+- $x\to\infty$: $\operatorname{erfc}(\infty)=0$ ⇒ $c\to \frac{c_L + c_R}{2}$
+- Takes **infinite** amount of time to reach steady-state, but we can often take intermediate snapshots
+
+## Inifinite Space: Half-Half Situation Time Scale
+
+```{=html}
+<iframe width="100%" height="900"
+		src="../../scripts/L07_half_half_silution.html" title="Webpage example"></iframe>
+```
 
 ---
 
 ## Line Source as Superposition
 
-Notes: “line source” can be built from two semi-infinite problems
+Notes: “line source” can be built from two semi-infinite problems. For
+a line source with concentration $c_0$ and thickness $\delta$,
+solution $c(x, t)$ follows
 
-<!-- ![](./public/placeholder-image-2.png) -->
+$$
+c(x, t) = c_1(x, t) + c_2(x, t)
+$$
 
-Idea
+Idea:
 
+- $c_1$ and $c_2$ are solutions for 2 semi-infinite geometries
 - decompose initial profile into steps
 - add corresponding erfc solutions
+
+## Superposition Solution For Slab Geometry
+
+- Step 1: write 2 half-space solutions
+
+```{=tex}
+\begin{align}
+c_1(x, t) &= \frac{c_0}{2} + \frac{c_0}{2} \operatorname{erf}\!(\frac{x}{\sqrt{4 Dt}}) \\
+c_2(x, t) &= -\frac{c_0}{2} - \frac{c_0}{2} \operatorname{erf}\!(\frac{x - \delta}{\sqrt{4 Dt}})
+\end{align}
+```
+
+- Step 2: combine them!
+
+```{=tex}
+\begin{align}
+c(x,t)=\frac{c_0}{2}\left[
+\mathrm{erf}\!\left(\frac{x}{\sqrt{4Dt}}\right)
+-\mathrm{erf}\!\left(\frac{x-\delta}{\sqrt{4Dt}}\right)
+\right]
+\end{align}
+```
+
+is obtained by superposition and is valid under the following conditions:
+
+<!-- - Governing equation is linear diffusion -->
+<!-- $$ -->
+<!-- \frac{\partial c}{\partial t} = D \frac{\partial^2 c}{\partial x^2}, \quad D=\text{const.} -->
+<!-- $$ -->
+
+<!-- - Initial condition (finite diffusion couple) -->
+<!-- $$ -->
+<!-- c(x,0)= -->
+<!-- \begin{cases} -->
+<!-- 0, & x<0 \\ -->
+<!-- c_0, & 0<x<\delta \\ -->
+<!-- 0, & x>\delta -->
+<!-- \end{cases} -->
+<!-- $$ -->
+
+<!-- - Infinite or semi-infinite domain -->
+<!--   - external boundaries do not affect diffusion over the time of interest -->
+
+<!-- - Same diffusivity $D$ applies to both sub-problems -->
+
+<!-- Interpretation: -->
+<!-- - $c_1(x,t)$ and $c_2(x,t)$ are solutions to shifted step-function initial conditions -->
+<!-- - Linearity allows $c(x,t)=c_1(x,t)+c_2(x,t)$ -->
 
 ## Infinite Domain: Point Source (1D)
 
@@ -119,7 +210,7 @@ $$
 c(x,0)=N\,\delta(x)
 $$
 
-Solution
+Solution (thin-film limit)
 
 $$
 c(x,t)=\frac{N}{\sqrt{4\pi Dt}}
@@ -440,9 +531,9 @@ Conceptual plots
 
 ## Next Steps
 
-- Apply these solutions to real diffusion experiments
-- Extract $D$ by fitting measured $c(x,t)$
-- Extend to variable $D(c)$ and coupled diffusion (later)
+- Numerical solutions to diffusion problems
+- Estimation of diffusivity from solutions
+- Introduction to atomic model of diffusion
 
 
 
