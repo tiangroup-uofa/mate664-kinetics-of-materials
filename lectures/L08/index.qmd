@@ -157,6 +157,41 @@ c(i,j)
 
 - Development of solvers is a hot field for engineering!
 
+## Some Skeleton Code in Python
+
+MOL can usually be implemented using pure Python in less than 20 lines
+(really not that difficult!)
+
+```{python}
+#| eval: false
+
+from scipy.integrate import solve_ivp
+
+def rhs(t, c, D, dx):
+    """ Function to implement right-hand-side FD """
+	return delta_c_array
+	
+def apply_bc(c):
+   """ Function to enforce boundary conditions """
+   return modified_c_array
+	
+def solve_diffusion(c0, t_span, D, dx):
+    """
+    high-level diffusion solver
+    """
+    def rhs_bc(t, c):
+        c = apply_bc(c)
+        return rhs(t, c, D, dx)
+
+    sol = solve_ivp(
+        rhs_bc,
+        t_span,
+        c0,
+        method="RK45"
+    )
+    return sol
+```
+
 ## FD Numerical Method Demo
 
 How do FD compare with analytical solution?
@@ -172,9 +207,28 @@ The first diffusivity in metal was presented in 1894 by Roberts-Austen using dif
 
 The experiment is basically a solid Au-Pd alloy cylinder diffusing
 into semi-infinite molten Pd at $T$=492 ℃, as the geometry
-below. Experiment weight fraction of Au was determined by precision scales on sections of cylinder after $t=6.96$ days. Can we verify his results of diffusivity ($\tilde{D}=3.00$ cm$^2$d$^{-1}$?
+below. Experiment weight fraction of Au was determined by precision scales on sections of cylinder after $t=6.96$ days. Can we verify his results of diffusivity ($\tilde{D}=3.00$ cm$^2$d$^{-1}$)?
 
 ![](./public/roberts-austen-exp-setup.svg){width="50%"}
+
+## Roberts-Austen Experiment: Original Data & Setup
+
+See [Bakerian Lecture: On the Diffusion of Metals. Roberts-Austen](https://archive.org/details/philtrans09730582/page/n9/mode/2up)
+
+:::{.columns}
+:::{.column}
+
+![Roberts-Austen's original experimental data](./public/roberts-data.png){width="100%"}
+
+:::
+
+:::{.column}
+
+![Setup scheme](./public/roberts-real-setup.png){width="100%"}
+
+:::
+
+:::
 
 ## Roberts-Austen Experiment: Fitting
 
@@ -183,8 +237,218 @@ below. Experiment weight fraction of Au was determined by precision scales on se
 		src="../../scripts/L08_pb_au_diff_fit.html" title="Webpage example"></iframe>
 ```
 
+## More Complex Situation: Multiphase Interdiffusion
+
+- Diffusion couple experiments often cross phase boundaries
+  - single-phase → two-phase → single-phase regions
+  - composition is no longer a single-valued function of chemical potential
+
+Example 1: Ir–Re diffusion couple
+annealed at 2400°C (_adapted from MIT KOM course_)
+
+- How many discontinuities?
+
+![](./public/Ir-Re-phase-interdiff.png){width="100%"}
+
+## More Complex Situation: Multiphase Interdiffusion
+
+Example 2: Os-W diffusion couple
+annealed at 2200°C (_adapted from MIT KOM course_)
+
+- How many discontinuities?
+- How do we model these problems?
+- See packages like [`pyDiffusion`](https://github.com/zhangqi-chen/pyDiffusion)
+
+![](./public/Os-W-phase-interdiff.png){width="100%"}
+
+# Introduction to Atomic Models of Diffusion
+
+## Motivation: Predicting $D$ From Atomistic Simulations
+
+- We know from experiments how to extract the $D$ (or $\tilde{D}$) very well
+- But how are the diffusivities coming from atomic models?
+- Can we predict $D$ from some calculations?
+
+## Diffusion: Bridging Atomic and Macroscopic Pictures
+
+Two major achievements in 20th century
+
+- Explanation of Brownian motion (Einstein)
+  - macroscopic diffusion emerges from random atomic motion
+  - link between mean-square displacement and diffusivity
+
+- Atomic interpretation of Fick’s laws
+  - diffusion coefficient related to jump frequency and jump distance
+  - connects lattice-scale mechanisms to continuum transport equations
+  
+## Mean Squared Displacement (Brownian Motion Picture)
+
+A particle undergoes a sequence of thermally activated jumps
+
+- jump displacement for $k$-th step: $\vec{r}_k$
+- after $N_s$ jumps, total displacement:
+
+$$
+\vec{R}(N_s) = \sum_{k=1}^{N_s} \vec{r}_k
+$$
+
+- What is the mean displacement $\langle R \rangle$? (it's zero!)
+
+Mean squared displacement (MSD):
+
+$$
+\langle R^2(N_s) \rangle = \left\langle \vec{R}(N_s)\cdot \vec{R}(N_s) \right\rangle
+$$
+
+---
+
+## MSD: Expansion and Randomness Assumption
+
+Expand the dot product:
+
+$$
+R^2(N_s)
+=
+\sum_{k=1}^{N_s} |\vec{r}_k|^2
++
+2\sum_{k=1}^{N_s-1}\sum_{m=k+1}^{N_s} \vec{r}_k \cdot \vec{r}_m
+$$
+
+If successive jumps are uncorrelated (random directions):
+
+$$
+\langle \vec{r}_k \cdot \vec{r}_m \rangle = 0 \quad (k\neq m)
+$$
+
+Then
+
+$$
+\langle R^2(N_s) \rangle
+=
+N_s \langle r^2 \rangle
+$$
+
+where $\langle r^2 \rangle$ is the mean squared jump distance.
+
+---
+
+## Random Jump MSD from Continuum Diffusion
+
+Consider diffusion from a point source in 3D into infinite space. The concentration at each $r$ at any time $t$ is $c(r, t)$
+
+Define MSD as the normalized second moment of $c(r, t)$
+
+$$
+\langle R^2(t)\rangle
+=
+\frac{\int_0^\infty r^2\,c(r,t)\,4\pi r^2\,dr}{\int_0^\infty c(r,t)\,4\pi r^2\,dr}
+$$
+
+Luckily, the solution to $c(r, t)$ was already known in 1905 as Gaussian (also from last lecture):
+
+$$
+c(r, t) = \frac{N}{{\sqrt{4 \pi Dt}}^3}
+\exp\!(-\frac{r^2}{4Dt}),\qquad r^2 = x^2 + y^2 + z^2
+$$
+
+## Einstein Diffusion Equation From Continuum Diffusio
+
+Use the Gaussian form, Einstein showed for 3D random jump, we have 
+
+$$
+\langle R^2(t)\rangle = 6Dt
+$$
+
+More generally in $d$ dimensions:
+
+$$
+\langle R^2(t)\rangle = 2d\,Dt
+$$
+
+- This is known as Einstein diffusion equation
+- Links atomic motion (Brownian motion, $<R^2>$) to continuum diffusion ($D$)
+
+## Diffusion From Random Walk Model
+
+1D random walk with step $\pm 1$ (site index $n$)
+
+Constraints after $N_\tau$ steps:
+
+$$
+N_R - N_L = n,\quad N_R + N_L = N_\tau
+$$
+
+Number of ways (binomial):
+
+$$
+U(n,N_\tau)=\frac{N_\tau!}{N_R!N_L!}
+$$
+
+For an unbiased walk $p_L=p_R=1/2$:
+
+$$
+p(n,N_\tau)
+=
+\frac{N_\tau!}{N_R!N_L!}\left(\frac12\right)^{N_\tau}
+$$
+
+Large-step limit gives Gaussian form:
+
+$$
+p(n,N_\tau)\propto \exp\!\left(-\frac{n^2}{2N_\tau}\right)
+$$
+
+---
+
+## Linking Random Walk to Macroscopic $D$
+
+Identify:
+
+- diffusion distance: $x \sim n\,\Delta x$
+- number of steps: $N_\tau \sim \Gamma t$ (jump frequency $\Gamma$)
+
+From MSD (1D):
+
+$$
+\langle x^2(t)\rangle
+=
+\langle n^2\rangle (\Delta x)^2
+\sim N_\tau (\Delta x)^2
+\sim \Gamma t (\Delta x)^2
+$$
+
+Compare with Einstein (1D): $\langle x^2(t)\rangle = 2Dt$
+
+$$
+D = \frac{\Gamma (\Delta x)^2}{2}
+\qquad
+\text{(in 1D)}
+$$
+
+General $d$-D form:
+
+$$
+D = \frac{\Gamma \langle r^2\rangle}{2d}
+$$
+
+
+
+
+
+
+
 
 ## Summary
+
+- Numerical solutions to diffusion equations
+- Applying numerical fitting for $D$
+- Introducing to atomic picture of diffusivity
+
+## Next Steps
+
+- Understanding the atomic model in liquid and lattices
+- Complex mechanism of lattice diffusion
+- Estimating $D$ from thermodynamic data
 
 <!-- - Steady state ⇒ Laplace equation $\nabla^2 c=0$ (solve by geometry) -->
 <!-- - Non-steady constant-$D$ diffusion is linear -->
@@ -192,7 +456,7 @@ below. Experiment weight fraction of Au was determined by precision scales on se
 <!-- - Separation of variables: eigenmodes decay as $e^{-\lambda_n^2Dt}$ -->
 <!-- - Laplace transform: time derivative becomes $p\hat c - c(x,0)$, ODE in $x$ -->
 
----
+
 
 <!-- ## Next Steps -->
 
