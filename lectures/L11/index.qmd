@@ -1,0 +1,307 @@
+---
+title: "MATE 664 Lecture 11"
+subtitle: "Diffusion in Defect and Material Imperfections"
+author: "Dr. Tian Tian"
+date: "2026-02-09"
+format:
+  html: {}
+  revealjs:
+    output-file: slides.html
+  pdf:	 
+    output-file: L09.pdf
+---
+
+::: {.content-visible when-format="html" unless-format="revealjs"}
+
+::: {.callout-note}
+- Slides 👉  [Open presentation🗒️](./slides.html)
+- PDF version of course note  👉 [Open in pdf](./L11.pdf)
+- Handwritten notes 👉 [Open in pdf](./public/L11_annotated.pdf)
+:::
+
+:::
+
+
+## Recap of Lecture 10 {.center}
+Key ideas from last lecture:
+
+- Diffusion equations for solids
+- Link Einstein's equation to Arrhenius equation
+- Emergence of activation enthalpy / entropy
+- Vacancy formation free energy and diffusion
+
+
+## Learning Outcomes {.center}
+
+After this lecture, you will be able to:
+
+- Apply the free energy-dependent diffusion equations to systems with defects and material imperfections
+- Understand how intrinsic and extrinsic defect in ionic materials are formed
+- Analyze intrinsic / extrinsic diffusion regimes in ionic materials
+- Understand material imperfections as the diffusion shortcuts
+
+## What Does Diffusion In Real Materials Look Like?
+
+- Real solids are not perfect crystals
+- Defects control transport properties
+- Ionic diffusion shows rich temperature dependence
+- Same Einstein framework, new physics inside
+
+## Base Line: Vacancy-Mediated Diffusion In Metals
+
+- Diffusion = random walk of atoms via vacancies
+- Diffusivity related to both vacancy density (controlled by $G_v^f$) and vacancy jumping (controlled by $G_v^m$)
+
+```{=tex}
+\begin{align}
+D_A
+&= \frac{z \langle r^2 \rangle \nu}{6}
+\exp\!\left(\frac{S_v^{f} + S_v^{m}}{k_B}\right)
+\exp\!\left(-\frac{H_v^{f} + H_v^{m}}{k_B T}\right)
+\, f
+\end{align}
+```
+
+## Defect-Mediated Diffusion In Ionic Crystals
+
+- Defects in ionic crystals are more complex than in metal
+- Charge neutrality has to be conserved
+- More than one single defect species are involed
+- In other words, defects always come in **pairs** in ionic solids
+
+## Schottkey and Frenkel Defects In Ionic Crystals
+
+- Shottkey defects: missing both positive and negative species
+- Frenkel defects: one charged species moved to other site
+
+![Comparison between Schottkey and Frenkel defects](./public/compare-defect.png){width="65%"}
+
+## Ionic Defects: Kröger-Vink (KV) notation
+
+- Formula $X^Z_Y$
+ - X = what is at the site (Element or Vacancy)
+ - Y = what site is defective (Element or i)
+ - Z = effective charge at the site (• = +; '= –)
+
+![Example of KV notation](./public/kv-notation.png){width="60%"}
+
+## KV Notation For Schottky Defects
+
+Example: Schottky defects in MgO (anion + cation vacancies)
+
+- Formation reaction
+
+  $$
+  \text{null} \rightarrow V_{\mathrm{Mg}}^{''} + V_{\mathrm{O}}^{\bullet\bullet}
+  $$
+
+- Equilibrium condition
+  - $G_S^f$: formation free energy for Schottky defects (per reaction)
+
+  $$
+  K_S = [V_{\mathrm{Mg}}^{''}][V_{\mathrm{O}}^{\bullet\bullet}]
+  = \exp\!\left(-\dfrac{G_S^{f}}{kT}\right)
+  $$
+
+- Charge neutrality
+
+  $$
+  [V_{\mathrm{Mg}}^{''}] = [V_{\mathrm{O}}^{\bullet\bullet}]
+  $$
+
+
+## KV Notation For Frenkel Defects
+
+Example: Frenkel pairs in LiF (Lithium escaping to interstitial sites)
+
+- Formation reaction
+
+  $$
+  \mathrm{Li}_{\mathrm{Li}}^{\times} \rightarrow V_{\mathrm{Li}}^{'} + \mathrm{Li}_i^{\bullet}
+  $$
+
+- Equilibrium condition
+  -  $G_F^f$: formation free energy for Schottky defects (per reaction)
+  
+  $$
+  K_F = [V_{\mathrm{Li}}^{'}][\mathrm{Li}_i^{\bullet}]
+  = \exp\!\left(-\dfrac{G_F^{f}}{kT}\right)
+  $$
+
+- Charge neutrality  
+  $[V_{\mathrm{Li}}^{'}] = [\mathrm{Li}_i^{\bullet}]$
+
+## Intrinsic vs Extrinsic Defects
+
+- **Intrinsic** defects are those controlled by thermodynamics $G_S^f$, $G_F^f$ or $G_V^f$
+- **Extrinsic** defects are those defects added to the ionic crystal via doping
+
+Example of Extrinsic defects: CdCl$_2$ in NaCl
+
+- Dopant incorporation reaction  
+  $$
+  \mathrm{CdCl}_2 \rightarrow \mathrm{Cd}_{\mathrm{Na}}^{\bullet}
+  + 2\,\mathrm{Cl}_{\mathrm{Cl}}^{\times}
+  + V_{\mathrm{Na}}^{'}
+  $$
+
+- Extrinsic defect concentration  
+  $$
+  [V_{\mathrm{Na}}^{'}]_{\text{ext}}
+  = [\mathrm{Cd}_{\mathrm{Na}}^{\bullet}]
+  = [\mathrm{CdCl}_2]
+  $$
+
+- Total vacancy concentration  
+  $$
+  [V_{\mathrm{Na}}^{'}]
+  = [V_{\mathrm{Na}}^{'}]_s + [V_{\mathrm{Na}}^{'}]_{\text{ext}}
+  = \exp\!\left(-\dfrac{G_S^{f}}{2kT}\right) + [\mathrm{CdCl}_2]
+  $$
+
+
+## Diffusivity of Ionic Species
+
+- We can still use the vacancy exchange mechanism for the diffusivity of ionic species
+- E.g. Na$^+$ exchanges with its own vacancy $V_{\mathrm{Na}}^{'}$
+- $[V_{\mathrm{Na}}^{'}]$ depends on the $T$-regime!
+
+```{=tex}
+\begin{align}
+D_{\mathrm{Na}}
+&= [V_{\mathrm{Na}}^{'}]\,
+f\,\lambda^2\,\nu\,
+\exp\!\left(-\frac{G_{\mathrm{Na}}^{m}}{kT}\right) \\
+&= f \lambda^2 \nu \left[\exp\!\left(-\dfrac{G_S^{f}}{2kT}\right) + [\mathrm{CdCl}_2]\right]  \exp\!\left(-\frac{G_{\mathrm{Na}}^{m}}{kT}\right)
+\end{align}
+```
+
+## Intrinsic vs Extrinsic Regimes
+
+- Extrinsic: vacancy dominated by doped materials
+  - Low-$T$ regime (high $1/T$)
+
+```{=tex}
+\begin{align}
+D_{\mathrm{Na,ext}}
+&= [\mathrm{CdCl}_2]\,
+f\,\lambda^2\,\nu\,
+\exp\!\left(\frac{S_{\mathrm{Na}}^{m}}{k}\right)
+\exp\!\left(-\frac{H_{\mathrm{Na}}^{m}}{kT}\right)
+\end{align}
+```
+
+- Intrinsic: vacancy dominated by thermal dissociation
+  - High-$T$ regime (low $1/T$)
+
+```{=tex}
+\begin{align}
+D_{\mathrm{Na,int}}
+&= f\,\lambda^2\,\nu\,
+\exp\!\left(\frac{S_{S}^{f}}{2k}\right)
+\exp\!\left(\frac{S_{\mathrm{Na}}^{m}}{k}\right)
+\exp\!\left(-\frac{H_{S}^{f}}{2kT}\right)
+\exp\!\left(-\frac{H_{\mathrm{Na}}^{m}}{kT}\right)
+\end{align}
+```
+
+## Two-Regimes In The Arrhenius Plot
+
+![](./public/two-regimes-plot.png)
+
+## More Regimes In Arrhenius Plot
+
+- Example: cation diffusion in FeO during oxidation
+- Equilibrium depends on both $G^f$ and $p(O_2)$
+- Multiple regimes!
+
+![](./public/kom-feo-reaction.png)
+
+## Multiple Regimes Diffusion In Polycrystalline Materials
+
+![Arrhenius plot for diffusion on imperfections](./public/multi-regime-polycrystalline.png)
+
+## Diffusion Paths At Crystal Imperfections
+
+- Diffusion can occur along non-bulk pathways
+- Typical crystal imperfections
+  - Grain boundary and interface diffusion: 2D
+  - Free surface diffusion: 2D
+  - Dislocation (pipe) diffusion: 1D
+  - Vacancy / defect: 0D
+- Imperfections are associated with lower migration / activation energy!
+- Think as "shortcuts" during diffusion
+
+## Imperfection 1: Grain Boundaries
+
+![](./public/gb.png)
+
+## Grain Boundary Diffusion
+
+![](./public/gb-diff.png)
+
+## Harrison's ABC Model For GB Diffusion
+
+:::{.columns}
+:::{.column width="50%"}
+- A regime  
+  - $D_{XL} t > l^2$  
+  - $D_B t > l^2$  
+  - fast diffusion everywhere  
+
+- B regime  
+  - $D_{XL} t \gg l^2$  
+  - $D_B t < l^2$  
+  - coupled short-circuit and bulk diffusion  
+
+- C regime  
+  - $D_{XL} t < l^2$  
+  - $D_B t < l^2$  
+  - diffusion confined to imperfections  
+
+:::
+
+:::{.column width="50%"}
+![](./public/harrison-abc.png)
+:::
+
+## Dislocation Imperfections (Line Defect)
+
+:::{.columns}
+:::{.column width="50%"}
+
+![Edge and screw dislocations](./public/dislocation.png)
+
+:::
+
+:::{.column width="50%"}
+
+![Partial dislocations](./public/partial-dislocation.png)
+
+:::
+
+## Example of Diffusion Along Imperfection: Deposition on Graphene
+
+- See Vagli and Tian et al. _Nat Commun_ 2025, 16, 7726.
+- Diffusivity change on free graphene surface can be probed by deposition geometry!
+
+![](./public/ncomm-sem.png)
+
+## Deposition on Graphene - Theoretical Simulations
+
+- Kinetic Monte Carlo (kMC) assuming different diffusion barrier on imperfections
+- Faster diffusion direction --> lower density
+
+![](./public/ncomm-kmc1.png)
+
+## Deposition on Graphene - Theoretical Simulations
+
+- Kinetic Monte Carlo (kMC) assuming different diffusion barrier on imperfections
+- Faster diffusion direction --> lower density
+
+![](./public/ncomm-kmc2.png)
+
+## Deposition on Graphene - KMC vs Experiments
+
+
+![](./public/ncomm-kmc-exp.png)

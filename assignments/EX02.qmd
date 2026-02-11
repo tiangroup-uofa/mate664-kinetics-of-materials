@@ -1,0 +1,514 @@
+---
+title: "MATE 664 Assignment 2"
+subtitle: "Mechanism Of Diffusion In Materials"
+format:
+  pdf:	 
+    output-file: MAT664-WS2026-EX02.pdf
+    include-in-header:
+      - text: |
+          \usepackage{mathtools}
+          \usepackage{cancel}
+<!-- meta: -->
+<!--   answer: true -->
+
+---
+
+:::{.center}
+## **Due Date: 2026-02-27 (Fri) 11:59 PM**
+:::
+
+
+## 1. Diffusion From A Rate Equation Perspective
+
+In Assignment 1, we showed that the kinetics of a reversible
+homogeneous reaction can be described in terms of elementary forward
+and backward rates, with equilibrium determined by equality of
+chemical potentials.  Here we extend the same rate-equation logic to
+diffusion, viewing it as a sequence of reversible exchange steps
+between neighboring spatial locations. Consider a one-dimensional ring^[The ring geometry ensured the total number of molecules, $n_T$ is constant, without introducing boundary conditions.]
+of $N$ well-mixed chemical cells (@fig-diff-kinetic), each having volume $V$ and containing the same species.
+
+![Diffusion model from reaction kinetics](./img/EX02-ring-diffusion.svg){width="50%" #fig-diff-kinetic}
+
+Adjacent cells are separated
+by a distance $\Delta d$ and are connected by a pipe so that particles
+may exchange between neighboring cells.  Let $n_i(t)$ and $\mu_i(t)$
+denote the number of molecules and chemical potential in the $i$-th
+cell at time $t$, respectively. At any time, a molecule in cell $i$ may flow to the neighboring cell $i-1$ (left) or $i+1$ (right).
+We denote the corresponding rate constants by $k_{i,L}$ and $k_{i,R}$, respectively.
+The rate (unit: [number of molecules]/[time]) at which a molecules move from cell $i$ to the right cell $i+1$ is therefore $r_{i,R}=k_{i,R}\,n_i$, and similarly the rate from cell $i$ to the left cell $i-1$ is $r_{i,L} = k_{i,L}\,n_i$. We will see this is essentially a diffusion process.
+
+a) Using the definitions above, write an expression for the change rate of $n_i$, $\dfrac{d n_i}{d t}$ using $n_i$, $n_{i - 1}$, $n_{i + 1}$ and any corresponding rate constants. 
+
+:::{.content-hidden unless-meta="answer"}
+
+**Answer**:
+
+This is a reaction network, so balance of species A in cell $i$ depends on flow in and out of the cell
+
+```{=tex}
+\begin{align}
+\frac{d n_i}{d t} 
+&= \text{[In]} - \text{[Out]} \\
+&= k_{i-1,R}n_{i-1} + k_{i+1, L}n_{i+1} - (k_{i,L} + k_{i,R})n_i
+\end{align}
+```
+
+:::
+
+b) It is shown in _Kinetics of Materials_ Problem 2.5, that for each
+cell, the deviation of A from equilibrium $Y_i = n_i - n_i^{eq}$ has
+corresponding driving force $F_i = -(\mu_i - \mu_i^{eq})$, where
+$n_i^{eq}$ and $\mu^{eq}$ are equilibrium amount and chemical
+potential of A in cell $i$, respectively. Use your result in (a), show
+that $Y_i$ follows the linear force-flux relation
+
+```{=tex}
+\begin{align}
+\frac{d Y_i}{d t} = \sum_j L_{ij} F_j
+\end{align}
+```
+and show the expressions for the coefficients $L_{ij}$.
+
+_Note_: The relation between $\mu_i$ and $n_i$ follows ideal mixing:
+
+```{=tex}
+\begin{align}
+\mu_i = \mu_i^{eq} + k_B T \ln\!\left(\frac{n_i}{n_i^{\mathrm{eq}}}\right)
+\end{align}
+```
+
+:::{.content-hidden unless-meta="answer"}
+
+**Answer**:
+
+We have 
+
+```{=tex}
+\begin{align}
+Y_i &\equiv n_i-n_i^{\mathrm{eq}}\\
+F_i &\equiv \mu_i-\mu_i^{\mathrm{eq}}
+\end{align}
+```
+
+From linear relation (Eq. 2.48 in KOM) we have 
+
+```{=tex}
+\begin{align}
+Y_i \approx -\frac{n_i^{\mathrm{eq}}}{k_B T}\,F_i
+\end{align}
+```
+
+We can rewrite $d n_i / dt$ with:
+
+```{=tex}
+\begin{align}
+\mu_i-\mu_i^{\mathrm{eq}}
+&=k_BT\ln\!\left(\frac{n_i}{n_i^{\mathrm{eq}}}\right)
+=k_BT\ln\!\left(1+\frac{Y_i}{n_i^{\mathrm{eq}}}\right)
+\approx k_BT\,\frac{Y_i}{n_i^{\mathrm{eq}}}
+\end{align}
+```
+
+Substitute $Y_j \approx (n_j^{\mathrm{eq}}/k_BT)F_j$ into the discrete
+evolution equation to obtain the force–flux coefficients for $L_{ij}$,
+not that for each $i$, only 3 components are non-zero for each row / column in the $\mathbf{L}$ matrix
+
+```{=tex}
+\begin{align}
+L_{i,i-1} &= k_{i-1,R}\,\frac{n_{i-1}^{\mathrm{eq}}}{k_BT}\\
+L_{i,i}   &= -\left(k_{iL}+k_{iR}\right)\frac{n_i^{\mathrm{eq}}}{k_BT}\\
+L_{i,i+1} &= k_{i+1,L}\,\frac{n_{i+1}^{\mathrm{eq}}}{k_BT} \\
+L_{i,j} &= 0;\ \text{Other cases}
+\end{align}
+```
+
+:::
+
+
+c) Use Onsager's reciprocity principle $L_{ij} = L_{ji}$, show that at equilibrium it follows the detailed
+balance relation $k_{i-1, R} n_{i-1}^{eq} = k_{i, L} n_{i}^{eq}$.
+
+:::{.content-hidden unless-meta="answer"}
+
+**Answer**:
+
+Take the $\mathbf{L}$ matrix and compare the components $L_{i, i-1} and L_{i-1, i}$:
+
+```{=tex}
+\begin{align}
+L_{i, i-1} &= k_{i-1, R}\frac{n_{i-1}^{eq}}{k_B T} \\
+L_{i - 1, i} &= k_{i, L}\frac{n_{i}^{eq}}{k_B T} \\
+k_{i-1, R} n_{i-1}^{eq} &= k_{i, L} n_{i}^{eq}
+\end{align}
+```
+
+:::
+
+d) We can extend our conclusion from assignment 1 to this problem. At equilibrium, the chemical potential between any two cells are
+the same $\mu_i^{eq} = \mu_j^{eq}$.  If the system follows ideal mixing, show that the rate constants follow $k_{i-1, R} = k_{i, L}$. 
+
+:::{.content-hidden unless-meta="answer"}
+
+**Answer**:
+
+Under ideal mixing, we should have $n_{i-1}^{eq} = n_i^{eq} = n_{i+1}^{eq}$. Use the detail balance in previous question, we can show
+
+```{=tex}
+\begin{align}
+k_{i, L} \cancel{n_{i}^{eq}}
+&= k_{i-1, R} \cancel{n_{i-1}^{eq}} \\
+k_{i, L} &= k_{i-1, R}
+\end{align}
+```
+
+At this point we still can't say $k_{i, L} = k_{i, R}$ yet, that
+distinguishes the homogeneous and non-homogeneous materials.
+:::
+
+e) For diffusion in a homogeneous material, the symmetry ensures
+$k_{i, L} = k_{i, R} = k$. Combine with your results in previous
+questions, show that the number of species in all cells, $\mathbf{n} = [n_1, n_2,
+\ldots, n_N]^T$ follows the matrix-form differential equaiton:
+
+```{=tex}
+\begin{align}
+\frac{\partial \mathbf{n}}{\partial t}
+&=
+\mathbf{K} \mathbf{n} \\
+&= k \begin{bmatrix}
+-2 & 1  & 0  & \cdots & 0  & 1 \\
+1  & -2 & 1  & \cdots & 0  & 0 \\
+0  & 1  & -2 & \ddots & \vdots & \vdots \\
+\vdots & \ddots & \ddots & \ddots & 1 & 0 \\
+0  & \cdots & 0  & 1  & -2 & 1 \\
+1  & 0  & \cdots & 0  & 1  & -2
+\end{bmatrix}
+ \mathbf{n} 
+\end{align}
+```
+
+:::{.content-hidden unless-meta="answer"}
+
+**Answer**:
+
+From previous question we can easily see
+```{=tex}
+\begin{align}
+k_{i,L} &= k_{i, R} \\
+k_{i-1, R} &= k_{i+1, L}\\
+k_{i-1, L} &= k_{i+1, R}\\
+\vdots     &= \vdots \\
+	&= k
+\end{align}
+```
+
+this can be propagated to show that any rate constant between any two
+neighboring cells is $k$. Use the rate equation in a) we can show the
+$\mathbf{K}$ is a big triagonal matrix.
+
+:::
+
+f) The matrix form in (d) can be linked to the finite-difference (FD) form
+of Fick's second law of diffusion ($\dfrac{\partial c}{\partial t} = D
+\dfrac{\partial^2 c}{\partial x^2}$). Please show the macroscopic
+diffusivity $D$ follows $D = k (\Delta d)^2$ where $\Delta d$ is the
+distance between the cells. Please comment on how this formulation is related to the 1D Einstein relation of diffusion $D = \Gamma r^2 / 2$.
+
+
+::: {.content-hidden unless-meta="answer"}
+
+**Answer**:
+
+From part d), we show that
+
+```{=tex}
+\begin{align}
+\frac{dn_i}{dt} &= k\left(n_{i+1}-2n_i+n_{i-1}\right) \\
+\frac{d c_i}{dt} &= k\left(n_{i+1}-2n_i+n_{i-1}\right)
+\end{align}
+```
+
+this uses the relation that $c_i = n_i / V_i$ as each cell has the same
+volume $V_i = V$. The right hand side is similar to the finite-difference of $\partial^2 c / \partial x^2$:
+
+```{=tex}
+\begin{align}
+\frac{\partial^2 c}{\partial x^2}
+&= \frac{n_{i+1}-2n_i+n_{i-1}}{V (\Delta d)^2}
+\end{align}
+```
+
+Compare with the Fick's second law of diffusion, we will get
+
+```{=tex}
+\begin{align}
+D = k(\Delta d)^2
+\end{align}
+```
+
+It has the same format as the Einstein relation, with $r^2 = (\Delta
+d)$^2, and $\Gamma = 2k$. The factor of 2 takes into account that $k_{i,L}$ and $k_{i,R}$ are two equal probability events.
+
+:::
+
+
+## 2. Illustrating the Kirkendall Effect
+
+The Kirkendall effect is an important phenomenon in interdiffusion
+when the intrinsic mobilities of the two components in a diffusion
+couple are **not equal**. In the lectures, we discussed the
+vacancy-mediated mechanism and how the Kirkendall effect can be
+described in both the crystal-frame (C-frame) and the volume-fixed
+frame (V-frame). In this question, you will use a random-walk model to
+demonstrate the Kirkendall effect in the C-frame, and explain the
+physical origin of lattice drift. As shown in @fig-2d-swap, two atom types
+(orange and blue) occupy a 2D square lattice, with vacancies initially
+distributed randomly. A vacancy can exchange with a neighboring orange
+atom with probability $p_O$, and with a neighboring blue atom with
+probability $p_B$. When $p_O \neq p_B$, this biased vacancy-exchange
+kinetics should produce a Kirkendall-type effect. The y-direction of
+the lattice is periodic so no net diffusion exists in that direction.
+
+![The Kirkendall effect on a 2D-lattice. **a.** Movement involving atoms crossing the reference line. **b.** Movement involving compensating vacancies at C-frame boundaries](./img/EX02-swap.svg){width="100%" #fig-2d-swap}
+
+a) Place a reference line at the center of the C-frame domain (the
+initial boundary between the blue and orange regions). Starting from
+the configuration in @fig-2d-swap a, explain how a blue atom can end up on
+the left side of the reference line via vacancy exchanges. (Hint: the
+arrow in @fig-2d-swap a indicates one possible vacancy move sequence.)
+
+:::{.content-hidden unless-meta="answer"}
+
+**Answer**:
+
+There are many ways a blue atom adjacent to the reference line can
+move beyond that line, but it typically requires multiple steps. Using the steps in fig-2d-swap a, one possible trajectory that changes the configuration is:
+
+```
+0)  O | V        1)  O | B        2)  O | B        3)  V | B        4)  B | V
+    O | B   →        O | V   →        V | O   →        O | O   →        O | O
+```
+
+where we use letter O, B and V for orange, blue and vacancy, respectively.
+:::
+
+b) Use your observation in (a), qualitatively explain why the vacancy-mediated random walk involves **correlated movements** (i.e. next vacancy-atom exchange depends on the previous events).
+
+:::{.content-hidden unless-meta="answer"}
+
+**Answer**:
+
+In question (a) for a blue atom next to the reference line to cross
+that line, at least 4 vacancy jumps are required. More steps are
+needed as the vacancy may swap the atom into original positions
+(back-jump). 
+
+:::
+
+c) In the C-frame, the intrinsic atomic fluxes need not balance,
+  $J_A+J_B\neq 0$, so the vacancy flux $J_V=-(J_A+J_B)$ is also
+  non-zero. @fig-2d-swap b represents this by coupling the left boundary to
+  an orange–vacancy reservoir and the right boundary to a blue–vacancy
+  reservoir. Each time a vacancy crosses the C-frame boundary (leaves
+  the box), the reservoir immediately supplies a vacancy at the
+  opposite boundary so that the average vacancy content in the box
+  stays steady. In the scheme of @fig-2d-swap b, please answer:
+
+  - how many vacancies cross the C-frame boundary?
+  - how many organge / blue atoms are added / removed from the C-frame?
+  - does the total number of vacancies change inside the C-frame?
+  - does the total number of orange / blue atoms change inside the C-frame?
+
+:::{.content-hidden unless-meta="answer"}
+
+**Answer**:
+
+i. There are 2 vacancies crossing the boundary of C-frame (one leaving and one entering)
+ii. 1 orange atom is added and 1 blue atom is removed from the C-frame
+iii. The total number of vacancies remains constant in the C-frame
+iv. The total number of orange / blue atoms indeed change
+
+:::
+
+d) In part (c), the boundary reservoirs can effectively insert/remove
+real atoms. You may view this as the intermolecular forces can effectively "push" / "drag" the remaining atoms in the C-frame. As illustrated in @fig-2d-swap c, such effect produces a relative drift
+between the C-frame reference line and the stationary V-frame. Consider
+a 2D C-frame simulation with $N_y$ sites in the y-direction (normal to
+diffusion) and lattice spacing $a$ in the x-direction. After a given
+number of steps, the net number of vacancies that have crossed
+the left boundary is $\Delta N_v$. Explain why the corresponding drift distance of the C-frame
+relative to the stationary V-frame can be written as
+$$
+s = a\,\frac{\Delta
+N_v}{N_y}
+$$
+
+:::{.content-hidden unless-meta="answer"}
+
+**Answer**:
+
+A straightforward explanation is that when $\Delta N_v = N_y$ vacancies move across the left boundary of the C-frame, there are a layer of real atoms with thickness of $a$ moving in the fast diffusion direction. This relation should give a relative drift that scaled with $\Delta N_v$, such that
+
+$$
+s = \text{[Lattice spacing]}\times{}\text{[fraction of lattice plane]} = a\,\frac{\Delta
+N_v}{N_y}
+$$
+
+:::
+
+e) With the analysis from (a) - (d) we should be able to see vacancy
+exchange and proper boundary treatment in the C-frame can describe the Kirkendall effect. We can write a random
+sampling algorithm to simulate this effect. Please try the interactive demo we provided [https://tiangroup-uofa.github.io/mate664-kinetics-of-materials/scripts/EX02-demo-kirkendall.html](https://tiangroup-uofa.github.io/mate664-kinetics-of-materials/scripts/EX02-demo-kirkendall.html) to run such an simulation. Do you observe the numbers of orange, blue and vacancy sites to change in the domain when exchange probabilities are different?
+
+:::{.content-hidden unless-meta="answer"}
+
+**Answer**:
+
+Even though the random sampling demo isn't strictly a KMC simulation,
+you should be able to see the blue and orange sites start to mix when
+the probabilities $p_O$ and $p_B$ are nonzero. You can also observe
+that the fast diffusing species is the one with higher probability of
+exchange, while local vacancy concentration in that phase is lower
+than the other side (meaning there are now excess vacancy accumulation
+far away in the bulk).
+
+:::
+
+
+## 3. Understanding interdiffusion
+
+In the lectures we have shown that in the V-frame, the
+interdiffusivity $\tilde{D}$ in a binary diffusion couple can be
+written as the molar-average of the intrinsic diffusivities (also known as Darken
+equation):
+
+$$ \tilde{D} = D_1 X_2 + D_2 X_1 $$
+
+where $X_1$ and $X_2$
+are mole fractions of 1 and 2, respectively ($X_1+X_2=1$), and $D_1$, $D_2$ are corresponding **intrinsic
+diffusivities**. In this problem we will dive deeper into the meaning behind the interdiffusion process in 1D.
+
+a) In interstitial diffusion where species 2 are heavy host atoms such that $D_2 \approx 0$, we have shown
+
+$$
+\tilde{D} = D_1 X_2
+$$
+
+Since $\tilde{D}$ is also the interdiffusivity for species 2, qualitatively explain why species 2 can still exhibit an apparent flux $J_2 = -\tilde{D} \dfrac{\partial c_2}{\partial x}$ in the **V-frame**.
+
+:::{.content-hidden unless-meta="answer"}
+
+**Answer**:
+
+This is a clear example that conclusions from C- and V-frames are
+different. In the C-frame, we do not have net movement of host atoms
+(species 2) because of the interstitial mechanism. On the contrary,
+the total volume in the V-frame is kept constant. The movement of
+smaller solutes (species 1) will cause loss of volume, which must be
+compensated by the flux of host atoms in the V-frame. You can view
+this effect as if the interactions of the solute-host atoms "drag" the
+host atoms towards the opposite direction, although there is no
+apparent "jump" from the host atoms.
+
+:::
+
+
+b) Since $\tilde{D}=D_1 X_2 + D_2 X_1$ and $X_1(x,t)$ varies with
+position and time, $\tilde{D}$ is generally not a constant. Write down
+the governing equation (Fick’s second law form) for solving $\partial
+X_1/\partial t$. Assume the total concentration $c_T = c_1 + c_2$ is
+constant and $c_1 = X_1 c_T$, $c_2 = X_2 c_T$.
+
+:::{.content-hidden unless-meta="answer"}
+
+**Answer**:
+
+```{=tex}
+\begin{align}
+\frac{\partial X_1}{\partial t}
+&= \frac{\partial}{\partial x}\!\left(\tilde{D}(X_1)\frac{\partial X_1}{\partial x}\right) \\
+&= \frac{\partial}{\partial x}\!\left[\left(D_1(1-X_1)+D_2 X_1\right)\frac{\partial X_1}{\partial x}\right]
+\end{align}
+```
+:::
+
+c) The interdiffusion quation may be difficult to be solved
+analytically, but numerical integration by finite difference (FD) is
+straightforward. Consider 1D domain with uniform spatial grid spacing $\Delta x$
+and temporal grid spacing  $\Delta t$.  Let $X_1(i, j) \equiv X_1(x_i,t_j)$, show that we can update $X_1(i, j)$ to $X_i(i, j+1)$ (ignoring the boundaries) by:
+
+```{=tex}
+\begin{align*}
+X_1(i,j+1) &= X_1(i,j) 
++ \frac{\Delta t}{(\Delta x)^2}\Bigg[
+\tilde{D}(i+\frac{1}{2}, j)\Big(X_1(i+1,j)-X_1(i,j)\Big)\\
+&
+-\tilde{D}(i-\frac{1}{2}, j)\Big(X_1(i,j)-X_1(i-1,j)\Big)
+\Bigg] \\
+\tilde{D}(i+\frac{1}{2}, j) &= D_1 (1 - \frac{X_1(i, j) + X_1(i + 1, j)}{2}) + D_2 (\frac{X_1(i, j) + X_1(i + 1, j)}{2}) \\
+\tilde{D}(i-\frac{1}{2}, j) &= D_1 (1 - \frac{X_1(i, j) + X_1(i - 1, j)}{2}) + D_2 (\frac{X_1(i, j) + X_1(i - 1, j)}{2})
+\end{align*}
+```
+
+:::{.content-hidden unless-meta="answer"}
+
+**Answer**:
+
+In this case, we cannot assume a constant $\tilde{D}$, so we must
+explicitly express $\tilde{D}$ inside the FD scheme (i.e. no FD term for$\partial^2 X/\partial x^2$).
+
+The only trick is that when expressing $\partial X_1/\partial x$
+between $X_1(i, j)$ and $X_1(i + 1, j)$, we need to evaluate
+$\tilde{D}$ using the average $X_1$ between these two points, $\tilde{D}(i+\frac{1}{2}, n)$, and the same for $\tilde{D}(i-\frac{1}{2}, n)$.
+
+:::
+
+d) An example of the FD solution has been given in our online demo [https://tiangroup-uofa.github.io/mate664-kinetics-of-materials/scripts/EX02-inter-diffusion.html](https://tiangroup-uofa.github.io/mate664-kinetics-of-materials/scripts/EX02-inter-diffusion.html). Please run the interactive demo and record your observations.
+  - How will the profile $X_1(x)$ solved using the exact expression for $\tilde{D}(x)$ differ compared with average $\tilde{D}$ method?
+  - For certain initial concentrations $X_{1L}, X_{1R}$, the profile $X_1(x)$ will not be the same if we swap the values for $D_1$ and $D_2$. E.g. compare the plots for $D_1 = 10^{-11}$ $\text{m}^2\cdot \text{s}^{-1}$ & $D_2 = 10^{-9}$ $\text{m}^2\cdot \text{s}^{-1}$, and $D_1 = 10^{-9}$ $\text{m}^2\cdot \text{s}^{-1}$ & $D_2 = 10^{-11}$ $\text{m}^2\cdot \text{s}^{-1}$. Please qualitatively explain the reason behind this.
+
+:::{.content-hidden unless-meta="answer"}
+
+**Answer**:
+
+- The $X_1(x)$ profile from the exact $\tilde{D}(x)$ expression will look asymmetric compared with the one obtained from average $\tilde{D}(x)$.
+- For $D_1$ and $D_2$ that are very different, we will see the diffusion profiles look distinct if swapping $D_1$ and $D_2$ values, as shown in Figure below.
+
+![$X_1(x)$ profiles for (a) $D_1 = 10^{-11}$ $\text{m}^2\cdot \text{s}^{-1}$ & $D_2 = 10^{-9}$ $\text{m}^2\cdot \text{s}^{-1}$ and (b) $D_2 = 10^{-9}$ $\text{m}^2\cdot \text{s}^{-1}$ & $D_2 = 10^{-11}$ $\text{m}^2\cdot \text{s}^{-1}$](./img/EX02-answer-asym.svg){width="65%"}
+
+Swapping $D_1$ and $D_2$ values will cause the final interdiffusivity
+change significantly. Most notably when $D_1 \ll D_2$ and $X_{1L} >
+X_{1R} $, $\tilde{D}$ will drop drastically over $x$, creating a steep change in $X_1$, while on the other hand $\tilde{D}$ has a smoother variation.
+
+:::
+
+e) Early experiments in the 1950s (Da Silva & Mehl, _Interface and
+Marker Movements in Diffusion in Solid Solutions of Metals._ _JOM_ 3,
+155–173 (1951).) revealed similar asymmetric $X_1(x)$ profile as in
+our demo.  @fig-silva-exp showed a sample plot for 30% Zn-Cu | Cu diffusion at
+1107 K for 507 hours. Change the value input in the online demo, please estimate
+the order of magnitudes for intrinsic diffusivities $D_1$ (for Zn) and $D_2$ (for Cu).
+_Please feel free to modify the code if needed._
+
+![Da Silva & Mehl diffusion profile for Brass-Cu.](./img/EX02-ZnCu-profile.png){width="60%" #fig-silva-exp}
+
+:::{.content-hidden unless-meta="answer"}
+
+**Answer**:
+
+You could either use the online demo to perform a manual
+trial-and-error fitting or write your own least square fitting. From
+the shape of experimental observations there is a steep change of
+$X_1(x)$ around $x=+0.2$ cm, so we should have $D_1 \ll D_2$. One
+possible solution is shown in the following figure, where $D_1$ is two
+orders of magnitudes lower than $D_2$. The interdiffusivity value for
+Zn increases dramatically with higher Zn atomic concentration. The fitting value is very close to the calculated in the paper, where $\tilde{D}(X_1 = 0.3) \approx 1.2\times 10^{-12}\ \text{m}^2/s$.
+
+![Fitted $X_1(x)$ and $\tilde{D}(x)$ profiles using manual finetuning.](./img/fit-interdiffusivity.png){width="100%"}
+
+:::
+  
+
+
+  
