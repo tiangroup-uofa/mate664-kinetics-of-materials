@@ -56,7 +56,7 @@ def _(KirkendallSimulation, mo):
     return (ks,)
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     # Button to run the simulation
     run_button = mo.ui.button(label="Run Simulation", on_click=lambda value: True)
@@ -84,7 +84,7 @@ def _(mo):
     return num_steps, run_button
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(ks, mo, num_steps, plt, run_button):
     mo.stop(not run_button.value)
 
