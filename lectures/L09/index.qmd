@@ -1,0 +1,72 @@
+---
+title: "MATE 664 Lecture 09"
+subtitle: "Atomic Models for Diffusion (II): Gas & Liquid Phases"
+author: "Dr. Tian Tian"
+date: "2026-02-02"
+format:
+  html: {}
+  revealjs:
+    output-file: slides.html
+  pdf:	 
+    output-file: L09.pdf
+---
+
+::: {.content-visible when-format="html" unless-format="revealjs"}
+
+::: {.callout-note}
+- Slides 👉  [Open presentation🗒️](./slides.html)
+- PDF version of course note  👉 [Open in pdf](./L09.pdf)
+- Handwritten notes 👉 [Open in pdf](./public/L09_annotated.pdf)
+:::
+
+:::
+
+
+## Recap of Lecture 07 {.center}
+Key ideas from last lecture:
+
+- Analytical solution to diffusion problems (infinite domain)
+  - Semi-infinite (half-half) solution
+  - Line / point source solution
+  - Superimposition method
+- Separation of variables method (finite / bounded domain)
+- Laplace transform (will not be covered in exam)
+
+
+## Learning Outcomes {.center}
+
+After this lecture, you will be able to:
+
+- Recall the conditions behind the Einstein diffusion equation
+- Understand why the Einstein relation is universal across states of matter
+- Connect gas, liquid, and solid diffusion within a unified framework
+- Derive Arrhenius-type diffusivity from a 1D potential well model
+- Identify assumptions and missing physics in simple diffusion models
+
+## Recap: Linking Atomistic Motion to Diffusion {.center}
+
+From last lecture:
+
+- Diffusion emerges from random microscopic motion
+- Mean squared displacement (MSD) is the key observable
+- Einstein equation links MSD to macroscopic diffusivity
+
+---
+
+## Einstein Diffusion Equation
+
+Define MSD as the normalized second moment of concentration:
+
+```{=tex}
+\begin{align}
+\langle R^2(t)\rangle
+&=
+\frac{\int_0^\infty r^2 c(r,t)\,4\pi r^2 dr}
+{\int_0^\infty c(r,t)\,4\pi r^2 dr}
+\end{align}
+```
+
+Using solution to point source diffusion, Einstein showed:
+- 3D: $\langle R^2\rangle = 6Dt$
+- 2D: $\langle R^2\rangle = 4Dt$
+- 1D: $\langle R^2\rangle = 2Dt$

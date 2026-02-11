@@ -1,0 +1,39 @@
+---
+title: "MATE 664 Lecture 12"
+subtitle: "Recitation 1: Kinetics Fundamentals & Diffusion Theory"
+author: "Dr. Tian Tian"
+date: "2026-02-11"
+format:
+  html: {}
+  revealjs:
+    output-file: slides.html
+  pdf:	 
+    output-file: L12.pdf
+---
+
+::: {.content-visible when-format="html" unless-format="revealjs"}
+
+::: {.callout-note}
+- Slides 👉  [Open presentation🗒️](./slides.html)
+- PDF version of course note  👉 [Open in pdf](./L12.pdf)
+- Handwritten notes 👉 [Open in pdf](./public/L12_annotated.pdf)
+:::
+
+:::
+
+
+
+## Learning Outcomes {.center}
+
+This is a recitation class. We will be reviewing what the Kinetics of Materials course
+have currently covered.
+
+After this lecture, you should be ablt to:
+
+- Describe in your own words the major topics in kinetics course
+- Link the irreversible thermodynamics to kinetics
+- Understand the analog between diffusion and other kinetic problems
+- Analysis of important charts in diffusion
+- Apply irreversible and kinetic knowledge to modern material research
+
+## 

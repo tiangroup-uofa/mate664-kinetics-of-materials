@@ -501,7 +501,7 @@ Optionally, substitute $c_{\mathrm{A}}^{\mathrm{eq}}=\frac{1}{1+K}c_{\mathrm{T}}
 \end{align*}
 ```
 
-This means the final entropy change is related with the squared driving force, $\Delta \mu_{\mathrm{A}}^{t_0})^2$. An analog is the energy dissipation in Joule heating, that $\dot{Q} = U^2/R$.
+This means the final entropy change is related with the squared driving force, $(\Delta \mu_{\mathrm{A}}^{t_0})^2$. An analog is the energy dissipation in Joule heating, that $\dot{Q} = U^2/R$.
 
 :::
 
@@ -520,7 +520,7 @@ This means the final entropy change is related with the squared driving force, $
 For each time step we have
 
 $$
-\frac{ds^{\mathrm{CSTR}}}{dt} = \frac{1}{T}\frac{dQ}{dt} + \dot{sigma}
+\frac{ds^{\mathrm{CSTR}}}{dt} = \frac{1}{T}\frac{dQ}{dt} + \dot{\sigma}
 $$
 
 and over the relaxation to equilibrium:
@@ -710,29 +710,41 @@ L_{\mathrm{Qq}}^{(i)} & L_{\mathrm{QQ}}^{(i)}
 The same driving forces act in both A and B because the two bars share
 the same boundary values of $\phi$ and $T$, but the resulting fluxes
 differ due to different transport coefficients.
+
 :::
 
 2) Explain the physical meaning of $L_{\mathrm{qq}}^{(i)}$ and
 $L_{\mathrm{QQ}}^{(i)}$ for a single homogeneous material.
 
-:::{.content-hidden unless-meta=“answer”}
+:::{.content-hidden unless-meta="answer"}
 
 **Answer**:
+
 - $L_{\mathrm{qq}}^{(i)}$ is related to the electrical conductivity
 - $L_{\mathrm{QQ}}^{(i)}$ is related to the thermal conductivity
 
 The off-diagonal coefficient $L_{\mathrm{qQ}}^{(i)}$ quantifies
 thermoelectric coupling.
+
 :::
 
 3) Atomistically, what types of materials tend to have large
 $L_{\mathrm{qQ}}^{(i)}$ (equivalently $L_{\mathrm{Qq}}^{(i)}$)? You can search literature for the answer and cite any relevant ones.
 
-:::{.content-hidden unless-meta=“answer”}
+:::{.content-hidden unless-meta="answer"}
 
 **Answer**:
 
-$L_{\mathrm{qQ}}^{(i)}$ characterizes the strength a charged carrier in a material also transports entropy. Narrow band semiconductors are typically used materials for harnessing $L_{\mathrm{qQ}}^{(i)}$ coupling (like the n-p junction).
+$L_{\mathrm{qQ}}^{(i)}$ characterizes the strength a charged carrier
+in a material also transports entropy. Narrow band semiconductors are
+typically used materials for harnessing $L_{\mathrm{qQ}}^{(i)}$
+coupling (like the n-p junction), but there are many other materials
+that satisfy this type of coefficient.
+
+The baseline is that $L_{\mathrm{qQ}}$ characterizes the momentum transfer
+between carrier charge (electron for conduction band, hole for valence band) and
+phonon (the lattice vibration), both can be studied using electron-phonon band diagram in
+solid state systems.
 
 :::
 
@@ -744,7 +756,7 @@ equation for $J_{\mathrm{q}}$ in each material. Also write the
 equation that can be used to solve the potential difference measured $\Delta \phi$. (See _Balluffi, Allen, Carter_
 Problem 2.3.)
 
-:::{.content-hidden unless-meta=“answer”}
+:::{.content-hidden unless-meta="answer"}
 
 **Answer**:
 
@@ -758,7 +770,7 @@ maintain a constant $\phi=\phi_1$ and $\phi=\phi_2$ at both
 ends.Explain why the Peltier effect may be used
 to move heat from a surface (cooling) using electric current. (See _Balluffi, Allen, Carter_ Problem 2.4.)
 
-:::{.content-hidden unless-meta=“answer”}
+:::{.content-hidden unless-meta="answer"}
 
 **Answer**:
 
