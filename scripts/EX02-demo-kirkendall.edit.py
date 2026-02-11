@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.19.0"
+__generated_with = "0.19.9"
 app = marimo.App()
 
 
@@ -26,14 +26,14 @@ def _(mo):
         """ ## Setup simulation environment
         Let's first setup a random simulation domain. 
      Please choose the following parameters:
- 
+
      - Total sites x-direction each side $N_{{\\mathrm{{site}} }}$: {nsites}
      - Total rows $N_{{\\mathrm{{row}}}}$: {nrows}
      - Vacancy fraction $f_{{v}}$: {fvac}
      - Exchange prob. with Orange atoms $p_{{O}}$: {pO}
      - Exchange prob. with Blue atoms $p_{{B}}$: {pB}
      - Random generator seed: {seed}
- 
+
      """
     ).batch(
         nsites=mo.ui.slider(5, 100, value=60, step=5, show_value=True),
@@ -59,7 +59,7 @@ def _(KirkendallSimulation, mo):
 @app.cell(hide_code=True)
 def _(mo):
     # Button to run the simulation
-    run_button = mo.ui.button(label="Run Simulation", on_click=lambda value: True)
+    run_button = mo.ui.run_button(label="Run Simulation")
     # UI components for simulation control
     num_steps = mo.ui.slider(
         start=100,
@@ -337,7 +337,7 @@ def _(Axes, List, Optional, mcolors, np, plt, setup):
                     pick = rng.choice(range(len(cany)), size=k, replace=False)
                     for p_ in pick:
                         sys[cany[p_], canx[p_]] = "V"
-            
+
             # # debug vacancy count
             if debug_print:
                 print("Nv =", int(np.sum(sys == "V")))
@@ -397,6 +397,7 @@ def _(Axes, List, Optional, mcolors, np, plt, setup):
                 )
 
             return ax
+
     return (KirkendallSimulation,)
 
 
@@ -853,12 +854,14 @@ def _():
     from matplotlib.figure import Figure
     from typing import List, Tuple, Dict, Optional, Union, Any
     import matplotlib.colors as mcolors
+
     return Axes, List, Optional, mcolors, np, plt
 
 
 @app.cell(hide_code=True)
 def _():
     import marimo as mo
+
     return (mo,)
 
 
