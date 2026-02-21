@@ -50,6 +50,8 @@ website:
           - lectures/L10/index.qmd
           - lectures/L11/index.qmd
           - lectures/L12/index.qmd
+          - lectures/L13/index.qmd
+          - lectures/L14/index.qmd
       - section: "Interactive Demos"
         contents:
           - scripts.qmd
@@ -61,7 +63,9 @@ format:
     #theme: [simple, reveal-course.scss]
     theme: [default]
     slide-number: true
-    chalkboard: false
+    chalkboard:
+      theme: whiteboard
+      buttons: true
     preview-links: auto
     transition: none
     navigation-mode: linear
@@ -81,3 +85,8 @@ format:
     code-tools: true
     code-fold: true
     code-summary: "Show the code"
+  pdf:
+    include-in-header:
+      - text: |
+          \usepackage{mathtools}
+          \usepackage{cancel}

@@ -22,7 +22,7 @@ format:
 :::
 
 
-## Recap of Lecture 07 {.center}
+## Recap of Lecture 08 {.center}
 Key ideas from last lecture:
 
 - Analytical solution to diffusion problems (infinite domain)
@@ -51,7 +51,6 @@ From last lecture:
 - Mean squared displacement (MSD) is the key observable
 - Einstein equation links MSD to macroscopic diffusivity
 
----
 
 ## Einstein Diffusion Equation
 
@@ -67,6 +66,312 @@ Define MSD as the normalized second moment of concentration:
 ```
 
 Using solution to point source diffusion, Einstein showed:
+
 - 3D: $\langle R^2\rangle = 6Dt$
 - 2D: $\langle R^2\rangle = 4Dt$
 - 1D: $\langle R^2\rangle = 2Dt$
+
+## Random-Walk Model Solution to MSD
+
+MSD in a 1D random-walk model is the expectance value of $\text{Distance}^2$:
+
+```{=tex}
+\begin{align}
+\langle R^2(t)\rangle
+&= N_{\tau} \langle r^2\rangle \\
+&= \Gamma \tau \langle r^2\rangle
+\end{align}
+```
+
+## Linking Einstein Equation To Random Walk Model
+
+- Two methods should give the same result for $\langle R^2(t)\rangle$
+- $t$ in Einstein's method is just $\tau$ in random walk model
+
+:::{.columns}
+:::{.column width="50%"}
+
+Compare (1D case):
+
+```{=tex}
+\begin{align}
+\langle R^2(\tau)\rangle
+&= 2 D \tau \\
+&= \Gamma \tau \langle r^2\rangle
+\end{align}
+```
+
+:::
+
+:::{.column width="50%"}
+
+Results for diffusivity $D$
+
+```{=tex}
+\begin{align}
+D &= \frac{\Gamma \langle r^2\rangle}{6};\quad \text{3D} \\
+&= \frac{\Gamma \langle r^2\rangle}{4};\quad \text{2D}\\
+&= \frac{\Gamma \langle r^2\rangle}{2};\quad \text{1D}
+\end{align}
+```
+
+:::
+
+:::
+
+## In-Depth Analysis of Microscopic $D$ Formula
+
+```{=tex}
+\begin{align}
+D &= \frac{\Gamma \langle r^2\rangle}{6};\quad \text{3D} \\
+&= \frac{\Gamma \langle r^2\rangle}{4};\quad \text{2D}\\
+&= \frac{\Gamma \langle r^2\rangle}{2};\quad \text{1D}
+\end{align}
+```
+
+Units:
+
+- Diffusivity $D$: $\text{m}^2/\text{s}$
+- Mean jump length $\langle r^2\rangle$: $\text{m}$
+- Frequency $\Gamma$: $\text{s}^{-1}$
+- The macroscopic diffusivity is directly linked to microscopic movements!
+
+## Correction For Correlated Jumps
+
+The random-walk model considers "uncorrelated" jumps, where subsequent
+events are independent of previous steps, where $\langle R^2\rangle = N_{\tau} \langle r^2\rangle$.
+
+In reality, some atomic motions are "correlated", so that the direction / probability of the next move are linked to previous events. Examples include:
+
+- Movement in tangled polymer chains
+- Vacancy-mediated diffusion in solids
+- Push-out mechanism of interstalcy diffusion
+
+3D Diffusivity correction:
+
+```{=tex}
+\begin{align}
+D &= \frac{\Gamma \langle r^2\rangle}{6} f \\
+f &\leq 1\;\quad\text{for correlated-jump}
+\end{align}
+```
+
+## Application of Microscopic Diffusivity Equation
+
+The master equation for microscopic diffusivity becomes
+
+```{=tex}
+\begin{align}
+\boxed{
+D = \frac{\Gamma \langle r^2\rangle}{6} f
+}
+\end{align}
+```
+
+Applicable fields?
+
+- Gas? ✅ -- kinetic theory of gases
+- Liquid? ✅ -- Stokes-Einstein equation
+- Amorphous material / polymers? ✅ -- Modified Stokes-Einstein
+- Solid? ✅ -- various mechanism
+
+## Case 1: Gas-Phase Diffusivity
+
+$\Gamma$ and $r^2$ in gas phase can be solved using statistical
+mechanics treatment (kinetic theory). Some important results:
+
+- Average velocity $\langle u \rangle$ ($m$: molecular weight)
+
+$$
+\langle u \rangle = \sqrt{\frac{8 k_B T}{\pi m}}
+$$
+
+- Mean free path $\lambda$ ($n$: number density; $d$: molecular diameter)
+
+$$
+\lambda = \frac{1}{\sqrt{2} \pi d n}
+$$
+
+- Relation to microscopic parameters:
+
+```{=tex}
+\begin{align}
+\Gamma &= \frac{\langle u \rangle}{\lambda} \\
+\langle r^2 \rangle &= 2 \lambda^2 \\
+D &= \frac{1}{3} \langle u \rangle \lambda
+\end{align}
+```
+
+## Gas-Phase Diffusivity: $T, p$ relations
+
+Using ideal gas law $p = n k_B T$, it is possible to show
+
+```{=tex}
+\begin{align}
+D &\propto \sqrt{T} (\frac{p}{k_B T})^{-1} \\
+&= \frac{T^{3/2}}{p}
+\end{align}
+```
+
+Methods like the Chapman-Enskog theory has such power laws with $T$
+and $p$, and can predict $D$ in gas phase within 10% error compared to
+experimental results.
+
+## Case 2: Liquid-Phase Diffusivity
+
+Recall the macroscopic model for diffusivity (Einstein relation) that links mobility $M$ to diffusivity $D$ using steady-state motion of a particle in a frictous fluid:
+
+```{=tex}
+\begin{align}
+D &= M k_B T \\
+M &= \frac{\text{[velocity]}}{\text{[driving force]}}
+\end{align}
+```
+
+At steady-state, the driving force $F_{d}$ equals the opposite of
+dragging force $f_{drag}$. In the linear regime, we can often model
+$f_{drag} = k_{f} v$, where $k_{f}$ is the friction factor.
+
+We will see the mobility treatment is essentially the same as $D \propto \Gamma \langle r^2 \rangle$.
+
+## Newton's Equation For Transport In Frictuous Liquid
+
+- Goal: from dynamic equation of the system --> expressions for $\Gamma$ and $\langle r^2 \rangle$
+
+- Governing Equation
+
+```{=tex}
+\begin{align}
+m a &= F_{d} - k_f v \\
+m \frac{\partial^2 x}{\partial t^2} &= F_{d} - k_f \frac{\partial x}{\partial t} \\
+\vdots & \vdots \\
+\frac{m}{2} \frac{\partial}{\partial t}\left[
+\frac{\partial (x^2)}{\partial t}
+\right] - m \left(
+\frac{\partial x}{\partial t}
+\right)^2
+&= x F_{d,x} - \frac{k_f}{2} \frac{\partial (x^2)}{\partial t}
+\end{align}
+```
+
+## Transport In Frictuous Liquid: Results
+
+We're more interested in the average displacement $x^2$. In 1D system it follows:
+
+```{=tex}
+\begin{align}
+\langle \frac{\partial (x^2)}{\partial t} \rangle
+&= \frac{2 k_B T}{k_f} \\
+\langle x^2 \rangle &= \frac{2 k_B T}{k_f} t
+\end{align}
+```
+
+Which means $\langle x^2 \rangle$ linearly increases with time!
+
+## Linking Diffusivity Results
+
+For 3D
+system where $x, y, z$ motions are independent, $\langle R^2 \rangle =
+\langle x^2 \rangle + \langle y^2 \rangle + \langle z^2 \rangle =
+\frac{6 k_B T}{k_f} t$. We can reuse the result $\langle R^2 \rangle =
+6 Dt$:
+
+```{=tex}
+\begin{align}
+D &= \frac{\langle R^2 \rangle}{6 t} \\
+  &= \frac{\cancel{6} k_B T \cancel{t}}{k_f \cancel{6} \cancel{t}} \\
+  &= \frac{k_B T}{k_f} \\
+  &= M k_B T
+\end{align}
+```
+
+We've arrived at the macroscopic conclusion! The last expression uses the relation $M = f_k^{-1}$.
+
+## Diffusivity in Liquid: Stokes-Einstein Equation
+
+When the mobility $M$ uses the Stokes equation $f_{drag} = 6 \pi \eta R v$, we arrive at the Stokes-Einstein equation:
+
+```{=tex}
+\begin{align}
+D &= M k_B T\\
+  &= \frac{\cancel{v}}{6 \pi \eta R \cancel{v}} k_B T \\
+  &= \frac{k_B T}{6 \pi \eta R}
+\end{align}
+```
+
+- Viscosity $\eta$ (unit $\text{Pa}\cdot \text{s}$) typically follows thermal activation $\eta \propto \exp(A/T)$
+- What about the radius $R$ for _non-spherical_ objects?
+
+## Polymer Diffusivity Models
+
+In linear polymer with $N$ repeating units, each having characteristic
+lenth $b$, the self-diffusivity follows:
+
+```{=tex}
+\begin{align}
+D^*  &= \frac{k_B T}{6 \pi \eta R_h}
+\end{align}
+```
+
+and the hydrodynamic radius $R_h$ scales as
+
+```{=tex}
+\begin{align}
+R_h &\sim
+\begin{cases}
+N^{3/5} b & \text{good solvent} \\
+N^{1/2} b & \theta \text{theta solvent}
+\end{cases}
+\end{align}
+```
+
+- Good solvent: polymer–solvent interaction is favorable 
+- Theta solvent: polymer–solvent interaction is neutral (like ideal chain)
+
+## Case 3: Diffusivity in Solids
+
+The relation $D = \frac{\Gamma r^2}{6} f$ can be applied to diffusion in solids, if we know the type of _mechanism_
+
+Some terminologies:
+
+- *Mechanism*: an abstraction of atomic motion in crystals
+- *Sites*: available spaces for atoms to move in / out
+  - Substitutional site: an atom replaces the position of another
+  - Interstitial site: an atom is inserted into the spaces between two atomic sites
+- *Barrier*: when moving atoms in either substitional or interstitial mechanisms, the inter-atomic potential causes moving atoms to "feel" higher energy states
+
+Key of diffusion theory: barrier ⇔ diffusivity
+
+## Solid Diffusion: Potential Well Model
+
+The easiest model to illustrate the effect of an energy barrier is the
+potential well model. Our goal is still to find:
+
+1) Expression for $\Gamma$, $r^2$ (and optionally $f$)
+2) Derive $D = \frac{\Gamma r^2}{6} f$
+
+## Potential Well Model
+
+Key results:
+
+- Attempted frequency $\nu$ (due to kinetic energy)
+
+$$
+\nu = \sqrt{\frac{k_B T}{2 \pi m}} \frac{1}{L_w}
+$$
+
+- Cross-barrier frequency $\Gamma'$
+
+$$
+\Gamma' = \nu e^{-\frac{E^a}{k_B T}}
+$$
+
+- Diffusivity
+
+```{=tex}
+\begin{align}
+D &= \sqrt{\frac{k_B T}{2 \pi m}} \frac{(L_w + L_a)^2}{L_w} e^{-\frac{E^a}{k_B T}} \\
+  &= D_0 e^{-\frac{E^a}{k_B T}}
+\end{align}
+```
+

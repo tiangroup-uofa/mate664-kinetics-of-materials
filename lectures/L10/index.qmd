@@ -1,6 +1,6 @@
 ---
-title: "MATE 664 Lecture 09"
-subtitle: "Atomic Models for Diffusion (II): Gas & Liquid Phases"
+title: "MATE 664 Lecture 10"
+subtitle: "Atomic Models for Diffusion (III): Ideal Crystals"
 author: "Dr. Tian Tian"
 date: "2026-02-02"
 format:
@@ -8,15 +8,15 @@ format:
   revealjs:
     output-file: slides.html
   pdf:	 
-    output-file: L09.pdf
+    output-file: L10.pdf
 ---
 
 ::: {.content-visible when-format="html" unless-format="revealjs"}
 
 ::: {.callout-note}
 - Slides 👉  [Open presentation🗒️](./slides.html)
-- PDF version of course note  👉 [Open in pdf](./L09.pdf)
-- Handwritten notes 👉 [Open in pdf](./public/L09_annotated.pdf)
+- PDF version of course note  👉 [Open in pdf](./L10.pdf)
+- Handwritten notes 👉 [Open in pdf](./public/L10_annotated.pdf)
 :::
 
 :::

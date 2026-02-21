@@ -36,4 +36,341 @@ After this lecture, you should be ablt to:
 - Analysis of important charts in diffusion
 - Apply irreversible and kinetic knowledge to modern material research
 
-## 
+## Outlines
+
+- **Kinetics** $\approx$ **non-equilibrium** --> Equilibrium [L01](../L01)
+- How to describe **non-equilibrium process**: Force–flux relation [L02](../L02) & [L03](../L03)
+- **Diffusion laws** from driving force [L04](../L04) & [L05](../L05)
+- Solving **Fick's equations** [L06](../L06) & [L07](../L07)
+- **Numerical** solution to Fick's equations [L08](../L08)
+- Atomic models for diffusion -- **Einstein relations** [L08](../L08) & [L09](../L09)
+- Diffusion in **ideal crystals** [L10](../L10) & **defects/short-circuit** [L11](../L11)
+
+## Conceptual Difference Kinetics vs Thermodynamics
+
+![Kinetics vs thermodynamics on a phase diagram](./public/phase-diag-compare.svg)
+
+## Entropic View of Irreversible Thermodynamics
+
+- Any non-equilibrium system going back to equilibrium 👉 entropy generation
+- For local system, entropy generation is always non-zero
+- Entropy can flow between local systems  👉 root cause of diffusion 
+
+$$
+\dot{\sigma} = \frac{\partial s}{\partial t} + \nabla\cdot\vec{J}_{s} \geq 0
+$$
+
+## Entropy Flux and Generation
+
+- Entropy in the system is nothing but some **descriptor** of how energy and quantities **flow**
+- **Flow of entropy** ⇔ **Flow of quantities**
+- **Entropy generation** ⇔ **Magnitude of quantity flow**
+
+```{=tex}
+\begin{align}
+  \vec{J}_s &= \sum_i \frac{\partial s}{\partial \xi_i} \vec{J}_{\xi_i} \\
+  \dot{\sigma} &= \sum_i \vec{J}_{\xi_i} \cdot \nabla \left(\frac{\partial s}{\partial \xi_i}\right)
+\end{align}
+```
+
+## Quantity -- Flux -- Potential Relation
+
+- Link in thermodynamics
+$$
+ds = \frac{1}{T}du - \frac{p}{T}dv - \sum_i \frac{\psi_i}{T} d\xi_i
+$$
+
+::: columns
+::: {.column width="50%"}
+- $\xi_i$: **extensive variables**
+  - volume $v$
+  - charge $q$
+  - concentration $c$
+  - surface area $A$
+  - dipole moment $\mathbf{p}$
+  - magnetic moment $\mathbf{b}$
+:::
+::: {.column width="50%"}
+- $\psi_i$: **conjugate intensive variables**
+  - pressure $p$
+  - electric potential $\phi$
+  - chemical potential $\mu$
+  - surface energy $\gamma$
+  - external electric field $\mathbf{E}$
+  - magnetic field $\mathbf{H}$
+:::
+:::
+Each $(\psi_i,\xi_i)$ pair contributes to entropy change.
+
+## Flux -- Potential Relation: Driving Force
+
+- Extensive quantities: $\xi_i$
+- Conjugate driving forces:
+$$
+\vec{F}_i \equiv - \nabla \psi_i
+$$
+- Associated fluxes: $\vec{J}_i$
+
+Matrix Form
+
+$$
+\vec{J} = \mathbf{L}\,\vec{F}
+$$
+
+equivalent:
+$$
+\vec{J}_i = \sum_j L_{ij}\,\vec{F}_j
+$$
+
+
+## Kinetic vs Thermodynamics: Behaviour
+
+::: {.content-visible when-format="html" unless-format="revealjs"}
+```{=html}
+<iframe width="100%" height="500"
+		src="https://vilas.us/simulations/liquidvapor/" title="Webpage example"></iframe>
+```
+:::
+
+- Probability follow Boltzmann distribution $p \propto \exp\left(-\frac{E + C N}{T}\right)$
+- Scaled potential / entropy $C = T \mu = T \partial S/\partial N$
+
+
+[Demo link](https://vilas.us/simulations/liquidvapor/)
+_Copyright: Vilas Winstein (UC Berkeley)_
+
+## Mass Transfer From Driving Force
+
+- Chemical potential $\mu = \left(\frac{\partial U}{\partial N}\right)_{S,V} = \left(\frac{\partial G}{\partial N}\right)_{P,T}$
+- $\mu$ is driving force for mass transfer / diffusion
+
+- Entropy production due to diffusion:
+  $$
+  T\dot{\sigma} = -\vec{J}_m \cdot \nabla \mu
+  $$
+  
+- Linear law:
+  $$
+  \vec{J}_m = -L_{MM}\nabla \mu
+  $$
+  
+- $L_{MM}$: phenomenological mobility coefficient
+
+## Macroscopic Mass Transfer: Diffusivity -- Mobility
+
+- Force balance and drift velocity ($M$: mobility):
+  $$
+  v = M \nabla \mu
+  $$
+  
+- Mass flux:
+  $$
+  \vec{J} = c v = -M c \nabla \mu
+  $$
+  
+- Diffusion coefficient:
+  $$
+  D = M k_B T
+  $$
+  
+## Solving Mass Transfer: Fick’s First Law 
+
+- Substitute $\mu$ with $c$
+- Works for ideal mixture / dilute system
+- Isotropic medium ($D_{\alpha \beta}=D=\text{Const}$)
+- Concentration gradient is a special case of $\nabla \mu$
+
+For species $i$
+$$
+  \vec{J} = -D \nabla c
+$$
+
+## Solving Mass Transfer: Fick’s Second Law
+
+- Mass conservation (no source term)
+  $$
+  \frac{\partial c}{\partial t} = -\nabla \cdot \vec{J}
+  $$
+  
+- Substitution:
+  $$
+  \frac{\partial c}{\partial t} = \nabla \cdot (D \nabla c)
+  $$
+  
+- If $D_i$ is constant:
+  $$
+  \frac{\partial c}{\partial t} = D_i \nabla^2 c
+  $$
+  
+  - $\nabla^2$: Laplace operator
+  
+## Overview of Solutions to Mass Transfer
+
+![Mass transfer equation as engine for kinetic problems.](./public/uss-engine.png)
+
+## Using Diffusivity $D$: Different Scenarios
+
+| Diffusivity | Frame | Meaning |
+|---|---|---|
+| $D_i^{*}$ | lattice | tracer / self-diffusion |
+| $D_i$ | C-frame | intrinsic diffusivity |
+| $\tilde{D}$ | V-frame | interdiffusivity |
+
+## Comparison Between C- and V-Frame
+
+![Reference frames analog: stream](./public/stream-analog.png)
+
+## Implications of V-Frame Interdiffusion
+
+- Kirkendall effect
+  - Movement of interface
+  - Creation of vacancy voids
+  
+- Darken's equation for interdiffusion
+
+  - Flux form:
+  $$
+  J_i^{V} = -\tilde{D} \frac{\partial C_i}{\partial x}
+  $$
+  
+  - Interdiffusivity:
+  $$
+  \tilde{D} = D_1 X_2 + D_2 X_1
+  $$
+
+## Solving Fick's Equation
+
+- Steady-state solution
+  - Geometry (planar / spherical / cylindrical)?
+  - Integration over non-isotropic
+  
+- Time-dependent (unsteady-state) solution
+  - Analytical: semi-infinite / point source
+  - Superimposition of BC and solutions
+  - Separation of variables method -- Fourier transform
+  - Laplace transform -- analysis of temporal decay
+  
+## Finite Difference for Fick's Equation
+  
+- Diffusion length scale $L_D \approx \sqrt{4Dt}$
+
+| derivative | finite-difference approximation | scheme |
+|-----------|----------------------------------|--------|
+| $\displaystyle \frac{\partial c}{\partial t}$ | $\displaystyle \frac{c(i,\,j+1) - c(i,\,j)}{\Delta t}$ | forward (time) |
+| $\displaystyle \frac{\partial c}{\partial x}$ | $\displaystyle \frac{c(i+1,\,j) - c(i-1,\,j)}{2\Delta x}$ | central (space) |
+| $\displaystyle \frac{\partial^2 c}{\partial x^2}$ | $\displaystyle \frac{c(i+1,\,j) - 2c(i,\,j) + c(i-1,\,j)}{(\Delta x)^2}$ | central (space) |
+
+## MOL Algorithm (Explicit Time Marching)
+
+
+1. Define spatial grid with $x_i$ ($N$ points), choose $\Delta x$
+2. Apply boundary conditions at $i=0$ and $i=N$
+3. Discretize spatial derivatives using central difference
+4. Obtain ODE system for $c(i,t)$
+5. Choose time step $\Delta t$
+6. Advance solution in time using forward Euler:
+   
+```{=tex}
+\begin{align}
+c(i,j+1)
+&=
+c(i,j)
++
+\Delta t \,
+\frac{d c(i,t)}{d t} \\
+&= c(i,j) + \Delta t \cdot D \frac{c(i+1,t) - 2c(i,t) + c(i-1,t)}{(\Delta x)^2}
+\end{align}
+```
+
+## Macroscopic $D$ ⇔ Atomic Movements
+
+- Einstein relation: from continuum solution <--> diffusivity
+- Random walk model (moluchowski): diffusivity from probability model
+- Same conclusion
+
+$$
+D = \frac{\Gamma \langle r^2\rangle}{2d}
+$$
+
+- 3D: $d=3$
+- 2D: $d=2$
+- 1D: $d=1$
+
+## Diffusivity In Different Environments / States
+
+All follow Einstein relation $D = \frac{\Gamma \langle r^2\rangle}{6}$
+
+- Gas: kinetic theory ($T, P$)
+- Liquid: Stokes-Einstein equation ($\mu, M, R$)
+- Solid: activation energy / potential well ($S^m, H^m$)
+
+## Diffusion In Solid: General Equation
+
+- Vacancy mechanism
+
+```{=tex}
+\begin{align}
+D_A
+&= \frac{z \langle r^2 \rangle \nu}{6}
+\exp\!\left(\frac{S_v^{f} + S_v^{m}}{k_B}\right)
+\exp\!\left(-\frac{H_v^{f} + H_v^{m}}{k_B T}\right)
+\, f
+\end{align}
+```
+
+## Diffusion In Ionic Crystals
+
+- Extrinsic: vacancy dominated by doped materials
+  - Low-$T$ regime (high $1/T$)
+
+```{=tex}
+\begin{align}
+D_{\mathrm{Na,ext}}
+&= [\mathrm{CdCl}_2]\,
+f\,\lambda^2\,\nu\,
+\exp\!\left(\frac{S_{\mathrm{Na}}^{m}}{k}\right)
+\exp\!\left(-\frac{H_{\mathrm{Na}}^{m}}{kT}\right)
+\end{align}
+```
+
+- Intrinsic: vacancy dominated by thermal dissociation
+  - High-$T$ regime (low $1/T$)
+
+```{=tex}
+\begin{align}
+D_{\mathrm{Na,int}}
+&= f\,\lambda^2\,\nu\,
+\exp\!\left(\frac{S_{S}^{f}}{2k}\right)
+\exp\!\left(\frac{S_{\mathrm{Na}}^{m}}{k}\right)
+\exp\!\left(-\frac{H_{S}^{f}}{2kT}\right)
+\exp\!\left(-\frac{H_{\mathrm{Na}}^{m}}{kT}\right)
+\end{align}
+```
+
+## Diffusion In Imperfections
+
+- Generally $D^{\text{imp}} \gg D^{XL}$
+- Shortcuts in diffusion pathways
+- Lengthscale comparison
+
+# Seminal Topics In Diffusion
+
+## Up-Hill Diffusion
+
+- Can diffusion happen against **concentration gradient**?
+
+![KOM Q3.3](./public/uphill.png)
+
+## Determination Of Diffusion In Varying $D$ System
+
+- Boltzmann-Matano analysis of interdiffusion
+
+![KOM Q4.1](./public/boltzmann-matano.png)
+
+
+## Diffusion Models In Machine Learning
+
+- AI image generation follows a diffusion process!
+
+![Copyright U Tokyo](./public/diffusion-model.png)
+
