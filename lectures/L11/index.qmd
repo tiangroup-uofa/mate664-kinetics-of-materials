@@ -264,6 +264,7 @@ D_{\mathrm{Na,int}}
 :::{.column width="50%"}
 ![](./public/harrison-abc.png)
 :::
+:::
 
 ## Dislocation Imperfections (Line Defect)
 

@@ -374,3 +374,22 @@ D_{\mathrm{Na,int}}
 
 ![Copyright U Tokyo](./public/diffusion-model.png)
 
+## What To Learn Next
+
+In the second half of the course, we will cover the following questions
+
+- How do materials evolve when chemical potentials are not at equilibrium?
+  - In-depth study of **phase diagrams**
+  - Continuous phase transformation: **spinodal decomposition**
+  - Phase transformation with barrier: **nucleation**
+
+- How do material interface evolve in non-equilibrium process?
+  - Heat / mass-transfer at interfaces: **solidification**
+  - Surface-energy-mediated transformation: **sintering**
+  - Interplay of diffusion & reaction: **aggregation phenomena**
+
+- How do we simulate / predict material kinetics?
+  - Macroscopic pattern formation: **phase-field method**
+  - **Kinetic Monte-Carlo** (KMC) simulations
+  - **Molecular dynamics** (MD) simulations
+  - Obtaining thermodynamic parameters from **first principles calculations** and **machine learning**
