@@ -350,7 +350,7 @@ potential well model. Our goal is still to find:
 1) Expression for $\Gamma$, $r^2$ (and optionally $f$)
 2) Derive $D = \frac{\Gamma r^2}{6} f$
 
-## Potential Well Model
+## Step-Function Potential Well Model
 
 Key results:
 
@@ -370,8 +370,77 @@ $$
 
 ```{=tex}
 \begin{align}
-D &= \sqrt{\frac{k_B T}{2 \pi m}} \frac{(L_w + L_a)^2}{L_w} e^{-\frac{E^a}{k_B T}} \\
-  &= D_0 e^{-\frac{E^a}{k_B T}}
+D &= \sqrt{\dfrac{k_B T}{2 \pi m}} \frac{(L_w + L_a)^2}{L_w} e^{-\dfrac{E^a}{k_B T}} \\
+  &= D_0 e^{-\dfrac{E^a}{k_B T}}
 \end{align}
 ```
+
+## More Complex Landscape: Parabolic Well Model
+
+- Near the bottom of well,
+$E(x) = E_{min} + \frac{\beta}{2} (x - x_{min})^2$
+- More realistic for interatomic potential (similar to springs)
+- Modifications from the step-function well:
+
+```{=tex}
+\begin{align}
+\Gamma' &= \frac{1}{2 \pi} \sqrt{\frac{\beta}{m}}
+e^{-\frac{E^a}{k_B T}}
+\end{align}
+```
+
+Again, the jumping frequency is related to thermal activation.
+
+## What Is Missing In This Picture?
+
+- One-particle energy landscape --> many-body landscape
+- Static potential --> configuration-dependent $E(\vec{x})$
+- Energy only --> entropic effect in many-body system
+- Uncorrelated jump --> correlated movement
+- Single jump event --> symmetry multiplication in lattice
+
+## Case 3: Diffusion In Many-Body Potential Landscape
+
+- Different modes of movement co-exist
+- General solution still follows the Boltzmann-distribution-like equation (see _KOM eq. 7.25_ )
+
+```{=tex}
+\begin{align}
+\Gamma' &= \nu e^{-\frac{G^m}{k_B T}} \\
+        &= \nu e^{\frac{S^m}{k_B}} e^{-\frac{H^m}{k_B T}} \\
+\end{align}
+```
+
+- Attempt frequency related to jumping angular momentum: $\nu = \omega_J / (2 \pi)$
+- Activation entropy $S^m$ related to all angular momenta in the system.
+
+## In-Depth Discussion About $D$
+
+- Arrhenius-type equation:
+
+$$
+D = D_0 \exp(- \frac{H^m}{k_B T})
+$$
+
+- In the plot only activation enthalpy relevant, entropic effect largely ignored
+
+- Activation enthalpy can be readily obtained from modern quantum chemistry / density functional theory calculation
+
+- Theoretical calculation for $D$ covered in later part of the course
+
+## Summary
+
+In this lecture we covered the following topics:
+
+- Link between micro- and macroscopic diffusivity descriptions through the Einstein equation
+- Master equation $D = \dfrac{\Gamma r^2}{6}f$
+- Case studies of diffusivities in gas and liquid phases
+- Derivation of Arrhenius diffusivity equation using the potential well model
+
+
+
+
+
+
+
 
