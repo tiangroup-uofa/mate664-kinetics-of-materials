@@ -8,7 +8,7 @@ format:
   revealjs:
     output-file: slides.html
   pdf:	 
-    output-file: L09.pdf
+    output-file: L11.pdf
 ---
 
 ::: {.content-visible when-format="html" unless-format="revealjs"}
@@ -279,6 +279,7 @@ D_{\mathrm{Na,int}}
 ![Partial dislocations](./public/partial-dislocation.png)
 
 :::
+:::
 
 ## Example of Diffusion Along Imperfection: Deposition on Graphene
 
@@ -305,3 +306,11 @@ D_{\mathrm{Na,int}}
 
 
 ![](./public/ncomm-kmc-exp.png)
+
+## Summary
+
+In this lecture, we reviewed a few sample cases where diffusion is dominated by crystal defects and imperfections
+
+- Diffusion by ionic defects -- multiple Arrhenius regimes
+- Diffusion by imperfections -- shortcut diffusion compared with bulk diffusion
+- Example of interface mediated diffusion -- 2D material
