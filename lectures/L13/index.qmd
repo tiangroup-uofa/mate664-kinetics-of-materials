@@ -1,0 +1,159 @@
+---
+title: "MATE 664 Lecture 13"
+subtitle: "Phase Diagram and Phase Transformation"
+author: "Dr. Tian Tian"
+date: "2026-02-24"
+format:
+  html: {}
+  revealjs:
+    output-file: slides.html
+  pdf:	 
+    output-file: L13.pdf
+---
+
+::: {.content-visible when-format="html" unless-format="revealjs"}
+
+::: {.callout-note}
+- Slides 👉  [Open presentation🗒️](./slides.html)
+- PDF version of course note  👉 [Open in pdf](./L13.pdf)
+- Handwritten notes 👉 [Open in pdf](./public/L13_annotated.pdf)
+:::
+
+:::
+
+# Kinetics of Materials Part II
+
+## What Topics Have We Learned So Far?
+
+- How to describe kinetic process: **irreversible thermodynamics**
+- What causes nonequilibrium mass transfer: **chemical potential** as driving force
+- Diffusion in materials: **Fick's equations**
+- Determine diffusivity $D$: **Macroscopic** and **Microscopic** models
+
+## What Do We Study In Part II?
+
+Insights from assignments 1 and 2
+
+![](./public/assignment-comparison.svg){.center}
+
+## Topic 1: Phase Transformation
+
+**Key question**: how do materials evolve when chemical potentials are not at equilibrium?
+
+:::{.columns}
+:::{.column width="50%"}
+
+- In-depth study of **phase diagrams**
+- Continuous phase transformation: **spinodal decomposition**
+- Phase transformation with barrier: **nucleation**
+
+:::
+
+:::{.column width="50%"}
+
+![MIT course _Fundamentals of Materials Sciece_](./public/mit-phase-diagram.png)
+
+:::
+
+:::
+
+
+
+## Topic 2: Interfacial Phenomena
+
+**Key question**: how do material interfaces change in non-equilibrium process?
+
+:::{.columns}
+:::{.column width="50%"}
+
+- **Solidification**: heat / mass-transfer at interfaces: 
+- **Sintering**: surface-energy-mediated transformation: 
+
+:::
+
+:::{.column width="50%"}
+
+![Copyright: kintek.com](./public/sintering-process.png)
+
+:::
+
+:::
+
+
+
+
+## Topic 3: Analysis of Kinetic Process In Materials
+
+**Key question**: how do the competition between different effects change the material behaviour?
+
+:::{.columns}
+:::{.column width="50%"}
+
+- **Aggregation phenomena**: diffusion & reaction of soft materials
+- **Dendrite formation**: morphological control in battery electrodes
+- **Carrier transport**: designing optical materials
+
+:::
+
+
+:::{.column width="50%"}
+
+::: {.content-visible when-format="html"}
+![Artificial dendrite growth](./public/Artificial_dendrites_growth.gif)
+
+:::
+
+:::
+
+:::
+
+
+## Topic 4: Simulating Kinetic Problems
+
+**Key question**: what methods can we use to simulate kinetic systems, and how good are they?
+
+- Macroscopic transport: phase-field method
+- Kinetic Monte-Carlo (KMC) and molecular dynamics (MD)
+- Thermodynamic parameters from **first principles calculations** and **machine learning**
+
+# Introduction To Phase Transformation
+
+## What Is Phase Transformation?
+
+Before introducing any fancy terminologies, let's define a few concepts:
+
+:::{.columns}
+:::{.column width="50%"}
+
+- **Phase**:
+  - a region with uniform structure and properties
+  - same crystal structure, composition, order
+  - particle size difference **NOT**
+
+- **Transformation**
+  - a kinetic process to reduce total free energy
+  - material evolves from one phase to another
+  - diffusion is key step to re-distribute matter
+
+- **Interface**
+  - a boundary separating two phases
+  - can migrate during transformation
+  - has **own energy contribution**
+
+:::
+
+:::{.column width="50%"}
+![Phase transformation scheme](./public/phase-transformation-scheme.svg)
+:::
+
+:::
+
+## Learning Outcomes {.center}
+
+After this lecture, you should be ablt to:
+
+- Recall key components in a phase diagram
+- Distinguish the meaning of axes in a phase diagram
+- Identify key thermodynamic equations from the phase diagram
+- Analysis phase transformation regions in a phase diagram
+
