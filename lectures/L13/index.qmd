@@ -266,7 +266,7 @@ $$
 ## Chemical Potential On Molar Free Energy Diagram
 
 - Chemical potential from $G$: $\mu_A = \left(\frac{\partial G}{\partial X_A}\right)\vert_{T, p, X_B}$
-- Ideal solution: $mu_A = G_A + RT \ln X_A$
+- Ideal solution: $\mu_A = G_A + RT \ln X_A$
 
 ![Graphical explanation of chemical potential](./public/chem-pot-phase-diag.png){width="50%"}
 
