@@ -69,12 +69,12 @@ D_A
 - More than one single defect species are involed
 - In other words, defects always come in **pairs** in ionic solids
 
-## Schottkey and Frenkel Defects In Ionic Crystals
+## Schottky and Frenkel Defects In Ionic Crystals
 
-- Shottkey defects: missing both positive and negative species
+- Schottky defects: missing both positive and negative species
 - Frenkel defects: one charged species moved to other site
 
-![Comparison between Schottkey and Frenkel defects](./public/compare-defect.png){width="65%"}
+![Comparison between Schottky and Frenkel defects](./public/compare-defect.png){width="65%"}
 
 ## Ionic Defects: Kröger-Vink (KV) notation
 
@@ -155,14 +155,15 @@ Example of Extrinsic defects: CdCl$_2$ in NaCl
 - Total vacancy concentration  
   $$
   [V_{\mathrm{Na}}^{'}]
-  = [V_{\mathrm{Na}}^{'}]_s + [V_{\mathrm{Na}}^{'}]_{\text{ext}}
-  = \exp\!\left(-\dfrac{G_S^{f}}{2kT}\right) + [\mathrm{CdCl}_2]
+  \approx [V_{\mathrm{Na}}^{'}]_s + [V_{\mathrm{Na}}^{'}]_{\text{ext}}
+  = \frac{\exp\!(-\dfrac{G_S^{f}}{k_B T})}{ [\mathrm{CdCl}_2]} + [\mathrm{CdCl}_2]
   $$
 
 
 ## Diffusivity of Ionic Species
 
 - We can still use the vacancy exchange mechanism for the diffusivity of ionic species
+- For f.c.c. lattice the neighbor sites of same charge, the multiplicity $z=6$.
 - E.g. Na$^+$ exchanges with its own vacancy $V_{\mathrm{Na}}^{'}$
 - $[V_{\mathrm{Na}}^{'}]$ depends on the $T$-regime!
 
@@ -171,8 +172,7 @@ Example of Extrinsic defects: CdCl$_2$ in NaCl
 D_{\mathrm{Na}}
 &= [V_{\mathrm{Na}}^{'}]\,
 f\,\lambda^2\,\nu\,
-\exp\!\left(-\frac{G_{\mathrm{Na}}^{m}}{kT}\right) \\
-&= f \lambda^2 \nu \left[\exp\!\left(-\dfrac{G_S^{f}}{2kT}\right) + [\mathrm{CdCl}_2]\right]  \exp\!\left(-\frac{G_{\mathrm{Na}}^{m}}{kT}\right)
+\exp\!\left(-\frac{G_{\mathrm{Na}}^{m}}{kT}\right) 
 \end{align}
 ```
 
@@ -242,21 +242,24 @@ D_{\mathrm{Na,int}}
 
 ## Harrison's ABC Model For GB Diffusion
 
+A foreign material is coated on the top of a polycrystalline
+metal. The degree of penetration can be studied by comparing the
+timescale $t$, interatomic distance $\lambda$ and grain size $s$
+
 :::{.columns}
 :::{.column width="50%"}
-- A regime  
-  - $D_{XL} t > l^2$  
-  - $D_B t > l^2$  
-  - fast diffusion everywhere  
+- **A**ll regime
+  - $D_{XL} t > s^2$  
+  - $D_B t > s^2$  
 
-- B regime  
-  - $D_{XL} t \gg l^2$  
-  - $D_B t < l^2$  
+- **B**oundary regime  
+  - $D_{XL} t \approx \lambda^2$  
+  - $D_B t > \lambda^2$  
   - coupled short-circuit and bulk diffusion  
 
-- C regime  
-  - $D_{XL} t < l^2$  
-  - $D_B t < l^2$  
+- **C**ore regime  
+  - $D_{XL} t < \lambda^2$  
+  - $D_B t > \lambda^2$  
   - diffusion confined to imperfections  
 
 :::
