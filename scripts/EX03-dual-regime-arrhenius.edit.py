@@ -16,7 +16,7 @@ def _(mo):
 
     The Arrhenius plot shows $\ln D_K$ versus $1/T$ for KCl with varying [CaCl$_2$] concentrations.
 
-    You can think of the following questions when playing with the chart:
+    Please consider the following questions:
 
     - Do you observe two regimes of diffusivitiy in the plot? At which dopant concentration is such effect prominent?
     - Take the slopes of the curve within the tntrinsic and extrinsic regions. Are they matching your expected activation enthalpy values?
@@ -147,7 +147,8 @@ def _(D_K, np, plt, setups):
         fig, ax = plt.subplots(figsize=(8, 6))
 
         # Range of CaCl2 concentrations (mol fraction)
-        _ca_conc_range = 10.0 ** np.arange(*setups_value["conc_range"])[::-1]
+        start, stop = setups_value["conc_range"]
+        _ca_conc_range = 10.0 ** np.arange(start, stop + 0.1, 1)[::-1]
 
         # Temperature range (K)
         _T_range = np.linspace(400, 1000, 100)
