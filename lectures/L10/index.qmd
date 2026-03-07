@@ -22,3 +22,455 @@ format:
 :::
 
 
+## Recap: Atomic model for diffusion
+
+- Random walk picture
+- Einstein relation links jump statistics to diffusivity
+- Correlation factor $f$ corrects for non-independent motion
+
+```{=tex}
+\begin{align}
+D = \frac{\Gamma \langle r^2 \rangle}{6}\, f
+\end{align}
+```
+
+
+## Recap: Diffusion in gases and liquids
+
+- Gas diffusion from kinetic theory ($D = f(T, p)$)
+- Liquid diffusion from mobility and viscous drag ($D = f(\mu, T)$)
+  - Often $\eta \propto \exp(B/T)$
+
+```{=tex}
+\begin{align}
+D_{\mathrm{gas}} &= \frac{1}{3}\langle u \rangle \lambda \propto T^{3/2}/p \\
+D_{\mathrm{liquid}} &= M k_B T \approx \frac{k_B T}{6\pi \eta R}
+\end{align}
+```
+
+## Learning Outcomes {.center}
+
+After this lecture, you will be able to:
+
+- Link thermodynamic properties to the diffusivity in ideal solids
+- Recall the potential well model for solid diffusivity
+- Analysis of the Arrhenius equation / plot for solids
+
+## Diffusion models in solids
+- Multiple mechanisms exist (_what is a machanism_?)
+- Mechanism depends on lattice, bonding, charge, and size mismatch
+- Two broad classes of diffusing species:
+  - substitutional: A occupies the lattice site of B
+	- interstitial: A is inserted between neighbouring B-sites
+
+## Two basic mechanisms
+:::{.columns}
+:::{.column width="50"}
+Substitutional diffusion
+  - atom replaces a lattice site
+	- usually vacancy-mediated
+
+
+:::
+
+:::{.column width="50"}
+Interstitial diffusion
+  - atom moves between host sites
+  - solute squeezes through interstitial positions
+
+
+
+:::
+
+
+## Barrier picture for diffusion
+
+- Both mechanisms encounter an energy barrier
+- Goal remains to estimate jump frequency and jump length
+
+```{=tex}
+\begin{align}
+D = \frac{\Gamma \langle r^2 \rangle}{6}
+\end{align}
+```
+
+
+## Generalized well potential
+
+- Particle resides in a potential well
+- It must cross an activation barrier $E_a$
+- Activated population follows Boltzmann statistics
+
+```{=tex}
+\begin{align}
+\frac{P_{\mathrm{activated}}}{P_{\mathrm{well}}}
+= \exp\!\left(-\frac{E_a}{k_B T}\right)
+\end{align}
+```
+
+
+## Step 1: Crossing time
+
+- Ask how long one activated particle needs to cross the barrier region
+- Estimate by distance over average speed
+
+```{=tex}
+\begin{align}
+\tau_{\mathrm{cross}}
+= \frac{L_A}{\langle v \rangle}
+\approx \frac{L_A}{\sqrt{k_B T/(2\pi m)}}
+= L_A \sqrt{\frac{2\pi m}{k_B T}}
+\end{align}
+```
+
+Does it make sense? A few implications:
+- Larger $L_A$ gives longer crossing time
+- Higher $T$ gives shorter crossing time
+- Heavier particles cross more slowly
+
+
+## Step 2: How many particles can cross?
+
+Crossing rate is number of activated particles divided by crossing time
+
+```{=tex}
+\begin{align}
+R_{\mathrm{cross}} = \frac{N^\#}{\tau_{\mathrm{cross}}}
+\end{align}
+```
+
+where the total number of crossing $N^\#$ follows
+
+```{=tex}
+\begin{align}
+N^\# \approx N \frac{\tau_A}{\tau_W}
+\end{align}
+```
+
+- $\tau_A$: time spent in activated region
+- $\tau_W$: time spent in well
+
+
+## Step 3: crossing rate and jump frequency
+
+- Combine activated fraction with crossing time
+- Jump frequency behaves like a first-order rate constant
+
+```{=tex}
+\begin{align}
+R_{\mathrm{cross}}
+&= N \left(\frac{\tau_A/\tau_W}{\tau_{\mathrm{cross}}}\right) \\
+\Gamma'
+&= \frac{\tau_A}{\tau_W}\frac{1}{\tau_{\mathrm{cross}}}
+\end{align}
+```
+
+
+## Step 4: Probability ratio from the well shape
+
+Ratio of residence times scales with probability of occupying each region
+For a simple well model, we have
+
+```{=tex}
+\begin{align}
+\frac{\tau_A}{\tau_W}
+= \frac{L_A}{L_W}\exp\!\left(-\frac{E_a}{k_B T}\right)
+\end{align}
+```
+
+- $L_W$: well width
+- $L_A$: activated-region width
+
+## Arrhenius jump frequency
+
+Substituting the crossing time removes explicit dependence on $L_A$, so that 
+the jump frequency $\Gamma'$ follows a Boltzmann distribution!
+
+```{=tex}
+\begin{align}
+\Gamma'
+&= \sqrt{\frac{k_B T}{2\pi m}}\frac{1}{L_W}
+\exp\!\left(-\frac{E_a}{k_B T}\right)
+\end{align}
+```
+
+If we define the attempt frequency $\nu$ (frequency dependent on thermal kinetic energy and well geometry)
+```{=tex}
+\begin{align}
+\nu = \sqrt{\frac{k_B T}{2\pi m}}\frac{1}{L_W}
+\end{align}
+```
+
+Final form for the jump frequency:
+
+```{=tex}
+\begin{align}
+\Gamma' = \nu \exp\!\left(-\frac{E_a}{k_B T}\right)
+\end{align}
+```
+
+
+## From jump frequency to diffusivity
+
+In 1D, the random-walk expression becomes
+
+```{=tex}
+\begin{align}
+D = \frac{\Gamma' \langle r^2 \rangle}{2}
+\end{align}
+```
+
+What is $\langle r^2 \rangle$? For this well, $r \sim L_W + L_A$:
+
+```{=tex}
+\begin{align}
+D
+= \sqrt{\frac{k_B T}{8\pi m}}
+\frac{(L_W+L_A)^2}{L_W}
+\exp\!\left(-\frac{E_a}{k_B T}\right)
+\end{align}
+```
+
+
+##  More realistic potential landscape
+
+- Real barriers are not rectangular
+- Near a minimum, a parabolic approximation is often better 👉 parabolic well model
+
+```{=tex}
+\begin{align}
+E(x) = E_{\min} + \frac{\beta}{2}(x-x_{\min})^2
+\end{align}
+```
+
+- Barrier height (activation energy) $E_a$ approximated by:
+
+```{=tex}
+\begin{align}
+\frac{\beta}{2}\left(\frac{L_W}{2}\right)^2 = E_a
+\end{align}
+```
+
+
+## Moified attempt frequency for a parabolic well
+
+The jump frequency in a parabolic well follows:
+
+```{=tex}
+\begin{align}
+\Gamma' =
+\frac{1}{2\pi}\sqrt{\frac{\beta}{m}}
+\exp\!\left(-\frac{E_a}{k_B T}\right)
+\end{align}
+```
+
+- Can be rewritten with $\nu = \dfrac{1}{2\pi}\sqrt{\beta/m}$
+- Still follows the Boltzmann distribution!
+
+## What is missing from the simple picture?
+
+- One-particle picture may be too simple
+- Energy landscape can be many-body
+- Landscape may change with local environment
+- Many configurations can share the same barrier
+- Real lattices add symmetry factors
+- Jumps may be correlated
+
+## General activated form
+
+- More generally, write the jump frequency using activation free energy
+
+```{=tex}
+\begin{align}
+\Gamma'
+&= \nu \exp\!\left(-\frac{G^m}{k_B T}\right) \\
+&= \nu \exp\!\left(\frac{S^m}{k_B}\right)
+\exp\!\left(-\frac{H^m}{k_B T}\right)
+\end{align}
+```
+
+- $G^m = H^m - T S^m$: superscript $m$ denotes _migration_
+
+## Entropy contribution in migration
+
+- Activation entropy $S^m$ modifies the prefactor
+- It usually varies weakly with temperature, because it's usually estimated from all vibrational modes with angular momenta $\omega$
+
+```{=tex}
+\begin{align}
+S^m
+= k_B \left[
+2\ln\!\left(\frac{\omega_J^\ddagger}{\omega_J}\right)
++ \sum_{i=1}^{3N-7}\ln\!\left(\frac{\omega_i}{\omega_i^\ddagger}\right)
+\right]
+\end{align}
+```
+
+Analog: angular momenta of springs near the stationary point.
+
+## Arrhenius equation for diffusion
+
+Using our previous analysis, it can be shown that plugging the jump frequency 
+into the random-walk diffusivity equation is basically 
+the famous Arrhenius form of diffusivity
+
+\begin{align}
+D = D_0 \exp\!\left(-\frac{H^m}{k_B T}\right)
+\end{align}
+
+- $D_0$ contains geometric and entropic terms
+- $H^m$ is the activation **enthalpy**
+- In an Arrhenius plot ($\ln\!D$ vs $1/T$), the slope is only related with $H^m$! (see [Lecture 01](../L01))
+
+
+## Application to real materials
+
+For real materials, the Einstein relation / random-walk analog still holds, 
+while a few more factors need to be considered:
+
+```{=tex}
+\begin{align}
+D = \frac{\Gamma \langle r^2 \rangle}{6}\,f
+= \frac{z\,\Gamma'\langle r^2 \rangle}{6}\,f
+\end{align}
+```
+
+- $z$ counts equivalent jump paths (e.g. equivalent neighbouring sites in f.c.c. lattice)
+- $f$ is the correlation factor (usually around 0.7)
+
+
+## Case 1: Interstitial diffusion
+
+Interstitial jumps are often uncorrelated
+- After one interstitial jump, the next jump is not strongly biased
+- No vacancy left behind to pull the atom back
+- Successive jumps are approximately independent
+
+```{=tex}
+\begin{align}
+D_I
+=
+\frac{z\,\nu \langle r^2 \rangle}{6}
+\exp\!\left(\frac{S_I^m}{k_B}\right)
+\exp\!\left(-\frac{H_I^m}{k_B T}\right)
+\end{align}
+```
+
+## Case 2: Vacancy self-diffusion
+
+- Atom-vacancy exchange makes the vacancy appear to move
+- Diffusion still uses the migration barrier (_for vacancy_)
+- Usually uncorrelated ($f \approx 1$)
+
+```{=tex}
+\begin{align}
+D_V
+=
+\frac{z\,\nu \langle r^2 \rangle}{6}
+\exp\!\left(\frac{S_V^m}{k_B}\right)
+\exp\!\left(-\frac{H_V^m}{k_B T}\right)
+\end{align}
+```
+
+
+## Case 3: Vacancy-assisted solute diffusion
+
+- Solute motion requires a nearby vacancy
+- Combine vacancy availability with vacancy migration
+- Correlated motion!
+
+```{=tex}
+\begin{align}
+D_A &= X_V \, D_V f
+\end{align}
+```
+
+- Vacancy concentration is related with the vacancy formation free energy $G_V^f$
+
+```{=tex}
+\begin{align}
+X_V
+=
+\exp\!\left(-\frac{G_V^f}{k_B T}\right)
+=
+\exp\!\left(\frac{S_V^f}{k_B}\right)
+\exp\!\left(-\frac{H_V^f}{k_B T}\right)
+\end{align}
+```
+
+## Vacancy-assisted diffusion: final form
+	•	Combining vacancy formation and migration gives
+
+\begin{align}
+D_A
+=
+\frac{z\,\nu \langle r^2 \rangle}{6}
+\exp\!\left(\frac{S_V^f + S_m}{k_B}\right)
+\exp\!\left(-\frac{H_V^f + H_m}{k_B T}\right)\,f
+\end{align}
+
+	•	Here $f \neq 1$ in general
+
+⸻
+
+Why can $f \neq 1$?
+	•	Vacancy jumps create memory
+	•	A just-moved atom is likely to jump back into the nearby vacancy
+	•	This reduces net transport efficiency
+	•	Approximate estimate from jump-back bias:
+
+\begin{align}
+f \simeq \frac{1+\langle \cos\theta \rangle}{1-\langle \cos\theta \rangle}
+\end{align}
+
+	•	If jump-back probability is about $1/z$, then $\cos\theta=-1$ for that event
+
+⸻
+
+Correlation factor in practice
+	•	Simple estimate:
+
+\begin{align}
+f \simeq \frac{1-\frac{1}{z}}{1+\frac{1}{z}}
+\end{align}
+
+	•	For substitutional diffusion, $f$ is commonly below 1
+	•	For fcc, a typical value is about $0.78$
+	•	In many cases, using $f \sim 0.7$–$0.8$ is reasonable
+
+⸻
+
+Other correlated mechanisms
+	•	Ring mechanisms
+	•	Interstitialcy mechanisms
+	•	Cooperative multi-atom motion
+	•	These also lead to nontrivial $f$
+
+
+⸻
+
+Summary
+	•	Diffusion in solids is an activated process
+	•	Generic form:
+
+\begin{align}
+D = D_0 \exp\!\left(-\frac{Q}{k_B T}\right)
+\end{align}
+
+	•	Mechanism determines:
+	•	jump geometry
+	•	coordination factor $z$
+	•	correlation factor $f$
+	•	activation enthalpy and entropy
+
+⸻
+
+Next topics
+	•	Diffusion in ionic solids
+	•	Diffusion in imperfect solids
+	•	Short-circuit diffusion
+
+⸻
+
+
+
