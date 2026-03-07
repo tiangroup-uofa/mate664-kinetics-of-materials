@@ -53,6 +53,7 @@ website:
           - lectures/L13/index.qmd
           - lectures/L14/index.qmd
           - lectures/L15/index.qmd
+          - lectures/L16/index.qmd
       - section: "Interactive Demos"
         contents:
           - scripts.qmd
