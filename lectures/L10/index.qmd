@@ -399,8 +399,11 @@ X_V
 ```
 
 ## Vacancy-assisted diffusion: final form
-	•	Combining vacancy formation and migration gives
 
+After ombining vacancy formation and migration, $D_A$ becomes dependent on both vacancy
+formation enthalpy and vacancy migration barrier!
+
+```{=tex}
 \begin{align}
 D_A
 =
@@ -408,69 +411,58 @@ D_A
 \exp\!\left(\frac{S_V^f + S_m}{k_B}\right)
 \exp\!\left(-\frac{H_V^f + H_m}{k_B T}\right)\,f
 \end{align}
+```
 
-	•	Here $f \neq 1$ in general
+##  Why can $f < 1$ in vacancy-mediated diffusion?
 
-⸻
+- Vacancy jumps create "memory"
+- A just-moved atom is likely to **jump back** into the nearby vacancy
+  - This reduces net transport efficiency
+- Approximate estimate from jump-back bias:
 
-Why can $f \neq 1$?
-	•	Vacancy jumps create memory
-	•	A just-moved atom is likely to jump back into the nearby vacancy
-	•	This reduces net transport efficiency
-	•	Approximate estimate from jump-back bias:
-
+```{=tex}
 \begin{align}
 f \simeq \frac{1+\langle \cos\theta \rangle}{1-\langle \cos\theta \rangle}
 \end{align}
+```
 
-	•	If jump-back probability is about $1/z$, then $\cos\theta=-1$ for that event
 
-⸻
-
-Correlation factor in practice
-	•	Simple estimate:
-
+## Correlation factor in practice
+Simple estimate with $z$
+```{=tex}
 \begin{align}
 f \simeq \frac{1-\frac{1}{z}}{1+\frac{1}{z}}
 \end{align}
+```
 
-	•	For substitutional diffusion, $f$ is commonly below 1
-	•	For fcc, a typical value is about $0.78$
-	•	In many cases, using $f \sim 0.7$–$0.8$ is reasonable
+- For substitutional diffusion, $f$ is commonly below 1
+- For fcc, a typical value is about $0.78$
+- In many cases, using $f \sim 0.7$–$0.8$ is reasonable
 
-⸻
+## Other correlated mechanisms
 
-Other correlated mechanisms
-	•	Ring mechanisms
-	•	Interstitialcy mechanisms
-	•	Cooperative multi-atom motion
-	•	These also lead to nontrivial $f$
+- Ring mechanisms
+- Interstitialcy mechanisms
+- Cooperative multi-atom motion (e.g. push-out mechanism)
 
 
-⸻
+## Summary
 
-Summary
-	•	Diffusion in solids is an activated process
-	•	Generic form:
+After today's lecture, you should be able to
+- recognize diffusion in solids as an process associated with activation energy
+- link diffusivity with potential well picture
+- analyze the enthalpy dependency in the Arrhenius-type diffusivity equations
 
-\begin{align}
-D = D_0 \exp\!\left(-\frac{Q}{k_B T}\right)
-\end{align}
 
-	•	Mechanism determines:
-	•	jump geometry
-	•	coordination factor $z$
-	•	correlation factor $f$
-	•	activation enthalpy and entropy
 
-⸻
+## Next topics
 
-Next topics
-	•	Diffusion in ionic solids
-	•	Diffusion in imperfect solids
-	•	Short-circuit diffusion
+In [next lecture](../L11), we will discuss diffusion processes with varied energy barriers, 
+in particular:
 
-⸻
+- Diffusion in ionic solids
+- Diffusion in imperfect solids
+- Short-circuit diffusion
 
 
 
