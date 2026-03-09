@@ -1,0 +1,1893 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="142.02206mm"
+   height="64.400002mm"
+   viewBox="0 0 142.02206 64.400002"
+   version="1.1"
+   id="svg21582"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
+   sodipodi:docname="pressure-water-bubble.svg">
+  <defs
+     id="defs21576"
+     style="stroke-linecap:butt;stroke-linejoin:round">
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mend"
+       style="overflow:visible;stroke-linecap:butt;stroke-linejoin:round"
+       inkscape:isstock="true">
+      <path
+         id="path5634"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect25132"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect25128"
+       is_visible="true" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect25124"
+       effect="spiro" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect25120"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect25116"
+       is_visible="true" />
+    <style
+       id="style24152"
+       type="text/css">
+*{stroke-linecap:butt;stroke-linejoin:round;}
+  </style>
+    <path
+       style="stroke:#000000;stroke-width:0.85000002;stroke-linecap:butt;stroke-linejoin:round"
+       id="m1c4ed482a5"
+       d="M 0,0 V 3.5"
+       inkscape:connector-curvature="0" />
+    <path
+       id="ArialMT-31"
+       d="m 37.25,0 h -8.78125 v 56 q -3.171875,-3.015625 -8.328125,-6.046875 -5.15625,-3.03125 -9.25,-4.546875 v 8.5 q 7.375,3.46875 12.890625,8.390625 5.515625,4.9375 7.8125,9.578125 H 37.25 Z"
+       inkscape:connector-curvature="0"
+       style="stroke-linecap:butt;stroke-linejoin:round" />
+    <path
+       id="ArialMT-30"
+       d="m 4.15625,35.296875 q 0,12.703125 2.609375,20.4375 2.609375,7.75 7.75,11.9375 5.15625,4.203125 12.96875,4.203125 5.765625,0 10.109375,-2.328125 4.34375,-2.3125 7.171875,-6.6875 Q 47.609375,58.5 49.21875,52.21875 q 1.609375,-6.265625 1.609375,-16.921875 0,-12.59375 -2.59375,-20.328125 Q 45.65625,7.234375 40.5,3 35.359375,-1.21875 27.484375,-1.21875 q -10.34375,0 -16.25,7.421875 -7.078125,8.9375 -7.078125,29.09375 m 9.03125,0 q 0,-17.625 4.125,-23.46875 Q 21.4375,6 27.484375,6 q 6.0625,0 10.1875,5.859375 4.125,5.859375 4.125,23.4375 0,17.6875 -4.125,23.484375 -4.125,5.8125 -10.28125,5.8125 -6.046875,0 -9.671875,-5.125 Q 13.1875,52.9375 13.1875,35.296875"
+       inkscape:connector-curvature="0"
+       style="stroke-linecap:butt;stroke-linejoin:round" />
+    <path
+       id="ArialMT-2212"
+       d="M 52.828125,31.203125 H 5.5625 v 8.203125 h 47.265625 z"
+       inkscape:connector-curvature="0"
+       style="stroke-linecap:butt;stroke-linejoin:round" />
+    <path
+       id="ArialMT-37"
+       d="m 4.734375,62.203125 v 8.453125 h 46.34375 V 63.8125 Q 44.234375,56.546875 37.515625,44.484375 30.8125,32.421875 27.15625,19.671875 24.515625,10.6875 23.78125,0 H 14.75 q 0.140625,8.453125 3.3125,20.40625 3.171875,11.96875 9.109375,23.078125 5.9375,11.109375 12.625,18.71875 z"
+       inkscape:connector-curvature="0"
+       style="stroke-linecap:butt;stroke-linejoin:round" />
+    <path
+       id="ArialMT-36"
+       d="M 49.75,54.046875 41.015625,53.375 q -1.171875,5.171875 -3.3125,7.515625 -3.578125,3.765625 -8.796875,3.765625 -4.203125,0 -7.375,-2.34375 Q 17.390625,59.28125 14.984375,53.46875 12.59375,47.65625 12.5,36.921875 15.671875,41.75 20.265625,44.09375 q 4.59375,2.34375 9.625,2.34375 8.78125,0 14.953125,-6.46875 Q 51.03125,33.5 51.03125,23.25 51.03125,16.5 48.125,10.71875 45.21875,4.9375 40.140625,1.859375 35.0625,-1.21875 28.609375,-1.21875 17.625,-1.21875 10.6875,6.859375 3.765625,14.9375 3.765625,33.5 q 0,20.75 7.65625,30.171875 6.6875,8.203125 18.015625,8.203125 8.453125,0 13.84375,-4.734375 Q 48.6875,62.40625 49.75,54.046875 M 13.875,23.1875 q 0,-4.53125 1.921875,-8.6875 Q 17.71875,10.359375 21.1875,8.171875 24.65625,6 28.46875,6 q 5.5625,0 9.5625,4.484375 4.015625,4.5 4.015625,12.21875 0,7.421875 -3.96875,11.6875 -3.953125,4.28125 -9.953125,4.28125 -5.953125,0 -10.109375,-4.28125 Q 13.875,30.125 13.875,23.1875"
+       inkscape:connector-curvature="0"
+       style="stroke-linecap:butt;stroke-linejoin:round" />
+    <path
+       id="ArialMT-35"
+       d="M 4.15625,18.75 13.375,19.53125 Q 14.40625,12.796875 18.140625,9.390625 21.875,6 27.15625,6 33.5,6 37.890625,10.78125 42.28125,15.578125 42.28125,23.484375 42.28125,31 38.0625,35.34375 33.84375,39.703125 27,39.703125 q -4.25,0 -7.671875,-1.9375 -3.40625,-1.921875 -5.359375,-5 l -8.25,1.078125 6.921875,36.765625 H 48.25 v -8.40625 H 19.671875 L 15.828125,42.96875 q 6.4375,4.5 13.515625,4.5 9.375,0 15.8125,-6.5 6.453125,-6.5 6.453125,-16.703125 0,-9.71875 -5.65625,-16.796875 -6.890625,-8.6875 -18.796875,-8.6875 -9.765625,0 -15.953125,5.46875 Q 5.03125,9.71875 4.15625,18.75"
+       inkscape:connector-curvature="0"
+       style="stroke-linecap:butt;stroke-linejoin:round" />
+    <path
+       id="ArialMT-34"
+       d="m 32.328125,0 v 17.140625 h -31.0625 v 8.0625 l 32.671875,46.375 h 7.171875 v -46.375 h 9.671875 v -8.0625 H 41.109375 V 0 Z m 0,25.203125 V 57.46875 L 9.90625,25.203125 Z"
+       inkscape:connector-curvature="0"
+       style="stroke-linecap:butt;stroke-linejoin:round" />
+    <path
+       style="stroke:#000000;stroke-width:0.85000002;stroke-linecap:butt;stroke-linejoin:round"
+       id="m9da9100ad1"
+       d="M 0,0 V 1.8"
+       inkscape:connector-curvature="0" />
+    <path
+       id="Arial-ItalicMT-72"
+       d="M 3.328125,0 14.15625,51.859375 h 7.8125 l -2.1875,-10.59375 q 4,6 7.828125,8.875 3.84375,2.890625 7.84375,2.890625 2.640625,0 6.484375,-1.90625 l -3.609375,-8.203125 q -2.296875,1.65625 -5.03125,1.65625 -4.640625,0 -9.53125,-5.171875 -4.875,-5.171875 -7.65625,-18.609375 L 11.71875,0 Z"
+       inkscape:connector-curvature="0"
+       style="stroke-linecap:butt;stroke-linejoin:round" />
+    <path
+       id="ArialMT-20"
+       d=""
+       inkscape:connector-curvature="0"
+       style="stroke-linecap:butt;stroke-linejoin:round" />
+    <path
+       id="ArialMT-28"
+       d="m 23.390625,-21.046875 q -7.28125,9.1875 -12.3125,21.484375 Q 6.0625,12.75 6.0625,25.921875 q 0,11.625 3.75,22.265625 4.390625,12.359375 13.578125,24.609375 H 29.6875 q -5.90625,-10.15625 -7.8125,-14.5 -2.984375,-6.734375 -4.6875,-14.0625 -2.09375,-9.125 -2.09375,-18.359375 0,-23.484375 14.59375,-46.921875 z"
+       inkscape:connector-curvature="0"
+       style="stroke-linecap:butt;stroke-linejoin:round" />
+    <path
+       id="Arial-ItalicMT-6d"
+       d="m 3.265625,0 10.84375,51.859375 h 8.84375 l -1.8125,-8.546875 q 4.9375,5.515625 8.8125,7.609375 3.890625,2.109375 8.421875,2.109375 4.84375,0 8.078125,-2.5625 3.25,-2.5625 4.28125,-7.15625 3.953125,4.875 8.3125,7.296875 4.375,2.421875 9.21875,2.421875 Q 74.75,53.03125 78,49.953125 81.25,46.875 81.25,41.3125 q 0,-2.390625 -1.125,-7.90625 L 73.140625,0 H 64.3125 l 7.125,34.28125 q 0.921875,4.203125 0.921875,6 0,2.546875 -1.609375,4 -1.609375,1.46875 -4.53125,1.46875 -3.96875,0 -8.078125,-2.390625 -4.09375,-2.390625 -6.359375,-6.28125 -2.265625,-3.875 -3.984375,-11.9375 L 42.53125,0 H 33.6875 l 7.328125,35.015625 q 0.78125,3.5625 0.78125,5.078125 0,2.53125 -1.59375,4.09375 -1.578125,1.5625 -4.125,1.5625 -3.75,0 -7.875,-2.390625 -4.125,-2.390625 -6.71875,-6.671875 -2.59375,-4.265625 -4.25,-12.171875 L 12.109375,0 Z"
+       inkscape:connector-curvature="0"
+       style="stroke-linecap:butt;stroke-linejoin:round" />
+    <path
+       id="ArialMT-29"
+       d="M 12.359375,-21.046875 H 6.0625 q 14.59375,23.4375 14.59375,46.921875 0,9.1875 -2.09375,18.21875 -1.671875,7.328125 -4.640625,14.0625 -1.90625,4.390625 -7.859375,14.640625 h 6.296875 Q 21.53125,60.546875 25.921875,48.1875 29.6875,37.546875 29.6875,25.921875 29.6875,12.75 24.625,0.4375 19.578125,-11.859375 12.359375,-21.046875"
+       inkscape:connector-curvature="0"
+       style="stroke-linecap:butt;stroke-linejoin:round" />
+    <path
+       style="stroke:#000000;stroke-width:0.85000002;stroke-linecap:butt;stroke-linejoin:round"
+       id="mb5c5298c59"
+       d="M 0,0 H -3.5"
+       inkscape:connector-curvature="0" />
+    <path
+       id="ArialMT-32"
+       d="M 50.34375,8.453125 V 0 H 3.03125 Q 2.9375,3.171875 4.046875,6.109375 5.859375,10.9375 9.828125,15.625 13.8125,20.3125 21.34375,26.46875 q 11.671875,9.5625 15.765625,15.15625 4.109375,5.59375 4.109375,10.578125 0,5.21875 -3.75,8.796875 -3.734375,3.59375 -9.734375,3.59375 -6.34375,0 -10.15625,-3.8125 Q 13.765625,56.984375 13.71875,50.25 L 4.6875,51.171875 q 0.921875,10.109375 6.96875,15.40625 6.0625,5.296875 16.28125,5.296875 10.296875,0 16.296875,-5.71875 Q 50.25,60.453125 50.25,52 50.25,47.703125 48.484375,43.546875 46.734375,39.40625 42.65625,34.8125 38.578125,30.21875 29.109375,22.21875 21.1875,15.578125 18.9375,13.203125 q -2.234375,-2.359375 -3.703125,-4.75 z"
+       inkscape:connector-curvature="0"
+       style="stroke-linecap:butt;stroke-linejoin:round" />
+    <path
+       id="ArialMT-38"
+       d="m 17.671875,38.8125 q -5.46875,2.015625 -8.109375,5.71875 -2.625,3.71875 -2.625,8.890625 0,7.8125 5.609375,13.125 5.625,5.328125 14.9375,5.328125 9.375,0 15.09375,-5.453125 5.71875,-5.4375 5.71875,-13.25 0,-4.984375 -2.625,-8.671875 Q 43.0625,40.828125 37.75,38.8125 q 6.59375,-2.140625 10.03125,-6.9375 3.4375,-4.78125 3.4375,-11.421875 0,-9.171875 -6.5,-15.421875 -6.484375,-6.25 -17.078125,-6.25 -10.59375,0 -17.09375,6.265625 -6.5,6.28125 -6.5,15.65625 0,6.984375 3.546875,11.6875 3.546875,4.71875 10.078125,6.421875 m -1.75,14.90625 q 0,-5.078125 3.265625,-8.3125 3.28125,-3.21875 8.5,-3.21875 5.078125,0 8.328125,3.1875 3.25,3.203125 3.25,7.84375 0,4.84375 -3.359375,8.140625 -3.34375,3.296875 -8.3125,3.296875 -5.03125,0 -8.359375,-3.234375 -3.3125,-3.21875 -3.3125,-7.703125 M 13.09375,20.65625 q 0,-3.765625 1.78125,-7.28125 Q 16.65625,9.859375 20.171875,7.921875 23.6875,6 27.734375,6 34.03125,6 38.125,10.046875 q 4.109375,4.0625 4.109375,10.3125 0,6.34375 -4.21875,10.5 -4.21875,4.15625 -10.578125,4.15625 -6.203125,0 -10.28125,-4.109375 -4.0625,-4.09375 -4.0625,-10.25"
+       inkscape:connector-curvature="0"
+       style="stroke-linecap:butt;stroke-linejoin:round" />
+    <path
+       id="ArialMT-394"
+       d="M -0.09375,0 27.390625,71.578125 H 37.59375 L 66.890625,0 Z m 13.125,8.453125 H 52.828125 L 37.359375,49.21875 q -3.46875,9.1875 -5.078125,14.84375 -1.328125,-6.640625 -3.859375,-13.671875 z"
+       inkscape:connector-curvature="0"
+       style="stroke-linecap:butt;stroke-linejoin:round" />
+    <path
+       id="Arial-ItalicMT-70"
+       d="m -1.03125,-19.875 15,71.734375 H 22.125 L 20.609375,44.625 q 4.53125,4.734375 8.125,6.5625 3.59375,1.84375 7.59375,1.84375 7.421875,0 12.296875,-5.40625 4.890625,-5.390625 4.890625,-15.453125 0,-8.09375 -2.6875,-14.765625 -2.6875,-6.65625 -6.59375,-10.71875 -3.90625,-4.046875 -7.90625,-5.953125 -4,-1.90625 -8.203125,-1.90625 -9.328125,0 -14.453125,9.46875 L 7.8125,-19.875 Z m 17.484375,41.0625 q 0,-5.8125 0.828125,-8.046875 1.21875,-3.171875 4,-5.125 2.796875,-1.953125 6.453125,-1.953125 7.625,0 12.3125,8.5625 4.6875,8.5625 4.6875,17.5 0,6.59375 -3.15625,10.1875 -3.15625,3.59375 -7.84375,3.59375 -3.359375,0 -6.25,-1.796875 -2.875,-1.78125 -5.34375,-5.328125 Q 19.671875,35.25 18.0625,30.125 16.453125,25 16.453125,21.1875"
+       inkscape:connector-curvature="0"
+       style="stroke-linecap:butt;stroke-linejoin:round" />
+    <path
+       id="ArialMT-61"
+       d="M 40.4375,6.390625 Q 35.546875,2.25 31.03125,0.53125 q -4.515625,-1.703125 -9.6875,-1.703125 -8.546875,0 -13.140625,4.171875 -4.59375,4.171875 -4.59375,10.671875 0,3.8125 1.734375,6.953125 1.734375,3.15625 4.546875,5.0625 2.8125,1.90625 6.328125,2.875 2.578125,0.6875 7.8125,1.328125 10.640625,1.265625 15.671875,3.015625 0.04687,1.8125 0.04687,2.296875 0,5.375 -2.5,7.578125 -3.359375,2.96875 -10,2.96875 -6.203125,0 -9.15625,-2.171875 -2.953125,-2.171875 -4.375,-7.6875 L 5.125,37.0625 q 1.171875,5.515625 3.859375,8.90625 2.6875,3.390625 7.765625,5.21875 5.078125,1.84375 11.765625,1.84375 6.640625,0 10.78125,-1.5625 4.15625,-1.5625 6.109375,-3.9375 1.953125,-2.359375 2.734375,-5.984375 0.4375,-2.234375 0.4375,-8.09375 v -11.71875 q 0,-12.265625 0.5625,-15.515625 Q 49.703125,2.984375 51.375,0 h -9.1875 q -1.359375,2.734375 -1.75,6.390625 M 39.703125,26.03125 Q 34.90625,24.078125 25.34375,22.703125 19.921875,21.921875 17.671875,20.9375 15.4375,19.96875 14.203125,18.09375 q -1.21875,-1.875 -1.21875,-4.171875 0,-3.515625 2.65625,-5.859375 2.671875,-2.34375 7.796875,-2.34375 5.078125,0 9.03125,2.21875 3.953125,2.21875 5.8125,6.078125 1.421875,2.984375 1.421875,8.78125 z"
+       inkscape:connector-curvature="0"
+       style="stroke-linecap:butt;stroke-linejoin:round" />
+    <path
+       id="ArialMT-74"
+       d="M 25.78125,7.859375 27.046875,0.09375 Q 23.34375,-0.6875 20.40625,-0.6875 15.625,-0.6875 12.984375,0.828125 10.359375,2.34375 9.28125,4.8125 8.203125,7.28125 8.203125,15.1875 v 29.828125 h -6.4375 v 6.84375 h 6.4375 v 12.84375 L 16.9375,69.96875 V 51.859375 h 8.84375 v -6.84375 H 16.9375 v -30.3125 q 0,-3.765625 0.46875,-4.84375 0.46875,-1.0625 1.515625,-1.703125 1.046875,-0.640625 3,-0.640625 1.46875,0 3.859375,0.34375"
+       inkscape:connector-curvature="0"
+       style="stroke-linecap:butt;stroke-linejoin:round" />
+    <path
+       id="ArialMT-6d"
+       d="m 6.59375,0 v 51.859375 h 7.859375 v -7.28125 q 2.4375,3.8125 6.484375,6.125 4.0625,2.328125 9.234375,2.328125 5.765625,0 9.453125,-2.390625 3.6875,-2.390625 5.203125,-6.6875 6.15625,9.078125 16.015625,9.078125 7.71875,0 11.859375,-4.28125 4.15625,-4.265625 4.15625,-13.15625 V 0 h -8.75 v 32.671875 q 0,5.265625 -0.859375,7.578125 -0.84375,2.328125 -3.09375,3.734375 -2.234375,1.421875 -5.265625,1.421875 -5.46875,0 -9.09375,-3.640625 Q 46.1875,38.140625 46.1875,30.125 V 0 h -8.78125 v 33.6875 q 0,5.859375 -2.15625,8.78125 -2.140625,2.9375 -7.03125,2.9375 -3.703125,0 -6.859375,-1.953125 Q 18.21875,41.5 16.796875,37.734375 15.375,33.984375 15.375,26.90625 V 0 Z"
+       inkscape:connector-curvature="0"
+       style="stroke-linecap:butt;stroke-linejoin:round" />
+    <clipPath
+       id="p8e3a3aa202"
+       style="stroke-linecap:butt;stroke-linejoin:round">
+      <rect
+         id="rect24563"
+         y="18"
+         x="43.200001"
+         width="151.2"
+         height="126"
+         style="stroke-linecap:butt;stroke-linejoin:round" />
+    </clipPath>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB;stroke-linecap:butt;stroke-linejoin:round"
+       id="filter24906"
+       x="-0.031382609"
+       width="1.0627652"
+       y="-0.042210527"
+       height="1.0844212">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="3.2223216"
+         id="feGaussianBlur24908"
+         style="stroke-linecap:butt;stroke-linejoin:round" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB;stroke-linecap:butt;stroke-linejoin:round"
+       id="filter25098"
+       x="-0.032400001"
+       width="1.0648"
+       y="-0.032400001"
+       height="1.0648">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.62919644"
+         id="feGaussianBlur25100"
+         style="stroke-linecap:butt;stroke-linejoin:round" />
+    </filter>
+    <style
+       id="style25635"
+       type="text/css">
+*{stroke-linecap:butt;stroke-linejoin:round;}
+  </style>
+    <path
+       style="stroke:#000000;stroke-width:0.85000002;stroke-linecap:butt;stroke-linejoin:round"
+       id="m8c3f39a80d"
+       d="M 0,0 V 3.5"
+       inkscape:connector-curvature="0" />
+    <path
+       id="ArialMT-31-6"
+       d="m 37.25,0 h -8.78125 v 56 q -3.171875,-3.015625 -8.328125,-6.046875 -5.15625,-3.03125 -9.25,-4.546875 v 8.5 q 7.375,3.46875 12.890625,8.390625 5.515625,4.9375 7.8125,9.578125 H 37.25 Z"
+       inkscape:connector-curvature="0"
+       style="stroke-linecap:butt;stroke-linejoin:round" />
+    <path
+       id="ArialMT-30-1"
+       d="m 4.15625,35.296875 q 0,12.703125 2.609375,20.4375 2.609375,7.75 7.75,11.9375 5.15625,4.203125 12.96875,4.203125 5.765625,0 10.109375,-2.328125 4.34375,-2.3125 7.171875,-6.6875 Q 47.609375,58.5 49.21875,52.21875 q 1.609375,-6.265625 1.609375,-16.921875 0,-12.59375 -2.59375,-20.328125 Q 45.65625,7.234375 40.5,3 35.359375,-1.21875 27.484375,-1.21875 q -10.34375,0 -16.25,7.421875 -7.078125,8.9375 -7.078125,29.09375 m 9.03125,0 q 0,-17.625 4.125,-23.46875 Q 21.4375,6 27.484375,6 q 6.0625,0 10.1875,5.859375 4.125,5.859375 4.125,23.4375 0,17.6875 -4.125,23.484375 -4.125,5.8125 -10.28125,5.8125 -6.046875,0 -9.671875,-5.125 Q 13.1875,52.9375 13.1875,35.296875"
+       inkscape:connector-curvature="0"
+       style="stroke-linecap:butt;stroke-linejoin:round" />
+    <path
+       id="ArialMT-2212-3"
+       d="M 52.828125,31.203125 H 5.5625 v 8.203125 h 47.265625 z"
+       inkscape:connector-curvature="0"
+       style="stroke-linecap:butt;stroke-linejoin:round" />
+    <path
+       id="ArialMT-37-8"
+       d="m 4.734375,62.203125 v 8.453125 h 46.34375 V 63.8125 Q 44.234375,56.546875 37.515625,44.484375 30.8125,32.421875 27.15625,19.671875 24.515625,10.6875 23.78125,0 H 14.75 q 0.140625,8.453125 3.3125,20.40625 3.171875,11.96875 9.109375,23.078125 5.9375,11.109375 12.625,18.71875 z"
+       inkscape:connector-curvature="0"
+       style="stroke-linecap:butt;stroke-linejoin:round" />
+    <path
+       id="ArialMT-36-3"
+       d="M 49.75,54.046875 41.015625,53.375 q -1.171875,5.171875 -3.3125,7.515625 -3.578125,3.765625 -8.796875,3.765625 -4.203125,0 -7.375,-2.34375 Q 17.390625,59.28125 14.984375,53.46875 12.59375,47.65625 12.5,36.921875 15.671875,41.75 20.265625,44.09375 q 4.59375,2.34375 9.625,2.34375 8.78125,0 14.953125,-6.46875 Q 51.03125,33.5 51.03125,23.25 51.03125,16.5 48.125,10.71875 45.21875,4.9375 40.140625,1.859375 35.0625,-1.21875 28.609375,-1.21875 17.625,-1.21875 10.6875,6.859375 3.765625,14.9375 3.765625,33.5 q 0,20.75 7.65625,30.171875 6.6875,8.203125 18.015625,8.203125 8.453125,0 13.84375,-4.734375 Q 48.6875,62.40625 49.75,54.046875 M 13.875,23.1875 q 0,-4.53125 1.921875,-8.6875 Q 17.71875,10.359375 21.1875,8.171875 24.65625,6 28.46875,6 q 5.5625,0 9.5625,4.484375 4.015625,4.5 4.015625,12.21875 0,7.421875 -3.96875,11.6875 -3.953125,4.28125 -9.953125,4.28125 -5.953125,0 -10.109375,-4.28125 Q 13.875,30.125 13.875,23.1875"
+       inkscape:connector-curvature="0"
+       style="stroke-linecap:butt;stroke-linejoin:round" />
+    <path
+       id="ArialMT-35-2"
+       d="M 4.15625,18.75 13.375,19.53125 Q 14.40625,12.796875 18.140625,9.390625 21.875,6 27.15625,6 33.5,6 37.890625,10.78125 42.28125,15.578125 42.28125,23.484375 42.28125,31 38.0625,35.34375 33.84375,39.703125 27,39.703125 q -4.25,0 -7.671875,-1.9375 -3.40625,-1.921875 -5.359375,-5 l -8.25,1.078125 6.921875,36.765625 H 48.25 v -8.40625 H 19.671875 L 15.828125,42.96875 q 6.4375,4.5 13.515625,4.5 9.375,0 15.8125,-6.5 6.453125,-6.5 6.453125,-16.703125 0,-9.71875 -5.65625,-16.796875 -6.890625,-8.6875 -18.796875,-8.6875 -9.765625,0 -15.953125,5.46875 Q 5.03125,9.71875 4.15625,18.75"
+       inkscape:connector-curvature="0"
+       style="stroke-linecap:butt;stroke-linejoin:round" />
+    <path
+       id="ArialMT-34-2"
+       d="m 32.328125,0 v 17.140625 h -31.0625 v 8.0625 l 32.671875,46.375 h 7.171875 v -46.375 h 9.671875 v -8.0625 H 41.109375 V 0 Z m 0,25.203125 V 57.46875 L 9.90625,25.203125 Z"
+       inkscape:connector-curvature="0"
+       style="stroke-linecap:butt;stroke-linejoin:round" />
+    <path
+       style="stroke:#000000;stroke-width:0.85000002;stroke-linecap:butt;stroke-linejoin:round"
+       id="mae7a150587"
+       d="M 0,0 V 1.8"
+       inkscape:connector-curvature="0" />
+    <path
+       id="Arial-ItalicMT-72-8"
+       d="M 3.328125,0 14.15625,51.859375 h 7.8125 l -2.1875,-10.59375 q 4,6 7.828125,8.875 3.84375,2.890625 7.84375,2.890625 2.640625,0 6.484375,-1.90625 l -3.609375,-8.203125 q -2.296875,1.65625 -5.03125,1.65625 -4.640625,0 -9.53125,-5.171875 -4.875,-5.171875 -7.65625,-18.609375 L 11.71875,0 Z"
+       inkscape:connector-curvature="0"
+       style="stroke-linecap:butt;stroke-linejoin:round" />
+    <path
+       id="ArialMT-20-6"
+       d=""
+       inkscape:connector-curvature="0"
+       style="stroke-linecap:butt;stroke-linejoin:round" />
+    <path
+       id="ArialMT-28-6"
+       d="m 23.390625,-21.046875 q -7.28125,9.1875 -12.3125,21.484375 Q 6.0625,12.75 6.0625,25.921875 q 0,11.625 3.75,22.265625 4.390625,12.359375 13.578125,24.609375 H 29.6875 q -5.90625,-10.15625 -7.8125,-14.5 -2.984375,-6.734375 -4.6875,-14.0625 -2.09375,-9.125 -2.09375,-18.359375 0,-23.484375 14.59375,-46.921875 z"
+       inkscape:connector-curvature="0"
+       style="stroke-linecap:butt;stroke-linejoin:round" />
+    <path
+       id="ArialMT-6d-5"
+       d="m 6.59375,0 v 51.859375 h 7.859375 v -7.28125 q 2.4375,3.8125 6.484375,6.125 4.0625,2.328125 9.234375,2.328125 5.765625,0 9.453125,-2.390625 3.6875,-2.390625 5.203125,-6.6875 6.15625,9.078125 16.015625,9.078125 7.71875,0 11.859375,-4.28125 4.15625,-4.265625 4.15625,-13.15625 V 0 h -8.75 v 32.671875 q 0,5.265625 -0.859375,7.578125 -0.84375,2.328125 -3.09375,3.734375 -2.234375,1.421875 -5.265625,1.421875 -5.46875,0 -9.09375,-3.640625 Q 46.1875,38.140625 46.1875,30.125 V 0 h -8.78125 v 33.6875 q 0,5.859375 -2.15625,8.78125 -2.140625,2.9375 -7.03125,2.9375 -3.703125,0 -6.859375,-1.953125 Q 18.21875,41.5 16.796875,37.734375 15.375,33.984375 15.375,26.90625 V 0 Z"
+       inkscape:connector-curvature="0"
+       style="stroke-linecap:butt;stroke-linejoin:round" />
+    <path
+       id="ArialMT-29-9"
+       d="M 12.359375,-21.046875 H 6.0625 q 14.59375,23.4375 14.59375,46.921875 0,9.1875 -2.09375,18.21875 -1.671875,7.328125 -4.640625,14.0625 -1.90625,4.390625 -7.859375,14.640625 h 6.296875 Q 21.53125,60.546875 25.921875,48.1875 29.6875,37.546875 29.6875,25.921875 29.6875,12.75 24.625,0.4375 19.578125,-11.859375 12.359375,-21.046875"
+       inkscape:connector-curvature="0"
+       style="stroke-linecap:butt;stroke-linejoin:round" />
+    <path
+       style="stroke:#000000;stroke-width:0.85000002;stroke-linecap:butt;stroke-linejoin:round"
+       id="m07adc0998a"
+       d="M 0,0 H -3.5"
+       inkscape:connector-curvature="0" />
+    <path
+       id="ArialMT-32-2"
+       d="M 50.34375,8.453125 V 0 H 3.03125 Q 2.9375,3.171875 4.046875,6.109375 5.859375,10.9375 9.828125,15.625 13.8125,20.3125 21.34375,26.46875 q 11.671875,9.5625 15.765625,15.15625 4.109375,5.59375 4.109375,10.578125 0,5.21875 -3.75,8.796875 -3.734375,3.59375 -9.734375,3.59375 -6.34375,0 -10.15625,-3.8125 Q 13.765625,56.984375 13.71875,50.25 L 4.6875,51.171875 q 0.921875,10.109375 6.96875,15.40625 6.0625,5.296875 16.28125,5.296875 10.296875,0 16.296875,-5.71875 Q 50.25,60.453125 50.25,52 50.25,47.703125 48.484375,43.546875 46.734375,39.40625 42.65625,34.8125 38.578125,30.21875 29.109375,22.21875 21.1875,15.578125 18.9375,13.203125 q -2.234375,-2.359375 -3.703125,-4.75 z"
+       inkscape:connector-curvature="0"
+       style="stroke-linecap:butt;stroke-linejoin:round" />
+    <path
+       id="ArialMT-38-8"
+       d="m 17.671875,38.8125 q -5.46875,2.015625 -8.109375,5.71875 -2.625,3.71875 -2.625,8.890625 0,7.8125 5.609375,13.125 5.625,5.328125 14.9375,5.328125 9.375,0 15.09375,-5.453125 5.71875,-5.4375 5.71875,-13.25 0,-4.984375 -2.625,-8.671875 Q 43.0625,40.828125 37.75,38.8125 q 6.59375,-2.140625 10.03125,-6.9375 3.4375,-4.78125 3.4375,-11.421875 0,-9.171875 -6.5,-15.421875 -6.484375,-6.25 -17.078125,-6.25 -10.59375,0 -17.09375,6.265625 -6.5,6.28125 -6.5,15.65625 0,6.984375 3.546875,11.6875 3.546875,4.71875 10.078125,6.421875 m -1.75,14.90625 q 0,-5.078125 3.265625,-8.3125 3.28125,-3.21875 8.5,-3.21875 5.078125,0 8.328125,3.1875 3.25,3.203125 3.25,7.84375 0,4.84375 -3.359375,8.140625 -3.34375,3.296875 -8.3125,3.296875 -5.03125,0 -8.359375,-3.234375 -3.3125,-3.21875 -3.3125,-7.703125 M 13.09375,20.65625 q 0,-3.765625 1.78125,-7.28125 Q 16.65625,9.859375 20.171875,7.921875 23.6875,6 27.734375,6 34.03125,6 38.125,10.046875 q 4.109375,4.0625 4.109375,10.3125 0,6.34375 -4.21875,10.5 -4.21875,4.15625 -10.578125,4.15625 -6.203125,0 -10.28125,-4.109375 -4.0625,-4.09375 -4.0625,-10.25"
+       inkscape:connector-curvature="0"
+       style="stroke-linecap:butt;stroke-linejoin:round" />
+    <path
+       id="ArialMT-394-0"
+       d="M -0.09375,0 27.390625,71.578125 H 37.59375 L 66.890625,0 Z m 13.125,8.453125 H 52.828125 L 37.359375,49.21875 q -3.46875,9.1875 -5.078125,14.84375 -1.328125,-6.640625 -3.859375,-13.671875 z"
+       inkscape:connector-curvature="0"
+       style="stroke-linecap:butt;stroke-linejoin:round" />
+    <path
+       id="Arial-ItalicMT-70-1"
+       d="m -1.03125,-19.875 15,71.734375 H 22.125 L 20.609375,44.625 q 4.53125,4.734375 8.125,6.5625 3.59375,1.84375 7.59375,1.84375 7.421875,0 12.296875,-5.40625 4.890625,-5.390625 4.890625,-15.453125 0,-8.09375 -2.6875,-14.765625 -2.6875,-6.65625 -6.59375,-10.71875 -3.90625,-4.046875 -7.90625,-5.953125 -4,-1.90625 -8.203125,-1.90625 -9.328125,0 -14.453125,9.46875 L 7.8125,-19.875 Z m 17.484375,41.0625 q 0,-5.8125 0.828125,-8.046875 1.21875,-3.171875 4,-5.125 2.796875,-1.953125 6.453125,-1.953125 7.625,0 12.3125,8.5625 4.6875,8.5625 4.6875,17.5 0,6.59375 -3.15625,10.1875 -3.15625,3.59375 -7.84375,3.59375 -3.359375,0 -6.25,-1.796875 -2.875,-1.78125 -5.34375,-5.328125 Q 19.671875,35.25 18.0625,30.125 16.453125,25 16.453125,21.1875"
+       inkscape:connector-curvature="0"
+       style="stroke-linecap:butt;stroke-linejoin:round" />
+    <path
+       id="ArialMT-61-0"
+       d="M 40.4375,6.390625 Q 35.546875,2.25 31.03125,0.53125 q -4.515625,-1.703125 -9.6875,-1.703125 -8.546875,0 -13.140625,4.171875 -4.59375,4.171875 -4.59375,10.671875 0,3.8125 1.734375,6.953125 1.734375,3.15625 4.546875,5.0625 2.8125,1.90625 6.328125,2.875 2.578125,0.6875 7.8125,1.328125 10.640625,1.265625 15.671875,3.015625 0.04687,1.8125 0.04687,2.296875 0,5.375 -2.5,7.578125 -3.359375,2.96875 -10,2.96875 -6.203125,0 -9.15625,-2.171875 -2.953125,-2.171875 -4.375,-7.6875 L 5.125,37.0625 q 1.171875,5.515625 3.859375,8.90625 2.6875,3.390625 7.765625,5.21875 5.078125,1.84375 11.765625,1.84375 6.640625,0 10.78125,-1.5625 4.15625,-1.5625 6.109375,-3.9375 1.953125,-2.359375 2.734375,-5.984375 0.4375,-2.234375 0.4375,-8.09375 v -11.71875 q 0,-12.265625 0.5625,-15.515625 Q 49.703125,2.984375 51.375,0 h -9.1875 q -1.359375,2.734375 -1.75,6.390625 M 39.703125,26.03125 Q 34.90625,24.078125 25.34375,22.703125 19.921875,21.921875 17.671875,20.9375 15.4375,19.96875 14.203125,18.09375 q -1.21875,-1.875 -1.21875,-4.171875 0,-3.515625 2.65625,-5.859375 2.671875,-2.34375 7.796875,-2.34375 5.078125,0 9.03125,2.21875 3.953125,2.21875 5.8125,6.078125 1.421875,2.984375 1.421875,8.78125 z"
+       inkscape:connector-curvature="0"
+       style="stroke-linecap:butt;stroke-linejoin:round" />
+    <path
+       id="ArialMT-74-2"
+       d="M 25.78125,7.859375 27.046875,0.09375 Q 23.34375,-0.6875 20.40625,-0.6875 15.625,-0.6875 12.984375,0.828125 10.359375,2.34375 9.28125,4.8125 8.203125,7.28125 8.203125,15.1875 v 29.828125 h -6.4375 v 6.84375 h 6.4375 v 12.84375 L 16.9375,69.96875 V 51.859375 h 8.84375 v -6.84375 H 16.9375 v -30.3125 q 0,-3.765625 0.46875,-4.84375 0.46875,-1.0625 1.515625,-1.703125 1.046875,-0.640625 3,-0.640625 1.46875,0 3.859375,0.34375"
+       inkscape:connector-curvature="0"
+       style="stroke-linecap:butt;stroke-linejoin:round" />
+    <clipPath
+       id="padd731636b"
+       style="stroke-linecap:butt;stroke-linejoin:round">
+      <rect
+         id="rect26045"
+         y="18"
+         x="43.200001"
+         width="151.2"
+         height="126"
+         style="stroke-linecap:butt;stroke-linejoin:round" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="3.7741825"
+     inkscape:cx="89.273178"
+     inkscape:cy="85.066283"
+     inkscape:document-units="mm"
+     inkscape:current-layer="axes_1"
+     showgrid="false"
+     fit-margin-top="0.4"
+     fit-margin-right="0.5"
+     fit-margin-bottom="0.5"
+     fit-margin-left="0.5"
+     inkscape:window-width="1280"
+     inkscape:window-height="681"
+     inkscape:window-x="0"
+     inkscape:window-y="1"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata21579">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(2.3941894,-3.5940363)">
+    <g
+       id="figure_1"
+       transform="matrix(0.35277778,0,0,0.35277778,82.474405,2.7455334)"
+       style="stroke-linecap:butt;stroke-linejoin:round">
+      <g
+         id="axes_1"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <rect
+           style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#90c6ea;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.75118107;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal;filter:url(#filter24906);color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+           id="rect24884"
+           width="246.42859"
+           height="183.21429"
+           x="-231.64285"
+           y="26.25"
+           transform="matrix(0.66419012,0,0,0.72662146,-80.163613,4.3772924)" />
+        <g
+           id="g25104"
+           transform="translate(3.0208259,0.22035865)"
+           style="stroke-linecap:butt;stroke-linejoin:round">
+          <circle
+             r="23.303572"
+             cy="114.91072"
+             cx="-157.44643"
+             id="path24910"
+             style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.75118107;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+          <circle
+             style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.75118107;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal;filter:url(#filter25098);color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+             id="circle24988"
+             cx="-157.44643"
+             cy="114.91072"
+             r="23.303572" />
+        </g>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:125%;font-family:arial;-inkscape-font-specification:'arial Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="-179.23747"
+           y="54.521923"
+           id="text25108"><tspan
+             sodipodi:role="line"
+             id="tspan25106"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:arial;-inkscape-font-specification:arial;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:round"
+             x="-179.23747"
+             y="54.521923">B (water)</tspan></text>
+        <text
+           id="text25112"
+           y="88.614571"
+           x="-147.79648"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:125%;font-family:arial;-inkscape-font-specification:'arial Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             y="88.614571"
+             x="-147.79648"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:arial;-inkscape-font-specification:arial;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:round"
+             id="tspan25110"
+             sodipodi:role="line">A (bubble)</tspan></text>
+        <path
+           style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.75118113;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+           d="m -154.615,115.13108 15.9099,-15.909904"
+           id="path25130"
+           inkscape:connector-curvature="0"
+           inkscape:path-effect="#path-effect25132"
+           inkscape:original-d="m -154.615,115.13108 c 5.93539,-4.67271 10.60735,-10.60736 15.9099,-15.909904" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:125%;font-family:arial;-inkscape-font-specification:'arial Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="-152.72098"
+           y="108.31255"
+           id="text25156"><tspan
+             sodipodi:role="line"
+             id="tspan25154"
+             style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:arial;-inkscape-font-specification:'arial Italic';stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:round"
+             x="-152.72098"
+             y="108.31255">r</tspan></text>
+        <g
+           id="figure_1-6"
+           transform="translate(-55.407469,3.5390634)"
+           style="stroke-linecap:butt;stroke-linejoin:round">
+          <g
+             id="patch_1"
+             style="stroke-linecap:butt;stroke-linejoin:round">
+            <path
+               id="path25639"
+               style="fill:none;stroke-linecap:butt;stroke-linejoin:round"
+               d="M 0,180 H 216 V 0 H 0 Z"
+               inkscape:connector-curvature="0" />
+          </g>
+          <g
+             id="axes_1-7"
+             style="stroke-linecap:butt;stroke-linejoin:round">
+            <g
+               id="patch_2"
+               style="stroke-linecap:butt;stroke-linejoin:round">
+              <path
+                 id="path25642"
+                 style="fill:none;stroke-linecap:butt;stroke-linejoin:round"
+                 d="M 43.2,144 H 194.4 V 18 H 43.2 Z"
+                 inkscape:connector-curvature="0" />
+            </g>
+            <g
+               id="matplotlib.axis_1"
+               style="stroke-linecap:butt;stroke-linejoin:round">
+              <g
+                 id="xtick_1"
+                 style="stroke-linecap:butt;stroke-linejoin:round">
+                <g
+                   id="line2d_1"
+                   style="stroke-linecap:butt;stroke-linejoin:round">
+                  <defs
+                     id="defs25646">
+                    <path
+                       style="stroke:#000000;stroke-width:0.85000002;stroke-linecap:butt;stroke-linejoin:round"
+                       id="path26084"
+                       d="M 0,0 V 3.5"
+                       inkscape:connector-curvature="0" />
+                  </defs>
+                  <g
+                     id="g25650"
+                     style="stroke-linecap:butt;stroke-linejoin:round">
+                    <use
+                       id="use25648"
+                       y="144"
+                       xlink:href="#m8c3f39a80d"
+                       x="43.200001"
+                       style="stroke:#000000;stroke-width:0.85000002;stroke-linecap:butt;stroke-linejoin:round"
+                       width="100%"
+                       height="100%" />
+                  </g>
+                </g>
+                <g
+                   id="text_1"
+                   style="stroke-linecap:butt;stroke-linejoin:round">
+                  <!-- ${10^{-7}}$ -->
+                  <defs
+                     id="defs25657">
+                    <path
+                       id="path26090"
+                       d="m 37.25,0 h -8.78125 v 56 q -3.171875,-3.015625 -8.328125,-6.046875 -5.15625,-3.03125 -9.25,-4.546875 v 8.5 q 7.375,3.46875 12.890625,8.390625 5.515625,4.9375 7.8125,9.578125 H 37.25 Z"
+                       inkscape:connector-curvature="0"
+                       style="stroke-linecap:butt;stroke-linejoin:round" />
+                    <path
+                       id="path26092"
+                       d="m 4.15625,35.296875 q 0,12.703125 2.609375,20.4375 2.609375,7.75 7.75,11.9375 5.15625,4.203125 12.96875,4.203125 5.765625,0 10.109375,-2.328125 4.34375,-2.3125 7.171875,-6.6875 Q 47.609375,58.5 49.21875,52.21875 q 1.609375,-6.265625 1.609375,-16.921875 0,-12.59375 -2.59375,-20.328125 Q 45.65625,7.234375 40.5,3 35.359375,-1.21875 27.484375,-1.21875 q -10.34375,0 -16.25,7.421875 -7.078125,8.9375 -7.078125,29.09375 m 9.03125,0 q 0,-17.625 4.125,-23.46875 Q 21.4375,6 27.484375,6 q 6.0625,0 10.1875,5.859375 4.125,5.859375 4.125,23.4375 0,17.6875 -4.125,23.484375 -4.125,5.8125 -10.28125,5.8125 -6.046875,0 -9.671875,-5.125 Q 13.1875,52.9375 13.1875,35.296875"
+                       inkscape:connector-curvature="0"
+                       style="stroke-linecap:butt;stroke-linejoin:round" />
+                    <path
+                       id="path26094"
+                       d="M 52.828125,31.203125 H 5.5625 v 8.203125 h 47.265625 z"
+                       inkscape:connector-curvature="0"
+                       style="stroke-linecap:butt;stroke-linejoin:round" />
+                    <path
+                       id="path26096"
+                       d="m 4.734375,62.203125 v 8.453125 h 46.34375 V 63.8125 Q 44.234375,56.546875 37.515625,44.484375 30.8125,32.421875 27.15625,19.671875 24.515625,10.6875 23.78125,0 H 14.75 q 0.140625,8.453125 3.3125,20.40625 3.171875,11.96875 9.109375,23.078125 5.9375,11.109375 12.625,18.71875 z"
+                       inkscape:connector-curvature="0"
+                       style="stroke-linecap:butt;stroke-linejoin:round" />
+                  </defs>
+                  <g
+                     id="g25667"
+                     transform="matrix(0.075,0,0,-0.075,35.775,158.65937)"
+                     style="stroke-linecap:butt;stroke-linejoin:round">
+                    <use
+                       id="use25659"
+                       xlink:href="#ArialMT-31-6"
+                       transform="translate(0,0.846875)"
+                       style="stroke-linecap:butt;stroke-linejoin:round"
+                       x="0"
+                       y="0"
+                       width="100%"
+                       height="100%" />
+                    <use
+                       id="use25661"
+                       xlink:href="#ArialMT-30-1"
+                       transform="translate(55.615234,0.846875)"
+                       style="stroke-linecap:butt;stroke-linejoin:round"
+                       x="0"
+                       y="0"
+                       width="100%"
+                       height="100%" />
+                    <use
+                       id="use25663"
+                       xlink:href="#ArialMT-2212-3"
+                       transform="matrix(0.7,0,0,0.7,112.97281,70.540625)"
+                       style="stroke-linecap:butt;stroke-linejoin:round"
+                       x="0"
+                       y="0"
+                       width="100%"
+                       height="100%" />
+                    <use
+                       id="use25665"
+                       xlink:href="#ArialMT-37-8"
+                       transform="matrix(0.7,0,0,0.7,153.85172,70.540625)"
+                       style="stroke-linecap:butt;stroke-linejoin:round"
+                       x="0"
+                       y="0"
+                       width="100%"
+                       height="100%" />
+                  </g>
+                </g>
+              </g>
+              <g
+                 id="xtick_2"
+                 style="stroke-linecap:butt;stroke-linejoin:round">
+                <g
+                   id="line2d_2"
+                   style="stroke-linecap:butt;stroke-linejoin:round">
+                  <g
+                     id="g25673"
+                     style="stroke-linecap:butt;stroke-linejoin:round">
+                    <use
+                       id="use25671"
+                       y="144"
+                       xlink:href="#m8c3f39a80d"
+                       x="93.599998"
+                       style="stroke:#000000;stroke-width:0.85000002;stroke-linecap:butt;stroke-linejoin:round"
+                       width="100%"
+                       height="100%" />
+                  </g>
+                </g>
+                <g
+                   id="text_2"
+                   style="stroke-linecap:butt;stroke-linejoin:round">
+                  <!-- ${10^{-6}}$ -->
+                  <defs
+                     id="defs25677">
+                    <path
+                       id="path26109"
+                       d="M 49.75,54.046875 41.015625,53.375 q -1.171875,5.171875 -3.3125,7.515625 -3.578125,3.765625 -8.796875,3.765625 -4.203125,0 -7.375,-2.34375 Q 17.390625,59.28125 14.984375,53.46875 12.59375,47.65625 12.5,36.921875 15.671875,41.75 20.265625,44.09375 q 4.59375,2.34375 9.625,2.34375 8.78125,0 14.953125,-6.46875 Q 51.03125,33.5 51.03125,23.25 51.03125,16.5 48.125,10.71875 45.21875,4.9375 40.140625,1.859375 35.0625,-1.21875 28.609375,-1.21875 17.625,-1.21875 10.6875,6.859375 3.765625,14.9375 3.765625,33.5 q 0,20.75 7.65625,30.171875 6.6875,8.203125 18.015625,8.203125 8.453125,0 13.84375,-4.734375 Q 48.6875,62.40625 49.75,54.046875 M 13.875,23.1875 q 0,-4.53125 1.921875,-8.6875 Q 17.71875,10.359375 21.1875,8.171875 24.65625,6 28.46875,6 q 5.5625,0 9.5625,4.484375 4.015625,4.5 4.015625,12.21875 0,7.421875 -3.96875,11.6875 -3.953125,4.28125 -9.953125,4.28125 -5.953125,0 -10.109375,-4.28125 Q 13.875,30.125 13.875,23.1875"
+                       inkscape:connector-curvature="0"
+                       style="stroke-linecap:butt;stroke-linejoin:round" />
+                  </defs>
+                  <g
+                     id="g25687"
+                     transform="matrix(0.075,0,0,-0.075,86.175,158.73437)"
+                     style="stroke-linecap:butt;stroke-linejoin:round">
+                    <use
+                       id="use25679"
+                       xlink:href="#ArialMT-31-6"
+                       transform="translate(0,0.99375)"
+                       style="stroke-linecap:butt;stroke-linejoin:round"
+                       x="0"
+                       y="0"
+                       width="100%"
+                       height="100%" />
+                    <use
+                       id="use25681"
+                       xlink:href="#ArialMT-30-1"
+                       transform="translate(55.615234,0.99375)"
+                       style="stroke-linecap:butt;stroke-linejoin:round"
+                       x="0"
+                       y="0"
+                       width="100%"
+                       height="100%" />
+                    <use
+                       id="use25683"
+                       xlink:href="#ArialMT-2212-3"
+                       transform="matrix(0.7,0,0,0.7,112.97281,70.6875)"
+                       style="stroke-linecap:butt;stroke-linejoin:round"
+                       x="0"
+                       y="0"
+                       width="100%"
+                       height="100%" />
+                    <use
+                       id="use25685"
+                       xlink:href="#ArialMT-36-3"
+                       transform="matrix(0.7,0,0,0.7,153.85172,70.6875)"
+                       style="stroke-linecap:butt;stroke-linejoin:round"
+                       x="0"
+                       y="0"
+                       width="100%"
+                       height="100%" />
+                  </g>
+                </g>
+              </g>
+              <g
+                 id="xtick_3"
+                 style="stroke-linecap:butt;stroke-linejoin:round">
+                <g
+                   id="line2d_3"
+                   style="stroke-linecap:butt;stroke-linejoin:round">
+                  <g
+                     id="g25693"
+                     style="stroke-linecap:butt;stroke-linejoin:round">
+                    <use
+                       id="use25691"
+                       y="144"
+                       xlink:href="#m8c3f39a80d"
+                       x="144"
+                       style="stroke:#000000;stroke-width:0.85000002;stroke-linecap:butt;stroke-linejoin:round"
+                       width="100%"
+                       height="100%" />
+                  </g>
+                </g>
+                <g
+                   id="text_3"
+                   style="stroke-linecap:butt;stroke-linejoin:round">
+                  <!-- ${10^{-5}}$ -->
+                  <defs
+                     id="defs25697">
+                    <path
+                       id="path26122"
+                       d="M 4.15625,18.75 13.375,19.53125 Q 14.40625,12.796875 18.140625,9.390625 21.875,6 27.15625,6 33.5,6 37.890625,10.78125 42.28125,15.578125 42.28125,23.484375 42.28125,31 38.0625,35.34375 33.84375,39.703125 27,39.703125 q -4.25,0 -7.671875,-1.9375 -3.40625,-1.921875 -5.359375,-5 l -8.25,1.078125 6.921875,36.765625 H 48.25 v -8.40625 H 19.671875 L 15.828125,42.96875 q 6.4375,4.5 13.515625,4.5 9.375,0 15.8125,-6.5 6.453125,-6.5 6.453125,-16.703125 0,-9.71875 -5.65625,-16.796875 -6.890625,-8.6875 -18.796875,-8.6875 -9.765625,0 -15.953125,5.46875 Q 5.03125,9.71875 4.15625,18.75"
+                       inkscape:connector-curvature="0"
+                       style="stroke-linecap:butt;stroke-linejoin:round" />
+                  </defs>
+                  <g
+                     id="g25707"
+                     transform="matrix(0.075,0,0,-0.075,136.575,158.65937)"
+                     style="stroke-linecap:butt;stroke-linejoin:round">
+                    <use
+                       id="use25699"
+                       xlink:href="#ArialMT-31-6"
+                       transform="translate(0,0.879688)"
+                       style="stroke-linecap:butt;stroke-linejoin:round"
+                       x="0"
+                       y="0"
+                       width="100%"
+                       height="100%" />
+                    <use
+                       id="use25701"
+                       xlink:href="#ArialMT-30-1"
+                       transform="translate(55.615234,0.879688)"
+                       style="stroke-linecap:butt;stroke-linejoin:round"
+                       x="0"
+                       y="0"
+                       width="100%"
+                       height="100%" />
+                    <use
+                       id="use25703"
+                       xlink:href="#ArialMT-2212-3"
+                       transform="matrix(0.7,0,0,0.7,112.97281,70.573438)"
+                       style="stroke-linecap:butt;stroke-linejoin:round"
+                       x="0"
+                       y="0"
+                       width="100%"
+                       height="100%" />
+                    <use
+                       id="use25705"
+                       xlink:href="#ArialMT-35-2"
+                       transform="matrix(0.7,0,0,0.7,153.85172,70.573438)"
+                       style="stroke-linecap:butt;stroke-linejoin:round"
+                       x="0"
+                       y="0"
+                       width="100%"
+                       height="100%" />
+                  </g>
+                </g>
+              </g>
+              <g
+                 id="xtick_4"
+                 style="stroke-linecap:butt;stroke-linejoin:round">
+                <g
+                   id="line2d_4"
+                   style="stroke-linecap:butt;stroke-linejoin:round">
+                  <g
+                     id="g25713"
+                     style="stroke-linecap:butt;stroke-linejoin:round">
+                    <use
+                       id="use25711"
+                       y="144"
+                       xlink:href="#m8c3f39a80d"
+                       x="194.39999"
+                       style="stroke:#000000;stroke-width:0.85000002;stroke-linecap:butt;stroke-linejoin:round"
+                       width="100%"
+                       height="100%" />
+                  </g>
+                </g>
+                <g
+                   id="text_4"
+                   style="stroke-linecap:butt;stroke-linejoin:round">
+                  <!-- ${10^{-4}}$ -->
+                  <defs
+                     id="defs25717">
+                    <path
+                       id="path26135"
+                       d="m 32.328125,0 v 17.140625 h -31.0625 v 8.0625 l 32.671875,46.375 h 7.171875 v -46.375 h 9.671875 v -8.0625 H 41.109375 V 0 Z m 0,25.203125 V 57.46875 L 9.90625,25.203125 Z"
+                       inkscape:connector-curvature="0"
+                       style="stroke-linecap:butt;stroke-linejoin:round" />
+                  </defs>
+                  <g
+                     id="g25727"
+                     transform="matrix(0.075,0,0,-0.075,186.975,158.65937)"
+                     style="stroke-linecap:butt;stroke-linejoin:round">
+                    <use
+                       id="use25719"
+                       xlink:href="#ArialMT-31-6"
+                       transform="translate(0,0.201563)"
+                       style="stroke-linecap:butt;stroke-linejoin:round"
+                       x="0"
+                       y="0"
+                       width="100%"
+                       height="100%" />
+                    <use
+                       id="use25721"
+                       xlink:href="#ArialMT-30-1"
+                       transform="translate(55.615234,0.201563)"
+                       style="stroke-linecap:butt;stroke-linejoin:round"
+                       x="0"
+                       y="0"
+                       width="100%"
+                       height="100%" />
+                    <use
+                       id="use25723"
+                       xlink:href="#ArialMT-2212-3"
+                       transform="matrix(0.7,0,0,0.7,112.97281,69.895313)"
+                       style="stroke-linecap:butt;stroke-linejoin:round"
+                       x="0"
+                       y="0"
+                       width="100%"
+                       height="100%" />
+                    <use
+                       id="use25725"
+                       xlink:href="#ArialMT-34-2"
+                       transform="matrix(0.7,0,0,0.7,153.85172,69.895313)"
+                       style="stroke-linecap:butt;stroke-linejoin:round"
+                       x="0"
+                       y="0"
+                       width="100%"
+                       height="100%" />
+                  </g>
+                </g>
+              </g>
+              <g
+                 id="xtick_5"
+                 style="stroke-linecap:butt;stroke-linejoin:round">
+                <g
+                   id="line2d_5"
+                   style="stroke-linecap:butt;stroke-linejoin:round">
+                  <defs
+                     id="defs25732">
+                    <path
+                       style="stroke:#000000;stroke-width:0.85000002;stroke-linecap:butt;stroke-linejoin:round"
+                       id="path26145"
+                       d="M 0,0 V 1.8"
+                       inkscape:connector-curvature="0" />
+                  </defs>
+                  <g
+                     id="g25736"
+                     style="stroke-linecap:butt;stroke-linejoin:round">
+                    <use
+                       id="use25734"
+                       y="144"
+                       xlink:href="#mae7a150587"
+                       x="58.37191"
+                       style="stroke:#000000;stroke-width:0.85000002;stroke-linecap:butt;stroke-linejoin:round"
+                       width="100%"
+                       height="100%" />
+                  </g>
+                </g>
+              </g>
+              <g
+                 id="xtick_6"
+                 style="stroke-linecap:butt;stroke-linejoin:round">
+                <g
+                   id="line2d_6"
+                   style="stroke-linecap:butt;stroke-linejoin:round">
+                  <g
+                     id="g25742"
+                     style="stroke-linecap:butt;stroke-linejoin:round">
+                    <use
+                       id="use25740"
+                       y="144"
+                       xlink:href="#mae7a150587"
+                       x="67.24691"
+                       style="stroke:#000000;stroke-width:0.85000002;stroke-linecap:butt;stroke-linejoin:round"
+                       width="100%"
+                       height="100%" />
+                  </g>
+                </g>
+              </g>
+              <g
+                 id="xtick_7"
+                 style="stroke-linecap:butt;stroke-linejoin:round">
+                <g
+                   id="line2d_7"
+                   style="stroke-linecap:butt;stroke-linejoin:round">
+                  <g
+                     id="g25748"
+                     style="stroke-linecap:butt;stroke-linejoin:round">
+                    <use
+                       id="use25746"
+                       y="144"
+                       xlink:href="#mae7a150587"
+                       x="73.543823"
+                       style="stroke:#000000;stroke-width:0.85000002;stroke-linecap:butt;stroke-linejoin:round"
+                       width="100%"
+                       height="100%" />
+                  </g>
+                </g>
+              </g>
+              <g
+                 id="xtick_8"
+                 style="stroke-linecap:butt;stroke-linejoin:round">
+                <g
+                   id="line2d_8"
+                   style="stroke-linecap:butt;stroke-linejoin:round">
+                  <g
+                     id="g25754"
+                     style="stroke-linecap:butt;stroke-linejoin:round">
+                    <use
+                       id="use25752"
+                       y="144"
+                       xlink:href="#mae7a150587"
+                       x="78.428085"
+                       style="stroke:#000000;stroke-width:0.85000002;stroke-linecap:butt;stroke-linejoin:round"
+                       width="100%"
+                       height="100%" />
+                  </g>
+                </g>
+              </g>
+              <g
+                 id="xtick_9"
+                 style="stroke-linecap:butt;stroke-linejoin:round">
+                <g
+                   id="line2d_9"
+                   style="stroke-linecap:butt;stroke-linejoin:round">
+                  <g
+                     id="g25760"
+                     style="stroke-linecap:butt;stroke-linejoin:round">
+                    <use
+                       id="use25758"
+                       y="144"
+                       xlink:href="#mae7a150587"
+                       x="82.418823"
+                       style="stroke:#000000;stroke-width:0.85000002;stroke-linecap:butt;stroke-linejoin:round"
+                       width="100%"
+                       height="100%" />
+                  </g>
+                </g>
+              </g>
+              <g
+                 id="xtick_10"
+                 style="stroke-linecap:butt;stroke-linejoin:round">
+                <g
+                   id="line2d_10"
+                   style="stroke-linecap:butt;stroke-linejoin:round">
+                  <g
+                     id="g25766"
+                     style="stroke-linecap:butt;stroke-linejoin:round">
+                    <use
+                       id="use25764"
+                       y="144"
+                       xlink:href="#mae7a150587"
+                       x="85.792938"
+                       style="stroke:#000000;stroke-width:0.85000002;stroke-linecap:butt;stroke-linejoin:round"
+                       width="100%"
+                       height="100%" />
+                  </g>
+                </g>
+              </g>
+              <g
+                 id="xtick_11"
+                 style="stroke-linecap:butt;stroke-linejoin:round">
+                <g
+                   id="line2d_11"
+                   style="stroke-linecap:butt;stroke-linejoin:round">
+                  <g
+                     id="g25772"
+                     style="stroke-linecap:butt;stroke-linejoin:round">
+                    <use
+                       id="use25770"
+                       y="144"
+                       xlink:href="#mae7a150587"
+                       x="88.715736"
+                       style="stroke:#000000;stroke-width:0.85000002;stroke-linecap:butt;stroke-linejoin:round"
+                       width="100%"
+                       height="100%" />
+                  </g>
+                </g>
+              </g>
+              <g
+                 id="xtick_12"
+                 style="stroke-linecap:butt;stroke-linejoin:round">
+                <g
+                   id="line2d_12"
+                   style="stroke-linecap:butt;stroke-linejoin:round">
+                  <g
+                     id="g25778"
+                     style="stroke-linecap:butt;stroke-linejoin:round">
+                    <use
+                       id="use25776"
+                       y="144"
+                       xlink:href="#mae7a150587"
+                       x="91.293823"
+                       style="stroke:#000000;stroke-width:0.85000002;stroke-linecap:butt;stroke-linejoin:round"
+                       width="100%"
+                       height="100%" />
+                  </g>
+                </g>
+              </g>
+              <g
+                 id="xtick_13"
+                 style="stroke-linecap:butt;stroke-linejoin:round">
+                <g
+                   id="line2d_13"
+                   style="stroke-linecap:butt;stroke-linejoin:round">
+                  <g
+                     id="g25784"
+                     style="stroke-linecap:butt;stroke-linejoin:round">
+                    <use
+                       id="use25782"
+                       y="144"
+                       xlink:href="#mae7a150587"
+                       x="108.77191"
+                       style="stroke:#000000;stroke-width:0.85000002;stroke-linecap:butt;stroke-linejoin:round"
+                       width="100%"
+                       height="100%" />
+                  </g>
+                </g>
+              </g>
+              <g
+                 id="xtick_14"
+                 style="stroke-linecap:butt;stroke-linejoin:round">
+                <g
+                   id="line2d_14"
+                   style="stroke-linecap:butt;stroke-linejoin:round">
+                  <g
+                     id="g25790"
+                     style="stroke-linecap:butt;stroke-linejoin:round">
+                    <use
+                       id="use25788"
+                       y="144"
+                       xlink:href="#mae7a150587"
+                       x="117.64691"
+                       style="stroke:#000000;stroke-width:0.85000002;stroke-linecap:butt;stroke-linejoin:round"
+                       width="100%"
+                       height="100%" />
+                  </g>
+                </g>
+              </g>
+              <g
+                 id="xtick_15"
+                 style="stroke-linecap:butt;stroke-linejoin:round">
+                <g
+                   id="line2d_15"
+                   style="stroke-linecap:butt;stroke-linejoin:round">
+                  <g
+                     id="g25796"
+                     style="stroke-linecap:butt;stroke-linejoin:round">
+                    <use
+                       id="use25794"
+                       y="144"
+                       xlink:href="#mae7a150587"
+                       x="123.94382"
+                       style="stroke:#000000;stroke-width:0.85000002;stroke-linecap:butt;stroke-linejoin:round"
+                       width="100%"
+                       height="100%" />
+                  </g>
+                </g>
+              </g>
+              <g
+                 id="xtick_16"
+                 style="stroke-linecap:butt;stroke-linejoin:round">
+                <g
+                   id="line2d_16"
+                   style="stroke-linecap:butt;stroke-linejoin:round">
+                  <g
+                     id="g25802"
+                     style="stroke-linecap:butt;stroke-linejoin:round">
+                    <use
+                       id="use25800"
+                       y="144"
+                       xlink:href="#mae7a150587"
+                       x="128.82809"
+                       style="stroke:#000000;stroke-width:0.85000002;stroke-linecap:butt;stroke-linejoin:round"
+                       width="100%"
+                       height="100%" />
+                  </g>
+                </g>
+              </g>
+              <g
+                 id="xtick_17"
+                 style="stroke-linecap:butt;stroke-linejoin:round">
+                <g
+                   id="line2d_17"
+                   style="stroke-linecap:butt;stroke-linejoin:round">
+                  <g
+                     id="g25808"
+                     style="stroke-linecap:butt;stroke-linejoin:round">
+                    <use
+                       id="use25806"
+                       y="144"
+                       xlink:href="#mae7a150587"
+                       x="132.81882"
+                       style="stroke:#000000;stroke-width:0.85000002;stroke-linecap:butt;stroke-linejoin:round"
+                       width="100%"
+                       height="100%" />
+                  </g>
+                </g>
+              </g>
+              <g
+                 id="xtick_18"
+                 style="stroke-linecap:butt;stroke-linejoin:round">
+                <g
+                   id="line2d_18"
+                   style="stroke-linecap:butt;stroke-linejoin:round">
+                  <g
+                     id="g25814"
+                     style="stroke-linecap:butt;stroke-linejoin:round">
+                    <use
+                       id="use25812"
+                       y="144"
+                       xlink:href="#mae7a150587"
+                       x="136.19295"
+                       style="stroke:#000000;stroke-width:0.85000002;stroke-linecap:butt;stroke-linejoin:round"
+                       width="100%"
+                       height="100%" />
+                  </g>
+                </g>
+              </g>
+              <g
+                 id="xtick_19"
+                 style="stroke-linecap:butt;stroke-linejoin:round">
+                <g
+                   id="line2d_19"
+                   style="stroke-linecap:butt;stroke-linejoin:round">
+                  <g
+                     id="g25820"
+                     style="stroke-linecap:butt;stroke-linejoin:round">
+                    <use
+                       id="use25818"
+                       y="144"
+                       xlink:href="#mae7a150587"
+                       x="139.11574"
+                       style="stroke:#000000;stroke-width:0.85000002;stroke-linecap:butt;stroke-linejoin:round"
+                       width="100%"
+                       height="100%" />
+                  </g>
+                </g>
+              </g>
+              <g
+                 id="xtick_20"
+                 style="stroke-linecap:butt;stroke-linejoin:round">
+                <g
+                   id="line2d_20"
+                   style="stroke-linecap:butt;stroke-linejoin:round">
+                  <g
+                     id="g25826"
+                     style="stroke-linecap:butt;stroke-linejoin:round">
+                    <use
+                       id="use25824"
+                       y="144"
+                       xlink:href="#mae7a150587"
+                       x="141.69382"
+                       style="stroke:#000000;stroke-width:0.85000002;stroke-linecap:butt;stroke-linejoin:round"
+                       width="100%"
+                       height="100%" />
+                  </g>
+                </g>
+              </g>
+              <g
+                 id="xtick_21"
+                 style="stroke-linecap:butt;stroke-linejoin:round">
+                <g
+                   id="line2d_21"
+                   style="stroke-linecap:butt;stroke-linejoin:round">
+                  <g
+                     id="g25832"
+                     style="stroke-linecap:butt;stroke-linejoin:round">
+                    <use
+                       id="use25830"
+                       y="144"
+                       xlink:href="#mae7a150587"
+                       x="159.17191"
+                       style="stroke:#000000;stroke-width:0.85000002;stroke-linecap:butt;stroke-linejoin:round"
+                       width="100%"
+                       height="100%" />
+                  </g>
+                </g>
+              </g>
+              <g
+                 id="xtick_22"
+                 style="stroke-linecap:butt;stroke-linejoin:round">
+                <g
+                   id="line2d_22"
+                   style="stroke-linecap:butt;stroke-linejoin:round">
+                  <g
+                     id="g25838"
+                     style="stroke-linecap:butt;stroke-linejoin:round">
+                    <use
+                       id="use25836"
+                       y="144"
+                       xlink:href="#mae7a150587"
+                       x="168.04691"
+                       style="stroke:#000000;stroke-width:0.85000002;stroke-linecap:butt;stroke-linejoin:round"
+                       width="100%"
+                       height="100%" />
+                  </g>
+                </g>
+              </g>
+              <g
+                 id="xtick_23"
+                 style="stroke-linecap:butt;stroke-linejoin:round">
+                <g
+                   id="line2d_23"
+                   style="stroke-linecap:butt;stroke-linejoin:round">
+                  <g
+                     id="g25844"
+                     style="stroke-linecap:butt;stroke-linejoin:round">
+                    <use
+                       id="use25842"
+                       y="144"
+                       xlink:href="#mae7a150587"
+                       x="174.34383"
+                       style="stroke:#000000;stroke-width:0.85000002;stroke-linecap:butt;stroke-linejoin:round"
+                       width="100%"
+                       height="100%" />
+                  </g>
+                </g>
+              </g>
+              <g
+                 id="xtick_24"
+                 style="stroke-linecap:butt;stroke-linejoin:round">
+                <g
+                   id="line2d_24"
+                   style="stroke-linecap:butt;stroke-linejoin:round">
+                  <g
+                     id="g25850"
+                     style="stroke-linecap:butt;stroke-linejoin:round">
+                    <use
+                       id="use25848"
+                       y="144"
+                       xlink:href="#mae7a150587"
+                       x="179.22809"
+                       style="stroke:#000000;stroke-width:0.85000002;stroke-linecap:butt;stroke-linejoin:round"
+                       width="100%"
+                       height="100%" />
+                  </g>
+                </g>
+              </g>
+              <g
+                 id="xtick_25"
+                 style="stroke-linecap:butt;stroke-linejoin:round">
+                <g
+                   id="line2d_25"
+                   style="stroke-linecap:butt;stroke-linejoin:round">
+                  <g
+                     id="g25856"
+                     style="stroke-linecap:butt;stroke-linejoin:round">
+                    <use
+                       id="use25854"
+                       y="144"
+                       xlink:href="#mae7a150587"
+                       x="183.21883"
+                       style="stroke:#000000;stroke-width:0.85000002;stroke-linecap:butt;stroke-linejoin:round"
+                       width="100%"
+                       height="100%" />
+                  </g>
+                </g>
+              </g>
+              <g
+                 id="xtick_26"
+                 style="stroke-linecap:butt;stroke-linejoin:round">
+                <g
+                   id="line2d_26"
+                   style="stroke-linecap:butt;stroke-linejoin:round">
+                  <g
+                     id="g25862"
+                     style="stroke-linecap:butt;stroke-linejoin:round">
+                    <use
+                       id="use25860"
+                       y="144"
+                       xlink:href="#mae7a150587"
+                       x="186.59294"
+                       style="stroke:#000000;stroke-width:0.85000002;stroke-linecap:butt;stroke-linejoin:round"
+                       width="100%"
+                       height="100%" />
+                  </g>
+                </g>
+              </g>
+              <g
+                 id="xtick_27"
+                 style="stroke-linecap:butt;stroke-linejoin:round">
+                <g
+                   id="line2d_27"
+                   style="stroke-linecap:butt;stroke-linejoin:round">
+                  <g
+                     id="g25868"
+                     style="stroke-linecap:butt;stroke-linejoin:round">
+                    <use
+                       id="use25866"
+                       y="144"
+                       xlink:href="#mae7a150587"
+                       x="189.51573"
+                       style="stroke:#000000;stroke-width:0.85000002;stroke-linecap:butt;stroke-linejoin:round"
+                       width="100%"
+                       height="100%" />
+                  </g>
+                </g>
+              </g>
+              <g
+                 id="xtick_28"
+                 style="stroke-linecap:butt;stroke-linejoin:round">
+                <g
+                   id="line2d_28"
+                   style="stroke-linecap:butt;stroke-linejoin:round">
+                  <g
+                     id="g25874"
+                     style="stroke-linecap:butt;stroke-linejoin:round">
+                    <use
+                       id="use25872"
+                       y="144"
+                       xlink:href="#mae7a150587"
+                       x="192.09383"
+                       style="stroke:#000000;stroke-width:0.85000002;stroke-linecap:butt;stroke-linejoin:round"
+                       width="100%"
+                       height="100%" />
+                  </g>
+                </g>
+              </g>
+              <g
+                 id="text_5"
+                 style="stroke-linecap:butt;stroke-linejoin:round">
+                <!-- $r$ (m) -->
+                <defs
+                   id="defs25883">
+                  <path
+                     id="path26244"
+                     d="M 3.328125,0 14.15625,51.859375 h 7.8125 l -2.1875,-10.59375 q 4,6 7.828125,8.875 3.84375,2.890625 7.84375,2.890625 2.640625,0 6.484375,-1.90625 l -3.609375,-8.203125 q -2.296875,1.65625 -5.03125,1.65625 -4.640625,0 -9.53125,-5.171875 -4.875,-5.171875 -7.65625,-18.609375 L 11.71875,0 Z"
+                     inkscape:connector-curvature="0"
+                     style="stroke-linecap:butt;stroke-linejoin:round" />
+                  <path
+                     id="path26246"
+                     d=""
+                     inkscape:connector-curvature="0"
+                     style="stroke-linecap:butt;stroke-linejoin:round" />
+                  <path
+                     id="path26248"
+                     d="m 23.390625,-21.046875 q -7.28125,9.1875 -12.3125,21.484375 Q 6.0625,12.75 6.0625,25.921875 q 0,11.625 3.75,22.265625 4.390625,12.359375 13.578125,24.609375 H 29.6875 q -5.90625,-10.15625 -7.8125,-14.5 -2.984375,-6.734375 -4.6875,-14.0625 -2.09375,-9.125 -2.09375,-18.359375 0,-23.484375 14.59375,-46.921875 z"
+                     inkscape:connector-curvature="0"
+                     style="stroke-linecap:butt;stroke-linejoin:round" />
+                  <path
+                     id="path26250"
+                     d="m 6.59375,0 v 51.859375 h 7.859375 v -7.28125 q 2.4375,3.8125 6.484375,6.125 4.0625,2.328125 9.234375,2.328125 5.765625,0 9.453125,-2.390625 3.6875,-2.390625 5.203125,-6.6875 6.15625,9.078125 16.015625,9.078125 7.71875,0 11.859375,-4.28125 4.15625,-4.265625 4.15625,-13.15625 V 0 h -8.75 v 32.671875 q 0,5.265625 -0.859375,7.578125 -0.84375,2.328125 -3.09375,3.734375 -2.234375,1.421875 -5.265625,1.421875 -5.46875,0 -9.09375,-3.640625 Q 46.1875,38.140625 46.1875,30.125 V 0 h -8.78125 v 33.6875 q 0,5.859375 -2.15625,8.78125 -2.140625,2.9375 -7.03125,2.9375 -3.703125,0 -6.859375,-1.953125 Q 18.21875,41.5 16.796875,37.734375 15.375,33.984375 15.375,26.90625 V 0 Z"
+                     inkscape:connector-curvature="0"
+                     style="stroke-linecap:butt;stroke-linejoin:round" />
+                  <path
+                     id="path26252"
+                     d="M 12.359375,-21.046875 H 6.0625 q 14.59375,23.4375 14.59375,46.921875 0,9.1875 -2.09375,18.21875 -1.671875,7.328125 -4.640625,14.0625 -1.90625,4.390625 -7.859375,14.640625 h 6.296875 Q 21.53125,60.546875 25.921875,48.1875 29.6875,37.546875 29.6875,25.921875 29.6875,12.75 24.625,0.4375 19.578125,-11.859375 12.359375,-21.046875"
+                     inkscape:connector-curvature="0"
+                     style="stroke-linecap:butt;stroke-linejoin:round" />
+                </defs>
+                <g
+                   id="g25895"
+                   transform="matrix(0.075,0,0,-0.075,110.8875,172.7)"
+                   style="stroke-linecap:butt;stroke-linejoin:round">
+                  <use
+                     id="use25885"
+                     xlink:href="#Arial-ItalicMT-72-8"
+                     transform="translate(0,0.203125)"
+                     style="stroke-linecap:butt;stroke-linejoin:round"
+                     x="0"
+                     y="0"
+                     width="100%"
+                     height="100%" />
+                  <use
+                     id="use25887"
+                     xlink:href="#ArialMT-20-6"
+                     transform="translate(33.300781,0.203125)"
+                     style="stroke-linecap:butt;stroke-linejoin:round"
+                     x="0"
+                     y="0"
+                     width="100%"
+                     height="100%" />
+                  <use
+                     id="use25889"
+                     xlink:href="#ArialMT-28-6"
+                     transform="translate(61.083984,0.203125)"
+                     style="stroke-linecap:butt;stroke-linejoin:round"
+                     x="0"
+                     y="0"
+                     width="100%"
+                     height="100%" />
+                  <use
+                     id="use25891"
+                     xlink:href="#ArialMT-6d-5"
+                     transform="translate(94.384766,0.203125)"
+                     style="stroke-linecap:butt;stroke-linejoin:round"
+                     x="0"
+                     y="0"
+                     width="100%"
+                     height="100%" />
+                  <use
+                     id="use25893"
+                     xlink:href="#ArialMT-29-9"
+                     transform="translate(177.68555,0.203125)"
+                     style="stroke-linecap:butt;stroke-linejoin:round"
+                     x="0"
+                     y="0"
+                     width="100%"
+                     height="100%" />
+                </g>
+              </g>
+            </g>
+            <g
+               id="matplotlib.axis_2"
+               style="stroke-linecap:butt;stroke-linejoin:round">
+              <g
+                 id="ytick_1"
+                 style="stroke-linecap:butt;stroke-linejoin:round">
+                <g
+                   id="line2d_29"
+                   style="stroke-linecap:butt;stroke-linejoin:round">
+                  <defs
+                     id="defs25900">
+                    <path
+                       style="stroke:#000000;stroke-width:0.85000002;stroke-linecap:butt;stroke-linejoin:round"
+                       id="path26263"
+                       d="M 0,0 H -3.5"
+                       inkscape:connector-curvature="0" />
+                  </defs>
+                  <g
+                     id="g25904"
+                     style="stroke-linecap:butt;stroke-linejoin:round">
+                    <use
+                       id="use25902"
+                       y="144.12613"
+                       xlink:href="#m07adc0998a"
+                       x="43.200001"
+                       style="stroke:#000000;stroke-width:0.85000002;stroke-linecap:butt;stroke-linejoin:round"
+                       width="100%"
+                       height="100%" />
+                  </g>
+                </g>
+                <g
+                   id="text_6"
+                   style="stroke-linecap:butt;stroke-linejoin:round">
+                  <!-- 0 -->
+                  <g
+                     id="g25909"
+                     transform="matrix(0.075,0,0,-0.075,32.029297,146.81031)"
+                     style="stroke-linecap:butt;stroke-linejoin:round">
+                    <use
+                       id="use25907"
+                       xlink:href="#ArialMT-30-1"
+                       style="stroke-linecap:butt;stroke-linejoin:round"
+                       x="0"
+                       y="0"
+                       width="100%"
+                       height="100%" />
+                  </g>
+                </g>
+              </g>
+              <g
+                 id="ytick_2"
+                 style="stroke-linecap:butt;stroke-linejoin:round">
+                <g
+                   id="line2d_30"
+                   style="stroke-linecap:butt;stroke-linejoin:round">
+                  <g
+                     id="g25915"
+                     style="stroke-linecap:butt;stroke-linejoin:round">
+                    <use
+                       id="use25913"
+                       y="126.3765"
+                       xlink:href="#m07adc0998a"
+                       x="43.200001"
+                       style="stroke:#000000;stroke-width:0.85000002;stroke-linecap:butt;stroke-linejoin:round"
+                       width="100%"
+                       height="100%" />
+                  </g>
+                </g>
+                <g
+                   id="text_7"
+                   style="stroke-linecap:butt;stroke-linejoin:round">
+                  <!-- 2 -->
+                  <defs
+                     id="defs25919">
+                    <path
+                       id="path26276"
+                       d="M 50.34375,8.453125 V 0 H 3.03125 Q 2.9375,3.171875 4.046875,6.109375 5.859375,10.9375 9.828125,15.625 13.8125,20.3125 21.34375,26.46875 q 11.671875,9.5625 15.765625,15.15625 4.109375,5.59375 4.109375,10.578125 0,5.21875 -3.75,8.796875 -3.734375,3.59375 -9.734375,3.59375 -6.34375,0 -10.15625,-3.8125 Q 13.765625,56.984375 13.71875,50.25 L 4.6875,51.171875 q 0.921875,10.109375 6.96875,15.40625 6.0625,5.296875 16.28125,5.296875 10.296875,0 16.296875,-5.71875 Q 50.25,60.453125 50.25,52 50.25,47.703125 48.484375,43.546875 46.734375,39.40625 42.65625,34.8125 38.578125,30.21875 29.109375,22.21875 21.1875,15.578125 18.9375,13.203125 q -2.234375,-2.359375 -3.703125,-4.75 z"
+                       inkscape:connector-curvature="0"
+                       style="stroke-linecap:butt;stroke-linejoin:round" />
+                  </defs>
+                  <g
+                     id="g25923"
+                     transform="matrix(0.075,0,0,-0.075,32.029297,129.06068)"
+                     style="stroke-linecap:butt;stroke-linejoin:round">
+                    <use
+                       id="use25921"
+                       xlink:href="#ArialMT-32-2"
+                       style="stroke-linecap:butt;stroke-linejoin:round"
+                       x="0"
+                       y="0"
+                       width="100%"
+                       height="100%" />
+                  </g>
+                </g>
+              </g>
+              <g
+                 id="ytick_3"
+                 style="stroke-linecap:butt;stroke-linejoin:round">
+                <g
+                   id="line2d_31"
+                   style="stroke-linecap:butt;stroke-linejoin:round">
+                  <g
+                     id="g25929"
+                     style="stroke-linecap:butt;stroke-linejoin:round">
+                    <use
+                       id="use25927"
+                       y="108.62688"
+                       xlink:href="#m07adc0998a"
+                       x="43.200001"
+                       style="stroke:#000000;stroke-width:0.85000002;stroke-linecap:butt;stroke-linejoin:round"
+                       width="100%"
+                       height="100%" />
+                  </g>
+                </g>
+                <g
+                   id="text_8"
+                   style="stroke-linecap:butt;stroke-linejoin:round">
+                  <!-- 4 -->
+                  <g
+                     id="g25934"
+                     transform="matrix(0.075,0,0,-0.075,32.029297,111.31106)"
+                     style="stroke-linecap:butt;stroke-linejoin:round">
+                    <use
+                       id="use25932"
+                       xlink:href="#ArialMT-34-2"
+                       style="stroke-linecap:butt;stroke-linejoin:round"
+                       x="0"
+                       y="0"
+                       width="100%"
+                       height="100%" />
+                  </g>
+                </g>
+              </g>
+              <g
+                 id="ytick_4"
+                 style="stroke-linecap:butt;stroke-linejoin:round">
+                <g
+                   id="line2d_32"
+                   style="stroke-linecap:butt;stroke-linejoin:round">
+                  <g
+                     id="g25940"
+                     style="stroke-linecap:butt;stroke-linejoin:round">
+                    <use
+                       id="use25938"
+                       y="90.877251"
+                       xlink:href="#m07adc0998a"
+                       x="43.200001"
+                       style="stroke:#000000;stroke-width:0.85000002;stroke-linecap:butt;stroke-linejoin:round"
+                       width="100%"
+                       height="100%" />
+                  </g>
+                </g>
+                <g
+                   id="text_9"
+                   style="stroke-linecap:butt;stroke-linejoin:round">
+                  <!-- 6 -->
+                  <g
+                     id="g25945"
+                     transform="matrix(0.075,0,0,-0.075,32.029297,93.561432)"
+                     style="stroke-linecap:butt;stroke-linejoin:round">
+                    <use
+                       id="use25943"
+                       xlink:href="#ArialMT-36-3"
+                       style="stroke-linecap:butt;stroke-linejoin:round"
+                       x="0"
+                       y="0"
+                       width="100%"
+                       height="100%" />
+                  </g>
+                </g>
+              </g>
+              <g
+                 id="ytick_5"
+                 style="stroke-linecap:butt;stroke-linejoin:round">
+                <g
+                   id="line2d_33"
+                   style="stroke-linecap:butt;stroke-linejoin:round">
+                  <g
+                     id="g25951"
+                     style="stroke-linecap:butt;stroke-linejoin:round">
+                    <use
+                       id="use25949"
+                       y="73.127625"
+                       xlink:href="#m07adc0998a"
+                       x="43.200001"
+                       style="stroke:#000000;stroke-width:0.85000002;stroke-linecap:butt;stroke-linejoin:round"
+                       width="100%"
+                       height="100%" />
+                  </g>
+                </g>
+                <g
+                   id="text_10"
+                   style="stroke-linecap:butt;stroke-linejoin:round">
+                  <!-- 8 -->
+                  <defs
+                     id="defs25955">
+                    <path
+                       id="path26300"
+                       d="m 17.671875,38.8125 q -5.46875,2.015625 -8.109375,5.71875 -2.625,3.71875 -2.625,8.890625 0,7.8125 5.609375,13.125 5.625,5.328125 14.9375,5.328125 9.375,0 15.09375,-5.453125 5.71875,-5.4375 5.71875,-13.25 0,-4.984375 -2.625,-8.671875 Q 43.0625,40.828125 37.75,38.8125 q 6.59375,-2.140625 10.03125,-6.9375 3.4375,-4.78125 3.4375,-11.421875 0,-9.171875 -6.5,-15.421875 -6.484375,-6.25 -17.078125,-6.25 -10.59375,0 -17.09375,6.265625 -6.5,6.28125 -6.5,15.65625 0,6.984375 3.546875,11.6875 3.546875,4.71875 10.078125,6.421875 m -1.75,14.90625 q 0,-5.078125 3.265625,-8.3125 3.28125,-3.21875 8.5,-3.21875 5.078125,0 8.328125,3.1875 3.25,3.203125 3.25,7.84375 0,4.84375 -3.359375,8.140625 -3.34375,3.296875 -8.3125,3.296875 -5.03125,0 -8.359375,-3.234375 -3.3125,-3.21875 -3.3125,-7.703125 M 13.09375,20.65625 q 0,-3.765625 1.78125,-7.28125 Q 16.65625,9.859375 20.171875,7.921875 23.6875,6 27.734375,6 34.03125,6 38.125,10.046875 q 4.109375,4.0625 4.109375,10.3125 0,6.34375 -4.21875,10.5 -4.21875,4.15625 -10.578125,4.15625 -6.203125,0 -10.28125,-4.109375 -4.0625,-4.09375 -4.0625,-10.25"
+                       inkscape:connector-curvature="0"
+                       style="stroke-linecap:butt;stroke-linejoin:round" />
+                  </defs>
+                  <g
+                     id="g25959"
+                     transform="matrix(0.075,0,0,-0.075,32.029297,75.811807)"
+                     style="stroke-linecap:butt;stroke-linejoin:round">
+                    <use
+                       id="use25957"
+                       xlink:href="#ArialMT-38-8"
+                       style="stroke-linecap:butt;stroke-linejoin:round"
+                       x="0"
+                       y="0"
+                       width="100%"
+                       height="100%" />
+                  </g>
+                </g>
+              </g>
+              <g
+                 id="ytick_6"
+                 style="stroke-linecap:butt;stroke-linejoin:round">
+                <g
+                   id="line2d_34"
+                   style="stroke-linecap:butt;stroke-linejoin:round">
+                  <g
+                     id="g25965"
+                     style="stroke-linecap:butt;stroke-linejoin:round">
+                    <use
+                       id="use25963"
+                       y="55.378002"
+                       xlink:href="#m07adc0998a"
+                       x="43.200001"
+                       style="stroke:#000000;stroke-width:0.85000002;stroke-linecap:butt;stroke-linejoin:round"
+                       width="100%"
+                       height="100%" />
+                  </g>
+                </g>
+                <g
+                   id="text_11"
+                   style="stroke-linecap:butt;stroke-linejoin:round">
+                  <!-- 10 -->
+                  <g
+                     id="g25972"
+                     transform="matrix(0.075,0,0,-0.075,27.858594,58.062183)"
+                     style="stroke-linecap:butt;stroke-linejoin:round">
+                    <use
+                       id="use25968"
+                       xlink:href="#ArialMT-31-6"
+                       style="stroke-linecap:butt;stroke-linejoin:round"
+                       x="0"
+                       y="0"
+                       width="100%"
+                       height="100%" />
+                    <use
+                       id="use25970"
+                       xlink:href="#ArialMT-30-1"
+                       x="55.615234"
+                       style="stroke-linecap:butt;stroke-linejoin:round"
+                       y="0"
+                       width="100%"
+                       height="100%" />
+                  </g>
+                </g>
+              </g>
+              <g
+                 id="ytick_7"
+                 style="stroke-linecap:butt;stroke-linejoin:round">
+                <g
+                   id="line2d_35"
+                   style="stroke-linecap:butt;stroke-linejoin:round">
+                  <g
+                     id="g25978"
+                     style="stroke-linecap:butt;stroke-linejoin:round">
+                    <use
+                       id="use25976"
+                       y="37.62838"
+                       xlink:href="#m07adc0998a"
+                       x="43.200001"
+                       style="stroke:#000000;stroke-width:0.85000002;stroke-linecap:butt;stroke-linejoin:round"
+                       width="100%"
+                       height="100%" />
+                  </g>
+                </g>
+                <g
+                   id="text_12"
+                   style="stroke-linecap:butt;stroke-linejoin:round">
+                  <!-- 12 -->
+                  <g
+                     id="g25985"
+                     transform="matrix(0.075,0,0,-0.075,27.858594,40.312558)"
+                     style="stroke-linecap:butt;stroke-linejoin:round">
+                    <use
+                       id="use25981"
+                       xlink:href="#ArialMT-31-6"
+                       style="stroke-linecap:butt;stroke-linejoin:round"
+                       x="0"
+                       y="0"
+                       width="100%"
+                       height="100%" />
+                    <use
+                       id="use25983"
+                       xlink:href="#ArialMT-32-2"
+                       x="55.615234"
+                       style="stroke-linecap:butt;stroke-linejoin:round"
+                       y="0"
+                       width="100%"
+                       height="100%" />
+                  </g>
+                </g>
+              </g>
+              <g
+                 id="ytick_8"
+                 style="stroke-linecap:butt;stroke-linejoin:round">
+                <g
+                   id="line2d_36"
+                   style="stroke-linecap:butt;stroke-linejoin:round">
+                  <g
+                     id="g25991"
+                     style="stroke-linecap:butt;stroke-linejoin:round">
+                    <use
+                       id="use25989"
+                       y="19.878754"
+                       xlink:href="#m07adc0998a"
+                       x="43.200001"
+                       style="stroke:#000000;stroke-width:0.85000002;stroke-linecap:butt;stroke-linejoin:round"
+                       width="100%"
+                       height="100%" />
+                  </g>
+                </g>
+                <g
+                   id="text_13"
+                   style="stroke-linecap:butt;stroke-linejoin:round">
+                  <!-- 14 -->
+                  <g
+                     id="g25998"
+                     transform="matrix(0.075,0,0,-0.075,27.858594,22.562933)"
+                     style="stroke-linecap:butt;stroke-linejoin:round">
+                    <use
+                       id="use25994"
+                       xlink:href="#ArialMT-31-6"
+                       style="stroke-linecap:butt;stroke-linejoin:round"
+                       x="0"
+                       y="0"
+                       width="100%"
+                       height="100%" />
+                    <use
+                       id="use25996"
+                       xlink:href="#ArialMT-34-2"
+                       x="55.615234"
+                       style="stroke-linecap:butt;stroke-linejoin:round"
+                       y="0"
+                       width="100%"
+                       height="100%" />
+                  </g>
+                </g>
+              </g>
+              <g
+                 id="text_14"
+                 style="stroke-linecap:butt;stroke-linejoin:round">
+                <!-- $\Delta p$ (atm) -->
+                <defs
+                   id="defs26006">
+                  <path
+                     id="path26331"
+                     d="M -0.09375,0 27.390625,71.578125 H 37.59375 L 66.890625,0 Z m 13.125,8.453125 H 52.828125 L 37.359375,49.21875 q -3.46875,9.1875 -5.078125,14.84375 -1.328125,-6.640625 -3.859375,-13.671875 z"
+                     inkscape:connector-curvature="0"
+                     style="stroke-linecap:butt;stroke-linejoin:round" />
+                  <path
+                     id="path26333"
+                     d="m -1.03125,-19.875 15,71.734375 H 22.125 L 20.609375,44.625 q 4.53125,4.734375 8.125,6.5625 3.59375,1.84375 7.59375,1.84375 7.421875,0 12.296875,-5.40625 4.890625,-5.390625 4.890625,-15.453125 0,-8.09375 -2.6875,-14.765625 -2.6875,-6.65625 -6.59375,-10.71875 -3.90625,-4.046875 -7.90625,-5.953125 -4,-1.90625 -8.203125,-1.90625 -9.328125,0 -14.453125,9.46875 L 7.8125,-19.875 Z m 17.484375,41.0625 q 0,-5.8125 0.828125,-8.046875 1.21875,-3.171875 4,-5.125 2.796875,-1.953125 6.453125,-1.953125 7.625,0 12.3125,8.5625 4.6875,8.5625 4.6875,17.5 0,6.59375 -3.15625,10.1875 -3.15625,3.59375 -7.84375,3.59375 -3.359375,0 -6.25,-1.796875 -2.875,-1.78125 -5.34375,-5.328125 Q 19.671875,35.25 18.0625,30.125 16.453125,25 16.453125,21.1875"
+                     inkscape:connector-curvature="0"
+                     style="stroke-linecap:butt;stroke-linejoin:round" />
+                  <path
+                     id="path26335"
+                     d="M 40.4375,6.390625 Q 35.546875,2.25 31.03125,0.53125 q -4.515625,-1.703125 -9.6875,-1.703125 -8.546875,0 -13.140625,4.171875 -4.59375,4.171875 -4.59375,10.671875 0,3.8125 1.734375,6.953125 1.734375,3.15625 4.546875,5.0625 2.8125,1.90625 6.328125,2.875 2.578125,0.6875 7.8125,1.328125 10.640625,1.265625 15.671875,3.015625 0.04687,1.8125 0.04687,2.296875 0,5.375 -2.5,7.578125 -3.359375,2.96875 -10,2.96875 -6.203125,0 -9.15625,-2.171875 -2.953125,-2.171875 -4.375,-7.6875 L 5.125,37.0625 q 1.171875,5.515625 3.859375,8.90625 2.6875,3.390625 7.765625,5.21875 5.078125,1.84375 11.765625,1.84375 6.640625,0 10.78125,-1.5625 4.15625,-1.5625 6.109375,-3.9375 1.953125,-2.359375 2.734375,-5.984375 0.4375,-2.234375 0.4375,-8.09375 v -11.71875 q 0,-12.265625 0.5625,-15.515625 Q 49.703125,2.984375 51.375,0 h -9.1875 q -1.359375,2.734375 -1.75,6.390625 M 39.703125,26.03125 Q 34.90625,24.078125 25.34375,22.703125 19.921875,21.921875 17.671875,20.9375 15.4375,19.96875 14.203125,18.09375 q -1.21875,-1.875 -1.21875,-4.171875 0,-3.515625 2.65625,-5.859375 2.671875,-2.34375 7.796875,-2.34375 5.078125,0 9.03125,2.21875 3.953125,2.21875 5.8125,6.078125 1.421875,2.984375 1.421875,8.78125 z"
+                     inkscape:connector-curvature="0"
+                     style="stroke-linecap:butt;stroke-linejoin:round" />
+                  <path
+                     id="path26337"
+                     d="M 25.78125,7.859375 27.046875,0.09375 Q 23.34375,-0.6875 20.40625,-0.6875 15.625,-0.6875 12.984375,0.828125 10.359375,2.34375 9.28125,4.8125 8.203125,7.28125 8.203125,15.1875 v 29.828125 h -6.4375 v 6.84375 h 6.4375 v 12.84375 L 16.9375,69.96875 V 51.859375 h 8.84375 v -6.84375 H 16.9375 v -30.3125 q 0,-3.765625 0.46875,-4.84375 0.46875,-1.0625 1.515625,-1.703125 1.046875,-0.640625 3,-0.640625 1.46875,0 3.859375,0.34375"
+                     inkscape:connector-curvature="0"
+                     style="stroke-linecap:butt;stroke-linejoin:round" />
+                </defs>
+                <g
+                   id="g26024"
+                   transform="matrix(0,-0.075,-0.075,0,19.208594,95.4)"
+                   style="stroke-linecap:butt;stroke-linejoin:round">
+                  <use
+                     id="use26008"
+                     xlink:href="#ArialMT-394-0"
+                     transform="translate(0,0.203125)"
+                     style="stroke-linecap:butt;stroke-linejoin:round"
+                     x="0"
+                     y="0"
+                     width="100%"
+                     height="100%" />
+                  <use
+                     id="use26010"
+                     xlink:href="#Arial-ItalicMT-70-1"
+                     transform="translate(66.796875,0.203125)"
+                     style="stroke-linecap:butt;stroke-linejoin:round"
+                     x="0"
+                     y="0"
+                     width="100%"
+                     height="100%" />
+                  <use
+                     id="use26012"
+                     xlink:href="#ArialMT-20-6"
+                     transform="translate(122.41211,0.203125)"
+                     style="stroke-linecap:butt;stroke-linejoin:round"
+                     x="0"
+                     y="0"
+                     width="100%"
+                     height="100%" />
+                  <use
+                     id="use26014"
+                     xlink:href="#ArialMT-28-6"
+                     transform="translate(150.19531,0.203125)"
+                     style="stroke-linecap:butt;stroke-linejoin:round"
+                     x="0"
+                     y="0"
+                     width="100%"
+                     height="100%" />
+                  <use
+                     id="use26016"
+                     xlink:href="#ArialMT-61-0"
+                     transform="translate(183.49609,0.203125)"
+                     style="stroke-linecap:butt;stroke-linejoin:round"
+                     x="0"
+                     y="0"
+                     width="100%"
+                     height="100%" />
+                  <use
+                     id="use26018"
+                     xlink:href="#ArialMT-74-2"
+                     transform="translate(239.11133,0.203125)"
+                     style="stroke-linecap:butt;stroke-linejoin:round"
+                     x="0"
+                     y="0"
+                     width="100%"
+                     height="100%" />
+                  <use
+                     id="use26020"
+                     xlink:href="#ArialMT-6d-5"
+                     transform="translate(266.89453,0.203125)"
+                     style="stroke-linecap:butt;stroke-linejoin:round"
+                     x="0"
+                     y="0"
+                     width="100%"
+                     height="100%" />
+                  <use
+                     id="use26022"
+                     xlink:href="#ArialMT-29-9"
+                     transform="translate(350.19531,0.203125)"
+                     style="stroke-linecap:butt;stroke-linejoin:round"
+                     x="0"
+                     y="0"
+                     width="100%"
+                     height="100%" />
+                </g>
+              </g>
+            </g>
+            <g
+               id="line2d_37"
+               style="stroke-linecap:butt;stroke-linejoin:round">
+              <path
+                 id="path26028"
+                 style="opacity:0.8;fill:none;stroke:#1f77b4;stroke-width:0.85000002;stroke-linecap:square;stroke-linejoin:round"
+                 d="m 43.2,18 1.190551,6.676991 1.190551,6.323518 2.381103,11.660475 2.381102,10.458566 2.381102,9.380545 2.381103,8.413641 2.381102,7.546401 2.381103,6.768552 2.381102,6.070881 2.381102,5.445121 2.381103,4.883869 2.381102,4.38045 2.381102,3.92894 2.381103,3.52396 2.381102,3.16073 2.381102,2.83494 2.381103,2.54272 2.381102,2.28063 2.381103,2.04555 2.381102,1.83471 3.571653,2.40364 3.571654,2.04176 3.571654,1.73436 3.571654,1.47323 3.57165,1.25143 4.76221,1.38052 4.7622,1.11059 4.76221,0.89344 5.95275,0.8753 7.14331,0.77984 8.33386,0.63988 9.52441,0.48723 11.90551,0.37494 16.66772,0.27652 L 194.4,144 v 0"
+                 clip-path="url(#padd731636b)"
+                 inkscape:connector-curvature="0" />
+            </g>
+            <g
+               id="patch_3"
+               style="stroke-linecap:butt;stroke-linejoin:round">
+              <path
+                 id="path26031"
+                 style="fill:none;stroke:#000000;stroke-width:0.85000002;stroke-linecap:square;stroke-linejoin:miter"
+                 d="M 43.2,144 V 18"
+                 inkscape:connector-curvature="0" />
+            </g>
+            <g
+               id="patch_4"
+               style="stroke-linecap:butt;stroke-linejoin:round">
+              <path
+                 id="path26034"
+                 style="fill:none;stroke:#000000;stroke-width:0.85000002;stroke-linecap:square;stroke-linejoin:miter"
+                 d="M 194.4,144 V 18"
+                 inkscape:connector-curvature="0" />
+            </g>
+            <g
+               id="patch_5"
+               style="stroke-linecap:butt;stroke-linejoin:round">
+              <path
+                 id="path26037"
+                 style="fill:none;stroke:#000000;stroke-width:0.85000002;stroke-linecap:square;stroke-linejoin:miter"
+                 d="M 43.2,144 H 194.4"
+                 inkscape:connector-curvature="0" />
+            </g>
+            <g
+               id="patch_6"
+               style="stroke-linecap:butt;stroke-linejoin:round">
+              <path
+                 id="path26040"
+                 style="fill:none;stroke:#000000;stroke-width:0.85000002;stroke-linecap:square;stroke-linejoin:miter"
+                 d="M 43.2,18 H 194.4"
+                 inkscape:connector-curvature="0" />
+            </g>
+          </g>
+        </g>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:125%;font-family:arial;-inkscape-font-specification:'arial Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="-151.96335"
+           y="150.73895"
+           id="text26365"><tspan
+             sodipodi:role="line"
+             id="tspan26363"
+             style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:arial;-inkscape-font-specification:'arial Italic';stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:round"
+             x="-151.96335"
+             y="150.73895">p<tspan
+   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:65%;baseline-shift:sub"
+   id="tspan1162">A</tspan> = p<tspan
+   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:65%;baseline-shift:sub"
+   id="tspan1158">B</tspan> + <tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:arial;-inkscape-font-specification:arial;stroke-linecap:butt;stroke-linejoin:round"
+   id="tspan26375">Δ</tspan>p</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>
