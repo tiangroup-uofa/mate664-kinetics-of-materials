@@ -75,6 +75,8 @@ format:
     navigation-mode: linear
     incremental: false
     scrollable: true
+    controls: true
+    controls-layout: bottom-right
     center: false
     footer: <a href="./index.qmd">MATE 664 · Kinetics of Materials · WS 2026 ↰</a>
     title-slide-attributes:

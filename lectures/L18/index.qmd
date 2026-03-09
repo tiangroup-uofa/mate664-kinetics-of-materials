@@ -59,7 +59,7 @@ Experimental observation of small Pt particles are "absorbed" by the larger part
 ![_Chem Sci._ 2015, 6, 5197-5203](./public/ostwald-rippening.png)
 
 
-## Analog: two-balloon experiment
+## Analog: two-baloon experiment
 
 - The effect of curvature on the total free energy is analogous to the two-baloon experiment
 - The driving force is **capillarity**
