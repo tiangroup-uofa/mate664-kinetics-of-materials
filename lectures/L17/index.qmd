@@ -267,7 +267,7 @@ the same distribution:
 \end{align}
 ```
 
-See previous example of Pb-Sn alloy
+In experiment the measured growth follows $\langle R \rangle \propto t^{1/3}$. See previous example of Pb-Sn alloy
 
 ## Source-limited growth regime
 
@@ -290,9 +290,18 @@ $$
 
 For source-limited growth, we will have the radius grow in a **power-of-2** fashion
 
-$$
-<R^{2}(t)> - <R^{2}(0)>  = K_D t
-$$
+```{=tex}
+\begin{align}
+\langle R^{2}(t) \rangle - \langle R^{2}(0) \rangle  &=
+\frac{64 K c^{\text{eq}}(\infty) \Omega^2}{81 k_B T} \\
+ &= K_s t
+\end{align}
+```
+
+In experiments you will measure that $\sqrt{\langle R^{2}(t) \rangle}
+\propto t^{1/2}$, a diffferent power law than the diffusion controlled
+growth!
+
 
 ## Summary
 
