@@ -1,6 +1,6 @@
 ---
-title: "MATE 664 Lecture 17"
-subtitle: "Growth Phenomena: Coarsening"
+title: "MATE 664 Lecture 18"
+subtitle: ""
 author: "Dr. Tian Tian"
 date: "2026-03-09"
 format:
