@@ -320,7 +320,7 @@ We know from the diffusion concepts it is like a steady-state Fick's second law,
 One consequence of the DH approximation is that the electrostatic
 screening is related with the charge concentrations in the liquid:
 
-```
+```{=tex}
 \begin{align}
 \kappa^{-1}
 &=
@@ -501,18 +501,17 @@ R_{\mathrm{eff}} = \frac{a}{2}
 
 ## Topic 1: final form
 
-The repulsion between two spherical particles separated by $D$ under the Derjarguin approximation is
+The repulsion between two spherical particles separated by $h$ under the Derjarguin approximation is
 
 $$
-V_{\mathrm{R}}^{\mathrm{ss}}(D)
-= 64 \pi k_B T c_{0} R \kappa^{-2} \Lambda_{0}^{2} e^{-\kappa D}
-\end{equation}
+V_{\mathrm{R}}^{\mathrm{ss}}(h)
+= 64 \pi k_B T c_{0} R \kappa^{-2} \Lambda_{0}^{2} e^{-\kappa h}
 $$
 
 Such approximation is valid when:
 
-- $R \gg D$, i.e. near the junction the surfaces from two particles are still considered as planar.
-- $D \gg \kappa^{-1}$, i.e. small overlap between EDLs.
+- $R \gg h$, i.e. near the junction the surfaces from two particles are still considered as planar.
+- $h \gg \kappa^{-1}$, i.e. small overlap between EDLs.
 
 ## Topic 2: van der Waals attraction
 

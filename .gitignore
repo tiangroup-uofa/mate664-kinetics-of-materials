@@ -287,3 +287,5 @@ index.html
 index_files/
 
 .quarto_ipynb_*
+site_libs/bootstrap/bootstrap-e14cfaa651a2b1e5413afab38cf38831.min.css
+*.quarto_ipynb_1
