@@ -159,7 +159,7 @@ The potential field $\psi$ in a dielectric medium satisfies Poisson equation (on
 
 :::{.column width="50%"}
 
-![](./public/maxwell.svg)
+![](./public/maxwell.svg){width="450px"}
 :::
 
 :::
@@ -334,6 +334,7 @@ screening is related with the charge concentrations in the liquid:
 {2 e^2 N_a I}
 \right)^{1/2}
 \end{align}
+```
 
 where $N_a$ is the Avogadro number, and $I = 1/2 \sum_{i} z_{i}^{2}
 c_{i, 0}$ is the ionic strength.
