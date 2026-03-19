@@ -1,0 +1,249 @@
+---
+title: "MATE 664 Assignment 3"
+subtitle: "Diffusion Mechanism"
+format:
+  pdf:	 
+    output-file: MATE664-WS2026-EX03.pdf
+    include-in-header:
+      - text: |
+          \usepackage{mathtools}
+          \usepackage{cancel}
+<!-- meta: -->
+<!--   answer: true -->
+---
+
+:::{.center}
+# **Due Date: 2026-04-10 (Fri) 11:59 PM**
+:::
+
+:::{.callout-note}
+You just need to submit solutions to a total of
+**two (2)** questions from Assignments 3 and 4 before the deadline.
+You are welcome to solve and submit more questions for bonus credit.
+:::
+
+## 1. Diffusion In Ionic Crystals
+
+Consider the ionic crystal KCl, where intrinsically Schottky-type
+defects ($V_{\text{K}}'$ & $V_{\text{Cl}}^•$) form. At equilibrium,
+the intrinsic concentrations of $[V_{\text{K}}']_{\text{pure}}$ and
+$[V_{\text{Cl}}^•]_{\text{pure}}$ are associated with the Schottky
+vacancy formation free energy $G_{S}^f$. Extrinsic potassium vacancies
+are introduced by adding CaCl$_2$ into the KCl crystal. We will use
+this example to develop an expression for the diffusivity of K$^{+}$ species. 
+
+a) Express the potassium vacancy concentration in pure crystal $[V_{\text{K}}']_{\text{pure}}$ using $G_{S}^f$
+
+:::{.content-hidden unless-meta="answer"}
+
+**Answer**:
+
+When there are only intrinsic defects forming, the concentration for $V_{\text{K}}'$ and $V_{\text{Cl}}^•$ are the same.
+
+```{=tex}
+\begin{align}
+[V_{\text{K}}'] [V_{\text{Cl}}^•] &= \exp\left(-\frac{G_{S}^f}{k_B T}\right) \\
+[V_{\text{K}}']_{\text{pure}}^2 &= \exp\left(-\frac{G_{S}^f}{k_B T}\right)
+\end{align}
+```
+
+We get $[V_{\text{K}}']_{\text{pure}} = \exp\left(-\frac{G_{S}^f}{2k_B T}\right)$
+
+:::
+
+b) Show that adding one CaCl$_2$ dopant will create one extrinsic K-vacancy $V_{\text{K}}'$ and one substitutional cation $\text{Ca}_\text{K}^•$
+
+
+
+:::{.content-hidden unless-meta="answer"}
+
+**Answer**:
+
+Similar to the CdCl$_2$ dopant in NaCl case from
+the lecture, we can show that each inserted Ca$^{2+}$ cation will
+create one K-vacancy. The process involves a multi-step reaction:
+
+1. 2 pairs of Schottky defects for $V_{\text{K}}'$ and $V_{\text{Cl}}^•$ are created
+
+$$
+2\text{null} \rightarrow 2V_{\text{K}}' + 2V_{\text{Cl}}^•
+$$
+
+2. The CaCl$_2$ dopant dissociates into one Ca$^{2+}$ and two $Cl^-$
+
+$$
+\text{CaCl}_2 \rightarrow \text{Ca}^{2+} + 2\text{Cl}^{-}
+$$
+
+3. The Ca$^{2+}$ cation and Cl$^{-}$ anions occupy K- and Cl-vacancies, respectively
+
+$$
+\text{Ca}^{2+} + \text{V}_{\text{K}}' \rightarrow \text{Ca}_{\text{K}}^•
+$$
+
+and
+
+$$
+2 V_{\text{Cl}}^• + 2 \text{Cl}^{-} \rightarrow 2\text{Cl}_{\text{Cl}}^{\times}
+$$
+
+The overall effect is that the defect reaction leaves 1 extra $V_{\text{K}}'$ vacancy. Summing all reactions together we get the net generation of extrinsic vacancies
+
+$$
+\text{CaCl}_2 \rightarrow \text{Ca}_{\text{K}}^• + \text{V}_{\text{K}}' + 2 \text{Cl}_{\text{Cl}}^{\times}
+$$
+
+
+
+:::
+
+c) Show that after adding the CaCl$_2$ dopant, the total K-vacancy concentration follows:
+
+$$
+[V_\text{K}'] = [V_\text{Cl}^•] + [\text{Ca}_\text{K}^•]
+$$
+
+:::{.content-hidden unless-meta="answer"}
+
+**Answer**:
+
+
+The above equation is basically the charge neutrality equation for
+extrinsic species (L.H.S. is the total negative charge and R.H.S. is the total positive charge). We note $[V_\text{K}']$ becomes higher than $[V_\text{Cl}^•]$ because the former contains both intrinsic and extrinsic terms.
+
+:::
+
+d) The values for $[V_\text{K}']$ and $[V_\text{Cl}^•]$ after adding the CaCl$_2$ still follow the chemical equilibrium of vacancy formation, such that:
+
+$$
+[V_\text{K}'][V_\text{Cl}^•] = K_{\text{eq}} = \exp(-\frac{G_S^f}{k_B T})
+$$
+
+Show that the exact expression for the K-vacancy concentration $[V_\text{K}']$ follows (equation 8.51 in KoM textbook) :
+
+$$
+[V_\text{K}'] = \frac{[\text{CaCl2}]}{2}
+\left(
+1 + \sqrt{1 +
+\left(
+\frac{2 [V_\text{K}']}{[\text{CaCl2}]}
+\right)^2}
+\right)
+$$
+
+_Hint: you need to solve a quadratic equation and find the correct root_
+
+:::{.content-hidden unless-meta="answer"}
+
+**Answer**:
+
+From charge neutrality in Q1-c:
+
+$$
+[V_\text{K}’] = [V_\text{Cl}^•] + [\text{Ca}_\text{K}^•]
+$$
+
+Since each CaCl$_2$ produces one substitutional $\text{Ca}\text{K}^•$,
+
+$$
+[\text{Ca}_\text{K}^•] = [\text{CaCl}_2]
+$$
+
+so
+
+$$
+[V_\text{Cl}^•] = [V_\text{K}'] - [\text{CaCl}_2]
+$$
+
+Schottky equilibrium still holds after doping:
+
+$$
+[V_\text{K}’][V_\text{Cl}^•] = K_{\text{eq}}=\exp!\left(-\frac{G_S^f}{k_B T}\right)
+$$
+
+Substitute $[V_\text{Cl}^•] = [V_\text{K}'] - [\text{CaCl}_2]$:
+
+```{=tex}
+\begin{align}
+[V_\text{K}']\left([V_\text{K}']-[\text{CaCl}_2]\right) &= K_{\text{eq}} \\
+[V_\text{K}']^2 - [\text{CaCl}_2]\,[V_\text{K}'] - K_{\text{eq}} &= 0
+\end{align}
+```
+
+This is a quadratic equation in $[V_\text{K}']$. Using the quadratic formula $x_{1,2} = \frac{-b \pm \sqrt{b^2 - 4 ac}}{2a}$:
+
+```{=tex}
+\begin{align}
+[V_\text{K}'] &=
+\frac{[\text{CaCl}_2] \pm \sqrt{[\text{CaCl}_2]^2 + 4K_{\text{eq}}}}{2}
+\end{align}
+```
+
+Choose the **positive root**, because we must have $[V_\text{Cl}^•]=[V_\text{K}']-[\text{CaCl}_2]\ge 0$, and use the relation $K_{\text{eq}}=\exp(-G_S^f/k_B T)=\left([V_\text{K}’]_{\text{pure}}\right)^2$ from Q1-a:
+
+```{=tex}
+\begin{align}
+[V_\text{K}'] &=
+\frac{[\text{CaCl}_2]}{2}
+\left(
+1+\sqrt{1+\frac{4([V_\text{K}']_{\text{pure}})^2}{[\text{CaCl}_2]^2}}
+\right) \\
+&=
+\frac{[\text{CaCl}_2]}{2}
+\left(
+1+\sqrt{1+\left(\frac{2[V_\text{K}']_{\text{pure}}}{[\text{CaCl}_2]}\right)^2}
+\right)
+\end{align}
+```
+
+:::
+
+e) From the lecture notes an f.c.c. lattice like KCl, the diffusivity for potassium species is
+
+```{=tex}
+\begin{align}
+D_{K} = [V_{\text{K}}'] f \lambda^2 \nu \exp(-\frac{G_K^m}{k_B T})
+\end{align}
+```
+
+According to [Fuller, et al. _Physical Review_, **1968**, 176(3),
+1036–1045.](https://doi.org/10.1103/PhysRev.176.1036), the following thermodynamic properties were determined for KCl:
+
+- Schottky defect formation enthalpy $H_S^f = 2.49$ eV
+- Schottky defect formation entropy $S_S^f = 7.64 k_B$
+- Cation (K$^+$) migration enthalpy $H_K^m = 0.76 eV$
+- Cation (K$^+$) migration entropy $S_K^m = 2.56 k_B$
+- Jumping frequency $\nu = 6.95\times 10^12$ s$^{-1}$
+- Lattice constant for KCl $a = 629.2$ pm
+
+The jumping distance between 2 closest K-sites is $\lambda = a / \sqrt{2}$. As a rule of thumb the correlated jump correction factor $f=0.7$.
+
+
+Show the Arrhenius plot of $\ln D_{K}$ vs $1/T$ when $[\text{CaCl}_2]$
+varies from $10^{-9}$ to $10^{-3}$. Do you observe two regimes in the Arrhenius plot?
+
+You can use our [demo code](https://tiangroup-uofa.github.io/mate664-kinetics-of-materials/scripts/EX03-dual-regime-arrhenius.html) to draw the plots, but feel free to change the code or develop your own.
+
+:::{.content-hidden unless-meta="answer"}
+
+**Answer**:
+
+See a sample plot in ![](./img/ex03-arrhenius-plot.png). When the
+dopant concentration increases, the temperature required to overcome the extrinsic concentration becomes higher, thus moving the intrinsic $1/T$ range to the left.
+
+
+:::
+
+
+f) Based on the plots in e), evaluate the slope of the $\ln D_K - 1/T$ plot in the **intrinsic** regime. Is the relation $\text{slope} \propto [\frac{1}{2} H_S^f + H_K^m]$ valid?
+
+:::{.content-hidden unless-meta="answer"}
+
+**Answer**:
+
+You can either manually measure the slope or use numerical linear regression. The slope in each linear regime is $\text{slope} = -k_B H^{a}$.
+
+From the intrinsic limit line, the activation enthalpy is measured to be 2.0 eV, which is just $\frac{1}{2} H_S^f + H_K^m$.
+
+:::
+
