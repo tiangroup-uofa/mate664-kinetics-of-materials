@@ -376,5 +376,13 @@ Graphically, the shape of the function $y = \frac{\ln x_B - \ln (1 - x_B)}{2 x_B
 ![Shape of the function $y = \frac{\ln x_B - \ln (1 - x_B)}{2 x_B - 1}$](./img/EX4-miscibility-minima.svg){width="45%" #fig-misc-gap}.
 
 
+We can also verify that the second derivative of $g^{\text{homo}}$ is
+
+$$
+\frac{\partial^2 g^{\text{homo}}}{\partial x_B^2} = \frac{k_B T}{x_B (1-x_B)} - 2\omega
+$$
+
+when $\frac{\omega}{k_B T} > 2$, $\frac{\partial^2 g^{\text{homo}}}{\partial x_B^2} <0$, meaning the maximum at $x_B = 0.5$ is indeed unstable.
 :::
-c) 
+
+c) Simulating the Cahn-Hilliard equation with regular solution free energy
