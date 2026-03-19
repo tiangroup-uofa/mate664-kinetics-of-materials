@@ -386,3 +386,7 @@ when $\frac{\omega}{k_B T} > 2$, $\frac{\partial^2 g^{\text{homo}}}{\partial x_B
 :::
 
 c) Simulating the Cahn-Hilliard equation with regular solution free energy
+
+We will modify our interactive demo from Lecture 20 in the
+Cahn-Hilliard example so that it uses the regular solution free energy
+$g^{\text{homo}}$. 
