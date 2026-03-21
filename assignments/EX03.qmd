@@ -247,3 +247,72 @@ From the intrinsic limit line, the activation enthalpy is measured to be 2.0 eV,
 
 :::
 
+
+## 2. Effective Diffusivity In Mixed Geometry
+
+In this question, you will compare two idealized geometries for mass
+transport in heterogeneous materials. Although the geometry is simple,
+the analysis captures important ideas for diffusion through
+imperfections such as dislocations, grain boundaries, coatings, and
+layered barriers. Consider steady-state one-dimensional diffusion
+between two reservoirs with concentrations $c_L$ and $c_R$, separated by a
+distance $L$. Assume Fick’s first law applies locally:
+
+$$
+J_i = -D_i \frac{dc}{dx}
+$$
+
+where $J_i$ and $D_i$ are the flux and diffusivity in material $i$, respectively.
+
+We define the effective diffusivity $D_{\mathrm{eff}}$ of the whole
+system through
+
+$$
+J_{\mathrm{tot}} = -D_{\mathrm{eff}} \frac{\Delta c}{L}
+$$
+
+where $\Delta c = c_R - c_L$.
+
+### Part 1. Parallel diffusion paths
+
+A sample contains two parallel diffusion paths connecting the same two
+reservoirs. Path 1 has cross-sectional area $A_1$ and diffusivity
+$D_1$, while path 2 has cross-sectional area $A_2$ and diffusivity
+$D_2$. 
+
+a) Write the flux through each path $J_1$ and $J_2$.
+b) Total flux $J_{\mathrm{tot}}$ would be $J_1 + J_2$ in this case, show that 
+
+$$
+D_{\mathrm{eff}}^{\text{parallel}} =
+\frac{D_1 A_1 + D_2 A_2}{A_1 + A_2}
+$$
+
+### Part 2. Series diffusion paths
+
+Now consider diffusion through two slabs connected in series. Slab 1
+has thickness $L_1$ and diffusivity $D_1$, while slab 2 has
+thickness $L_2$ and diffusivity $D_2$. The total thickness is
+$L=L_1+L_2$, and both slabs have the same cross-sectional area
+$A$.
+
+c) Let the concentration at the interface between the two slabs be the
+same value $c_i$. Write the steady-state flux $J_1$ and $J_2$ through each slab.
+d) At the interface, the continuity must ensure $J_1 = J_2$, prove that in this case:
+
+$$
+D_{\mathrm{eff}}^{\mathrm{series}} =
+\frac{L_1 + L_2}{\dfrac{L_1}{D_1} + \dfrac{L_2}{D_2}}
+$$
+
+### Part 3. Implications
+
+d) In transport phenomena, it is often useful to describe a system in
+terms of transport resistance or capacitance. Based on your results
+above, does diffusion through heterogeneous media behave more
+similarly to resistors or capacitors in series and parallel?
+
+
+	3.	In a real material containing both fast paths and blocking regions,
+what determines whether the overall transport is enhanced or
+suppressed?

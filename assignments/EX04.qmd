@@ -176,7 +176,7 @@ a radius larger than $R_c$ to be able to grow of the pit.
 :::
 
 e) We will see how the 3-stage growth in part (d) can be actually
-calculated. We provide an online demo []() to demonstrate the change
+calculated. We provide an online demo [https://tiangroup-uofa.github.io/mate664-kinetics-of-materials/scripts/EX04_hetero_nuc.html](https://tiangroup-uofa.github.io/mate664-kinetics-of-materials/scripts/EX04_hetero_nuc.html) to demonstrate the change
 of $\Delta G_{\text{het}}$ as a function of total nucleus size $n$
 (measured in amount of material). You can tune the geometry of the pit
 to see how the critical $n_c$ differs. When will you observe a secondary kinetic barrier in the free energy curve?
@@ -301,7 +301,7 @@ respect to the mole fraction of B, $x_B$:
 \end{align}
 ```
 
-a) Instead of the double well potential in Lecture 20, we can
+Instead of the double well potential in Lecture 20, we can
 formulate $g^{\text{homo}}$ by mixing enthalpy and entropy for regular
 solution in Lecture 13. The mixing enthalpy per atom $h(x_B)$
 and mixing entropy per atom $s(x_B)$ can be written as:
@@ -313,8 +313,11 @@ s(x_B) &= -k_B \left[ (1-x_B)\ln\!(1 -x_B) + x_B\ln\!x_B \right]
 \end{align}
 ```
 
-where $\omega$ is a parameter measuring the degree of mixing energy between A and B.
-What is the equation for $g^{\text{homo}}(x_B)$ in this case?
+where $\omega$ is a parameter measuring the degree of mixing energy
+between A and B.  Hopefully this formalism will making solving the
+Cahn-Hilliard equation more physically intuitive.
+
+a) What is the equation for $g^{\text{homo}}(x_B)$ in this case?
 
 :::{.content-hidden unless-meta="answer"}
 
@@ -385,7 +388,52 @@ $$
 when $\frac{\omega}{k_B T} > 2$, $\frac{\partial^2 g^{\text{homo}}}{\partial x_B^2} <0$, meaning the maximum at $x_B = 0.5$ is indeed unstable.
 :::
 
-c) Simulating the Cahn-Hilliard equation with regular solution free energy
+c) One more caveat in the original Cahn-Hilliard equation is that the
+mobility $M$ is a constant value. In reality the mobility can vary
+locally in the mixture. From irreversible thermodynamics, we know that
+the mobility is linked to the apparent (inter)-diffusivity $\tilde{D}$ by:
+
+$$
+\tilde{D} = M \frac{\partial \mu}{\partial x_B}
+$$
+
+where $\mu = \frac{\partial g^{\text{homo}}{\partial c}$ is the
+chemical potential. Using previous knowledge of interdiffusivity that
+$\tilde{D} = D_A x_B + D_B x_A$, prove that in this case we have:
+
+$$
+M = \frac{[D_A x_B + D_B (1 - x_B)]x_B(1-x_B)}{k_B T - 2\omega x_B (1 - x_B) }
+$$
+
+where $M$ is no longer a constant.
+
+:::{.content-hidden unless-meta="answer"}
+
+**Answer**:
+
+From previous derivations, $\partial \mu/\partial x_B$ is:
+
+$$
+\frac{\partial \mu}{\partial x_B} = - 2 \omega + k_B T (\frac{1}{x_B (1 - x_B)})
+$$
+
+Using the Darken's equation for $\tilde{D}$, we get
+
+$$
+M = \frac{[D_A x_B + D_B (1 - x_B)]}{\frac{k_B T}{x_B(1-x_B)} - 2\omega}
+$$
+
+Rearrange this equation gives the final answer. Notice that for binary
+mixture phase transformation, neither $x_B$ nor $1 -x_B$ are close to
+1, so we cannot use the simplification $\ln (1 -x) \approx 1 -x$. In
+other words, this also explains the non-linear behaviour inside the spinodal region.
+
+:::
+
+
+
+
+d) Simulating the Cahn-Hilliard equation with regular solution free energy
 
 We will modify our interactive demo from Lecture 20 in the
 Cahn-Hilliard example so that it uses the regular solution free energy
