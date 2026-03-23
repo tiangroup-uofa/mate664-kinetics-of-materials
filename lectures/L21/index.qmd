@@ -404,34 +404,34 @@ scales exponentially.
 
 KMC simulation can handle much large length and timescales than MD.
 
-![Comput. Mater. Sci._ 135, 78–89 (2017).](./public/admat-kmc.pmg)
+![Comput. Mater. Sci._ 135, 78–89 (2017).](./public/admat-kmc.png)
 
 
-## KMC example 2: deposition on graphene
+## KMC example 2: deposition on graphene (previous [Lecture 11](../L11))
 
 - See Vagli and Tian et al. _Nat Commun_ 2025, 16, 7726.
 - Diffusivity change on free graphene surface can be probed by deposition geometry!
 
-![](../L10/public/ncomm-sem.png)
+![](../L11/public/ncomm-sem.png)
 
 ## Deposition on Graphene - Theoretical Simulations
 
 - Kinetic Monte Carlo (kMC) assuming different diffusion barrier on imperfections
 - Faster diffusion direction --> lower density
 
-![](../L10/public/ncomm-kmc1.png)
+![](../L11/public/ncomm-kmc1.png)
 
 ## Deposition on Graphene - Theoretical Simulations
 
 - Kinetic Monte Carlo (kMC) assuming different diffusion barrier on imperfections
 - Faster diffusion direction --> lower density
 
-![](../L10/public/ncomm-kmc2.png)
+![](../L11/public/ncomm-kmc2.png)
 
 ## Deposition on Graphene - KMC vs Experiments
 
 
-![](../L10/public/ncomm-kmc-exp.png)
+![](../L11/public/ncomm-kmc-exp.png)
 
 
 

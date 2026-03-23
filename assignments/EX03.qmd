@@ -126,7 +126,7 @@ $$
 \left(
 1 + \sqrt{1 +
 \left(
-\frac{2 [V_\text{K}']}{[\text{CaCl2}]}
+\frac{2 [V_\text{K}']_{\text{pure}}}{[\text{CaCl2}]}
 \right)^2}
 \right)
 $$
