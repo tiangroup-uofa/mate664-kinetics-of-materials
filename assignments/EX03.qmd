@@ -268,19 +268,43 @@ We define the effective diffusivity $D_{\mathrm{eff}}$ of the whole
 system through
 
 $$
-J_{\mathrm{tot}} = -D_{\mathrm{eff}} \frac{\Delta c}{L}
+J_{\mathrm{tot}} = D_{\mathrm{eff}} \frac{\Delta c}{L}
 $$
 
-where $\Delta c = c_R - c_L$.
+where $\Delta c = c_L - c_R$.
+
+![Effective medium treatment of diffusion.](./img/EX03-eff-diff.svg){width="85%" #fig-eff-med}
 
 ### Part 1. Parallel diffusion paths
 
 A sample contains two parallel diffusion paths connecting the same two
-reservoirs. Path 1 has cross-sectional area $A_1$ and diffusivity
+reservoirs (@fig-eff-med a). Path 1 has cross-sectional area $A_1$ and diffusivity
 $D_1$, while path 2 has cross-sectional area $A_2$ and diffusivity
 $D_2$. 
 
 a) Write the flux through each path $J_1$ and $J_2$.
+
+:::{.content-hidden unless-meta=“answer”}
+
+Answer:
+
+Since the two paths connect the same reservoirs, they experience the
+same concentration difference $\Delta c = c_L - c_R$ over the same
+length $L$. By Fick’s first law,
+
+$$
+J_1 = - D_1 A_1 \frac{\Delta c}{L}
+$$
+
+and
+
+$$
+J_2 = - D_2 A_2 \frac{\Delta c}{L}.
+$$
+
+:::
+
+
 b) Total flux $J_{\mathrm{tot}}$ would be $J_1 + J_2$ in this case, show that 
 
 $$
@@ -288,9 +312,45 @@ D_{\mathrm{eff}}^{\text{parallel}} =
 \frac{D_1 A_1 + D_2 A_2}{A_1 + A_2}
 $$
 
+:::{.content-hidden unless-meta=“answer”}
+
+Answer:
+
+The total flux is the sum of the two parallel contributions:
+
+$$
+J_{\mathrm{tot}} = J_1 + J_2
+= -\left(D_1 A_1 + D_2 A_2\right)\frac{\Delta c}{L}.
+$$
+
+Now define the effective diffusivity through the total area
+$A_1 + A_2$:
+
+$$
+J_{\mathrm{tot}} = - D_{\mathrm{eff}}^{\text{parallel}} (A_1+A_2)\frac{\Delta c}{L}.
+$$
+
+Comparing the two expressions gives
+
+$$
+D_{\mathrm{eff}}^{\text{parallel}} (A_1+A_2)
+= D_1 A_1 + D_2 A_2,
+$$
+
+therefore
+
+$$
+D_{\mathrm{eff}}^{\text{parallel}} =
+\frac{D_1 A_1 + D_2 A_2}{A_1 + A_2}.
+$$
+
+This is the weighted average of the two diffusivities.
+
+:::
+
 ### Part 2. Series diffusion paths
 
-Now consider diffusion through two slabs connected in series. Slab 1
+Now consider diffusion through two slabs connected in series (@fig-eff-med b). Slab 1
 has thickness $L_1$ and diffusivity $D_1$, while slab 2 has
 thickness $L_2$ and diffusivity $D_2$. The total thickness is
 $L=L_1+L_2$, and both slabs have the same cross-sectional area
@@ -298,6 +358,35 @@ $A$.
 
 c) Let the concentration at the interface between the two slabs be the
 same value $c_i$. Write the steady-state flux $J_1$ and $J_2$ through each slab.
+
+:::{.content-hidden unless-meta=“answer”}
+
+Answer:
+
+For slab 1, the concentration changes from $c_L$ to $c_i$ across a
+distance $L_1$, so the steady-state flux is
+
+$$
+J_1 = - D_1 A \frac{c_i - c_L}{L_1}.
+$$
+
+For slab 2, the concentration changes from $c_i$ to $c_R$ across a
+distance $L_2$, so
+
+$$
+J_2 = - D_2 A \frac{c_R - c_i}{L_2}.
+$$
+
+Equivalently, these may be written as
+
+$$
+J_1 = D_1 A \frac{c_L - c_i}{L_1},
+\qquad
+J_2 = D_2 A \frac{c_i - c_R}{L_2}.
+$$
+
+:::
+
 d) At the interface, the continuity must ensure $J_1 = J_2$, prove that in this case:
 
 $$
@@ -305,14 +394,171 @@ D_{\mathrm{eff}}^{\mathrm{series}} =
 \frac{L_1 + L_2}{\dfrac{L_1}{D_1} + \dfrac{L_2}{D_2}}
 $$
 
+:::{.content-hidden unless-meta=“answer”}
+
+Answer:
+
+At steady state, mass cannot accumulate at the interface, so the flux
+must be continuous:
+
+$$
+J_1 = J_2 = J.
+$$
+
+Using the expressions above,
+
+$$
+J = D_1 A \frac{c_L - c_i}{L_1}
+= D_2 A \frac{c_i - c_R}{L_2}.
+$$
+
+Rearrange each term to isolate the concentration drops:
+
+$$
+c_L - c_i = \frac{J L_1}{D_1 A},
+\qquad
+c_i - c_R = \frac{J L_2}{D_2 A}.
+$$
+
+Add the two equations:
+
+$$
+c_L - c_R
+= \frac{J L_1}{D_1 A} + \frac{J L_2}{D_2 A}.
+$$
+
+Thus,
+
+$$
+J = \frac{A(c_L-c_R)}{\dfrac{L_1}{D_1}+\dfrac{L_2}{D_2}}.
+$$
+
+Now define the effective diffusivity across the total thickness
+$L=L_1+L_2$ by
+
+$$
+J = D_{\mathrm{eff}}^{\mathrm{series}} A \frac{c_L-c_R}{L_1+L_2}.
+$$
+
+Comparing with the previous expression gives
+
+$$
+D_{\mathrm{eff}}^{\mathrm{series}} =
+\frac{L_1 + L_2}{\dfrac{L_1}{D_1} + \dfrac{L_2}{D_2}}.
+$$
+
+This is a harmonic-type average, so the slowest slab has the strongest
+influence.
+
+:::
+
 ### Part 3. Implications
 
-d) In transport phenomena, it is often useful to describe a system in
-terms of transport resistance or capacitance. Based on your results
-above, does diffusion through heterogeneous media behave more
-similarly to resistors or capacitors in series and parallel?
+d) Heterogeneous systems are often interpreted
+using analogies such as transport resistance or capacitance. Based on
+your results above, does diffusion through heterogeneous media behave
+more similarly to resistors or capacitors in series and parallel?
+Briefly explain your reasoning.
 
+:::{.content-hidden unless-meta=“answer”}
 
-	3.	In a real material containing both fast paths and blocking regions,
-what determines whether the overall transport is enhanced or
-suppressed?
+Answer:
+
+Diffusion through heterogeneous media behaves more similarly to
+electrical resistance than to capacitance.
+
+In the parallel case,
+
+$$
+D_{\mathrm{eff}}^{\text{parallel}} =
+\frac{D_1 A_1 + D_2 A_2}{A_1 + A_2},
+$$
+
+so the total transport is the sum of contributions from each path.
+This is analogous to multiple conductive channels acting in parallel.
+
+In the series case,
+
+$$
+D_{\mathrm{eff}}^{\mathrm{series}} =
+\frac{L_1 + L_2}{\dfrac{L_1}{D_1} + \dfrac{L_2}{D_2}},
+$$
+
+so the inverse transport contributions add, and the slowest layer
+dominates the overall flux. This is analogous to resistances in
+series.
+
+Therefore, diffusion is best understood using a transport resistance
+analogy: fast paths enhance transport in parallel, while slow layers
+strongly limit transport in series.
+
+:::
+
+e) Qualitatively
+explain why material imperfections such as dislocations or grain
+boundaries can act as fast diffusion shortcuts, whereas thin coating
+layers or oxide films can strongly limit the overall diffusion rate.
+
+:::{.content-hidden unless-meta=“answer”}
+
+Answer:
+
+Dislocations and grain boundaries often provide fast diffusion paths
+because atoms can move more easily along these defective regions than
+through the well-ordered crystal lattice. In the language of this
+problem, they behave like parallel channels with a much larger local
+diffusivity. Even if their area fraction is small, they can
+significantly increase the total flux.
+
+In contrast, thin coating layers or oxide films often lie directly
+across the diffusion direction. In that geometry, diffusion must pass
+through them in series with the bulk material. Since the series
+effective diffusivity is controlled most strongly by the slowest
+region, even a very thin but low-diffusivity layer can strongly reduce
+the overall transport rate.
+
+Thus, fast defects act as diffusion shortcuts, while blocking layers
+act as transport bottlenecks.
+
+:::
+
+f) The parallel and series cases above represent two ideal limits,
+while in real materials, diffusion is often not
+oriented along these special directions. How would you approach the
+diffusion problem in such cases? Briefly discuss what kind of
+mathematical description would be needed.
+
+:::{.content-hidden unless-meta=“answer”}
+
+Answer:
+
+In real materials, diffusion paths are usually not perfectly aligned
+parallel or perpendicular to the macroscopic diffusion direction.
+Therefore, the transport cannot in general be described by a single
+scalar diffusivity.
+
+A more general approach is to use an effective diffusivity tensor
+$\mathbf{D}$ and write
+
+$$
+\mathbf{J} = - \mathbf{D} \nabla c.
+$$
+
+In this description, the parallel and perpendicular cases correspond
+to principal directions of transport, and their effective
+diffusivities can be viewed as principal values of the tensor. For an
+arbitrary diffusion direction, the flux depends on both the
+orientation and connectivity of the heterogeneous paths.
+
+To solve such problems, one would typically use the diffusion equation
+with tensorial diffusivity,
+
+$$
+\frac{\partial c}{\partial t} = \nabla \cdot \left(\mathbf{D}\nabla c\right),
+$$
+
+together with the appropriate boundary conditions and material
+geometry. In complex microstructures, numerical methods or effective
+medium approximations are often needed.
+
+:::

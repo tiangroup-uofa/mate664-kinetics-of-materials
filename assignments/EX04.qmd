@@ -34,7 +34,9 @@ $\gamma_{\mathrm{NM}}$, $\gamma_{\mathrm{SM}}$, and
 $\gamma_{\mathrm{SN}}$, respectively. 
 
 ![Cross section of heterogeneous nucleus formed on a conical pit in
- the wall of a material.](./img/EX4-pit-1.svg){width="45%" #fig-pit-1}
+ the wall of a material.](./img/EX4-pit-1.svg){width="35%" #fig-pit-1}
+
+![Growth of nucleus in and out of the pit. The positions of the meniscus for 3 different stages are marked](./img/EX4-pit-2.svg){width="35%" #fig-pit-2}
 
 a) If $\gamma_{\mathrm{NM}} = \gamma_{\mathrm{SM}}$, what is the
 contact angle $\theta$ based on the Young's equation introduced in Lecture 15?
@@ -162,7 +164,7 @@ that in stage 2, the contact points of the meniscus will be "pinned"
 at the pit opening, until the contact angle on the top surface reaches
 $\theta$. Please briefly / qualitatively explain why the multi-stage growth may cause additional kinetic barrier to the nucleation.
 
-![Growth of nucleus in and out of the pit. The positions of the meniscus for 3 different stages are marked](./img/EX4-pit-2.svg){width="45%" #fig-pit-2}
+
 
 :::{.content-hidden unless-meta="answer"}
 
@@ -397,7 +399,7 @@ $$
 \tilde{D} = M \frac{\partial \mu}{\partial x_B}
 $$
 
-where $\mu = \frac{\partial g^{\text{homo}}{\partial c}$ is the
+where $\mu = \frac{\partial g^{\text{homo}}}{\partial c}$ is the
 chemical potential. Using previous knowledge of interdiffusivity that
 $\tilde{D} = D_A x_B + D_B x_A$, prove that in this case we have:
 
@@ -437,4 +439,19 @@ d) Simulating the Cahn-Hilliard equation with regular solution free energy
 
 We will modify our interactive demo from Lecture 20 in the
 Cahn-Hilliard example so that it uses the regular solution free energy
-$g^{\text{homo}}$. 
+$g^{\text{homo}}$. Please take a look at the online demo [https://tiangroup-uofa.github.io/mate664-kinetics-of-materials/scripts/EX04_cahn_hilliard.html](https://tiangroup-uofa.github.io/mate664-kinetics-of-materials/scripts/EX04_cahn_hilliard.html). When
+tuning the parameters $\omega$, $\kappa$, $x_{B0}$, identify one example for each of the following
+behaviors, if observed:
+
+- No phase separation
+- Nucleation
+- Spinodal decomposition
+- Coarsening / Ostwald ripening
+- Aggregation
+
+:::{.callout-note}
+You do not need to explore the full parameter space systematically.
+Finding one representative example for each observed behavior is
+sufficient.
+:::
+
