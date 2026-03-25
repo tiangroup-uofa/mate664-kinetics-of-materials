@@ -22,348 +22,454 @@ format:
 :::
 
 
+## Announcement: class presentation
+
+- **Date**: April 8 14:00 - 17:30
+- **Location**: HC 2-14 (same classroom)
+- **Format**: slide presentation or your choice of media. Pre-recorded video allowed if unable to attend
+- **Length**: 10 min presentation + 2 min questions
 
 
-## Why do we need material simulation?
+## Recap: Monte Carlo (MC) and Kinetic Monte Carlo (KMC) methods
 
-- Modelling: how do we simplify the complex physical system?
-- Simulation: how can the governing equation in a model evolve / be solved?
-
-![_Real map and simplified network of Beijing metro system_](./public/beijing-metro.png)
-
-## Multiscale modelling of materials
-
-How do simulation methods differ at length scales?
-
-![Copyright geunho.kentech.ac.kr](./public/meta-lab.png)
-
-## Multiscale view in spatial and temporal domains
-
-![](./public/multiscale-master.png)
-
-## Multiscale simulation in the context of kinetics
-
-![](./public/multiscale-kinetics.svg)
-
-# Topic 1: Continuum Modelling -- Phase Field Method
-
-## What are we talking about in continuum modelling?
-
-- Macroscopic diffusion -- phenological diffusivity $D$ is known
-- Phase transformation -- free energy of mixture system is known
-
-Core equation: generalized Fick's second law
-
-$$
-\frac{\partial \xi}{\partial t} = - \nabla \cdot \vec{J}_\xi(f, \xi)
-$$
-
-## Case study: spinodal decomposition & nucleation
-
-From [Lecture 16](../L16) we know that the nucleation and spinodal
-decomposition of A-B mixture follows the same bulk free energy
-landscape while the time dependent evolution is different. How do we model it?
-
-![](../L16/public/mauro-separation.png)
-
-## Target results
-
-Review back to what we proposed in [Lecture 1](../L01). _Does this kind of image make sense?_
-
-![](./public/l01-preview.png)
-
-## Modelling step 1: check the governing equation
-
-Problems suitable for continuum modelling typically have a clear
-governing equation, with a few parameters determined at bulk level or
-can be obtained from shorter-length scale simulations.
-
-Can we identify the components for Cahn-Hilliard equation ([L16](../L16))?
+- (Metropolis) MC: sampling equilibrium configuration
+- KMC: sampling configuration change over (pseudo) time scale
+- Major assumption: average / integral of states can be performed by random sampling
+- Probability ratio (NVT)
 
 ```{=tex}
 \begin{align}
-\frac{\partial c_B}{\partial t} = M_0 \left[
-\frac{\partial^2 f^{\text{homo}}}{\partial c_B^2}
-\nabla^2 c_B
-- 2 \kappa \nabla^4 c_B
-\right]
+p_i \propto e^{-E_i/k_B T}
 \end{align}
 ```
 
-## CH equation analysis
+## Recap: potential energy comparison in MC
+
+The central parameter in MC / KMC simulations is the estimation of
+probability, or equivalent the potential energy $E_i$ (or $U_i$).
+
+Remaining questions:
+
+- where do we get these energy values?
+- if we do need to calculate force $- \dfrac{\partial E}{\partial x}$, what can we get?
+- can we get continuous motion instead of discrete states "hopping"?
+
+
+
+## Historical review: atomic hypothesis
+
+Excerpt from [Richard Feymann's physics lecture at Caltech](https://www.feynmanlectures.caltech.edu/FLP_Lecture_1_Transcript.pdf#:~:text=I%20believe%20it%20is%20the%20hyp–%20atomic,a%20little%20imagination%20and%20thinking%20is%20applied.)
+
+> I believe it is the atomic hypothesis (or the atomic fact, or whatever you want to
+call it) that all things are made out of atoms -- little particles that move around, are in
+perpetual motion, attract each other when they are some distance apart, but repel being
+squeezed into one another. In that one sentence you’ll see there’s an enormous amount
+of information about the world if just a little imagination and thinking is applied.
+
+
+
+## Representing large system with small domain
+
+Pioneered by Bernal (UCL) in the 1950s, use ball bearing to study the
+liquid-solid phase transformation.
+
+![](./public/bernal-bearing.png)
+
+## Hard-sphere models for materials simulations
+
+Simulating defects with ball bearings!
+
+{{< video https://www.youtube.com/watch?v=O3RsDIWB7s0 width="100%" height="85%">}}
+
+## Another way down the road: molecular dynamics (MD)
+
+Instead of studying the systems in configuration space
+($\{\mathbf{r}_i, \cdot \}$), MD studies materials in a phase space
+($(\{\mathbf{r}_i, \mathbf{p}_i), \cdot \}$), more naturally
+representing the Newton's equation
 
 ```{=tex}
 \begin{align}
-\frac{\partial c_B}{\partial t} = M_0 \left[
-\frac{\partial^2 f^{\text{homo}}}{\partial c_B^2}
-\nabla^2 c_B
-- 2 \kappa \nabla^4 c_B
-\right]
+\frac{d \mathbf{r}_i}{dt} &= \frac{\mathbf{p}_i}{m_i} \\
+\frac{d \mathbf{p}_i}{dt} &=  - \nabla_{r_i} U(\mathbf{r})= \mathbf{F}_i
 \end{align}
 ```
 
-- $f^{\text{homo}}$ is the homogeneous Holmholtz free energy
-- $M_0$ is the (non-negative) mobility under chemical potential driving force
-- $\kappa$: interfacial penalty
-- Total concentration $c_B$ and $c_A$ should be conserved
-
-## Step 2: where do we get the free energy?
-
-An easy choice of (homogeneous) Helmholtz free energy is the double well potential
-
-```{=tex}
-\begin{align}
-f^{\text{homo}}(c_B) = W c_B^2 (1-c_B)^2
-\end{align}
-```
-
-- two minima: two preferred equilibrium compositions $c_B=0$ and $c_B=1$
-- barrier height set by $W$
-
-## Free energy and spinodal regions
-
-Can you locate:
-
-- Spinodal decomposition regime?
-- Nucleation region?
-
-![](./public/ch-bulk-free-energy.png)
-
-## From homogeneous to local free energy
-
-In the Cahn-Hilliard equation the local free energy is defined
-
-```{=tex}
-\begin{align}
-F(c_B) = \int_V \left[
-f^{\text{homo}}(c_B) + \kappa |\nabla c_B|^2
-\right] \mathrm{d}V
-\end{align}
-```
-
-and subsequently we have a local chemical potential
-
-```{=tex}
-\begin{align}
-\mu_B = \frac{\delta F}{\delta c_B}
-=
-\frac{\partial f^{\text{homo}}}{\partial c_B}
-- 2\kappa \nabla^2 c_B
-\end{align}
-```
-
-The CH equation is just a diffusion equation with $\nabla F(c_B)$ as the driving force.
-
-## What are the empirical parameters?
-
-```{=tex}
-\begin{align}
-\frac{\partial c_B}{\partial t} = M_0 \left[
-\frac{\partial^2 f^{\text{homo}}}{\partial c_B^2}
-\nabla^2 c_B
-- 2 \kappa \nabla^4 c_B
-\right]
-\end{align}
-```
-
-For the simplest Cahn-Hilliard model, the key parameters are:
-
-- $W$: height of the double-well free energy barrier
-- $M_0$: mobility under chemical potential gradient
-- $\kappa$: gradient-energy coefficient
-
-If the form of $f^{\text{homo}}$ is fixed, this becomes a minimal 3-parameter model.
-
-## How do we set up the simulation?
-
-The Cahn-Hilliard equation can be regarded as a showcase PDE problem
-in kinetics. In order to evolve the $c_B$ field, we can use
-
-Real space method:
-
-- Finite different (FD): as in [Lecture 8](../L08)
-- Finite element / finite volume: different ways to discretize the spatial grid
-
-Fourier space method:
-
-- Pseudo-spectral method: convert the real-space modes into Fourier space 
-
-## Real space approach (high level)
-
-A practical form is to split the equation into concentration and chemical potential:
-
-```{=tex}
-\begin{align}
-\frac{\partial c_B}{\partial t} &= \nabla \cdot \left(M \nabla \mu_B \right) \\
-\mu_B &= \frac{\partial f^{\text{homo}}}{\partial c_B} - 2\kappa \nabla^2 c_B
-\end{align}
-```
-
-- the general form is just to solve the Fick's second law with varying chemical potential space
-- can use our existing FD code to update!
-
-## Fourier space strategy (high level)
-
-Instead of solving the spatial derivatives directly in real space, we
-expand the concentration field into Fourier modes (the
-separation-of-variable method in [Lecture 8](../L08)). Note the
-notation $c$ just means $c_B$ in our previous case
-
-```{=tex}
-\begin{align}
-c(\mathbf{r},t) = \sum_{\mathbf{k}} \hat{c}_{\mathbf{k}}(t)e^{i\mathbf{k}\cdot\mathbf{r}}
-\end{align}
-```
-
-and the Fourier transform of the CH equation follows
-
-```{=tex}
-\begin{align}
-\frac{\partial \hat{c}_{\mathbf{k}}}{\partial t} = M \left[
--k^2 \text{FT}[\frac{\partial f}{\partial c}] - \kappa k^4 \hat{c}_{\mathbf{k}}
-\right]
-\end{align}
-```
+Time dependency now appears!
 
 
-- $\hat{c}_{\mathbf{k}}$  is the Fourier transformed $c$
-- Benefit of F.T.: the $\nabla^2$ and $\nabla^4$ becomes just computing $k^2$ and $k^4$
+## MD = Energy + Dynamics
 
+::: {.columns}
+::: {.column width=“50%”}
 
-::: {.content-visible when-format="html"}
+**Energy**
 
-## Example in action (1)
-
-Adapted from [`PyCahnHilliard`](https://github.com/elvissoares/PyCahnHilliard/tree/master). Let's see how the parameters change the result?
-
-- At spinodal top
-
-![](./public/ch-c0=0.5.gif)
-
-
-## Example in action (2)
-
-
-- More A phase
-
-![](./public/ch-c0=0.3.gif)
-
-## Example in action (3)
-
-- More B phase
-
-![](./public/ch-c0=0.7.gif)
+- potential energy surface (PES)
+- bonding physics
+- force evaluation
+- material specificity
 
 :::
 
-## Evolution over time
+::: {.column width=“50%”}
 
-Under the same free energy profile, how does the pattern evolve? And why?
+**Dynamics**
 
-![](./public/CH-evolution.png)
+- Newton’s equations
+- time integrator
+- thermostat / barostat
+- trajectory sampling
 
-## Interactive tool to play with the CH equation
+:::
 
-Can you identify the following phenomena from the CH equation simulation?
+:::
 
-- Nucleation
-- Spinodal decomposition
-- Coarsening
-- Aggregation / sintering
+- no MD without both parts
+- wrong energy or wrong dynamics both lead to wrong physics (butterfly effect)
+
+## Dissecting the MD method
+
+- **Deterministic** method: state of the system at any future time can be predicted from its
+current state (with caution)
+
+- MD cycle for one step:
+  - Force acting on each atom is assumed to be constant during the time interval
+  - Forces on the atoms are computed and combined with the current positions and
+velocities to generate new positions and velocities a short time ahead
+
+- MD simulations provide a molecular level picture of structure and dynamics →
+structure-property relationships (**SPR**)
+
+## Timescale in MD
+
+:::{.columns}
+:::{.column width="50%}
+
+**Physical world**
+
+- Bond vibrations - 1 fs
+- Collective vibrations - 1 ps
+- Conformational transitions - ps or longer
+- Enzyme catalysis - microsecond/millisecond
+- Ligand Binding - micro/millisecond
+- Protein Folding - millisecond/second
+
+:::
+
+:::{.column width="50%"}
+
+**MD Simulation**
+
+- Integration time step - 1 femtosecond
+- Set by fastest varying force
+- Accessible timescale about **10 nanoseconds**
+
+:::
+
+:::
+
+## Topic 1: the dynamics
+
+We wanted to talk about the "control" part of the MD
+
+- how do we turn forces into trajectories?
+- how do we know the simulation system represents the set ensemble?
+- how to get quantities from MD simulation?
 
 
+## A bit of statistical mechanics: averaging quantity in MD
 
-## Side note: CH equation interfacial thickness
-
-The consequence of the CH equation is to have a **diffuse interface**,
-characterized by the width $\lambda$:
-
-![Adapted from Prof. Bazant, MIT](./public/CH-equation-width.png)
-
-## Side note: classical interfacial energy $\gamma$ from CH picture
-
-- The interfacial width $\lambda$ is given by
-
-$$
-\lambda = \Delta c \sqrt{\frac{\kappa}{W}}
-$$
-
-where $W$ is the magnitude of the potential barrier
-
-- The classical interfacial energy $\gamma$ follows
+In MD simulation a macroscopic quantity is averaged over time
 
 ```{=tex}
 \begin{align}
-\gamma &= \kappa \frac{(\Delta  c)^2}{\lambda} \\
-&= \Delta c \sqrt{\kappa W}
+\langle A \rangle_{\text{time}}
+=
+\frac{1}{\tau}\int_0^\tau A(t)\,dt
 \end{align}
 ```
 
-## What is the key message from Cahn-Hilliard?
+The ergodic assumption gives that for an infinitely long enough
+simulation, every configuration in the phase space should eventually
+be visited. (Like MC, but we evolve continuously in time)
 
-- Thermodynamics enters through free energy $f^{\text{homo}}$ (controlled by $W$)
-- Kinetics enters through mobility $M$
-- Interface cost enters through gradient penalty ($\kappa |\nabla c|^2$)
-- Morphology evolves **without explicitly setting interface**
+```{=tex}
+\begin{align}
+\langle A \rangle_{\text{ens}}
+=
+\int d\mathbf r^N d\mathbf p^N \, A(\mathbf r^N,\mathbf p^N)\,\rho(\mathbf r^N,\mathbf p^N)
+\end{align}
+```
 
-This is the core idea behind the **phase field method**.
+**Time average** = **Ensemble average**
 
-## From Cahn-Hilliard to phase field method
+## What quantities are we interested in MD?
 
-Cahn-Hilliard is one example of phase field modelling. General phase
-field strategy:
+What quantities are we interested in MD?
 
-- choose a field variable $\phi$ (the order parameter in [Lecture 13](../L13))
-- write a total free energy functional $F(\phi, \cdots)$
-- obtain a driving force from variational derivative
-- evolve the field with suitable dynamics
+::: {.columns}
+::: {.column width=“33%”}
 
+Thermodynamic
 
-## Why is phase field useful beyond this toy model?
+- temperature $T$
+- pressure $P$
+- energy $E$
 
-- Moving interfaces do not need explicit tracking
-- Morphology can be coupled to diffusion, stress, heat, or electrochemistry
-- Suitable for realistic microstructure evolution problems
+:::
 
-## Example of solidification process in phase field modelling
+::: {.column width=“33%”}
 
-See  _J. Braz. Soc. Mech. Sci. & Eng._ 2011, 33, 125_.
+Structural
 
-- Heat transfer + phase transformation
+- radial distribution function $g(r)$
+- coordination number $N_c$
+- defect structure / order parameter $c_i(\mathbf r)$
+:::
 
-![](./public/phase-field-ex.svg)
+::: {.column width=“33%”}
 
-## What are the results?
+**Kinetic**
 
-Phase field simulation results [yt video](https://www.youtube.com/watch?v=jYlUHtlk9pA)
+- **diffusivity** $D$
+- viscosity $\eta$
+- relaxation time $\tau$
+- conductivity $\mu$
 
-## Examples of phase field applications
-
-- spinodal decomposition in alloys
-- precipitate growth and coarsening
-- dendritic solidification
-- grain growth
-- stress-coupled phase separation
-- lithium concentration evolution in battery particles
-
-## Where to go next
-
-The mathematical CH model does have a few parameters to be studied
-
-- Free energy form?
-- Free energy scale height?
-- Molecular meaning of $\kappa$?
-- Mobility $M_0$?
-
-Not all continuum parameters can be predetermined --> get from simulations at other scales!
+:::
+:::
 
 
+## Ensembles: how to describe your system?
+
+In a MD setup, we usually want to fix a few macroscopic quantities
+while let others to give our statistical average
+
+Relate to thermodynamic relations
+
+$$
+dU = T\,dS - P\,dV + \mu\,dN
+$$
+
+- common MD ensembles:
+
+  - NVE (micro-canonical)
+  - NVT (canonical)
+  - NPT (isothermal- isobaric)
+
+## Comparison between ensembles
+
+::: {.columns}
+::: {.column width=“33%”}
+
+NVE
+
+- isolated system
+- fixed $N,V,E$
+- Probability $\rho_{NVE} \propto \delta(H-E)$
+
+:::
+
+::: {.column width=“33%”}
+
+NVT
+
+- heat bath
+- fixed $N,V,T$
+- $\rho_{NVT} \propto e^{-H/k_B T}$
+:::
+
+::: {.column width=“33%”}
+
+NPT
+
+- heat + pressure bath
+- fixed $N,P,T$
+- $\rho_{NPT} \propto e^{-(H+PV)/k_B T}$
+
+
+:::
+:::
+
+## MD: how to advance in time?
+
+Just solve the coupled dynamic equations
+
+```{=tex}
+\begin{align}
+\dot{\mathbf r}_i &= \mathbf v_i \\
+m_i \dot{\mathbf v}_i &= \mathbf F_i
+\end{align}
+```
+
+At each time step:
+
+1. compute forces
+2. update positions and velocities
+3. apply ensemble control if needed
+4. collect observables
+
+## The Verlet algorithm
+
+We can of course use $t \to t + \Delta t$ (the forward Euler) method, but maybe not so stable.
+
+Verlet algorithm: use Taylor expansion
+
+```{=tex}
+\begin{align}
+\mathbf r_i(t+\Delta t)
+=
+2\mathbf r_i(t)-\mathbf r_i(t-\Delta t)
++\mathbf a_i(t)\Delta t^2 + O(\Delta t^4)
+\end{align}
+```
+
+Requires 2 time steps to advance
+
+```{=tex}
+\begin{align}
+\mathbf v_i(t)
+=
+\frac{\mathbf r_i(t+\Delta t)-\mathbf r_i(t-\Delta t)}{2\Delta t}
+\end{align}
+```
+
+Can now go back in time!
+
+## Velocity Verlet: most common practical form
+
+```{=tex}
+\begin{align}
+\mathbf r_i(t+\Delta t)
+&=
+\mathbf r_i(t)+\mathbf v_i(t)\Delta t+\frac{1}{2}\mathbf a_i(t)\Delta t^2 \\
+\mathbf v_i\!\left(t+\frac{\Delta t}{2}\right)
+&=
+\mathbf v_i(t)+\frac{1}{2}\mathbf a_i(t)\Delta t \\
+\mathbf a_i(t+\Delta t)
+&=
+\frac{\mathbf F_i(t+\Delta t)}{m_i} \\
+\mathbf v_i(t+\Delta t)
+&=
+\mathbf v_i\!\left(t+\frac{\Delta t}{2}\right)+\frac{1}{2}\mathbf a_i(t+\Delta t)\Delta t
+\end{align}
+```
+
+## MD: choice timestep
+
+$\Delta t$ must resolve the fastest motion
+
+**too large**:
+
+- unstable integration
+- broken energy conservation
+
+**too small**:
+
+- too expensive
+
+## MD: typical values for timesteps
+
+- metal MD: $\sim 1$ fs
+- molecules with constrained bonds: $\sim 2$ fs
+- coarse motion / rigid modes: up to $\sim 10$ fs
+- _ab initio_ MD: often smaller than 1 fs
+
+## MD: how to maintain ensemble?
+
+- **NVE**: integrate Newton’s law only
+- **NVT**: add thermostat
+- **NPT**: thermostat + barostat
+
+Ideas for thermo- and barostats:
+
+- thermostat controls kinetic energy
+- barostat allows box size / shape to fluctuate
+
+## Comparison between thermostats
+
+::: {.columns}
+::: {.column width=“33%”}
+
+Berendsen
+
+- fast equilibration
+- weakly rescales velocities
+- does not generate exact canonical ensemble
+
+:::
+
+::: {.column width=“33%”}
+
+Nosé-Hoover
+
+- extended dynamical system
+- samples canonical ensemble better
+- may oscillate if poorly tuned
+
+:::
+
+::: {.column width=“33%”}
+
+Langevin
+
+- friction + random force
+- good temperature control
+- can distort dynamics if damping is too strong
+
+:::
+:::
+
+## Topic 2: the energy
+
+- How do you get the energy and forces?
+- Which energy form is good?
+- Can we get energy from data?
+
+## Potential energy in MD (1)
+
+![](./public/374-1.png)
+
+## Potential eenrgy in MD (2)
+
+![](./public/374-2.png)
+
+## Potential energy in MD (3)
+
+![](./public/374-3.png)
+
+## Potential energy in MD (4)
+
+![](./public/374-4.png)
 
 
 
+## More about the atomic hypothesis
 
+Still from Feynman:
 
-## Summary
+> If, in some cataclysm, all of scientific knowledge were to be destroyed, and
+only one sentence passed onto the next generations of creatures, what sentence would contain
+the most information in the fewest words? I believe it is the atomic hypothesis that all things are
+made of atoms – little particles that move around in perpetual motion, attracting each other
+when they are a little distance apart, but repelling upon squeezed into one another. In that
+sentence, you will see, there is enormous amount of information about the world, if just a little
+imagination and thinking are applied
+
+## Example of data-driven potential
+
+Can we use data to train potential? Examples from [John Kitchin (CMU)](https://kitchingroup.cheme.cmu.edu/blog/2017/11/19/Training-the-ASE-Lennard-Jones-potential-to-DFT-calculations/)
+
+- Atomic Simulation Environment (ASE) as a easy python wrapper over the atomistic calculator
+- Bulk argon energies calculated in different lattice type, volume etc.
+- Fit the polynomial LJ potential using the DFT dataset!
+
+![](./public/kitchin-result.png)
+
+## Interatomic potentials: from polynomials to machine learning
+
+![](./public/MLIPs.png)
 
 
 
