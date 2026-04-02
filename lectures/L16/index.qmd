@@ -32,7 +32,7 @@ After this lecture, you will be able to:
 - **Identify** the chemical-potential driving force in spinodal decomposition
 - **Analyze** the Cahn-Hilliard equation and its gradient driving force
 
-## Recall: General Picture of Phase Transformation
+## Recall: general picture of phase transformation
 
 Stability regions in $T-X_{B}$ and $G-X_{B}$ plots
 - spinodal: "spine-like" shape in the free energy diagram
@@ -40,9 +40,9 @@ Stability regions in $T-X_{B}$ and $G-X_{B}$ plots
 ![](./public/stability-region.png)
 
 
-## Stability of Phase Transformation: Second Derivative of Free Energy
+## Stability of phase transformation: second derivative of free energy
 
-Talor expansion of the Gibbs free energy
+Taylor expansion of the Gibbs free energy
 
 ```{=tex}
 \begin{align}
@@ -55,17 +55,17 @@ G\!\left(x_B^{0}+\delta x_B\right)
 \end{align}
 ```
 
-## Key Questions To Be Answered For Continuous Transformation
+## Key questions to be answered for continuous transformation
 
 - **Where**: which region in a phase diagram does continuous phase transformation occur?
-- **How**: how does the continuous transfromation differ from discontinuous one (e.g. nucleation)?
+- **How**: how does the continuous transformation differ from discontinuous one (e.g. nucleation)?
 - **Why**: why do we see the continuous behaviour?
 
-## Comparision: Nucleation vs Spinodal Decomposition
+## Comparison: nucleation vs spinodal decomposition
 
 ![](./public/mauro-separation.png)
 
-## Continuous Transformation: Irreversible Thermodynamics View (1)
+## Continuous transformation: irreversible thermodynamics view (1)
 
 From [Lecture 08](../L08) we know the fluxes between an A-B binary mixture follows:
 
@@ -75,7 +75,7 @@ From [Lecture 08](../L08) we know the fluxes between an A-B binary mixture follo
 
 - Conservation equations
 
-## Continuous Transformation: Irreversible Thermodynamics View (2)
+## Continuous transformation: irreversible thermodynamics view (2)
 
 Expanding the flux conservation and Gibbs-Duhem equation we get the $J_B^V$ as
 
@@ -89,7 +89,7 @@ J_B^V &= -\Omega^2 (c_A^2 L_B + c_B^2 L_A)(\nabla \mu_B - \nabla \mu_A) \\
 
 So far this is just a formal diffusion equation using chemical potential driving force
 
-## Meaning of $J_B^V$ Equation
+## Meaning of $J_B^V$ equation
 
 - Mobility $M>0$ satisfies the $\dot{\sigma}\geq 0$ postulate
 - What is $\mu_B - \mu_A$? 👉 Slope $\partial G/\partial X_B$ on the free energy diagram!
@@ -104,7 +104,7 @@ J_B^V &= - M \nabla(\mu_B - \mu_A) \\
 \end{align}
 ```
 
-## Negative Interdiffusivity?
+## Negative interdiffusivity?
 
 From previous analysis we see that the apparent interdiffusivity $\tilde{D}$ follows:
 
@@ -116,7 +116,7 @@ $$
 - In continuous transformation, we see the local concentration difference amplifies!
 - In contrast, normal diffusion $\tilde{D} > 0$ tries to smoothen the concentration curvature.
 
-## Diffusion (homogenization) vs Phase separation
+## Diffusion (homogenization) vs phase separation
 
 Very rough estimation of the composition change using Fick's second law
 
@@ -124,14 +124,14 @@ $$
 \frac{\partial c_B}{\partial t} = \tilde{D}\nabla^2 c_B
 $$
 
-## Summary For "Where" and "Why" Questions
+## Summary for "where" and "why" questions
 
 - Continuous phase transformation occurs **where** the second derivative of free energy is **negative**
 - The continuous phase separation is dominated by **barrierless** diffusion
 - The process is triggered by infinitesimal spatial fluctuation
 - Amplification of concentration fluctuation is enhanced by **negative interdiffusivity** $\tilde{D} = \frac{M\Omega}{N_0} \frac{\partial^2 G}{\partial X_B^2} < 0$
 
-## The "How" Question: Evolution of Patterns In Spinodal Decomposition
+## The "how" question: evolution of patterns in spinodal decomposition
 
 Let's still use the 1D Fick's second law, assuming $\tilde{D}$ is constant everywhere
 
@@ -143,7 +143,7 @@ From [Lecture 07](../L07) we know that the diffusion equation can be
 decomposed into spatial and temporal parts. Use a wave form $c_B(x, t)
 = \overline{c_B} + \exp(i \beta x) A(t)$, we can solve the $c_B(x, t)$ profile.
 
-## Amplification In Continuous Transformation
+## Amplification in continuous transformation
 
 The general solution to the waveform $c_B$ is:
 
@@ -159,20 +159,20 @@ c_B - \overline{c_B} &= A(\beta, 0) \exp(-\beta^2 \tilde{D}) exp(i \beta x) \\
 - $\beta \rightarrow \infty$ should give maximal amplification ?! 👉 We always end up with noise ?!
 - Not the case in real scenario 👉 **stablization** by interfaces!
 
-## Example: Spinodal Decomposition In Computer Simulations
+## Example: spinodal decomposition in computer simulations
 
 - See Seol, et al. _Acta Materialia_ 51, 5173–5185 (2003)
 - Final pattern always has a principal wavelength, why?
 
 ![](./public/seol-simulation.png)
 
-## Interfacial Energy As Stablization Term
+## Interfacial energy as stabilization term
 
 - The term $R(\beta) = -\beta^2 \frac{M \Omega}{N_0} \frac{\partial^2 G}{\partial X_B^2}$ uses _homogeneous_ free energy of a mixture
 - In reality creating a new phase always increase the free energy by surface energy (similar to nucleation in [Lecture 14](../L14))
 - In spinodal decomposition, surface energy acts as "stablization" for pattern formation!
 
-## Energy at Gradient Interfaces
+## Energy at gradient interfaces
 
 - Unlike in nucleation where sharp interface can be defined (thus $\gamma$), spinodal decomposition usually accompanies **diffuse interface**
 - $c_{B}$ has a finite gradient, not sharp step function
@@ -190,7 +190,7 @@ $$
 \frac{\partial c_B}{\partial x}
 \right)^2$ becomes large!
 
-## Cahn-Hilliard Equation For Spinodal Decomposition
+## Cahn-Hilliard equation for spinodal decomposition
 
 - It is just Fick's second law with a more precise $\tilde{D}$ counting the interfacial term
 - Total Helmholtz free energy comes from both homogeneous free energy density $f^{\text{homo}}$ and $\kappa (\partial c_B/\partial x)^2$
@@ -205,7 +205,7 @@ Define a general "diffusion potential" for inhomogeneous system:
 \end{align}
 ```
 
-## Cahn-Hilliard Equation (2)
+## Cahn-Hilliard equation (2)
 
 Instead of chemical potential $\mu_B - \mu_A$, we use $\Phi$ as the overall potential
 
@@ -229,7 +229,7 @@ J_B &= -L \nabla \Phi \\
 \end{align}
 ```
 
-## Cahn-Hilliard Equation (3)
+## Cahn-Hilliard equation (3)
 
 Final format of Cahn-Hilliard equation
 
@@ -243,7 +243,7 @@ Final format of Cahn-Hilliard equation
 \end{align}
 ```
 
-## Perturbation Analysis For Cahn-Hilliard Equation
+## Perturbation analysis for Cahn-Hilliard equation
 
 Toy model for the Helmholtz free energy
 
@@ -265,7 +265,7 @@ $$
 \right] A(t)
 $$
 
-## Amplification Factor $R(\beta)$ In Cahn-Hilliard Equation
+## Amplification factor $R(\beta)$ in Cahn-Hilliard equation
 
 $$
 R(\beta) = -M_0 \left( \frac{\partial^2 f}{\partial c_B^2} \beta^2 + 2 \kappa \beta^4 \right)
@@ -275,7 +275,7 @@ The $\beta^4$ term now stablizes $R(\beta)$!
 
 ![](./public/cahn-hilliard-rb.png)
 
-## Cahn-Hilliard Equation: Critical Wavelength
+## Cahn-Hilliard equation: critical wavelength
 
 - Critical wavelength $\lambda_c = \frac{\pi}{2} (c^\beta - c^\alpha) \sqrt{\frac{\kappa}{f^m}}$
 - $\lambda > \lambda_c$ --> Growth
@@ -285,7 +285,7 @@ The $\beta^4$ term now stablizes $R(\beta)$!
 
 
 
-## Applications of Spinodal Decomposition: Pattern Formation
+## Applications of spinodal decomposition: pattern formation
 
 ![](./public/mauro-example.png)
 

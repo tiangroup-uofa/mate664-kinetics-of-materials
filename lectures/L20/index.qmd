@@ -109,7 +109,7 @@ Can we identify the components for Cahn-Hilliard equation ([L16](../L16))?
 \end{align}
 ```
 
-- $f^{\text{homo}}$ is the homogeneous Holmholtz free energy
+- $f^{\text{homo}}$ is the homogeneous Helmholtz free energy
 - $M_0$ is the (non-negative) mobility under chemical potential driving force
 - $\kappa$: interfacial penalty
 - Total concentration $c_B$ and $c_A$ should be conserved
@@ -375,4 +375,3 @@ Not all continuum parameters can be predetermined --> get from simulations at ot
 - Continuum modelling uses field variables and governing equations to describe kinetic evolution
 - The Cahn-Hilliard equation combines bulk free energy, mobility, and interfacial penalty
 - Phase-field methods extend this idea to simulate evolving microstructures without explicit interface tracking
-

@@ -40,14 +40,14 @@ After this lecture, you will be able to:
 - Analyze intrinsic / extrinsic diffusion regimes in ionic materials
 - Understand material imperfections as the diffusion shortcuts
 
-## What Does Diffusion In Real Materials Look Like?
+## What does diffusion in real materials look like?
 
 - Real solids are not perfect crystals
 - Defects control transport properties
 - Ionic diffusion shows rich temperature dependence
 - Same Einstein framework, new physics inside
 
-## Base Line: Vacancy-Mediated Diffusion In Metals
+## Base line: vacancy-mediated diffusion in metals
 
 - Diffusion = random walk of atoms via vacancies
 - Diffusivity related to both vacancy density (controlled by $G_v^f$) and vacancy jumping (controlled by $G_v^m$)
@@ -62,14 +62,14 @@ D_A
 \end{align}
 ```
 
-## Defect-Mediated Diffusion In Ionic Crystals
+## Defect-mediated diffusion in ionic crystals
 
 - Defects in ionic crystals are more complex than in metal
 - Charge neutrality has to be conserved
 - More than one single defect species are involed
 - In other words, defects always come in **pairs** in ionic solids
 
-## Schottky and Frenkel Defects In Ionic Crystals
+## Schottky and Frenkel defects in ionic crystals
 
 - Schottky defects: missing both positive and negative species
 - Frenkel defects: one charged species moved to other site
@@ -85,7 +85,7 @@ D_A
 
 ![Example of KV notation](./public/kv-notation.png){width="60%"}
 
-## KV Notation For Schottky Defects
+## KV notation for Schottky defects
 
 Example: Schottky defects in MgO (anion + cation vacancies)
 
@@ -110,7 +110,7 @@ Example: Schottky defects in MgO (anion + cation vacancies)
   $$
 
 
-## KV Notation For Frenkel Defects
+## KV notation for Frenkel defects
 
 Example: Frenkel pairs in LiF (Lithium escaping to interstitial sites)
 
@@ -131,7 +131,7 @@ Example: Frenkel pairs in LiF (Lithium escaping to interstitial sites)
 - Charge neutrality  
   $[V_{\mathrm{Li}}^{'}] = [\mathrm{Li}_i^{\bullet}]$
 
-## Intrinsic vs Extrinsic Defects
+## Intrinsic vs extrinsic defects
 
 - **Intrinsic** defects are those controlled by thermodynamics $G_S^f$, $G_F^f$ or $G_V^f$
 - **Extrinsic** defects are those defects added to the ionic crystal via doping
@@ -160,7 +160,7 @@ Example of Extrinsic defects: CdCl$_2$ in NaCl
   $$
 
 
-## Diffusivity of Ionic Species
+## Diffusivity of ionic species
 
 - We can still use the vacancy exchange mechanism for the diffusivity of ionic species
 - For f.c.c. lattice the neighbor sites of same charge, the multiplicity $z=6$.
@@ -176,7 +176,7 @@ f\,\lambda^2\,\nu\,
 \end{align}
 ```
 
-## Intrinsic vs Extrinsic Regimes
+## Intrinsic vs extrinsic regimes
 
 - Extrinsic: vacancy dominated by doped materials
   - Low-$T$ regime (high $1/T$)
@@ -205,11 +205,11 @@ D_{\mathrm{Na,int}}
 \end{align}
 ```
 
-## Two-Regimes In The Arrhenius Plot
+## Two-regimes in the Arrhenius plot
 
 ![](./public/two-regimes-plot.png)
 
-## More Regimes In Arrhenius Plot
+## More regimes in Arrhenius plot
 
 - Example: cation diffusion in FeO during oxidation
 - Equilibrium depends on both $G^f$ and $p(O_2)$
@@ -217,11 +217,11 @@ D_{\mathrm{Na,int}}
 
 ![](./public/kom-feo-reaction.png)
 
-## Multiple Regimes Diffusion In Polycrystalline Materials
+## Multiple-regime diffusion in polycrystalline materials
 
 ![Arrhenius plot for diffusion on imperfections](./public/multi-regime-polycrystalline.png)
 
-## Diffusion Paths At Crystal Imperfections
+## Diffusion paths at crystal imperfections
 
 - Diffusion can occur along non-bulk pathways
 - Typical crystal imperfections
@@ -236,11 +236,11 @@ D_{\mathrm{Na,int}}
 
 ![](./public/gb.png)
 
-## Grain Boundary Diffusion
+## Grain boundary diffusion
 
 ![](./public/gb-diff.png)
 
-## Harrison's ABC Model For GB Diffusion
+## Harrison's ABC model for GB diffusion
 
 A foreign material is coated on the top of a polycrystalline
 metal. The degree of penetration can be studied by comparing the
@@ -269,7 +269,7 @@ timescale $t$, interatomic distance $\lambda$ and grain size $s$
 :::
 :::
 
-## Dislocation Imperfections (Line Defect)
+## Dislocation imperfections (line defect)
 
 :::{.columns}
 :::{.column width="50%"}
@@ -285,14 +285,14 @@ timescale $t$, interatomic distance $\lambda$ and grain size $s$
 :::
 :::
 
-## Example of Diffusion Along Imperfection: Deposition on Graphene
+## Example of diffusion along imperfection: deposition on Graphene
 
 - See Vagli and Tian et al. _Nat Commun_ 2025, 16, 7726.
 - Diffusivity change on free graphene surface can be probed by deposition geometry!
 
 ![](./public/ncomm-sem.png)
 
-## Deposition on Graphene - Theoretical Simulations
+## Deposition on Graphene - theoretical simulations
 
 - Kinetic Monte Carlo (kMC) assuming different diffusion barrier on imperfections
 - Faster diffusion direction --> lower density
@@ -306,7 +306,7 @@ timescale $t$, interatomic distance $\lambda$ and grain size $s$
 
 ![](./public/ncomm-kmc2.png)
 
-## Deposition on Graphene - KMC vs Experiments
+## Deposition on Graphene - KMC vs experiments
 
 
 ![](./public/ncomm-kmc-exp.png)

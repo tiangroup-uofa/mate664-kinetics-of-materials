@@ -30,7 +30,7 @@ Key ideas from last lecture:
 - Free energy change $\Delta G^{0}$ determines spontaneity
 - Activation barrier $\Delta G^*$ controls rates
 
-## Recap: Equilibrium Is a Time-Scale Concept {.center}
+## Recap: equilibrium is a time-scale concept {.center}
 - Equilibrium when
 
 $$\tau_{\text{observation}} \gg \tau_{\text{relaxation}}$$
@@ -38,7 +38,7 @@ $$\tau_{\text{observation}} \gg \tau_{\text{relaxation}}$$
 - Many materials are metastable, not unstable
 - Diamond vs graphite is a kinetic story, not thermodynamic failure
 
-## Recap: Entropy Revisited {.center}
+## Recap: entropy revisited {.center}
 - Entropy is **not disorder**
 - Entropy measures number of accessible **microstates**
 - Statistical view:
@@ -55,7 +55,7 @@ After this lecture, you will be able to:
 - **Apply** Onsager’s linear response framework
 - **Interpret** irreversible thermodynamics from a microscopic viewpoint
 
-## Crash Course on Statistical Mechanics (1)
+## Crash course on statistical mechanics (1)
 
 *Part of the introductions are adapted from MAT E 374 by Dr. Hao Zhang*
 
@@ -66,7 +66,7 @@ Dynamics from Newton & Laplace point of view:
 
 ![Newtonian dynamics in a nutshell](./public/newtonian.png){width=600}
 
-## Crash Course on Statistical Mechanics (2)
+## Crash course on statistical mechanics (2)
 
 Why can't we determine the system state using Newtonian Dynamics (yet)?
 
@@ -76,20 +76,20 @@ Why can't we determine the system state using Newtonian Dynamics (yet)?
 
 What is the alternative?
 
-- Deterministic → Probablistic
+- Deterministic -> probabilistic
 - *How much computation* is enough?
 
 ::: {.content-visible when-format="html"}
 ![](https://miro.medium.com/v2/resize:fit:720/format:webp/1*oA63oJ2qoBYiIQ4Wzy8YKw.png){.absolute bottom=50 right=50 width=600px}
 :::
 
-## Crash Course on Statistical Mechanics (3)
+## Crash course on statistical mechanics (3)
 
 Let's reintroduce the microscopic picture by Boltzmann
 
 ![](./public/boltzmann-intro.png){.centered}
 
-## Crash Course on Statistical Mechanics (4)
+## Crash course on statistical mechanics (4)
 
 - **Microstate**: a state in the phase space $\{\mathbf{x}_i, \mathbf{p}_i\}$
 - **Macrostate**: a specification of macroscopic constraints (e.g. $<E, V, N>$) that corresponds to many microstates
@@ -106,9 +106,9 @@ $$
 
 :::
 
-## Crash Course on Statistical Mechanics (5)
+## Crash course on statistical mechanics (5)
 
-Consider a *cannonical ensemble* (constant $N, V, U$) 
+Consider a *canonical ensemble* (constant $N, V, U$) 
 ^[Adapted from Green, Kinetics Transport, and Structure in Hard and Soft Materials, Ch 1]
 
 - Inner system (I): $U_I$, $\Omega(U_I)$
@@ -120,7 +120,7 @@ I and R can only exchange internal energy, not particles or volume.
 
 Q: The total internal energy of the universe $U_T$ is fixed. How do the inner and reservoir systems balance their energies?
 
-## Crash Course on Statistical Mechanics (6)
+## Crash course on statistical mechanics (6)
 
 Let's first see the equilibrium state. 
 
@@ -137,7 +137,7 @@ $$
 
 
 
-## Crash Course on Statistical Mechanics (7)
+## Crash course on statistical mechanics (7)
 
 - We know the Boltzmann equation $S = k_B \ln\!\Omega$
 
@@ -160,7 +160,7 @@ $$
 
 This leads the famous **Boltzmann distribution**
 
-## Crash Course on Statistical Mechanics (8)
+## Crash course on statistical mechanics (8)
 
 What if we're not at equilibrium?
 
@@ -180,7 +180,7 @@ $$
 - *Can we make sure it is the maximum?*
 - What is the sign of $\partial^2 S/\partial U^2$?
 
-## Crash Course on Statistical Mechanics (9)
+## Crash course on statistical mechanics (9)
 $$
 \left( \dfrac{
 \partial \ln \Omega(U_I)
@@ -207,13 +207,13 @@ $$
 
 Yay! This is something we know, temperature at equilibrium.
 
-## What Have We Observed So Far? {.center}
+## What have we observed so far? {.center}
 
-- Probability distribution **at equilibrium** follows Boltzmann distribution (for cannonical ensemble)
+- Probability distribution **at equilibrium** follows Boltzmann distribution (for canonical ensemble)
 - Equilibrium is a consequence of maximizing entropy of the universe
 - We can locally apply the equilibrium thermodynamics to describe kinetic process (though we don't know how fast yet)
 
-## Formal Framework 
+## Formal framework
 
 In Onsager's Irreversible Thermodynamics, for any thermodynamic parameter $X$, we define
 
@@ -232,7 +232,7 @@ $$
 L_{ij} = \dfrac{\partial J_i}{\partial F_j}
 $$
 
-## Postulate 1: Local Equilibrium
+## Postulate 1: local equilibrium
 
 - It is generally possible to use principles of the
 **continuum limit** to define meaningful, useful,
@@ -245,7 +245,7 @@ rate of a process and the local departure from
 equilibrium (“**driving force**”).
 
 
-## Postulate 2: Entropy Production
+## Postulate 2: entropy production
 
 Irreversible Process is An Increase of Entropy in the Universe
 
@@ -261,7 +261,7 @@ $$
 - Entropy can flow between micro-systems
 - Rate of entropy production (entropy generation + flow) must be positive
 
-## Postulate 3: Linearity
+## Postulate 3: linearity
 
 - The relation between $J$ and $X$ can be linearly described (resistive system).
 - Flux is only dependent on the affinity **at the same time**
@@ -279,13 +279,13 @@ $$
 \mathbf{J} = \mathbf{L}\cdot\mathbf{F}
 $$
 
-- Coefficient $L_{ii}$ is called **direct kinetic coefcient**
+- Coefficient $L_{ii}$ is called **direct kinetic coefficient**
   - Affinity $F_{i}$ is called **conjugate driving force** w.r.t. $J_i$
 - Coefficient $L_{ij}(i\neq j)$ is called **coupling coefficient**
 
-## Postulate 4: Reciprosity
+## Postulate 4: reciprocity
 
-Onsager propose that
+Onsager proposed that
 
 $$
 L_{ij} = L_{ji}

@@ -43,7 +43,7 @@ After this lecture, you will be able to:
 - Derive Arrhenius-type diffusivity from a 1D potential well model
 - Identify assumptions and missing physics in simple diffusion models
 
-## Recap: Linking Atomistic Motion to Diffusion {.center}
+## Recap: linking atomistic motion to diffusion {.center}
 
 From last lecture:
 
@@ -52,7 +52,7 @@ From last lecture:
 - Einstein equation links MSD to macroscopic diffusivity
 
 
-## Einstein Diffusion Equation
+## Einstein diffusion equation
 
 Define MSD as the normalized second moment of concentration:
 
@@ -71,7 +71,7 @@ Using solution to point source diffusion, Einstein showed:
 - 2D: $\langle R^2\rangle = 4Dt$
 - 1D: $\langle R^2\rangle = 2Dt$
 
-## Random-Walk Model Solution to MSD
+## Random-walk model solution to MSD
 
 MSD in a 1D random-walk model is the expectance value of $\text{Distance}^2$:
 
@@ -83,7 +83,7 @@ MSD in a 1D random-walk model is the expectance value of $\text{Distance}^2$:
 \end{align}
 ```
 
-## Linking Einstein Equation To Random Walk Model
+## Linking Einstein equation to random walk model
 
 - Two methods should give the same result for $\langle R^2(t)\rangle$
 - $t$ in Einstein's method is just $\tau$ in random walk model
@@ -119,7 +119,7 @@ D &= \frac{\Gamma \langle r^2\rangle}{6};\quad \text{3D} \\
 
 :::
 
-## In-Depth Analysis of Microscopic $D$ Formula
+## In-depth analysis of microscopic $D$ formula
 
 ```{=tex}
 \begin{align}
@@ -136,7 +136,7 @@ Units:
 - Frequency $\Gamma$: $\text{s}^{-1}$
 - The macroscopic diffusivity is directly linked to microscopic movements!
 
-## Correction For Correlated Jumps
+## Correction for correlated jumps
 
 The random-walk model considers "uncorrelated" jumps, where subsequent
 events are independent of previous steps, where $\langle R^2\rangle = N_{\tau} \langle r^2\rangle$.
@@ -156,7 +156,7 @@ f &\leq 1\;\quad\text{for correlated-jump}
 \end{align}
 ```
 
-## Application of Microscopic Diffusivity Equation
+## Application of microscopic diffusivity equation
 
 The master equation for microscopic diffusivity becomes
 
@@ -175,7 +175,7 @@ Applicable fields?
 - Amorphous material / polymers? ✅ -- Modified Stokes-Einstein
 - Solid? ✅ -- various mechanism
 
-## Case 1: Gas-Phase Diffusivity
+## Case 1: gas-phase diffusivity
 
 $\Gamma$ and $r^2$ in gas phase can be solved using statistical
 mechanics treatment (kinetic theory). Some important results:
@@ -202,7 +202,7 @@ D &= \frac{1}{3} \langle u \rangle \lambda
 \end{align}
 ```
 
-## Gas-Phase Diffusivity: $T, p$ relations
+## Gas-phase diffusivity: $T, p$ relations
 
 Using ideal gas law $p = n k_B T$, it is possible to show
 
@@ -217,7 +217,7 @@ Methods like the Chapman-Enskog theory has such power laws with $T$
 and $p$, and can predict $D$ in gas phase within 10% error compared to
 experimental results.
 
-## Case 2: Liquid-Phase Diffusivity
+## Case 2: liquid-phase diffusivity
 
 Recall the macroscopic model for diffusivity (Einstein relation) that links mobility $M$ to diffusivity $D$ using steady-state motion of a particle in a frictous fluid:
 
@@ -234,7 +234,7 @@ $f_{drag} = k_{f} v$, where $k_{f}$ is the friction factor.
 
 We will see the mobility treatment is essentially the same as $D \propto \Gamma \langle r^2 \rangle$.
 
-## Newton's Equation For Transport In Frictuous Liquid
+## Newton's equation for transport in frictuous liquid
 
 - Goal: from dynamic equation of the system --> expressions for $\Gamma$ and $\langle r^2 \rangle$
 
@@ -254,7 +254,7 @@ m \frac{\partial^2 x}{\partial t^2} &= F_{d} - k_f \frac{\partial x}{\partial t}
 \end{align}
 ```
 
-## Transport In Frictuous Liquid: Results
+## Transport in frictuous liquid: results
 
 We're more interested in the average displacement $x^2$. In 1D system it follows:
 
@@ -268,7 +268,7 @@ We're more interested in the average displacement $x^2$. In 1D system it follows
 
 Which means $\langle x^2 \rangle$ linearly increases with time!
 
-## Linking Diffusivity Results
+## Linking diffusivity results
 
 For 3D
 system where $x, y, z$ motions are independent, $\langle R^2 \rangle =
@@ -302,7 +302,7 @@ D &= M k_B T\\
 - Viscosity $\eta$ (unit $\text{Pa}\cdot \text{s}$) typically follows thermal activation $\eta \propto \exp(A/T)$
 - What about the radius $R$ for _non-spherical_ objects?
 
-## Polymer Diffusivity Models
+## Polymer diffusivity models
 
 In linear polymer with $N$ repeating units, each having characteristic
 lenth $b$, the self-diffusivity follows:
@@ -328,7 +328,7 @@ N^{1/2} b & \theta \text{theta solvent}
 - Good solvent: polymer–solvent interaction is favorable 
 - Theta solvent: polymer–solvent interaction is neutral (like ideal chain)
 
-## Case 3: Diffusivity in Solids
+## Case 3: diffusivity in solids
 
 The relation $D = \frac{\Gamma r^2}{6} f$ can be applied to diffusion in solids, if we know the type of _mechanism_
 
@@ -342,7 +342,7 @@ Some terminologies:
 
 Key of diffusion theory: barrier ⇔ diffusivity
 
-## Solid Diffusion: Potential Well Model
+## Solid diffusion: potential well model
 
 The easiest model to illustrate the effect of an energy barrier is the
 potential well model. Our goal is still to find:
@@ -350,7 +350,7 @@ potential well model. Our goal is still to find:
 1) Expression for $\Gamma$, $r^2$ (and optionally $f$)
 2) Derive $D = \frac{\Gamma r^2}{6} f$
 
-## Step-Function Potential Well Model
+## Step-function potential well model
 
 Key results:
 
@@ -375,7 +375,7 @@ D &= \sqrt{\dfrac{k_B T}{2 \pi m}} \frac{(L_w + L_a)^2}{L_w} e^{-\dfrac{E^a}{k_B
 \end{align}
 ```
 
-## More Complex Landscape: Parabolic Well Model
+## More complex landscape: parabolic well model
 
 - Near the bottom of well,
 $E(x) = E_{min} + \frac{\beta}{2} (x - x_{min})^2$
@@ -391,7 +391,7 @@ e^{-\frac{E^a}{k_B T}}
 
 Again, the jumping frequency is related to thermal activation.
 
-## What Is Missing In This Picture?
+## What is missing in this picture?
 
 - One-particle energy landscape --> many-body landscape
 - Static potential --> configuration-dependent $E(\vec{x})$
@@ -399,7 +399,7 @@ Again, the jumping frequency is related to thermal activation.
 - Uncorrelated jump --> correlated movement
 - Single jump event --> symmetry multiplication in lattice
 
-## Case 3: Diffusion In Many-Body Potential Landscape
+## Case 3: diffusion in many-body potential landscape
 
 - Different modes of movement co-exist
 - General solution still follows the Boltzmann-distribution-like equation (see _KOM eq. 7.25_ )
@@ -414,7 +414,7 @@ Again, the jumping frequency is related to thermal activation.
 - Attempt frequency related to jumping angular momentum: $\nu = \omega_J / (2 \pi)$
 - Activation entropy $S^m$ related to all angular momenta in the system.
 
-## In-Depth Discussion About $D$
+## In-depth discussion about $D$
 
 - Arrhenius-type equation:
 
@@ -436,7 +436,6 @@ In this lecture we covered the following topics:
 - Master equation $D = \dfrac{\Gamma r^2}{6}f$
 - Case studies of diffusivities in gas and liquid phases
 - Derivation of Arrhenius diffusivity equation using the potential well model
-
 
 
 

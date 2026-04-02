@@ -102,7 +102,7 @@ aggregated state, but aggregation may be delayed if particles must
 overcome a barrier.
 
 :::{.columns}
-:::{.column width=“50%”}
+:::{.column width="50%"}
 
 Key idea:
 
@@ -112,7 +112,7 @@ Key idea:
 
 :::
 
-:::{.column width=“50%”}
+:::{.column width="50%"}
 
 ![](../L18/public/col-stablitiy.png)
 :::
@@ -219,7 +219,7 @@ Combining Poisson and Boltzmann gives the nonlinear PB equation
 
 For a symmetric electrolyte and planar geometry, this becomes the standard 1D form.
 
-## Solution to the PB Equation: Planar geometry and boundary conditions
+## Solution to the PB equation: planar geometry and boundary conditions
 
 Take $x$ normal to a flat charged surface. Far from the surface, the solution must recover bulk electroneutrality:
 
@@ -293,7 +293,7 @@ then the PB equation can be linearized, often called the Debye-Hückel (DH) appr
 ```
 
 
-## Potential Profile in Debye-Hückel Approximation
+## Potential profile in Debye-Hückel approximation
 
 The linearized equation in DH approximation becomes
 
@@ -315,7 +315,7 @@ We know from the diffusion concepts it is like a steady-state Fick's second law,
 \end{align}
 ```
 
-## Debye-Hückel Approximation: Screening Length
+## Debye-Hückel approximation: screening length
 
 One consequence of the DH approximation is that the electrostatic
 screening is related with the charge concentrations in the liquid:
@@ -342,7 +342,7 @@ c_{i, 0}$ is the ionic strength.
 - high ionic strength $I$ $\rightarrow$ shorter screening length
 - low ionic strength $I$ $\rightarrow$ longer-range repulsion
 
-## In-Depth View of The Screening Length
+## In-depth view of the screening length
 
 From the Debye-Hückel Approximation, we typically can use the following handy rule:
 
@@ -353,13 +353,13 @@ $$
 when the solute concentration $c_{i, 0}$ is in mol/L. For
 example, for a $10^{−3}$ M,  1:1 electrolyte, $1/\kappa = 9.6$ nm.
 
-## Shape of Debye-Hückel Approximation
+## Shape of Debye-Hückel approximation
 
 Where can I find the screening length $\kappa^{-1}$?
 
 ![](./public/Debye-Huckel.png)
 
-## Poisson-Boltzmann in High Potential Regime: Guy-Chapman Equation
+## Poisson-Boltzmann in high potential regime: Guy-Chapman equation
 
 The Debye–Hückel approximation assumes small potential
 

@@ -67,7 +67,7 @@ to perform sampling in a (usually) high-dimensional space.
 
 ## Historical background for sampling-based method: Buffon's needle problem
 
-[Buffon's need problem](https://en.wikipedia.org/wiki/Buffon%27s_needle_problem) is one of the earliest demonstration to estimate an unknown quantity (here $\pi$) via sampling. The probability of a needle with length $l$ intersecting parallel lines spaced at $d$ is:
+[Buffon's needle problem](https://en.wikipedia.org/wiki/Buffon%27s_needle_problem) is one of the earliest demonstrations to estimate an unknown quantity (here $\pi$) via sampling. The probability of a needle with length $l$ intersecting parallel lines spaced at $d$ is:
 
 $$
 p = \frac{2}{\pi} \frac{l}{d}
@@ -79,10 +79,10 @@ $$
 ::: {.content-visible when-format="html"}
 
 
-## Buffon's need problem: visualization
+## Buffon's needle problem: visualization
 
 - How fast do the MC sampling converge?
-- Can such integation be distributed over different systems?
+- Can such integration be distributed over different systems?
 
 ![Simulation from wikipedia](./public/Buffon_needle_experiment_compressed.gif)
 
@@ -97,7 +97,7 @@ J_A = -\tilde{D}\nabla c_A
 $$
 
 and we can simulate the process (i.e. not knowing $\tilde{D}$) while
-only caring about the probabilitites a vacancy exchanges with a
+only caring about the probabilities that a vacancy exchanges with a
 certain type of atom.
 
 - Why are the probability picture and diffusion the same thing? 👉 See answers to Assignment 2
@@ -113,7 +113,7 @@ Newton’s equations of motion) but rather in a stochastic manner
 which depends on a sequence of random numbers which is
 generated during the simulation.
 
-## Monte Carlo method vs Molecular Dynamics
+## Monte Carlo method vs molecular dynamics
 
 The Monte Carlo (MD) method and Molecular Dynamics (MD) are both
 simulation techniques in material science but can be easily confused.
@@ -138,7 +138,7 @@ simulation techniques in material science but can be easily confused.
 
 One main topic in the kinetics course is how to link the probability
 of a system to a certain energy scale. For a property $A$ of interest,
-in the cannonical (NVT) ensemble of system, such distribution follow
+in the canonical (NVT) ensemble of system, such distribution follows
 the Boltzmann distribution
 
 $$
@@ -347,7 +347,7 @@ In a Metropolis MC simulation using the Potts model, Monte Carlo algorithm updat
 
 ![[_npj Comput Mater_ 6, 125 (2020)](https://doi.org/10.1038/s41524-020-00392-6)](./public/potts-polycrystal.png)
 
-## Monte Carlo in temporal domain: Kinetic Monte Carlo (KMC)
+## Monte Carlo in temporal domain: kinetic Monte Carlo (KMC)
 
 From our previous examples we clearly see the (Metropolis) MC method
 is a powerful tool to reveal equilibrium composition, but what about
@@ -423,7 +423,7 @@ KMC simulation can handle much large length and timescales than MD.
 
 ![](../L11/public/ncomm-sem.png)
 
-## Deposition on Graphene - Theoretical Simulations
+## Deposition on Graphene - theoretical simulations
 
 - Kinetic Monte Carlo (kMC) assuming different diffusion barrier on imperfections
 - Faster diffusion direction --> lower density
@@ -437,7 +437,7 @@ KMC simulation can handle much large length and timescales than MD.
 
 ![](../L11/public/ncomm-kmc2.png)
 
-## Deposition on Graphene - KMC vs Experiments
+## Deposition on Graphene - KMC vs experiments
 
 
 ![](../L11/public/ncomm-kmc-exp.png)

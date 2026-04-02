@@ -23,20 +23,20 @@ format:
 
 # Kinetics of Materials Part II
 
-## What Topics Have We Learned So Far?
+## What topics have we learned so far?
 
 - How to describe kinetic process: **irreversible thermodynamics**
 - What causes nonequilibrium mass transfer: **chemical potential** as driving force
 - Diffusion in materials: **Fick's equations**
 - Determine diffusivity $D$: **Macroscopic** and **Microscopic** models
 
-## What Do We Study In Part II?
+## What do we study in Part II?
 
 Insights from assignments 1 and 2
 
 ![](./public/assignment-comparison.svg){.center}
 
-## Topic 1: Phase Transformation
+## Topic 1: phase transformation
 
 **Key question**: how do materials evolve when chemical potentials are not at equilibrium?
 
@@ -59,7 +59,7 @@ Insights from assignments 1 and 2
 
 
 
-## Topic 2: Interfacial Phenomena
+## Topic 2: interfacial phenomena
 
 **Key question**: how do material interfaces change in non-equilibrium process?
 
@@ -82,7 +82,7 @@ Insights from assignments 1 and 2
 
 
 
-## Topic 3: Analysis of Kinetic Process In Materials
+## Topic 3: analysis of kinetic process in materials
 
 **Key question**: how do the competition between different effects change the material behaviour?
 
@@ -108,7 +108,7 @@ Insights from assignments 1 and 2
 :::
 
 
-## Topic 4: Simulating Kinetic Problems
+## Topic 4: simulating kinetic problems
 
 **Key question**: what methods can we use to simulate kinetic systems, and how good are they?
 
@@ -117,7 +117,7 @@ Insights from assignments 1 and 2
 - Molecular dynamics (**MD**)
 - Thermodynamic parameters from **first principles** and **machine learning**
 
-# Introduction To Phase Transformation
+# Introduction to phase transformation
 
 ## Learning outcomes {.center}
 
@@ -130,7 +130,7 @@ After this lecture, you will be able to:
 
 This lecture is adapted from Porter et al. _Phase Transformations in Metals and Alloys_
 
-## What Is Phase Transformation?
+## What is phase transformation?
 
 Before introducing any fancy terminologies, let's define a few concepts:
 
@@ -155,7 +155,7 @@ Before introducing any fancy terminologies, let's define a few concepts:
 
 :::
 
-## What Can Be Considered As A Phase?
+## What can be considered as a phase?
 
 - Mathematically (Landau & Lifshitz 1963), different phases are distinguished by _order parameter_ $\xi$
 - The molar free energy $F(T, \xi)$ can be written as a series expansion of $\xi$
@@ -171,7 +171,7 @@ F(T, \xi) = a_0(T) + a_1(T)\xi + a_2(T)\xi^2 + \cdots{}
   - $F$ is continuous at phase interfaces, 
   - $\xi$ has abrupt jump
 
-## General Picture of Phase Transformation (1st-Order)
+## General picture of phase transformation (1st-order)
 
 - Example of solid-liquid transformation (KOM book)
 - Order parameter $\xi$ can be arbitrary
@@ -179,7 +179,7 @@ F(T, \xi) = a_0(T) + a_1(T)\xi + a_2(T)\xi^2 + \cdots{}
 
 ![](./public/order-parameter.png)
 
-## What Quantity Can Be A Order Parameter?
+## What quantity can be an order parameter?
 
 :::{.columns}
 :::{.column width="50%"}
@@ -201,7 +201,7 @@ Magnetization as order parameter (second-order transition)
 
 :::
 
-## Disecting The Solid-Liquid Free Energy Diagram
+## Dissecting the solid-liquid free energy diagram
 
 - Typical $H$ and $G$ diagrams for the single-component system
 - $G$ is continuous while $H$ is discontinuous
@@ -209,12 +209,12 @@ Magnetization as order parameter (second-order transition)
 
 ![](./public/porter-free-energy.png)
 
-## How Do We Get Here?
+## How do we get here?
 
 - Enthalpy from specific heat $C_p$: $C_p = \left(\dfrac{\partial H}{\partial T}\right)\vert_{p}$
 - Entropy from specific heat: $\dfrac{C_p}{T} = \left(\dfrac{\partial S}{\partial T}\right)\vert_{p}$
 
-## Single-Component System: Including Pressure
+## Single-component system: including pressure
 
 - Left to right: increasing $T$ (melting / evaporation)
 - Lower to upper: increasing $p$ (condensation)
@@ -222,7 +222,7 @@ Magnetization as order parameter (second-order transition)
 
 ![](./public/single-comp-pT.png)
 
-## Single-Component System: Slope of Phase Boundary
+## Single-component system: slope of phase boundary
 
 - Phase boundary equilibrium $G^{\alpha} = G^{\beta}$
 - Slope of $p-T$ diagram: Clausius-Clapeyron equation
@@ -234,13 +234,13 @@ Magnetization as order parameter (second-order transition)
 \end{align}
 ```
 
-## Reading Single-Component Phase Diagram (Fe)
+## Reading single-component phase diagram (Fe)
 
 - What can we say about the lattice structure about Fe allotropes?
 
 ![](./public/Fe-phase-diagram.png){width="55%"}
 
-## Free Energy Diagrams of Binary Mixture
+## Free energy diagrams of binary mixture
 
 - Mixing of two materials A and B causes free energy to change
 - Before mixing, **molar** free energies $G_A$, $G_B$
@@ -254,7 +254,7 @@ G = X_A G_A + X_B G_B + \Delta G_{\text{mix}}
 
 ![](./public/g-mix.png)
 
-## Ideal Solution: Mixing Entropy
+## Ideal solution: mixing entropy
 
 - In ideal solution $\Delta G_{\text{mix}} = -T \Delta S_{\text{mix}}$
 - Ideal mixing entropy
@@ -263,14 +263,14 @@ $$
 \Delta S_{\text{mix}} = -R (X_A \ln X_A + X_B \ln X_B)
 $$
 
-## Chemical Potential On Molar Free Energy Diagram
+## Chemical potential on molar free energy diagram
 
 - Chemical potential from $G$: $\mu_A = \left(\frac{\partial G}{\partial X_A}\right)\vert_{T, p, X_B}$
 - Ideal solution: $\mu_A = G_A + RT \ln X_A$
 
 ![Graphical explanation of chemical potential](./public/chem-pot-phase-diag.png){width="50%"}
 
-## Regular Solution: Mixing Enthalpy
+## Regular solution: mixing enthalpy
 
 - Generally $\Delta H_{\text{mix}} \neq 0$
 - Can be expressed by "likeliness" between A-B
@@ -281,11 +281,11 @@ $$
 
 ![](./public/AB-likeliness.png){width="60%"}
 
-## Enthalpic and Entropic Contributions To Mixing
+## Enthalpic and entropic contributions to mixing
 
 ![](./public/delta-g-mix-figure.png){width="60%"}
 
-## Heterogeneous Phase Diagram
+## Heterogeneous phase diagram
 
 - At each $T$, molar free energy of 2 phases are calculated separately
 - Imaginary "unstable lattice" for incompatible crystals
@@ -293,33 +293,33 @@ $$
 
 ![](./public/hetero-free-energy-diagram.png)
 
-## Heterogeneous System: Equilibrium
+## Heterogeneous system: equilibrium
 
 - Equilibrium condition (common tangent): $\mu_A^\alpha = \mu_A^\beta$ & $\mu_B^\alpha = \mu_B^\beta$
 - Lever rule: graphical explanation
 
 ![](./public/hetero-lever-rule.png)
 
-## Phase Diagram Example 1: Completely Miscible Solid & Liquid
+## Phase diagram example 1: completely miscible solid & liquid
 
 - E.g. Cu–Ni alloy (fcc)
 
 ![](./public/complete-miscible-phase-diag.png)
 
-## Phase Diagram Example 2: Miscibility Gap
+## Phase diagram example 2: miscibility gap
 
 - Solid state $\Delta H_{\text{mix}} > 0$
 - Will be our example for spinodal decomposition
 
 ![](./public/miscibility-gap-phase-diag.png)
 
-## Phase Diagram Example 3: Eutetic Alloy (Same Lattice)
+## Phase diagram example 3: eutectic alloy (same lattice)
 
 - Eutetic formation due to dominant solid-phase
 
 ![](./public/eutetic-phase-diagram.png)
 
-## Additional Effects For Phase Stability
+## Additional effects for phase stability
 
 - Phase diagram does not tell everything!
 - Stability of a phase depends on
@@ -330,11 +330,11 @@ $$
   - Interface influence: **nucleation theory**
   - Kinetic stability: **spinodal decomposition**
 
-## Preview: Influence of Interfacial Energy
+## Preview: influence of interfacial energy
 
 ![](./public/interfacial-influence.png)
 
-## Preview: Second-Order Stability In Spinodal Decomposition
+## Preview: second-order stability in spinodal decomposition
 
 ![](./public/spinodal.png)
 
@@ -346,7 +346,5 @@ In today's lecture, we overviewed the origin of phase transformation and phase d
 - Equilibrium phase diagram is constructed by the lowest free energy phase
 - Free energy of mixing --> chemical potential --> constructing phase diagram
 - Basic literacy in phase diagram reading!
-
-
 
 

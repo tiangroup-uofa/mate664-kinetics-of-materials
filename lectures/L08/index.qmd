@@ -42,7 +42,7 @@ After this lecture, you will be able to:
 - **Apply** numerical methods to diffusion problems and diffusivity extraction
 - **Analyze** the atomic origin of diffusion
 
-## Numerical Method For Diffusion Equation
+## Numerical method for diffusion equation
 
 In many cases the analytical solutions to a diffusion equation is hard / impossible to obtain, due to:
 
@@ -60,7 +60,7 @@ For 1D problem 👉 use the **finite difference** (FD) method first proposed by 
 
 ![](./public/euler_meme.png){width="80%"}
 
-## FD In A Nutshell
+## FD in a nutshell
 
 To solve the diffusion equation, we need to **discretize** spatial and
 temporal domains into "grids".
@@ -68,7 +68,7 @@ temporal domains into "grids".
 ![](./public/fd-grid-2d.svg){width="80%"}
 
 
-## Derivatives By Finite Difference
+## Derivatives by finite difference
 
 In Fick's second law, the required derivatives and their finite-difference
 approximations are summarized below.
@@ -124,7 +124,7 @@ c(i,j)
 \end{align}
 ```
 
-## Things To Check In FD Scheme
+## Things to check in FD scheme
 
 - Grid stability condition  
 
@@ -157,7 +157,7 @@ c(i,j)
 
 - Development of solvers is a hot field for engineering!
 
-## Some Skeleton Code in Python
+## Some skeleton code in Python
 
 MOL can usually be implemented using pure Python in less than 20 lines
 (really not that difficult!)
@@ -192,7 +192,7 @@ def solve_diffusion(c0, t_span, D, dx):
     return sol
 ```
 
-## FD Numerical Method Demo
+## FD numerical method demo
 
 How do FD compare with analytical solution?
 
@@ -201,7 +201,7 @@ How do FD compare with analytical solution?
 		src="../../scripts/L08_fd_comparison.html" title="Webpage example"></iframe>
 ```
 
-## Estimating Diffusivity: Example 1
+## Estimating diffusivity: example 1
 
 The first diffusivity in metal was presented in 1894 by Roberts-Austen using diffusion of Au in liquid Pb. (See review by _Mehrer and Stolwijk, Diffusion Fundamentals, 2008, 1, 1-32_).
 
@@ -211,7 +211,7 @@ below. Experiment weight fraction of Au was determined by precision scales on se
 
 ![](./public/roberts-austen-exp-setup.svg){width="50%"}
 
-## Roberts-Austen Experiment: Original Data & Setup
+## Roberts-Austen experiment: original data & setup
 
 See [Bakerian Lecture: On the Diffusion of Metals. Roberts-Austen](https://archive.org/details/philtrans09730582/page/n9/mode/2up)
 
@@ -230,14 +230,14 @@ See [Bakerian Lecture: On the Diffusion of Metals. Roberts-Austen](https://archi
 
 :::
 
-## Roberts-Austen Experiment: Fitting
+## Roberts-Austen experiment: fitting
 
 ```{=html}
 <iframe width="100%" height="900"
 		src="../../scripts/L08_pb_au_diff_fit.html" title="Webpage example"></iframe>
 ```
 
-## More Complex Situation: Multiphase Interdiffusion
+## More complex situation: multiphase interdiffusion
 
 - Diffusion couple experiments often cross phase boundaries
   - single-phase → two-phase → single-phase regions
@@ -263,7 +263,7 @@ annealed at 2200°C (_adapted from MIT KOM course_)
 
 # Introduction to Atomic Models of Diffusion
 
-## Motivation: Predicting $D$ From Atomistic Simulations
+## Motivation: predicting $D$ from atomistic simulations
 
 - We know from experiments how to extract the $D$ (or $\tilde{D}$) very well
 - But how are the diffusivities coming from atomic models?
@@ -281,7 +281,7 @@ Two major achievements in 20th century
   - diffusion coefficient related to jump frequency and jump distance
   - connects lattice-scale mechanisms to continuum transport equations
   
-## Mean Squared Displacement (Brownian Motion Picture)
+## Mean squared displacement (Brownian motion picture)
 
 A particle undergoes a sequence of thermally activated jumps
 
@@ -302,7 +302,7 @@ $$
 
 ---
 
-## MSD: Expansion and Randomness Assumption
+## MSD: expansion and randomness assumption
 
 Expand the dot product:
 
@@ -332,7 +332,7 @@ where $\langle r^2 \rangle$ is the mean squared jump distance.
 
 ---
 
-## Random Jump MSD from Continuum Diffusion
+## Random jump MSD from continuum diffusion
 
 Consider diffusion from a point source in 3D into infinite space. The concentration at each $r$ at any time $t$ is $c(r, t)$
 
@@ -351,7 +351,7 @@ c(r, t) = \frac{N}{{\sqrt{4 \pi Dt}}^3}
 \exp\!(-\frac{r^2}{4Dt}),\qquad r^2 = x^2 + y^2 + z^2
 $$
 
-## Einstein Diffusion Equation From Continuum Diffusio
+## Einstein diffusion equation from continuum diffusion
 
 Use the Gaussian form, Einstein showed for 3D random jump, we have 
 
@@ -368,7 +368,7 @@ $$
 - This is known as Einstein diffusion equation
 - Links atomic motion (Brownian motion, $<R^2>$) to continuum diffusion ($D$)
 
-## Diffusion From Random Walk Model
+## Diffusion from random walk model
 
 1D random walk with step $\pm 1$ (site index $n$)
 
@@ -400,7 +400,7 @@ $$
 
 ---
 
-## Linking Random Walk to Macroscopic $D$
+## Linking random walk to macroscopic $D$
 
 Identify:
 
@@ -444,7 +444,7 @@ $$
 - Applying numerical fitting for $D$
 - Introducing to atomic picture of diffusivity
 
-## Next Steps
+## Next steps
 
 - Understanding the atomic model in liquid and lattices
 - Complex mechanism of lattice diffusion
@@ -463,7 +463,6 @@ $$
 <!-- - Numerical solutions to diffusion problems -->
 <!-- - Estimation of diffusivity from solutions -->
 <!-- - Introduction to atomic model of diffusion -->
-
 
 
 

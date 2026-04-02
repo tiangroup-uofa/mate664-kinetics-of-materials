@@ -29,7 +29,7 @@ Key ideas from last lecture:
 - Deriving diffusivity from driving force terms
 - Differentiate reference frames used for diffusion equations
 
-## Recap: Intrinsic Diffusivity Expression
+## Recap: intrinsic diffusivity expression
 
 For component $i$ (notation from notes)
 
@@ -49,7 +49,7 @@ $$
 \Phi(c) = 1+\frac{\partial \ln \gamma_i}{\partial \ln c_i}
 $$
 
-## Recap: Interdiffusivity (Binary)
+## Recap: interdiffusivity (binary)
 
 Binary mixture
 
@@ -72,7 +72,7 @@ After this lecture, you will be able to:
 - **Identify** separation of variables and Laplace transform as diffusion solution strategies
 
 
-## Remaining Question 1: Kirkendall Effect
+## Remaining question 1: Kirkendall effect
 
 ![Kirkendall effect demo](./public/kirkendall.png){width="100%"}
 
@@ -83,7 +83,7 @@ Key observation
 
 ---
 
-## C-frame vs V-frame Fluxes
+## C-frame vs V-frame fluxes
 
 **C-frame** (lattice frame)
 
@@ -101,7 +101,7 @@ Interpretation
 
 ---
 
-## Kirkendall Effect: Physical Meaning
+## Kirkendall effect: physical meaning
 
 Experimentally measured lattice shift
 
@@ -112,7 +112,7 @@ Experimentally measured lattice shift
 
 ---
 
-## Kirkendall Effect: Analog
+## Kirkendall effect: analog
 
 ![](./public/kirkendall-analog.svg){width="80%"}
 
@@ -121,7 +121,7 @@ Experimentally measured lattice shift
 - Fixed membrane 👉 expanding voids
 
 
-## Kirkendall Effect: Simulations
+## Kirkendall effect: simulations
 
 See [simulation of vacancy mechanism](https://www.doitpoms.ac.uk/tlplib/diffusion/HTML5/kirkendall.html)
 
@@ -129,7 +129,7 @@ _Credit: Dissemination of IT for the Promotion of Materials Science (DoITPoMS), 
 
 ---
 
-## Remaining Question 2: Interstitial Diffusion Setup
+## Remaining question 2: interstitial diffusion setup
 
 ![Interstitial diffusion](./public/Interstitial-diffusion-1024x575.jpg){width="75%"}
 
@@ -141,7 +141,7 @@ Model ideas:
 
 ---
 
-## Mobility and Diffusivity in C-frame
+## Mobility and diffusivity in C-frame
 
 C-frame velocity
 
@@ -167,7 +167,7 @@ Connection
 
 ---
 
-## V-frame Analysis
+## V-frame analysis
 
 Special Case: Diffusivity of 2 → 1 with $D_2=0$
 
@@ -202,7 +202,7 @@ The interdiffusivity now becomes:
 - interdiffusivity depends on "how many sites" the smaller species can use
 - this expression only applicable for interstitial diffusion!
 
-## Driving Forces Beyond Chemical Potential
+## Driving forces beyond chemical potential
 
 We often used $\mu_i$ as driving force for diffusion, but
 other contributions  exist.
@@ -219,7 +219,7 @@ $$
 - capillarity / surface curvature effects
 - etc.
 
-## How Do We Determine $D$?
+## How do we determine $D$?
 
 General experimental workflow:
 
@@ -230,7 +230,7 @@ General experimental workflow:
 
 ---
 
-## Forward Problem vs Inverse Problem
+## Forward problem vs inverse problem
 
 **Given**
 
@@ -246,7 +246,7 @@ General experimental workflow:
 - infer $D$ from measured $c(x,t)$
 
 
-## What Do We Learn In The Following Lectures?
+## What do we learn in the following lectures?
 
 - We want **analytical** + **numerical** solutions to the diffusion equations (Fick's laws)
 
@@ -282,7 +282,7 @@ To solve we must specify
 
 ---
 
-## Part I: Steady State Diffusion
+## Part I: steady state diffusion
 
 Steady state
 
@@ -321,7 +321,7 @@ $$
 
 ---
 
-## Cylindrical Steady State (Radial)
+## Cylindrical steady state (radial)
 
 For axisymmetric $c=c(r)$
 
@@ -349,7 +349,7 @@ $$
 
 ---
 
-## Spherical Steady State (Radial)
+## Spherical steady state (radial)
 
 For $c=c(r)$
 
@@ -378,7 +378,7 @@ $$
 
 ---
 
-## Spatially Varying Diffusivity in Steady State
+## Spatially varying diffusivity in steady state
 
 Notes: still solvable if $D$ depends on 1 variable (e.g. $x$ or $r$)
 
@@ -401,7 +401,7 @@ Often requires numerical integration for $D(\xi)$.
 - Dirchlet boundary 👉 directly integration
 - Neumann boundary 👉 need to fix $dc/dx$ at boundary
 
-## Part II: Non-steady State Diffusion
+## Part II: non-steady state diffusion
 
 Different strategies
 
@@ -412,7 +412,7 @@ Different strategies
 
 ---
 
-## Method 1: Superposition of Known Solutions
+## Method 1: superposition of known solutions
 
 Use linearity of diffusion equation
 
@@ -426,7 +426,7 @@ also satisfies (with compatible IC/BC decomposition).
 
 ---
 
-## Inifinite Space: Half-Half Situation 
+## Infinite space: half-half situation
 
 Geometry: $x\ge 0$
 
@@ -445,7 +445,7 @@ How do we get here?
 
 ---
 
-## Limits and Checks
+## Limits and checks
 
 - $t\to 0^+$: $\operatorname{erfc}(x/(2\sqrt{Dt}))\to 0$ for $x>0$ ⇒ $c\to c_B$
 - $x\to 0$: $\operatorname{erfc}(0)=1$ ⇒ $c(0,t)=c_A$
@@ -791,7 +791,7 @@ How do we get here?
 
 <!-- --- -->
 
-## Next Steps
+## Next steps
 
 - Apply these solutions to real diffusion experiments
 - Extract $D$ by fitting measured $c(x,t)$
@@ -803,7 +803,6 @@ How do we get here?
 - Steady-state diffusion problems reduce to Laplace equations with geometry-dependent solutions
 - Non-steady diffusion problems can be solved using Gaussian and error-function solutions
 - Separation of variables and Laplace transforms provide general tools for solving diffusion equations
-
 
 
 

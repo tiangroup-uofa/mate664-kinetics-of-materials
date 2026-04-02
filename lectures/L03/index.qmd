@@ -68,7 +68,7 @@ After this lecture, you will be able to:
 
 ---
 
-## Entropy Balance Equation
+## Entropy balance equation
 
 General form:
 $$
@@ -79,7 +79,7 @@ $$
 - Production: entropy generated internally
 - Entropy **can flow** and **can be generated**
 
-## Entropy Production In Microscopic Cells
+## Entropy production in microscopic cells
 
 When applying local equilibrium, we generally consider **entropy density** $s = S_i / V_i$ for a certain _microscopic cell_.
 
@@ -96,7 +96,7 @@ $$
 
 ---
 
-## Irreversible Thermodynamics
+## Irreversible thermodynamics
 
 Central law:
 
@@ -110,7 +110,7 @@ $$
 
 ---
 
-## Entropy Balance: Solving $\dot{\sigma}$ and $\vec{J}_{s}$
+## Entropy balance: solving $\dot{\sigma}$ and $\vec{J}_{s}$
 
 Chain rule again! For any thermodynamic quantity $\xi_{i}$:
 
@@ -126,7 +126,7 @@ Chain rule again! For any thermodynamic quantity $\xi_{i}$:
 
 --- 
 
-## Entropy Flux and Production: Results
+## Entropy flux and production: results
 
 After arranging the formula for entropy balance and apply laws in vector operations, we get:
 
@@ -144,7 +144,7 @@ After arranging the formula for entropy balance and apply laws in vector operati
 
 ---
 
-## What Are The Affinities, Anyway?
+## What are the affinities, anyway?
 
 Consider generalized 1st law of thermodynamics:
 ```{=tex}
@@ -192,7 +192,7 @@ Each $(\psi_i,\xi_i)$ pair contributes to entropy change.
 
 ---
 
-## Entropy Flux and Production In Driving Force Terms
+## Entropy flux and production in driving force terms
 
 We can rewrite the entropy balance equation using individual fluxes:
 
@@ -214,7 +214,7 @@ We can rewrite the entropy balance equation using individual fluxes:
 
 ---
 
-## Entropy Production: With Flux of Heat Term
+## Entropy production: with flux of heat term
 
 Often we wanted to write entropy generation using flux of heat $\vec{J}_{Q} = T \vec{J}_s$:
 
@@ -231,7 +231,7 @@ Often we wanted to write entropy generation using flux of heat $\vec{J}_{Q} = T 
 
 ---
 
-## General Formula for Entropy Production
+## General formula for entropy production
 
 ```{=tex}
 \begin{align}
@@ -252,7 +252,7 @@ This compact form unifies all irreversible transport processes.
 
 ---
 
-## What Are The Driving Forces (From Irreversible Thermodynamics)?
+## What are the driving forces (from irreversible thermodynamics)?
 
 Some quantities and their driving forces, see _Balluffi Table 2.1_
 
@@ -268,7 +268,7 @@ Some quantities and their driving forces, see _Balluffi Table 2.1_
 
 -- 
 
-## Empirical Laws of Fluxes
+## Empirical laws of fluxes
 
 We also know that fluxes are having empirical relation to the driving force (in a gradient form):
 
@@ -298,7 +298,7 @@ $$
 
 ---
 
-## Entropy Production in the Uncoupled Case
+## Entropy production in the uncoupled case
 
 If each flux is influenced by only **one dominant driving force (D.F.)**:
 
@@ -322,7 +322,7 @@ $$
 
 ---
 
-## Consequences of Irreversible Dynamics (Uncoupled Driving Force)
+## Consequences of irreversible dynamics (uncoupled driving force)
 
 - Empirically, all transport coefficients are **positive** from irreversible thermodynamics
 
@@ -344,7 +344,7 @@ $$
 
 ---
 
-## Linear Irreversible Thermodynamics: Coupled Fluxes
+## Linear irreversible thermodynamics: coupled fluxes
 
 - Extensive quantities: $\xi_i$
 - Conjugate driving forces:
@@ -366,7 +366,7 @@ $$
 
 ---
 
-## Entropy Production with Coupling
+## Entropy production with coupling
 
 $$
 \dot{sigma}
@@ -382,7 +382,7 @@ $$
 
 ---
 
-## Onsager Reciprocity (Again!)
+## Onsager reciprocity (again!)
 
 Under microscopic reversibility:
 $$
@@ -396,7 +396,7 @@ $$
 
 ---
 
-## Physical Examples of Coupling
+## Physical examples of coupling
 
 - Thermoelectric effects (Seebeck / Peltier)
 - Thermodiffusion (Soret / Dufour)
@@ -404,18 +404,18 @@ $$
 
 ---
 
-## Coupling: Mass ↔ Thermal -- Soret / Dufour Effects
+## Coupling: mass ↔ thermal -- Soret / Dufour effects
 
 **Coupled flux–force relations**
 
 - Mass flux driven by temperature gradient (Soret effect)
 - Heat flux driven by concentration gradient (Dufour effect)
 
-_Derivation of Sorret thermal conductivity please see [lecture handwritten notes](./public/L03-notes_annotated.pdf)_
+_Derivation of Soret thermal conductivity please see [lecture handwritten notes](./public/L03-notes_annotated.pdf)_
 
 ![](./public/sorret.png){width="100%"}
 
-## Coupling: Charge ↔ Thermal -- Seebeck / Peltier Effects
+## Coupling: charge ↔ thermal -- Seebeck / Peltier effects
 
 **Coupled flux–force relations**
 - Electric current driven by temperature gradient (Seebeck effect)
@@ -423,21 +423,21 @@ _Derivation of Sorret thermal conductivity please see [lecture handwritten notes
 
 ![](./public/thermoelectro.jpg){width="100%"}
 
-## Coupling: Charge ↔ Mass -- Electrokinetic Phenomena
+## Coupling: charge ↔ mass -- electrokinetic phenomena
 
 **Coupled flux–force relations**
 - Charge and mass transport are interdependent in ionic systems
 
 ![](./public/electrokinetic.png){width="100%"}
 
-## General Matrix for Coupling Effects
+## General matrix for coupling effects
 
 Example coupling effect matrix given in _J. Phase Equilib. Diffus._ **2022** 43, 640
 
 ![](./public/coupling-matrix.png){width="60%"}
 
 
-## Some Additional Consequence of Onsager Reciprocity
+## Some additional consequence of Onsager reciprocity
 
 There are some consequences of Onsager's reciprocity. As Curie's symmetry principle (1894,  _Pierre_ Curie, _not Marie_) stated,
 the cause of an effect needs to follow tensor rank selection rule,

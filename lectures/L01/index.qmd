@@ -21,7 +21,7 @@ format:
 
 :::
 
-## Land Acknowledgement {.center}
+## Land acknowledgement {.center}
 
 #### The University of Alberta acknowledges that we are located on Treaty 6 territory, and respects the histories, languages, and cultures of the First Nations, Métis, Inuit, and all First Peoples of Canada, whose presence continues to enrich our vibrant community.
 
@@ -36,7 +36,7 @@ After this lecture, you will be able to:
 - **Recall** the assumptions of equilibrium
 - **Describe** the influence of entropy in kinetic systems
 
-## Course Information
+## Course information
 
 - **Course:** MAT E 664 – Kinetics of Materials
 - **Term:** Winter 2026
@@ -44,7 +44,7 @@ After this lecture, you will be able to:
 - **Time:** 14:00 – 15:20
 - **Location:** HC 2-14
 
-## Meet the Instructor
+## Meet the instructor
 
 - **Office**: DICE 12-245
 
@@ -56,7 +56,7 @@ After this lecture, you will be able to:
 - Research fields: machine learning, multiscale materials simulations, computational tools
 - Let’s enjoy learning together!
 
-## TAs & Seminar Sessions
+## TAs & seminar sessions
 
 - **Teaching Assistant**
   - Hanlin Wang — hanlin7@ualberta.ca
@@ -70,7 +70,7 @@ After this lecture, you will be able to:
   - One-on-one or small-group discussions
   - Concept clarification and guidance
   
-## Course Grading
+## Course grading
 - **Assignments:** 25%
   - 4 assignments (best 3 counted)
   - Submission via Canvas
@@ -85,7 +85,7 @@ After this lecture, you will be able to:
 
 _Details please see the [course syllabus](../../syllabus/assets/MATE664-winter-2026-course-syllabus.pdf)_
 
-## Textbook and References
+## Textbook and references
 
 Our primary textbooks for this course are:
 
@@ -126,7 +126,7 @@ Our primary textbooks for this course are:
 
 ---
 
-## What Will We Learn in MAT E 664 (1)?
+## What will we learn in MAT E 664 (1)?
 
 Theory: irreversible thermodynamics & driving forces
 
@@ -147,7 +147,7 @@ display: block;"
    
 ---
 
-## What Will We Learn in MAT E 664 (2)?
+## What will we learn in MAT E 664 (2)?
 
 Mass transport on solid material interfaces: $v_{step} = \beta (c - c_{eq})$
 
@@ -184,7 +184,7 @@ display: block;
 
 ---
 
-## What Will We Learn in MAT E 664 (4)?
+## What will we learn in MAT E 664 (4)?
 
 Spinodal Decomposition (Pattern Formation)
 $$
@@ -216,7 +216,7 @@ display: block;
 
 ---
 
-## Interaction Time!
+## Interaction time!
 
 We will use Wooclap in this course for real-time interactions.
 
@@ -237,7 +237,7 @@ Participation link 👉 [https://app.wooclap.com/664L01?from=instruction-slide](
 
 --- 
 
-## The True Meaning of Equilibrium
+## The true meaning of equilibrium
 
 Equilibrium is a balance of time scales:
 $$
@@ -263,7 +263,7 @@ margin: 0 auto;"
 
 --- 
 
-## Kinetic Processes
+## Kinetic processes
 
 Kinetic processes are distinct from thermodynamic equilibrium:
 
@@ -275,7 +275,7 @@ Kinetic processes are distinct from thermodynamic equilibrium:
 
 --- 
 
-## Classical Thermodynamics Revisited
+## Classical thermodynamics revisited
 
 <div style="width: 80%; text-align: center;">
 <img
@@ -293,7 +293,7 @@ margin: 0 auto;"
 
 --- 
 
-## ## Thermodynamic Interplay Between $H$ and $S$
+## Thermodynamic interplay between $H$ and $S$
 
 Whether a process from A → B is **spontaneous** or **non-spontaneous** depends on the sign of free energy difference, $\Delta G = G_{B} - G_{A}$.
 
@@ -314,7 +314,7 @@ margin: 0 auto;"
 - What is $\Delta G$ for a reversible process at equilibrium?: $\Delta G = 0$,
 - How can we check the stability of a certain material at $P, T$?: Use the phase diagram!
 
-## How Stable Is Diamond?
+## How stable is diamond?
 
 - Which phase is the most stable at r.t. & 1 atm?
 - Should we worry our diamond rings turn into pencil?
@@ -332,7 +332,7 @@ margin: 0 auto;"
 />
 </div>
 
-## Two-State model of Thermodynamics vs Kinetics
+## Two-state model of thermodynamics vs kinetics
 
 - $\Delta G^0$: Free energy of **reaction** → will reaction happen? (**Thermodynamics**)
 - $\Delta G^*$: Free energy of **activation** → how likely / fast? (**Kinetics**)
@@ -352,7 +352,7 @@ margin: 0 auto;"
 
 
 
-## Arrhenius Plot Demo
+## Arrhenius plot demo
 
 <iframe
   width="100%"
@@ -362,7 +362,7 @@ margin: 0 auto;"
 </iframe>
 
 
-## Where Does Entropy $S$ Come From?
+## Where does entropy $S$ come from?
 
 - Claussius (1865) **Classical thermodynamics**.
   - Entropy is a state variable of internal energy.
@@ -385,7 +385,7 @@ margin: 0 auto;"
 />
 </div>
 	
-## Why The Logarithm?
+## Why the logarithm?
 
 - $S$ as an **extensive** quantity → **Additive** $S_T = S_1 + S_2$
 - $\Omega$ as microstates is **multiplicative** → $\Omega_T = \Omega_1 \cdot \Omega_2$
@@ -433,7 +433,7 @@ margin: 0 auto;"
 </div>
 ^[_Small_ **2024**, 20, 2311929]
 
-## What Should We Really Think of Entropy
+## What should we really think of entropy
 
 - **Arrow of time**: mixed cream and coffee cannot be demixed
   - Newtonian dynamics is time-reversible
@@ -447,7 +447,7 @@ margin: 0 auto;"
   - Link to Heisenberg's principle $\Delta x \Delta p \leq \hbar/2$
   -  See Hirschman *Am. J. Math.*, **1957** 79, 152
   
-## Where Can We Go From Here?
+## Where can we go from here?
 
 - **Irreversible thermodynamics**
   
@@ -463,7 +463,7 @@ margin: 0 auto;"
 
 **Stay Tuned!**
 
-## Brief Introduction to Course AI Helper
+## Brief introduction to course AI helper
 
 - A Socratic Gemini chatbot aiming to help course learning and key concepts
 - **Access the AI helper here:**
@@ -486,5 +486,4 @@ What we learned today:
 - Laws of thermodynamics revisited
 
 **See you next time!**
-
 

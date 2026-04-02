@@ -58,7 +58,7 @@ we learned in this course:
 In 1850s, Faraday found that chemical treatment of thin gold films
 produced **ruby** colored liquid that **scattered** light. The liquid,
 kept in the basement of the Faraday Museum in London, is still stable
-up to toady!
+up to today!
 
 ![](./public/faraday-sol.png)
 
@@ -105,7 +105,7 @@ possible:
 ## Topic 2: how do unstable colloids aggregate?
 
 If the repulsive interactions between the particles are not strong
-enough to prevent coalscence, we will end up with the aggregation
+enough to prevent coalescence, we will end up with the aggregation
 phenomenon, very similar to the coarsening:
 
 - Diffusion limited colloidal aggregation (**DLCA**): particles will interact with each other instantly, but flux will be limited by the diffusion

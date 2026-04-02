@@ -232,7 +232,7 @@ D
 ```
 
 
-##  More realistic potential landscape
+## More realistic potential landscape
 
 - Real barriers are not rectangular
 - Near a minimum, a parabolic approximation is often better 👉 parabolic well model
@@ -252,7 +252,7 @@ E(x) = E_{\min} + \frac{\beta}{2}(x-x_{\min})^2
 ```
 
 
-## Moified attempt frequency for a parabolic well
+## Modified attempt frequency for a parabolic well
 
 The jump frequency in a parabolic well follows:
 
@@ -400,7 +400,7 @@ X_V
 
 ## Vacancy-assisted diffusion: final form
 
-After ombining vacancy formation and migration, $D_A$ becomes dependent on both vacancy
+After combining vacancy formation and migration, $D_A$ becomes dependent on both vacancy
 formation enthalpy and vacancy migration barrier!
 
 ```{=tex}
@@ -463,5 +463,4 @@ in particular:
 - Diffusion in ionic solids
 - Diffusion in imperfect solids
 - Short-circuit diffusion
-
 

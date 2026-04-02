@@ -29,7 +29,7 @@ Key ideas from last lecture:
 - Steady state solutions to diffusion problems (without convection)
 - Introduction to nonsteady state diffusion solutions
 
-## Recap: Steady-State Solutions to Diffusion Equations
+## Recap: steady-state solutions to diffusion equations
 
 Just to solve Laplace equation $\nabla^2 c = 0$. But $\nabla^2$ terms depend on the coordinate system!
 
@@ -41,7 +41,7 @@ $k_1, k_2$ are determined by the boundary conditions.
 
 - _Can we determine $D$ using steady state profile?_
 
-## Influence of Geometry on S.S. Solutions
+## Influence of geometry on S.S. solutions
 
 ```{=html}
 <iframe width="100%" height="900"
@@ -58,7 +58,7 @@ After this lecture, you will be able to:
 - **Describe** the key process in separation of variables method
 - **Apply** Laplace transform in initial value problems
 
-## Part II: Non-steady State Diffusion
+## Part II: non-steady state diffusion
 
 Different strategies (review)
 
@@ -69,7 +69,7 @@ Different strategies (review)
 
 ---
 
-## Dimensionless Transform of Diffusion
+## Dimensionless transform of diffusion
 
 - Analysis of many diffusion problems will benefit by transforming into dimensionless forms
 - Diffusion length scale $\sqrt{Dt}$ (or $\sqrt{4Dt}$)
@@ -83,7 +83,7 @@ Different strategies (review)
   \end{align}
   ```
 
-## Solution to Dimensionless Diffusion Problem
+## Solution to dimensionless diffusion problem
 
 - Step 1: Let $u = \frac{\partial c}{\partial \eta}$
 
@@ -103,7 +103,7 @@ Different strategies (review)
 
 - How do the solution look like?
 
-## Inifinite Space: Half-Half Situation 
+## Infinite space: half-half situation
 
 Geometry: $x\ge 0$
 
@@ -122,14 +122,14 @@ How do we get here?
 
 ---
 
-## Limits and Checks
+## Limits and checks
 
 - $t\to 0^+$: $\operatorname{erfc}(x/(\sqrt{4Dt}))\to 0$ for $x>0$ ⇒ $c\to c_R$
 - $t\to 0^+$: $\operatorname{erfc}(x/(\sqrt{4Dt}))\to 0$ for $x>0$ ⇒ $c\to c_L$
 - $x\to\infty$: $\operatorname{erfc}(\infty)=0$ ⇒ $c\to \frac{c_L + c_R}{2}$
 - Takes **infinite** amount of time to reach steady-state, but we can often take intermediate snapshots
 
-## Inifinite Space: Half-Half Situation Time Scale
+## Infinite space: half-half situation time scale
 
 ```{=html}
 <iframe width="100%" height="900"
@@ -138,7 +138,7 @@ How do we get here?
 
 ---
 
-## Line Source as Superposition
+## Line source as superposition
 
 Notes: “line source” can be built from two semi-infinite problems. For
 a line source with concentration $c_0$ and thickness $\delta$,
@@ -154,7 +154,7 @@ Idea:
 - decompose initial profile into steps
 - add corresponding erfc solutions
 
-## Superposition Solution For Slab Geometry
+## Superposition solution for slab geometry
 
 - Step 1: write 2 half-space solutions
 
@@ -202,7 +202,7 @@ is obtained by superposition and is valid under the following conditions:
 <!-- - $c_1(x,t)$ and $c_2(x,t)$ are solutions to shifted step-function initial conditions -->
 <!-- - Linearity allows $c(x,t)=c_1(x,t)+c_2(x,t)$ -->
 
-## Infinite Domain: Point Source (1D)
+## Infinite domain: point source (1D)
 
 Initial conditions
 
@@ -219,7 +219,7 @@ $$
 
 ---
 
-## Gaussian Interpretation
+## Gaussian interpretation
 
 - point source spreads as a Gaussian
 - variance grows linearly with time
@@ -232,7 +232,7 @@ So width $\sigma\sim\sqrt{2Dt}$.
 
 ---
 
-## Error Function and Gaussian Integral
+## Error function and Gaussian integral
 
 Define
 
@@ -251,7 +251,7 @@ These appear in semi-infinite diffusion solutions.
 
 ---
 
-## Step Source
+## Step source
 
 Finite step (width $\Delta x$) can be treated as
 
@@ -273,7 +273,7 @@ $$
 
 ---
 
-## General Principle: Linear PDE → Build Solutions
+## General principle: linear PDE → build solutions
 
 Because diffusion equation is linear (for constant $D$)
 
@@ -310,7 +310,7 @@ $$
 
 ---
 
-## Time Part and Spatial Eigenfunctions
+## Time part and spatial eigenfunctions
 
 Time ODE
 
@@ -343,7 +343,7 @@ Physical meaning in notes
 
 ---
 
-## General Series Solution Form
+## General series solution form
 
 Superposition over modes
 
@@ -355,7 +355,7 @@ Coefficients $A_n$ from initial condition projection.
 
 ---
 
-## Modal Picture: What Decays First?
+## Modal picture: what decays first?
 
 - high spatial-frequency components (large $\lambda_n$) vanish quickly
 - long-wavelength components persist longer
@@ -378,7 +378,7 @@ Laplace transform replaces time derivative with initial-value term.
 
 ---
 
-## Key Property: Transform of $\partial c/\partial t$
+## Key property: transform of $\partial c/\partial t$
 
 Using integration by parts (as in notes)
 
@@ -414,7 +414,7 @@ Now an ODE in $x$ (parameter $p$).
 
 ---
 
-## Example Setup: Semi-infinite with Fixed Surface
+## Example setup: semi-infinite with fixed surface
 
 From notes example
 
@@ -466,7 +466,7 @@ $$
 
 ---
 
-## Back-transform: Error Function Result
+## Back-transform: error function result
 
 Inverse Laplace yields the erfc solution (notes)
 
@@ -481,7 +481,7 @@ Interpretation
 
 ---
 
-## General Laplace Workflow (Notes Summary)
+## General Laplace workflow (notes summary)
 
 1) Write PDE and IC/BC  
 2) Laplace in time: $c\to \hat c(x,p)$  
@@ -491,7 +491,7 @@ Interpretation
 
 ---
 
-## Meaning of the $p$-space Parameter
+## Meaning of the $p$-space parameter
 
 From your sketch (page 17)
 
@@ -506,7 +506,7 @@ Conceptual plots
 
 ---
 
-## When to Use Which Method?
+## When to use which method?
 
 - Known source solutions + superposition
   - infinite / semi-infinite, simple BCs
@@ -529,12 +529,11 @@ Conceptual plots
 
 ---
 
-## Next Steps
+## Next steps
 
 - Numerical solutions to diffusion problems
 - Estimation of diffusivity from solutions
 - Introduction to atomic model of diffusion
-
 
 
 

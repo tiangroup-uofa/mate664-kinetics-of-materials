@@ -52,7 +52,7 @@ Pb-Sn alloy coarsening experiment shows that particle distribution remains almos
 
 ![_Metall. Trans._, 1988, 19A, 2713-2721](./public/kom-coarsening.png)
 
-## Another angle: Ostwald rippening
+## Another angle: Ostwald ripening
 
 Experimental observation of small Pt particles are "absorbed" by the larger particles (Stage IV)
 
@@ -61,18 +61,18 @@ Experimental observation of small Pt particles are "absorbed" by the larger part
 
 ## Analog: two-balloon experiment
 
-- The effect of curvature on the total free energy is analogous to the two-baloon experiment
+- The effect of curvature on the total free energy is analogous to the two-balloon experiment
 - The driving force is **capillarity**
 - [YT Video](https://www.youtube.com/watch?v=1ftn09RBv74)
 
 ## Capillarity as a driving force
 
-The term "capilarity" refers to a broad variety of phenomena involving the interface
+The term "capillarity" refers to a broad variety of phenomena involving the interface
 
 - Excess free energy caused by surface energy + curvature
 - Driving force: minimizing interfacial area
 - Morphology change: interfaces will move during the optimization process
-  - **Coarsening**: large particles "absorbes" small particles; particles _do not touch_
+  - **Coarsening**: large particles "absorb" small particles; particles _do not touch_
   - **Coalescence/sintering**: interface between close-contact particles disappear; particles _touch and merge_
 
 ## Crash course: interfacial coordinate system
@@ -126,7 +126,7 @@ The driving force has 2 factors:
 - non-zero surface energy $\gamma$: 
 - curvatures $\kappa_1$, $\kappa_2$ ($\propto 1/R$)
 
-## Coarsening (Ostwald Ripening)
+## Coarsening (Ostwald ripening)
 
 The evolution of an inhomogeneous structure in a solid
 solution or a colloidal system (stages III and IV)
@@ -161,7 +161,7 @@ Key take-aways:
 
 ## Influence of curvature on free energy: Gibbs-Thompson effect
 
-From our baloon analog, curvature-induced pressure for an isotropic sphere is:
+From our balloon analog, curvature-induced pressure for an isotropic sphere is:
 
 $$
 \Delta p = p_A - p_B = \gamma(\kappa_1 + \kappa_2) = 2 \frac{\gamma}{R}

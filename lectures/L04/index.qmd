@@ -26,7 +26,7 @@ format:
 Key ideas from last lecture:
 
 - Entropy flux and production
-- Rewritting entropy production in flux and driving force terms
+- Rewriting entropy production in flux and driving force terms
 - Direct and coupling coefficients
 - Analysis of several cross-coupling effects in material science
 
@@ -44,7 +44,7 @@ After this lecture, you will be able to:
 
 ---
 
-## Recap: Driving Forces in Irreversible Thermodynamics
+## Recap: driving forces in irreversible thermodynamics
 
 - entropy balance:
   $$
@@ -63,7 +63,7 @@ After this lecture, you will be able to:
 
 ---
 
-## When Do $\dot{\sigma}$ Diminish? Orthogonality of Flux and Driving Force
+## When do $\dot{\sigma}$ diminish? Orthogonality of flux and driving force
 
 We will show one example that has non-trivial solution to $\dot{\sigma} = 0$
 
@@ -89,7 +89,7 @@ We will show one example that has non-trivial solution to $\dot{\sigma} = 0$
 
 ---
 
-## Chemical Potential as Driving Force
+## Chemical potential as driving force
 
 - Consider one chemical species with chemical potential $\mu$
 - Definition:
@@ -102,7 +102,7 @@ We will show one example that has non-trivial solution to $\dot{\sigma} = 0$
 
 _See analog to a water tank in [handwritten notes](./public/L04_annotated.pdf)_
 
-## Entropy Production and Mass Flux
+## Entropy production and mass flux
 
 - Entropy production due to diffusion:
   $$
@@ -116,7 +116,7 @@ _See analog to a water tank in [handwritten notes](./public/L04_annotated.pdf)_
   
 - $L_{MM}$: phenomenological mobility coefficient
 
-## From Mobility to Fick’s Law (Determine $L_MM$)
+## From mobility to Fick’s law (determine $L_{MM}$)
 
 _See analog in [handwritten notes](./public/L04_annotated.pdf)_
 
@@ -169,7 +169,7 @@ _See analog in [handwritten notes](./public/L04_annotated.pdf)_
 
 ---
 
-## What Does Diffusivity Depend On?
+## What does diffusivity depend on?
 
 - temperature
 - concentration
@@ -216,7 +216,7 @@ _See analog in [handwritten notes](./public/L04_annotated.pdf)_
 
 ---
 
-## Physical Meaning of Laplace Operator
+## Physical meaning of Laplace operator
 
 - $\nabla^2 c$ measures curvature (sort of...)
 - Steady state implies zero curvature
@@ -238,7 +238,7 @@ _See analog in [handwritten notes](./public/L04_annotated.pdf)_
 
 ---
 
-## Typical Magnitudes of Diffusivity
+## Typical magnitudes of diffusivity
 
 - gases:
   $$
@@ -261,7 +261,7 @@ _See analog in [handwritten notes](./public/L04_annotated.pdf)_
 ```
 
 
-## A Common Misconception
+## A common misconception
 
 Search for any youtube video with *"diffusion experiment dye"*
 
@@ -299,7 +299,7 @@ $v_{m} = 10^{-3} \mathrm{m/s}$
 
 ---
 
-## Temperature Dependence of Diffusivity
+## Temperature dependence of diffusivity
 
 :::: {.columns}
 
@@ -322,7 +322,7 @@ $v_{m} = 10^{-3} \mathrm{m/s}$
 
 ---
 
-## Physical Interpretation of Activation
+## Physical interpretation of activation
 
 :::: {.columns}
 
@@ -343,7 +343,7 @@ $v_{m} = 10^{-3} \mathrm{m/s}$
 :::
 ---
 
-## Multiple Diffusion Mechanisms
+## Multiple diffusion mechanisms
 
 ![Intrinsic and extrinsic mechanism in doped halides](./public/kom-multi-mechanism.png){width="50%"}
 
@@ -401,7 +401,7 @@ $v_{m} = 10^{-3} \mathrm{m/s}$
   - Dislocations
 
 
-## Types of Diffusivity
+## Types of diffusivity
 
 As the previous example of diffusion + convection video shows, the
 measurement of diffusivity really depends on which reference frame we
@@ -413,7 +413,7 @@ use.
 
 ---
 
-## Measuring Self-Diffusion
+## Measuring self-diffusion
 
 :::{.column}
 :::{.column width="50%"}
@@ -435,7 +435,7 @@ use.
 
 ---
 
-## Flux Relations in Network-Constrained Systems
+## Flux relations in network-constrained systems
 
 - Flux driven by chemical potential differences (1D)
   - Non-radioactive species:
@@ -458,7 +458,7 @@ use.
 
 ---
 
-## Vacancy Equilibrium Assumption
+## Vacancy equilibrium assumption
 
 - $\mu_v = \text{const}$
 - $J_v = 0$
@@ -469,7 +469,7 @@ use.
 
 ---
 
-## Resulting Self-Diffusion Flux
+## Resulting self-diffusion flux
 
 - Chemical potential gradient:
   $$
@@ -483,7 +483,7 @@ use.
 
 ---
 
-## Why Self-Diffusion Occurs
+## Why self-diffusion occurs
 
 - **No** macroscopic concentration gradient!
 - Chemical potential varies locally
@@ -499,7 +499,6 @@ use.
 - Laplace operator reflects curvature and smoothing
 - Diffusivity varies strongly with phase and temperature
 - Self-diffusion exists even in homogeneous systems
-
 
 
 

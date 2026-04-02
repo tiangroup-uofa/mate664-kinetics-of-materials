@@ -44,7 +44,7 @@ After this lecture, you will be able to:
 
 ---
 
-## Recap: Fick's Laws of Diffusion
+## Recap: Fick's laws of diffusion
 
 - 1st law: steady-state diffusion
 
@@ -198,7 +198,7 @@ J_{1^*} &= -k_B T \left[ \frac{L_{11}}{c_1} - \frac{L_{11^*}}{c_{1^*}} \right] \
 
 ---
 
-## Historical Observation: Boyle (17th Century)
+## Historical observation: Boyle (17th century)
 
 - Robert Boyle observed solid-state diffusion
 - Zn penetration into Cu coin → brass formation
@@ -208,7 +208,7 @@ J_{1^*} &= -k_B T \left[ \frac{L_{11}}{c_1} - \frac{L_{11^*}}{c_{1^*}} \right] \
 
 ---
 
-## Imbalance of Diffusion Fluxes
+## Imbalance of diffusion fluxes
 
 - Consider a binary diffusion couple A–B
 - If $D_A \neq D_B$
@@ -220,7 +220,7 @@ J_{1^*} &= -k_B T \left[ \frac{L_{11}}{c_1} - \frac{L_{11^*}}{c_{1^*}} \right] \
 
 ---
 
-## Vacancy Mechanism and Imbalance
+## Vacancy mechanism and imbalance
 
 - Substitutional diffusion proceeds via vacancies
 - Site conservation:
@@ -232,7 +232,7 @@ J_{1^*} &= -k_B T \left[ \frac{L_{11}}{c_1} - \frac{L_{11^*}}{c_{1^*}} \right] \
 
 ---
 
-## Vacancy Accumulation Issue
+## Vacancy accumulation issue
 
 - Vacancy flux implies transport of empty sites
 - But vacancy concentration remains near equilibrium
@@ -241,7 +241,7 @@ J_{1^*} &= -k_B T \left[ \frac{L_{11}}{c_1} - \frac{L_{11^*}}{c_{1^*}} \right] \
 
 ---
 
-## Kirkendall Effect
+## Kirkendall effect
 
 - Unequal intrinsic diffusivities
 - Net vacancy flux in crystal frame
@@ -252,7 +252,7 @@ J_{1^*} &= -k_B T \left[ \frac{L_{11}}{c_1} - \frac{L_{11^*}}{c_{1^*}} \right] \
 
 ---
 
-## C-frame View: Inhomogeneous Materials
+## C-frame view: inhomogeneous materials
 
 - Crystal (C) frame attached to lattice sites
 - Atomic fluxes are Fick-like:
@@ -264,7 +264,7 @@ J_{1^*} &= -k_B T \left[ \frac{L_{11}}{c_1} - \frac{L_{11^*}}{c_{1^*}} \right] \
 
 ---
 
-## Intrinsic Diffusivity
+## Intrinsic diffusivity
 
 - Defined in the crystal frame
 - Measures diffusion relative to lattice sites
@@ -283,7 +283,7 @@ J_1^C &= -k_BT [\frac{L_{11}}{c_1} - \frac{L_{12}}{c_2}]\Phi \frac{\partial c}{\
 
 ---
 
-## Relation to Self-Diffusivity
+## Relation to self-diffusivity
 
 - Self-diffusion: tracer in homogeneous system
 - No net chemical potential gradient
@@ -295,7 +295,7 @@ J_1^C &= -k_BT [\frac{L_{11}}{c_1} - \frac{L_{12}}{c_2}]\Phi \frac{\partial c}{\
 
 ---
 
-## Thought Experiment: Vacancy Diffusion (C-frame)
+## Thought experiment: vacancy diffusion (C-frame)
 
 - Assume $C_v \approx C_{v,\mathrm{eq}}$
 - Yet $J_v^{C} \neq 0$
@@ -304,7 +304,7 @@ J_1^C &= -k_BT [\frac{L_{11}}{c_1} - \frac{L_{12}}{c_2}]\Phi \frac{\partial c}{\
 
 ---
 
-## Origin of Lattice Velocity
+## Origin of lattice velocity
 
 - Transform flux to lab frame:
   $$
@@ -323,7 +323,7 @@ J_1^C &= -k_BT [\frac{L_{11}}{c_1} - \frac{L_{12}}{c_2}]\Phi \frac{\partial c}{\
 
 ---
 
-## Vacancy (V) Frame Basics
+## Vacancy (V) frame basics
 
 - V-frame moves with vacancy flux
 - By definition:
@@ -337,7 +337,7 @@ J_1^C &= -k_BT [\frac{L_{11}}{c_1} - \frac{L_{12}}{c_2}]\Phi \frac{\partial c}{\
 
 ---
 
-## Governing Equation in V-frame
+## Governing equation in V-frame
 
 - Impose volume conservation:
   $$
@@ -362,7 +362,7 @@ J_1^C &= -k_BT [\frac{L_{11}}{c_1} - \frac{L_{12}}{c_2}]\Phi \frac{\partial c}{\
 
 ---
 
-## Special Case: Interstitial Diffusion
+## Special case: interstitial diffusion
 
 - Interstitial atoms do not occupy lattice sites
 - No site conservation constraint
@@ -374,7 +374,7 @@ J_1^C &= -k_BT [\frac{L_{11}}{c_1} - \frac{L_{12}}{c_2}]\Phi \frac{\partial c}{\
 
 ---
 
-## Summary: Types of Diffusivities
+## Summary: types of diffusivities
 
 | Diffusivity | Frame | Meaning |
 |---|---|---|
@@ -393,7 +393,6 @@ J_1^C &= -k_BT [\frac{L_{11}}{c_1} - \frac{L_{12}}{c_2}]\Phi \frac{\partial c}{\
 - Lattice velocity resolves vacancy continuity
 - Choice of reference frame is essential
 - Kirkendall effect is a frame-dependent phenomenon
-
 
 
 

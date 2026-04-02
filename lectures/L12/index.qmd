@@ -45,11 +45,11 @@ After this lecture, you will be able to:
 - Atomic models for diffusion -- **Einstein relations** [L08](../L08) & [L09](../L09)
 - Diffusion in **ideal crystals** [L10](../L10) & **defects/short-circuit** [L11](../L11)
 
-## Conceptual Difference Kinetics vs Thermodynamics
+## Conceptual difference: kinetics vs thermodynamics
 
 ![Kinetics vs thermodynamics on a phase diagram](./public/phase-diag-compare.svg)
 
-## Entropic View of Irreversible Thermodynamics
+## Entropic view of irreversible thermodynamics
 
 - Any non-equilibrium system going back to equilibrium 👉 entropy generation
 - For local system, entropy generation is always non-zero
@@ -59,7 +59,7 @@ $$
 \dot{\sigma} = \frac{\partial s}{\partial t} + \nabla\cdot\vec{J}_{s} \geq 0
 $$
 
-## Entropy Flux and Generation
+## Entropy flux and generation
 
 - Entropy in the system is nothing but some **descriptor** of how energy and quantities **flow**
 - **Flow of entropy** ⇔ **Flow of quantities**
@@ -72,7 +72,7 @@ $$
 \end{align}
 ```
 
-## Quantity -- Flux -- Potential Relation
+## Quantity -- flux -- potential relation
 
 - Link in thermodynamics
 $$
@@ -101,7 +101,7 @@ $$
 :::
 Each $(\psi_i,\xi_i)$ pair contributes to entropy change.
 
-## Flux -- Potential Relation: Driving Force
+## Flux -- potential relation: driving force
 
 - Extensive quantities: $\xi_i$
 - Conjugate driving forces:
@@ -122,7 +122,7 @@ $$
 $$
 
 
-## Kinetic vs Thermodynamics: Behaviour
+## Kinetics vs thermodynamics: behaviour
 
 ::: {.content-visible when-format="html" unless-format="revealjs"}
 ```{=html}
@@ -138,7 +138,7 @@ $$
 [Demo link](https://vilas.us/simulations/liquidvapor/)
 _Copyright: Vilas Winstein (UC Berkeley)_
 
-## Mass Transfer From Driving Force
+## Mass transfer from driving force
 
 - Chemical potential $\mu = \left(\frac{\partial U}{\partial N}\right)_{S,V} = \left(\frac{\partial G}{\partial N}\right)_{P,T}$
 - $\mu$ is driving force for mass transfer / diffusion
@@ -155,7 +155,7 @@ _Copyright: Vilas Winstein (UC Berkeley)_
   
 - $L_{MM}$: phenomenological mobility coefficient
 
-## Macroscopic Mass Transfer: Diffusivity -- Mobility
+## Macroscopic mass transfer: diffusivity -- mobility
 
 - Force balance and drift velocity ($M$: mobility):
   $$
@@ -172,7 +172,7 @@ _Copyright: Vilas Winstein (UC Berkeley)_
   D = M k_B T
   $$
   
-## Solving Mass Transfer: Fick’s First Law 
+## Solving mass transfer: Fick’s first law
 
 - Substitute $\mu$ with $c$
 - Works for ideal mixture / dilute system
@@ -184,7 +184,7 @@ $$
   \vec{J} = -D \nabla c
 $$
 
-## Solving Mass Transfer: Fick’s Second Law
+## Solving mass transfer: Fick’s second law
 
 - Mass conservation (no source term)
   $$
@@ -203,11 +203,11 @@ $$
   
   - $\nabla^2$: Laplace operator
   
-## Overview of Solutions to Mass Transfer
+## Overview of solutions to mass transfer
 
 ![Mass transfer equation as engine for kinetic problems.](./public/uss-engine.png)
 
-## Using Diffusivity $D$: Different Scenarios
+## Using diffusivity $D$: different scenarios
 
 | Diffusivity | Frame | Meaning |
 |---|---|---|
@@ -215,11 +215,11 @@ $$
 | $D_i$ | C-frame | intrinsic diffusivity |
 | $\tilde{D}$ | V-frame | interdiffusivity |
 
-## Comparison Between C- and V-Frame
+## Comparison between C- and V-frame
 
 ![Reference frames analog: stream](./public/stream-analog.png)
 
-## Implications of V-Frame Interdiffusion
+## Implications of V-frame interdiffusion
 
 - Kirkendall effect
   - Movement of interface
@@ -237,7 +237,7 @@ $$
   \tilde{D} = D_1 X_2 + D_2 X_1
   $$
 
-## Solving Fick's Equation
+## Solving Fick's equation
 
 - Steady-state solution
   - Geometry (planar / spherical / cylindrical)?
@@ -249,7 +249,7 @@ $$
   - Separation of variables method -- Fourier transform
   - Laplace transform -- analysis of temporal decay
   
-## Finite Difference for Fick's Equation
+## Finite difference for Fick's equation
   
 - Diffusion length scale $L_D \approx \sqrt{4Dt}$
 
@@ -259,7 +259,7 @@ $$
 | $\displaystyle \frac{\partial c}{\partial x}$ | $\displaystyle \frac{c(i+1,\,j) - c(i-1,\,j)}{2\Delta x}$ | central (space) |
 | $\displaystyle \frac{\partial^2 c}{\partial x^2}$ | $\displaystyle \frac{c(i+1,\,j) - 2c(i,\,j) + c(i-1,\,j)}{(\Delta x)^2}$ | central (space) |
 
-## MOL Algorithm (Explicit Time Marching)
+## MOL algorithm (explicit time marching)
 
 
 1. Define spatial grid with $x_i$ ($N$ points), choose $\Delta x$
@@ -281,7 +281,7 @@ c(i,j)
 \end{align}
 ```
 
-## Macroscopic $D$ ⇔ Atomic Movements
+## Macroscopic $D$ ⇔ atomic movements
 
 - Einstein relation: from continuum solution <--> diffusivity
 - Random walk model (moluchowski): diffusivity from probability model
@@ -295,7 +295,7 @@ $$
 - 2D: $d=2$
 - 1D: $d=1$
 
-## Diffusivity In Different Environments / States
+## Diffusivity in different environments / states
 
 All follow Einstein relation $D = \frac{\Gamma \langle r^2\rangle}{6}$
 
@@ -303,7 +303,7 @@ All follow Einstein relation $D = \frac{\Gamma \langle r^2\rangle}{6}$
 - Liquid: Stokes-Einstein equation ($\mu, M, R$)
 - Solid: activation energy / potential well ($S^m, H^m$)
 
-## Diffusion In Solid: General Equation
+## Diffusion in solid: general equation
 
 - Vacancy mechanism
 
@@ -317,7 +317,7 @@ D_A
 \end{align}
 ```
 
-## Diffusion In Ionic Crystals
+## Diffusion in ionic crystals
 
 - Extrinsic: vacancy dominated by doped materials
   - Low-$T$ regime (high $1/T$)
@@ -346,7 +346,7 @@ D_{\mathrm{Na,int}}
 \end{align}
 ```
 
-## Diffusion In Imperfections
+## Diffusion in imperfections
 
 - Generally $D^{\text{imp}} \gg D^{XL}$
 - Shortcuts in diffusion pathways
@@ -354,26 +354,26 @@ D_{\mathrm{Na,int}}
 
 # Seminal Topics In Diffusion
 
-## Up-Hill Diffusion
+## Up-hill diffusion
 
 - Can diffusion happen against **concentration gradient**?
 
 ![KOM Q3.3](./public/uphill.png)
 
-## Determination Of Diffusion In Varying $D$ System
+## Determination of diffusion in varying $D$ system
 
 - Boltzmann-Matano analysis of interdiffusion
 
 ![KOM Q4.1](./public/boltzmann-matano.png)
 
 
-## Diffusion Models In Machine Learning
+## Diffusion models in machine learning
 
 - AI image generation follows a diffusion process!
 
 ![Copyright U Tokyo](./public/diffusion-model.png)
 
-## What To Learn Next
+## What to learn next
 
 In the second half of the course, we will cover the following questions
 

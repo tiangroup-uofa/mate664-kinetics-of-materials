@@ -67,7 +67,7 @@ Remaining questions:
 
 ## Historical review: atomic hypothesis
 
-Excerpt from [Richard Feymann's physics lecture at Caltech](https://www.feynmanlectures.caltech.edu/FLP_Lecture_1_Transcript.pdf#:~:text=I%20believe%20it%20is%20the%20hyp–%20atomic,a%20little%20imagination%20and%20thinking%20is%20applied.)
+Excerpt from [Richard Feynman's physics lecture at Caltech](https://www.feynmanlectures.caltech.edu/FLP_Lecture_1_Transcript.pdf#:~:text=I%20believe%20it%20is%20the%20hyp–%20atomic,a%20little%20imagination%20and%20thinking%20is%20applied.)
 
 > I believe it is the atomic hypothesis (or the atomic fact, or whatever you want to
 call it) that all things are made out of atoms -- little particles that move around, are in
@@ -107,10 +107,10 @@ representing the Newton's equation
 Time dependency now appears!
 
 
-## MD = Energy + Dynamics
+## MD = energy + dynamics
 
 ::: {.columns}
-::: {.column width=“50%”}
+::: {.column width="50%"}
 
 **Energy**
 
@@ -121,7 +121,7 @@ Time dependency now appears!
 
 :::
 
-::: {.column width=“50%”}
+::: {.column width="50%"}
 
 **Dynamics**
 
@@ -218,7 +218,7 @@ be visited. (Like MC, but we evolve continuously in time)
 What quantities are we interested in MD?
 
 ::: {.columns}
-::: {.column width=“33%”}
+::: {.column width="33%"}
 
 Thermodynamic
 
@@ -228,7 +228,7 @@ Thermodynamic
 
 :::
 
-::: {.column width=“33%”}
+::: {.column width="33%"}
 
 Structural
 
@@ -237,7 +237,7 @@ Structural
 - defect structure / order parameter $c_i(\mathbf r)$
 :::
 
-::: {.column width=“33%”}
+::: {.column width="33%"}
 
 **Kinetic**
 
@@ -270,7 +270,7 @@ $$
 ## Comparison between ensembles
 
 ::: {.columns}
-::: {.column width=“33%”}
+::: {.column width="33%"}
 
 NVE
 
@@ -280,7 +280,7 @@ NVE
 
 :::
 
-::: {.column width=“33%”}
+::: {.column width="33%"}
 
 NVT
 
@@ -289,7 +289,7 @@ NVT
 - $\rho_{NVT} \propto e^{-H/k_B T}$
 :::
 
-::: {.column width=“33%”}
+::: {.column width="33%"}
 
 NPT
 
@@ -399,7 +399,7 @@ Ideas for thermo- and barostats:
 ## Comparison between thermostats
 
 ::: {.columns}
-::: {.column width=“33%”}
+::: {.column width="33%"}
 
 Berendsen
 
@@ -409,7 +409,7 @@ Berendsen
 
 :::
 
-::: {.column width=“33%”}
+::: {.column width="33%"}
 
 Nosé-Hoover
 
@@ -419,7 +419,7 @@ Nosé-Hoover
 
 :::
 
-::: {.column width=“33%”}
+::: {.column width="33%"}
 
 Langevin
 
@@ -440,7 +440,7 @@ Langevin
 
 ![](./public/374-1.png)
 
-## Potential eenrgy in MD (2)
+## Potential energy in MD (2)
 
 ![](./public/374-2.png)
 
@@ -485,5 +485,3 @@ Can we use data to train potential? Examples from [John Kitchin (CMU)](https://k
 - Molecular dynamics evolves atomic positions and momenta using Newton’s equations
 - MD simulations require interatomic forces, numerical integration, and ensemble control
 - The choice of potential strongly affects what material behavior an MD model can represent
-
-

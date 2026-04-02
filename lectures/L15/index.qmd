@@ -33,7 +33,7 @@ After this lecture, you will be able to:
 - **Recall** methods for determining the equilibrium nucleation shape
 
 
-## Recall: Key Results From Homogeneous Nucleation
+## Recall: key results from homogeneous nucleation
 
 Homogeneous (spherical) nucleus gives the following results:
 
@@ -59,7 +59,7 @@ Z &= \sqrt{\frac{\Delta G_c}{3 \pi n_c^3 k_B T}}
 \end{align}
 ```
 
-## Recall: Homogeneous Nucleation Implications
+## Recall: homogeneous nucleation implications
 
 - $\Delta G_c \propto \gamma^3$: very sensitive to the interfacial free energy
 - Zeldovich factor $Z$ is around 0.1
@@ -67,13 +67,13 @@ Z &= \sqrt{\frac{\Delta G_c}{3 \pi n_c^3 k_B T}}
 - Rule of thumb: $\Delta G_c \leq 76 k_B T$, otherwise no detectable nucleation
 - At $T=298$ K, $\Delta G_c \leq 1.95$ eV
 
-## What's The Missing Picture?
+## What's the missing picture?
 
 _Can we really treat the nuclei as spheres?_
 
 ![](./public/sphere-cow.png)
 
-## Practical Considerations: Heterogeneous Nucleation
+## Practical considerations: heterogeneous nucleation
 
 - General idea: can we have smaller $\Delta G_c$ if other competing energies exist in the system?
 - Analog: nucleation of crystals on a beaker wall
@@ -82,7 +82,7 @@ _Can we really treat the nuclei as spheres?_
 ![](./public/hetero-nucleation.svg)
 
 
-## Triple Interface Balance: The Young's Equation
+## Triple interface balance: the Young's equation
 
 Analogous to the classical wetting theory, the "contact angle" on a droplet can be described by the Young's equation
 
@@ -93,7 +93,7 @@ $$
 $$
 
 
-## Heterogeneous Nucleation On A Wall: Volume vs Surface
+## Heterogeneous nucleation on a wall: volume vs surface
 
 The geometry of the
 droplet gives:
@@ -109,7 +109,7 @@ $$
            + (\gamma_{\mathrm{nw}} - \gamma_{\mathrm{sw}}) A_{\mathrm{c}}
 $$
 
-## Heterogeneous Nucleation On A Wall: Results
+## Heterogeneous nucleation on a wall: results
 
 We can compare the hetero- and homogeneous barriers:
 
@@ -122,7 +122,7 @@ $$
 
 
 
-## Heterogeneous In Binary Alloys: Geometry
+## Heterogeneous in binary alloys: geometry
 
 - At triple-interface, we have the balance
 
@@ -137,7 +137,7 @@ $$
 
 
 
-## Heterogeneous In Binary Alloys: $\Delta G_c^{\text{het}}$ Results
+## Heterogeneous in binary alloys: $\Delta G_c^{\text{het}}$ results
 
 ![Nucleation At Grain Boundary](./public/nucleation-gb.png)
 
@@ -152,7 +152,7 @@ $$
 $$
 
 
-## Ratio Between Hetero- and Homogeneous Nucleation Energy Barriers
+## Ratio between hetero- and homogeneous nucleation energy barriers
 
 Compare the two barriers, they are quite similar
 
@@ -175,11 +175,11 @@ This is similar to our case of heterogeneous nucleation on a wall, but with diff
 
 
 
-## Heterogeneous Nucleation Barrier
+## Heterogeneous nucleation barrier
 
 ![Comparison between nucleations along defects](./public/gc-diff-boundaries.png)
 
-## Heterogeneous Nucleation In Alloys: Other Nucleus Dimensionalities
+## Heterogeneous nucleation in alloys: other nucleus dimensionalities
 
 - From previous figure we see that $\Delta G_c$ on defect becomes smaller for lower-dimensionality defects
 - But do low dimensional defects always win? Not essentially.
@@ -192,7 +192,7 @@ n^{\text{defect}} \propto n_t (\frac{\delta}{L})^{3 - d}
 $$
 
 
-## Competition Between Hetero- And Homogeneous Nucleation Rates
+## Competition between hetero- and homogeneous nucleation rates
 
 When considering the rates, **two** factors matter in the overall $J$ equation:
 
@@ -204,14 +204,14 @@ $$
 $$
 
 
-## Overall Nucleation Regimes
+## Overall nucleation regimes
 
 - $R_B = k_B T\ln(\frac{L}{\delta})$
 - Homogeneous nucleation favours when $R_B > \Delta G_c^H - \Delta G_c^B$
 
 ![](./public/nucleation-regimes.png)
 
-## What Else May Be Missing?
+## What else may be missing?
 
 - The nucleation geometry may be very different from spherical or curved!
 - Different facets have distinct surface free energy
@@ -219,26 +219,26 @@ $$
 - Wulff construction: optimizing the geometry of equilibrium shape
 - Higher energy facet would have longer distance to the center!
 
-## Wulff Construction For Equilibrium Crystal Shape
+## Wulff construction for equilibrium crystal shape
 
 ![](./public/wulff.png)
 
-## Theoretical Wulff Construction For Elements
+## Theoretical Wulff construction for elements
 
 [Crystalium demo](http://crystalium.materialsvirtuallab.org)
 
 _Tran et al. Scientific Data, 2016, 3:160080_
 
-## Nucleation: Example Demo
+## Nucleation: example demo
 
 
 ![](./public/kom-alloy.png)
 
-## Nucleation Demo: How Do We Get The Values?
+## Nucleation demo: how do we get the values?
 
 ![](./public/kom-solution-1.png)
 
-## Nucleation Demo: Supersaturation Limit
+## Nucleation demo: supersaturation limit
 
 ![](./public/kom-supersat.png)
 

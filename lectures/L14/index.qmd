@@ -33,14 +33,14 @@ After this lecture, you will be able to:
 - **Describe** the role of surface and interfacial energy in nucleation
 - **Describe** the pseudo-steady-state kinetic model for nucleation
 
-## Phase-Diagram In Non-Equilibrium Region
+## Phase-diagram in non-equilibrium region
 
 - How to induce phase transformation from a phase diagram?
 - Going low in temperature --> (super)cooling
 
 ![](./public/phase-diagram-shift.png)
 
-## Transformation Driving Force in Single-Component Phase Diagram 
+## Transformation driving force in single-component phase diagram
 
 - Cooling from liquid to solid provides driving force
 
@@ -52,7 +52,7 @@ $$
 
 ![](./public/free-energy-SL.svg)
 
-## Phase Transformation in Binary Phase Diagram ($T-X_B$)
+## Phase transformation in binary phase diagram ($T-X_B$)
 
 **Ways to introduce driving force**:
 
@@ -61,7 +61,7 @@ $$
 
 ![](./public/binary-phase-sep.png)
 
-## Phase Transformation in Binary Phase Diagram ($G-X_B$)
+## Phase transformation in binary phase diagram ($G-X_B$)
 
 - Metastable regions in binary phase diagram (nucleation)
 - Unstable regions (spinodal decomposition)
@@ -75,14 +75,14 @@ $$
 
 ![](./public/binary-diagram-tangent-df.png)
 
-## Nucleation Theory In a Nutshell
+## Nucleation theory in a nutshell
 
 - Crystal growth can be divided in 4 regions
 - Nucleation theory deals with regions I and II (incubation & pseudo-steady-state)
 
 ![](./public/stages-growth.svg)
 
-## Introducing Interfacial Energy (1)
+## Introducing interfacial energy (1)
 
 - Creating interfaces between different atoms causes energy to change!
 
@@ -95,7 +95,7 @@ $$
 :::{.columns}
 :::{.column width="50%"}
 
-Interactomic energy in bulk
+Interatomic energy in bulk
 
 ![](./public/E-AA.svg)
 
@@ -112,7 +112,7 @@ Creation of surface
 :::
 
 
-## Introducing Interfacial Energy (2)
+## Introducing interfacial energy (2)
 
 - Interfacial energy $\gamma_{AB}$ can be calculated using $\gamma_A$ $\gamma_B$ and $\Delta W_{AB}$
 
@@ -124,7 +124,7 @@ $$
 
 ![](./public/WAB.svg)
 
-## Nucleation Theory: Overall Nucleation Free Energy
+## Nucleation theory: overall nucleation free energy
 
 - Nucleation free energy has bulk and interface parts
 
@@ -137,7 +137,7 @@ $$
 
 - Shape factor $\eta = (36 \pi)^{1/3} \Omega^{2/3}$
 
-## Different Scaling Between Bulk & Interfacial F.E
+## Different scaling between bulk & interfacial F.E.
 
 :::{.columns}
 :::{.column width="50%"}
@@ -157,7 +157,7 @@ $$
 :::
 
 
-## The Critical Nucleus Size $n_c$
+## The critical nucleus size $n_c$
 
 Classical homogeneous nucleation gives
 
@@ -173,13 +173,13 @@ $$
 \Delta G_c = \frac{4}{27} \frac{(\eta \gamma)^3}{(\mu_\beta - \mu_\alpha)^2}
 $$
 
-## Pseudo-Steady-State Nucleation Theory
+## Pseudo-steady-state nucleation theory
 
 - Consider the "quasi-diffusion" in $n$-landscape!
 
 ![](./public/qss-flux.svg)
 
-## Q.S.S. Governing Equations
+## Q.S.S. governing equations
 
 - "Quasi flux" of $n \rightarrow n+1$: $J_n$
 - Can also model $\partial N_n/\partial t$ from assignment 2
@@ -191,7 +191,7 @@ $$
 
 - The nucleation rate at quasi-pseudo-state can be computed using a known $N_n$ distribution
 
-## Q.S.S. Assumptions
+## Q.S.S. assumptions
 
 - In a constrained equilibrium system, $N_n$ follows the Boltzmann distribution
 
@@ -212,7 +212,7 @@ J = -L_{11} \nabla (\mu_1 + \phi) = -D_1 \left( \frac{\partial c}{\partial x} + 
 $$
 
 
-## Q.S.S. Nucleation Rate: Final Results
+## Q.S.S. nucleation rate: final results
 
 - Assuming the nucleation rate is determined by $J \approx J_{n_c}$
 - $Z$ is the Zeldovich factor (~0.1)
@@ -224,7 +224,7 @@ Z &= \sqrt{\frac{\Delta G_c}{3 \pi n_c^3 k_B T}}
 \end{align}
 ```
 
-## Implication of Q.S.S. Nucleation Rate
+## Implication of Q.S.S. nucleation rate
 
 - Zeldovich factor is around 0.1
 - Particles can shrink when they are not reaching $n_c$!
@@ -248,7 +248,7 @@ Z &= \sqrt{\frac{\Delta G_c}{3 \pi n_c^3 k_B T}}
 
 
 
-## What To Learn Next
+## What to learn next
 
 Is homogeneous nucleation the whole picture? Maybe not. Consider the following examples
 
