@@ -22,7 +22,7 @@ format:
 :::
 
 
-## Recap: Atomic model for diffusion
+## Recap: atomic model for diffusion
 
 - Random walk picture
 - Einstein relation links jump statistics to diffusivity
@@ -35,7 +35,7 @@ D = \frac{\Gamma \langle r^2 \rangle}{6}\, f
 ```
 
 
-## Recap: Diffusion in gases and liquids
+## Recap: diffusion in gases and liquids
 
 - Gas diffusion from kinetic theory ($D = f(T, p)$)
 - Liquid diffusion from mobility and viscous drag ($D = f(\mu, T)$)
@@ -109,7 +109,7 @@ D = \frac{\Gamma \langle r^2 \rangle}{6}
 ```
 
 
-## Step 1: Crossing time
+## Step 1: crossing time
 
 - Ask how long one activated particle needs to cross the barrier region
 - Estimate by distance over average speed
@@ -129,7 +129,7 @@ Does it make sense? A few implications:
 - Heavier particles cross more slowly
 
 
-## Step 2: How many particles can cross?
+## Step 2: how many particles can cross?
 
 Crossing rate is number of activated particles divided by crossing time
 
@@ -166,7 +166,7 @@ R_{\mathrm{cross}}
 ```
 
 
-## Step 4: Probability ratio from the well shape
+## Step 4: probability ratio from the well shape
 
 Ratio of residence times scales with probability of occupying each region
 For a simple well model, we have
@@ -339,7 +339,7 @@ D = \frac{\Gamma \langle r^2 \rangle}{6}\,f
 - $f$ is the correlation factor (usually around 0.7)
 
 
-## Case 1: Interstitial diffusion
+## Case 1: interstitial diffusion
 
 Interstitial jumps are often uncorrelated
 - After one interstitial jump, the next jump is not strongly biased
@@ -356,7 +356,7 @@ D_I
 \end{align}
 ```
 
-## Case 2: Vacancy self-diffusion
+## Case 2: vacancy self-diffusion
 
 - Atom-vacancy exchange makes the vacancy appear to move
 - Diffusion still uses the migration barrier (_for vacancy_)
@@ -373,7 +373,7 @@ D_V
 ```
 
 
-## Case 3: Vacancy-assisted solute diffusion
+## Case 3: vacancy-assisted solute diffusion
 
 - Solute motion requires a nearby vacancy
 - Combine vacancy availability with vacancy migration
@@ -413,7 +413,7 @@ D_A
 \end{align}
 ```
 
-##  Why can $f < 1$ in vacancy-mediated diffusion?
+## Why can $f < 1$ in vacancy-mediated diffusion?
 
 - Vacancy jumps create "memory"
 - A just-moved atom is likely to **jump back** into the nearby vacancy
@@ -463,4 +463,3 @@ in particular:
 - Diffusion in ionic solids
 - Diffusion in imperfect solids
 - Short-circuit diffusion
-

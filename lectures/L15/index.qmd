@@ -130,8 +130,8 @@ $$
 \gamma_{\alpha\alpha} = 2 \gamma_{\alpha \beta} cos \psi
 $$
 
-- Gain boundary $\gamma_{\alpha\alpha} \neq 0$
-- What does $\gamma_{\alpha\alpha} = 0$ mean? Homogeneous nuclation!
+- Grain boundary $\gamma_{\alpha\alpha} \neq 0$
+- What does $\gamma_{\alpha\alpha} = 0$ mean? Homogeneous nucleation!
 
 ![Nucleation At Grain Boundary](./public/nucleation-gb.png)
 

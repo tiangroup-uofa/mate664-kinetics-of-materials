@@ -68,7 +68,7 @@ $$
 
 ![](./public/binary-diagram-small-change.png)
 
-## Phase Transformation in Binary Phase Diagram ($G-X_B$)
+## Phase transformation in binary phase diagram ($G-X_B$)
 
 - Metastable regions in binary phase diagram
 - _Tangent-to-line_ method: driving force $\Delta G_B$ (molar)

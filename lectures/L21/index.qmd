@@ -430,7 +430,7 @@ KMC simulation can handle much large length and timescales than MD.
 
 ![](../L11/public/ncomm-kmc1.png)
 
-## Deposition on Graphene - Theoretical Simulations
+## Deposition on Graphene - theoretical simulations
 
 - Kinetic Monte Carlo (kMC) assuming different diffusion barrier on imperfections
 - Faster diffusion direction --> lower density

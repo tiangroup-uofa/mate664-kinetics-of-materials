@@ -187,7 +187,7 @@ J_1^V &= -D_1 \frac{\partial c_1}{\partial x}
 
 
 
-## V-frame: Effective Diffusivity
+## V-frame: effective diffusivity
 
 The interdiffusivity now becomes:
 
@@ -256,7 +256,7 @@ General experimental workflow:
 
 ---
 
-## Fick’s Second Law (1D, constant $D$)
+## Fick’s second law (1D, constant $D$)
 
 Assuming homogeneous isotropic constant $D$
 
@@ -302,7 +302,7 @@ $$
 
 ---
 
-## 1D Steady State: Dirichlet BC Example
+## 1D steady state: Dirichlet BC example
 
 If $c(0)=c^0$ and $c(L)=c^L$
 
@@ -337,7 +337,7 @@ $$
 
 ---
 
-## Cylinder: Apply BC at $r_1, r_2$
+## Cylinder: apply BC at $r_1, r_2$
 
 If $c(r_1)=c_1$ and $c(r_2)=c_2$
 
@@ -365,7 +365,7 @@ $$
 
 ---
 
-## Sphere: Apply BC at $r_1, r_2$
+## Sphere: apply BC at $r_1, r_2$
 
 If $c(r_1)=c_1$, $c(r_2)=c_2$
 
@@ -803,7 +803,6 @@ How do we get here?
 - Steady-state diffusion problems reduce to Laplace equations with geometry-dependent solutions
 - Non-steady diffusion problems can be solved using Gaussian and error-function solutions
 - Separation of variables and Laplace transforms provide general tools for solving diffusion equations
-
 
 
 

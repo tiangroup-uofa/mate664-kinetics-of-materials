@@ -76,7 +76,7 @@ D_A
 
 ![Comparison between Schottky and Frenkel defects](./public/compare-defect.png){width="65%"}
 
-## Ionic Defects: Kröger-Vink (KV) notation
+## Ionic defects: Kröger-Vink (KV) notation
 
 - Formula $X^Z_Y$
  - X = what is at the site (Element or Vacancy)
@@ -232,7 +232,7 @@ D_{\mathrm{Na,int}}
 - Imperfections are associated with lower migration / activation energy!
 - Think as "shortcuts" during diffusion
 
-## Imperfection 1: Grain Boundaries
+## Imperfection 1: grain boundaries
 
 ![](./public/gb.png)
 
@@ -285,7 +285,7 @@ timescale $t$, interatomic distance $\lambda$ and grain size $s$
 :::
 :::
 
-## Example of diffusion along imperfection: deposition on Graphene
+## Example of diffusion along imperfection: deposition on graphene
 
 - See Vagli and Tian et al. _Nat Commun_ 2025, 16, 7726.
 - Diffusivity change on free graphene surface can be probed by deposition geometry!
@@ -299,7 +299,7 @@ timescale $t$, interatomic distance $\lambda$ and grain size $s$
 
 ![](./public/ncomm-kmc1.png)
 
-## Deposition on Graphene - Theoretical Simulations
+## Deposition on Graphene - theoretical simulations
 
 - Kinetic Monte Carlo (kMC) assuming different diffusion barrier on imperfections
 - Faster diffusion direction --> lower density

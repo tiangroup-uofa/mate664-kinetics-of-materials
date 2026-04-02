@@ -260,7 +260,7 @@ Finite step (width $\Delta x$) can be treated as
 
 ---
 
-## 3D Point Source
+## 3D point source
 
 $c$ is separabile across axes!
 
@@ -286,7 +286,7 @@ Hard part
 
 ---
 
-## Method 2: Separation of Variables
+## Method 2: separation of variables
 
 Used often for finite domains
 
@@ -330,7 +330,7 @@ Solutions depend on BCs (sine/cosine, etc.).
 
 ---
 
-## Eigenvalues from Boundary Conditions
+## Eigenvalues from boundary conditions
 
 - Dirichlet BC ⇒ $\lambda_n = n\pi/L$
 - Neumann BC ⇒ $\lambda_n = n\pi/L$ with different eigenfunctions
@@ -363,7 +363,7 @@ Coefficients $A_n$ from initial condition projection.
 
 ---
 
-## Method 3: Laplace Transform (Time Domain)
+## Method 3: Laplace transform (time domain)
 
 Notes: convert time-dependence into algebraic parameter $p$
 
@@ -396,7 +396,7 @@ $$
 
 ---
 
-## Fick’s 2nd Law in Laplace Space
+## Fick’s 2nd law in Laplace space
 
 Transform
 
@@ -534,7 +534,6 @@ Conceptual plots
 - Numerical solutions to diffusion problems
 - Estimation of diffusivity from solutions
 - Introduction to atomic model of diffusion
-
 
 
 

@@ -234,7 +234,7 @@ $f_{drag} = k_{f} v$, where $k_{f}$ is the friction factor.
 
 We will see the mobility treatment is essentially the same as $D \propto \Gamma \langle r^2 \rangle$.
 
-## Newton's equation for transport in frictuous liquid
+## Newton's equation for transport in viscous liquid
 
 - Goal: from dynamic equation of the system --> expressions for $\Gamma$ and $\langle r^2 \rangle$
 
@@ -254,7 +254,7 @@ m \frac{\partial^2 x}{\partial t^2} &= F_{d} - k_f \frac{\partial x}{\partial t}
 \end{align}
 ```
 
-## Transport in frictuous liquid: results
+## Transport in viscous liquid: results
 
 We're more interested in the average displacement $x^2$. In 1D system it follows:
 
@@ -287,7 +287,7 @@ D &= \frac{\langle R^2 \rangle}{6 t} \\
 
 We've arrived at the macroscopic conclusion! The last expression uses the relation $M = f_k^{-1}$.
 
-## Diffusivity in Liquid: Stokes-Einstein Equation
+## Diffusivity in liquid: Stokes-Einstein equation
 
 When the mobility $M$ uses the Stokes equation $f_{drag} = 6 \pi \eta R v$, we arrive at the Stokes-Einstein equation:
 
@@ -436,7 +436,6 @@ In this lecture we covered the following topics:
 - Master equation $D = \dfrac{\Gamma r^2}{6}f$
 - Case studies of diffusivities in gas and liquid phases
 - Derivation of Arrhenius diffusivity equation using the potential well model
-
 
 
 

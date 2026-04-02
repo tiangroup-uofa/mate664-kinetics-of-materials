@@ -299,7 +299,7 @@ For source-limited growth, we will have the radius grow in a **power-of-2** fash
 ```
 
 In experiments you will measure that $\sqrt{\langle R^{2}(t) \rangle}
-\propto t^{1/2}$, a diffferent power law than the diffusion controlled
+\propto t^{1/2}$, a different power law than the diffusion-controlled
 growth!
 
 

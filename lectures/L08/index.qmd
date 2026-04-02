@@ -54,7 +54,7 @@ In many cases the analytical solutions to a diffusion equation is hard / impossi
 
 We need numerical methods for these situations!
 
-## Finite Difference Method
+## Finite difference method
 
 For 1D problem 👉 use the **finite difference** (FD) method first proposed by Euler.
 
@@ -81,7 +81,7 @@ $i$ indexes space and $j$ indexes time.
 | $\displaystyle \frac{\partial c}{\partial x}$ | $\displaystyle \frac{c(i+1,\,j) - c(i-1,\,j)}{2\Delta x}$ | central (space) |
 | $\displaystyle \frac{\partial^2 c}{\partial x^2}$ | $\displaystyle \frac{c(i+1,\,j) - 2c(i,\,j) + c(i-1,\,j)}{(\Delta x)^2}$ | central (space) |
 
-## Solving Diffusion Equation: Method of Lines (MOL)
+## Solving diffusion equation: method of lines (MOL)
 
 Fick's second law is PDE which is hard to integrate directly. Method of lines use the following strategies:
 
@@ -102,7 +102,7 @@ D \frac{c(i+1,t) - 2c(i,t) + c(i-1,t)}{(\Delta x)^2}
 
 Each spatial node $i$ (line) corresponds to one ODE, hence the name.
 
-## MOL Algorithm (Explicit Time Marching)
+## MOL algorithm (explicit time marching)
 
 
 1. Define spatial grid with $x_i$ ($N$ points), choose $\Delta x$
@@ -141,7 +141,7 @@ c(i,j)
 
 - Solving steady state problem (Laplace problem) can be non-trivial
 
-## Implementation and Multi-Dimensional Extensions
+## Implementation and multi-dimensional extensions
 
 - Open-source implementation (FD + MOL)
   - Python + NumPy for spatial discretization
@@ -250,7 +250,7 @@ annealed at 2400°C (_adapted from MIT KOM course_)
 
 ![](./public/Ir-Re-phase-interdiff.png){width="100%"}
 
-## More Complex Situation: Multiphase Interdiffusion
+## More complex situation: multiphase interdiffusion
 
 Example 2: Os-W diffusion couple
 annealed at 2200°C (_adapted from MIT KOM course_)
@@ -269,7 +269,7 @@ annealed at 2200°C (_adapted from MIT KOM course_)
 - But how are the diffusivities coming from atomic models?
 - Can we predict $D$ from some calculations?
 
-## Diffusion: Bridging Atomic and Macroscopic Pictures
+## Diffusion: bridging atomic and macroscopic pictures
 
 Two major achievements in 20th century
 
@@ -463,7 +463,6 @@ $$
 <!-- - Numerical solutions to diffusion problems -->
 <!-- - Estimation of diffusivity from solutions -->
 <!-- - Introduction to atomic model of diffusion -->
-
 
 
 
