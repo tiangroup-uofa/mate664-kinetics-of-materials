@@ -25,9 +25,9 @@ format:
 
 
 
-## Learning Outcomes {.center}
+## Learning outcomes {.center}
 
-After this lecture, you should be able to:
+After this lecture, you will be able to:
 
 - Explain why a thermodynamically unstable colloid may still remain dispersed
 - Describe the physical origin of van der Waals attraction and double-layer repulsion
@@ -682,4 +682,3 @@ These extensions are often needed in real polymer and ceramic systems.
 - double-layer repulsion decays as $e^{-\kappa D}$
 - the barrier height relative to $k_B T$ determines whether aggregation is DLCA-like or RLCA-like
 - increasing salt lowers the barrier and promotes coagulation
-

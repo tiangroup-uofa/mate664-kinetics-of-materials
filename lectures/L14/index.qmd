@@ -23,15 +23,15 @@ format:
 
 
 
-## Learning Outcomes {.center}
+## Learning outcomes {.center}
 
-After this lecture, you should be ablt to:
+After this lecture, you will be able to:
 
-- Identify the driving force when a system become supercooled or supersaturated
-- Understand the difference between discontinuous (nucleation) and continuous (spinodal decomposition) phase transformations
-- Analyze the free energy barrier $\Delta G_c$ during nucleation
-- Describe in your own words the emergence of surface / interfacial energy
-- Describe in your own words the kinetic model for particle size evolution in pseudo-steady-state nucleation
+- **Identify** the driving force when a system becomes supercooled or supersaturated
+- **Describe** the difference between discontinuous and continuous phase transformations
+- **Analyze** the nucleation free energy barrier $\Delta G_c$
+- **Describe** the role of surface and interfacial energy in nucleation
+- **Describe** the pseudo-steady-state kinetic model for nucleation
 
 ## Phase-Diagram In Non-Equilibrium Region
 

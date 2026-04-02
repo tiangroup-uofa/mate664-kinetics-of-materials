@@ -33,7 +33,7 @@ Key ideas from last lecture:
 - Laplace transform (will not be covered in exam)
 
 
-## Learning Outcomes {.center}
+## Learning outcomes {.center}
 
 After this lecture, you will be able to:
 
@@ -436,7 +436,6 @@ In this lecture we covered the following topics:
 - Master equation $D = \dfrac{\Gamma r^2}{6}f$
 - Case studies of diffusivities in gas and liquid phases
 - Derivation of Arrhenius diffusivity equation using the potential well model
-
 
 
 

@@ -48,7 +48,7 @@ D_{\mathrm{liquid}} &= M k_B T \approx \frac{k_B T}{6\pi \eta R}
 \end{align}
 ```
 
-## Learning Outcomes {.center}
+## Learning outcomes {.center}
 
 After this lecture, you will be able to:
 
@@ -463,6 +463,5 @@ in particular:
 - Diffusion in ionic solids
 - Diffusion in imperfect solids
 - Short-circuit diffusion
-
 
 

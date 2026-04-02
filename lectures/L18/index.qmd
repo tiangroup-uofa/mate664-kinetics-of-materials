@@ -23,15 +23,15 @@ format:
 
 
 
-## Learning Outcomes {.center}
+## Learning outcomes {.center}
 
-After this lecture, you should be able to:
+After this lecture, you will be able to:
 
-- Describe in your own words the thermodynamic and kinetic stability of colloids
-- Recall the balance between thermodynamic and kinetic factors
-- Identift aggregation phenomena in colloids: DLCA vs RLCA
-- Analysis of dimensionality in DLCA and RLCA aggregates
-- Understand the stability and kinetic barrier of charged colloids 
+- **Describe** the thermodynamic and kinetic stability of colloids
+- **Recall** the balance between thermodynamic and kinetic factors
+- **Identify** aggregation phenomena in colloids, including DLCA and RLCA
+- **Analyze** the dimensionality of DLCA and RLCA aggregates
+- **Describe** the stability and kinetic barrier of charged colloids
 
 ## Recap: surface-energy related growth mechanism
 
@@ -508,3 +508,6 @@ A rule of thumb for the dimensionality $d_f$ in polymer colloids
 
 ## Summary
 
+- DLCA and RLCA describe two limiting kinetic regimes of colloid aggregation
+- Population-balance and two-particle models connect diffusion, sticking probability, and aggregation rate
+- A kinetic barrier can strongly slow aggregation and sets up the need for DLVO theory

@@ -45,15 +45,15 @@ $$\tau_{\text{observation}} \gg \tau_{\text{relaxation}}$$
 
 $$S = k_B \ln\!\Omega$$
 
-## Learning Outcomes {.center}
+## Learning outcomes {.center}
 
 After this lecture, you will be able to:
 
-1.	Explain why classical thermodynamics fails for real kinetic processes
-2.	Define entropy production and irreversible processes
-3.	Relate macroscopic fluxes to thermodynamic driving forces
-4.	Apply Onsager’s linear response framework
-5.	Interpret irreversible thermodynamics from a microscopic viewpoint
+- **Describe** why classical thermodynamics is insufficient for real kinetic processes
+- **Define** entropy production and irreversible processes
+- **Relate** macroscopic fluxes to thermodynamic driving forces
+- **Apply** Onsager’s linear response framework
+- **Interpret** irreversible thermodynamics from a microscopic viewpoint
 
 ## Crash Course on Statistical Mechanics (1)
 
@@ -295,7 +295,7 @@ This is a key component in material kinetics!
 
 ![](https://www.ntnu.edu/documents/1412485/1277516986/Onsager_heading.jpg){width=800}
 
-## Summary: Irreversible Thermodynamics in One Slide
+## Summary
 
 - Irreversible processes are driven by **thermodynamic forces**
 - Each force generates a corresponding **flux**

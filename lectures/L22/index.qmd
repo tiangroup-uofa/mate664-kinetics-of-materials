@@ -21,6 +21,15 @@ format:
 
 :::
 
+## Learning outcomes {.center}
+
+After this lecture, you will be able to:
+
+- **Recall** the basic idea of molecular dynamics as time integration of atomic motion
+- **Identify** the main components of an MD simulation, including forces, integrators, and ensembles
+- **Describe** how thermostats and timesteps affect MD simulations
+- **Interpret** the role of interatomic potentials in molecular dynamics
+
 
 ## Announcement: class presentation
 
@@ -471,5 +480,10 @@ Can we use data to train potential? Examples from [John Kitchin (CMU)](https://k
 
 ![](./public/MLIPs.png)
 
+## Summary
+
+- Molecular dynamics evolves atomic positions and momenta using Newton’s equations
+- MD simulations require interatomic forces, numerical integration, and ensemble control
+- The choice of potential strongly affects what material behavior an MD model can represent
 
 

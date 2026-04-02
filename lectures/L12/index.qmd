@@ -23,18 +23,17 @@ format:
 
 
 
-## Learning Outcomes {.center}
+## Learning outcomes {.center}
 
-This is a recitation class. We will be reviewing what the Kinetics of Materials course
-have currently covered.
+This is a recitation class. We will review the main topics covered in the course so far.
 
-After this lecture, you should be ablt to:
+After this lecture, you will be able to:
 
-- Describe in your own words the major topics in kinetics course
-- Link the irreversible thermodynamics to kinetics
-- Understand the analog between diffusion and other kinetic problems
-- Analysis of important charts in diffusion
-- Apply irreversible and kinetic knowledge to modern material research
+- **Recall** the major topics covered in the kinetics course
+- **Describe** links between irreversible thermodynamics and kinetics
+- **Identify** analogies between diffusion and other kinetic problems
+- **Interpret** important charts used in diffusion analysis
+- **Apply** course ideas to modern materials research examples
 
 ## Outlines
 
@@ -393,3 +392,9 @@ In the second half of the course, we will cover the following questions
   - **Kinetic Monte-Carlo** (KMC) simulations
   - **Molecular dynamics** (MD) simulations
   - Obtaining thermodynamic parameters from **first principles calculations** and **machine learning**
+
+## Summary
+
+- This recitation reviewed the major kinetics topics covered in the first half of the course
+- Irreversible thermodynamics provides a common framework for diffusion and related kinetic problems
+- Diffusion concepts, solution methods, and atomistic pictures connect across many materials systems

@@ -119,14 +119,14 @@ Insights from assignments 1 and 2
 
 # Introduction To Phase Transformation
 
-## Learning Outcomes {.center}
+## Learning outcomes {.center}
 
-After this lecture, you should be ablt to:
+After this lecture, you will be able to:
 
-- Recall key components in a phase diagram
-- Distinguish the meaning of axes in a phase diagram
-- Identify key thermodynamic equations from the phase diagram
-- Analysis phase transformation regions in a phase diagram
+- **Recall** key components of a phase diagram
+- **Distinguish** the meaning of axes in a phase diagram
+- **Identify** key thermodynamic relations from a phase diagram
+- **Analyze** phase transformation regions in a phase diagram
 
 This lecture is adapted from Porter et al. _Phase Transformations in Metals and Alloys_
 
@@ -346,7 +346,6 @@ In today's lecture, we overviewed the origin of phase transformation and phase d
 - Equilibrium phase diagram is constructed by the lowest free energy phase
 - Free energy of mixing --> chemical potential --> constructing phase diagram
 - Basic literacy in phase diagram reading!
-
 
 
 

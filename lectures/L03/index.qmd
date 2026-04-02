@@ -57,14 +57,14 @@ Key ideas from last lecture:
 
 ---
 
-## Learning Outcomes {.center}
+## Learning outcomes {.center}
 
-After today's lecture, you will be able to:
+After this lecture, you will be able to:
 
-- **Recall** the entropy production equation and link to rate
-- **Analyze** the formula for entropy production the driving force expression
-- **Derive** general equation for driving forces in system
-- **Formulate** relationship between reciprocal driving force situations
+- **Recall** the entropy production equation and its rate form
+- **Analyze** the entropy production expression in terms of driving forces
+- **Derive** the general equation for driving forces in a system
+- **Describe** the reciprocal relation between coupled transport processes
 
 ---
 

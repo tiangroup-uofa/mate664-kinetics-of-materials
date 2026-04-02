@@ -48,9 +48,9 @@ $k_1, k_2$ are determined by the boundary conditions.
 		src="../../scripts/L07-steady-state-diff.html" title="Webpage example"></iframe>
 ```
 
-## Learning Outcomes {.center}
+## Learning outcomes {.center}
 
-After today's lecture, you will be able to:
+After this lecture, you will be able to:
 
 - **Recall** analytical solutions to diffusion problems
 - **Analyze** superposition of the source method in diffusion problems
@@ -534,7 +534,6 @@ Conceptual plots
 - Numerical solutions to diffusion problems
 - Estimation of diffusivity from solutions
 - Introduction to atomic model of diffusion
-
 
 
 

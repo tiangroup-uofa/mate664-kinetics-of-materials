@@ -62,14 +62,14 @@ $$
 
 ---
 
-## Learning Outcomes {.center}
+## Learning outcomes {.center}
 
-After today's lecture, you will be able to:
+After this lecture, you will be able to:
 
-- Interpret Kirkendall effect using lattice (C-frame) vs lab (V-frame)
-- Solve steady-state diffusion (Laplace equation) in common geometries
-- Use non-steady solutions: Gaussian / error function / superposition
-- Use separation of variables and Laplace transform as solution strategies
+- **Interpret** the Kirkendall effect using lattice (C-frame) and lab (V-frame)
+- **Solve** steady-state diffusion problems in common geometries
+- **Describe** non-steady diffusion solutions based on Gaussian, error-function, and superposition forms
+- **Identify** separation of variables and Laplace transform as diffusion solution strategies
 
 
 ## Remaining Question 1: Kirkendall Effect
@@ -797,6 +797,12 @@ How do we get here?
 - Extract $D$ by fitting measured $c(x,t)$
 - Extend to variable $D(c)$ and coupled diffusion (later)
 
+## Summary
+
+- The Kirkendall effect reveals differences between lattice and lab reference frames
+- Steady-state diffusion problems reduce to Laplace equations with geometry-dependent solutions
+- Non-steady diffusion problems can be solved using Gaussian and error-function solutions
+- Separation of variables and Laplace transforms provide general tools for solving diffusion equations
 
 
 

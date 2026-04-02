@@ -23,14 +23,14 @@ format:
 
 
 
-## Learning Outcomes {.center}
+## Learning outcomes {.center}
 
-After this lecture, you should be able to:
+After this lecture, you will be able to:
 
-- Recall the difference between continuous and discontinuous phase transformation
-- Understand spinodal decomposition as a key continuous phase transformation process
-- Identify the chemical potential driving force in spinodal decomposition
-- Analysis of the Cahn-Hilliard equation and gradient driving force
+- **Recall** the difference between continuous and discontinuous phase transformations
+- **Describe** spinodal decomposition as a continuous phase transformation process
+- **Identify** the chemical-potential driving force in spinodal decomposition
+- **Analyze** the Cahn-Hilliard equation and its gradient driving force
 
 ## Recall: General Picture of Phase Transformation
 

@@ -21,6 +21,15 @@ format:
 
 :::
 
+## Learning outcomes {.center}
+
+After this lecture, you will be able to:
+
+- **Recall** the basic idea behind Monte Carlo methods in materials science
+- **Describe** how Metropolis Monte Carlo samples equilibrium configurations
+- **Identify** the main steps in a kinetic Monte Carlo algorithm
+- **Interpret** when Monte Carlo methods are useful compared with continuum and molecular dynamics approaches
+
 
 ## Recap: two ways for modelling large-scale motion in materials
 
@@ -433,10 +442,15 @@ KMC simulation can handle much large length and timescales than MD.
 
 ![](../L11/public/ncomm-kmc-exp.png)
 
+## Summary
+
+- Monte Carlo methods use stochastic sampling to study materials problems that are difficult to solve deterministically
+- Metropolis Monte Carlo targets equilibrium sampling, while kinetic Monte Carlo tracks rare events over time
+- KMC links transition rates, pathway selection, and elapsed time in a discrete-event framework
+
 
 
 
 
 
   
-

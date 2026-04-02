@@ -23,14 +23,14 @@ format:
 
 
 
-## Learning Outcomes {.center}
+## Learning outcomes {.center}
 
-After this lecture, you should be able to:
+After this lecture, you will be able to:
 
-- Recall another surface-energy induced growth phenomenon: coarsening
-- Recall the main assumptions in the coarsening theory
-- Identify the competition between diffusion and reaction rate
-- Analysis of particle size distribution function
+- **Recall** coarsening as a surface-energy-induced growth phenomenon
+- **Recall** the main assumptions of coarsening theory
+- **Identify** the competition between diffusion and reaction-rate control
+- **Analyze** particle size distribution functions during coarsening
 
 ## Recap: continuous and discontinuous phase transformation
 

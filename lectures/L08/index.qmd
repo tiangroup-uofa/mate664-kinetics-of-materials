@@ -33,14 +33,14 @@ Key ideas from last lecture:
 - Laplace transform (will not be covered in exam)
 
 
-## Learning Outcomes {.center}
+## Learning outcomes {.center}
 
-After today's lecture, you will be able to:
+After this lecture, you will be able to:
 
-- **Describe** detail ideas behind the numerical / finite-difference solution to diffusion problems
-- **Recall** basic formalism of discrete differential equation
-- **Apply** numerical methods for diffusion problems and diffusivity extraction
-- **Analyze** atomic origin of diffusion
+- **Describe** the basic ideas behind finite-difference solutions to diffusion problems
+- **Recall** the basic form of discrete differential equations
+- **Apply** numerical methods to diffusion problems and diffusivity extraction
+- **Analyze** the atomic origin of diffusion
 
 ## Numerical Method For Diffusion Equation
 
@@ -463,7 +463,6 @@ $$
 <!-- - Numerical solutions to diffusion problems -->
 <!-- - Estimation of diffusivity from solutions -->
 <!-- - Introduction to atomic model of diffusion -->
-
 
 
 

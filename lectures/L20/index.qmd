@@ -21,7 +21,14 @@ format:
 
 :::
 
+## Learning outcomes {.center}
 
+After this lecture, you will be able to:
+
+- **Recall** the basic idea of continuum modelling in materials kinetics
+- **Identify** the main ingredients of the Cahn-Hilliard and phase-field frameworks
+- **Describe** how free energy, mobility, and gradient penalty enter a continuum model
+- **Interpret** what phase-field simulations can predict for microstructure evolution
 
 
 ## Why do we need material simulation?
@@ -365,5 +372,7 @@ Not all continuum parameters can be predetermined --> get from simulations at ot
 
 ## Summary
 
-
+- Continuum modelling uses field variables and governing equations to describe kinetic evolution
+- The Cahn-Hilliard equation combines bulk free energy, mobility, and interfacial penalty
+- Phase-field methods extend this idea to simulate evolving microstructures without explicit interface tracking
 

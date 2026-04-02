@@ -26,14 +26,14 @@ format:
 #### The University of Alberta acknowledges that we are located on Treaty 6 territory, and respects the histories, languages, and cultures of the First Nations, Métis, Inuit, and all First Peoples of Canada, whose presence continues to enrich our vibrant community.
 
 
-## Learning Outcomes
+## Learning outcomes {.center}
 
-After today's lecture, you will be able to:
+After this lecture, you will be able to:
 
 - **Identify** the key components of the course syllabus, content and grading schemes.
 - **Recall** common interaction methods and resources available in the course.
 - **Recall** basic concepts in thermodynamics and kinetics
-- **State** assumptions of equilibrium
+- **Recall** the assumptions of equilibrium
 - **Describe** the influence of entropy in kinetic systems
 
 ## Course Information
@@ -486,6 +486,5 @@ What we learned today:
 - Laws of thermodynamics revisited
 
 **See you next time!**
-
 
 

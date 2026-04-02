@@ -32,15 +32,15 @@ Key ideas from last lecture:
 
 ---
 
-## Learning Outcomes {.center}
+## Learning outcomes {.center}
 
-After today's lecture, you will be able to:
+After this lecture, you will be able to:
 
-- Identify driving forces and fluxes for diffusive mass transport
-- Derive Fick’s first law from irreversible thermodynamics using chemical potential
-- Estimate magnitudes of diffusivity in gases, liquids, and solids
-- Explain temperature dependence of diffusivity using Arrhenius-type relations
-- explain the thermodynamic origin of self-diffusion
+- **Identify** driving forces and fluxes for diffusive mass transport
+- **Derive** Fick’s first law from irreversible thermodynamics using chemical potential
+- **Estimate** diffusivities in gases, liquids, and solids
+- **Explain** the temperature dependence of diffusivity using Arrhenius-type relations
+- **Describe** the thermodynamic origin of self-diffusion
 
 ---
 
@@ -499,7 +499,6 @@ use.
 - Laplace operator reflects curvature and smoothing
 - Diffusivity varies strongly with phase and temperature
 - Self-diffusion exists even in homogeneous systems
-
 
 
 

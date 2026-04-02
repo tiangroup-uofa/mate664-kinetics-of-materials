@@ -23,14 +23,14 @@ format:
 
 
 
-## Learning Outcomes {.center}
+## Learning outcomes {.center}
 
-After this lecture, you should be ablt to:
+After this lecture, you will be able to:
 
-- Compare the heterogeneous nucleation with homogeneous nucleation
-- Analyze the driving force terms in both cases
-- Derive the ratio between hetero- and homogeneous nucleation barrier and rate
-- Recall different methods of determining equilibrium nucleation shape
+- **Compare** heterogeneous nucleation with homogeneous nucleation
+- **Analyze** the driving-force terms in both cases
+- **Derive** the ratio between heterogeneous and homogeneous nucleation barriers and rates
+- **Recall** methods for determining the equilibrium nucleation shape
 
 
 ## Recall: Key Results From Homogeneous Nucleation

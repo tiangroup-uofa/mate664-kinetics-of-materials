@@ -33,14 +33,14 @@ Key ideas from last lecture:
 
 ---
 
-## Learning Outcomes {.center}
+## Learning outcomes {.center}
 
-After today's lecture, you will be able to:
+After this lecture, you will be able to:
 
-- Recall different types of diffusivities in solids
-- Describe basic mechanism in interdiffusion systems
-- Analysis the driving force for various diffusion mechanisms
-- Analysis of change of reference system in diffusion experiments.
+- **Recall** the different types of diffusivities in solids
+- **Describe** the basic mechanisms in interdiffusion systems
+- **Analyze** the driving forces for various diffusion mechanisms
+- **Analyze** changes of reference frame in diffusion experiments
 
 ---
 
@@ -393,7 +393,6 @@ J_1^C &= -k_BT [\frac{L_{11}}{c_1} - \frac{L_{12}}{c_2}]\Phi \frac{\partial c}{\
 - Lattice velocity resolves vacancy continuity
 - Choice of reference frame is essential
 - Kirkendall effect is a frame-dependent phenomenon
-
 
 
 
