@@ -89,8 +89,8 @@ in either definition, $p_A > p_B$ (makes sense?)
 
 ## Crash course: interfacial curvature
 
-The surface curvature \(H\) can be expressed using the two
-principle radii \(R_{1}\) and \(R_{2}\) of the surface:
+The surface curvature $H$ can be expressed using the two
+principle radii $R_{1}$ and $R_{2}$ of the surface:
 
 ```{=tex}
 \begin{align}
@@ -112,12 +112,13 @@ Nanoscale droplet will have excessive pressure!
 
 ## Capillarity as driving force: high level description
 
-The driving force from capillarity $\delta f$ is generally the energy
+The driving force from capillarity $\Delta f$ is generally the energy
 change caused by the volume swept out by the interface, so that
 
 ```{=tex}
 \begin{align}
-\delta f = \gamma (\kappa_1 + \kappa_2)
+\Delta f &= \frac{\Delta E}{\text{volume due to moving interface}} \\
+ \gamma (\kappa_1 + \kappa_2)
 \end{align}	   
 ```
 
@@ -171,8 +172,8 @@ By adding an B particle in to the $\beta$ phase, the change of volume is $\Omega
 
 ```{=tex}
 \begin{align}
-c_B^{\text{eq}}(R) &= c_B^{\text{eq}}(\infty) \exp(\frac{2 \gamma\Omega}{k_B T R}) \\
-&\approx c_B^{\text{eq}}(\infty) \left[ \exp(\frac{2 \gamma\Omega}{k_B T R})\right]
+c_B^{\text{eq}}(R) &= c_B^{\text{eq}}(\infty) \exp(\frac{2 \gamma\Omega_B}{k_B T R}) \\
+&\approx c_B^{\text{eq}}(\infty) \left[ \exp(\frac{2 \gamma\Omega_B}{k_B T R})\right]
 \end{align}	   
 ```
 
