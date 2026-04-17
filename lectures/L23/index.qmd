@@ -1,0 +1,30 @@
+---
+title: "MATE 664 Lecture 23"
+subtitle: "Multiscale Simulation for Kinetics of Materials (IV): Thermodynamics from First Principle Calculations"
+author: "Dr. Tian Tian"
+date: "2026-04-01"
+format:
+  html: {}
+  revealjs:
+    output-file: slides.html
+  pdf:	 
+    output-file: L23.pdf
+---
+
+::: {.content-visible when-format="html" unless-format="revealjs"}
+
+::: {.callout-note}
+- Slides 👉  [Open presentation🗒️](./slides.html)
+- PDF version of course note  👉 [Open in pdf](./L23.pdf)
+- Guest Lecture notes 👉 [Open in pdf](./public/Introduction of Statistical Thermodynamic Calculations.pdf)
+:::
+
+:::
+
+## Lecture Notes
+
+This is a guest lecture by Hanlin Wang, PhD student at CME.
+
+- [Lecture Notes](./public/Introduction of Statistical Thermodynamic Calculations.pdf)
+- [Publication](./public/s41467-025-63540-w.pdf)
+- [Supplementary data](./public/41467_2025_63540_MOESM1_ESM.pdf)

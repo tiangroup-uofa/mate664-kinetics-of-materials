@@ -218,7 +218,7 @@ a uniform sampling strategy is now:
 
 $$
 \langle A \rangle_{NVT} = \frac{\sum_i^{N_\text{trial}} A(\xi_i) \exp(- \frac{U(\xi_i)}{k_B T})}
-{sum_{i}^{N_\text{trial}} \exp(- \frac{U(\xi_i)}{k_B T})}
+{\sum_{i}^{N_\text{trial}} \exp(- \frac{U(\xi_i)}{k_B T})}
 $$
 
 This is a powerful conclusion! Every single thermodynamic quantity in
