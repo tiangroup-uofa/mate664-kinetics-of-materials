@@ -25,6 +25,7 @@ format:
 
 This is a guest lecture by Hanlin Wang, PhD student at CME.
 
-- [Lecture Notes](./public/Introduction of Statistical Thermodynamic Calculations.pdf)
+![Lecture Notes](./public/Introduction of Statistical Thermodynamic Calculations.pdf){width="640px" height="480px"}
+
 - [Publication](./public/s41467-025-63540-w.pdf)
 - [Supplementary data](./public/41467_2025_63540_MOESM1_ESM.pdf)
