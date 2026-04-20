@@ -284,7 +284,7 @@ $D_2$.
 
 a) Write the flux through each path $J_1$ and $J_2$.
 
-:::{.content-hidden unless-meta=“answer”}
+:::{.content-hidden unless-meta="answer"}
 
 Answer:
 
@@ -312,7 +312,7 @@ D_{\mathrm{eff}}^{\text{parallel}} =
 \frac{D_1 A_1 + D_2 A_2}{A_1 + A_2}
 $$
 
-:::{.content-hidden unless-meta=“answer”}
+:::{.content-hidden unless-meta="answer"}
 
 Answer:
 
@@ -359,7 +359,7 @@ $A$.
 c) Let the concentration at the interface between the two slabs be the
 same value $c_i$. Write the steady-state flux $J_1$ and $J_2$ through each slab.
 
-:::{.content-hidden unless-meta=“answer”}
+:::{.content-hidden unless-meta="answer"}
 
 Answer:
 
@@ -394,7 +394,7 @@ D_{\mathrm{eff}}^{\mathrm{series}} =
 \frac{L_1 + L_2}{\dfrac{L_1}{D_1} + \dfrac{L_2}{D_2}}
 $$
 
-:::{.content-hidden unless-meta=“answer”}
+:::{.content-hidden unless-meta="answer"}
 
 Answer:
 
@@ -460,7 +460,7 @@ your results above, does diffusion through heterogeneous media behave
 more similarly to resistors or capacitors in series and parallel?
 Briefly explain your reasoning.
 
-:::{.content-hidden unless-meta=“answer”}
+:::{.content-hidden unless-meta="answer"}
 
 Answer:
 
@@ -499,7 +499,7 @@ explain why material imperfections such as dislocations or grain
 boundaries can act as fast diffusion shortcuts, whereas thin coating
 layers or oxide films can strongly limit the overall diffusion rate.
 
-:::{.content-hidden unless-meta=“answer”}
+:::{.content-hidden unless-meta="answer"}
 
 Answer:
 
@@ -528,7 +528,7 @@ oriented along these special directions. How would you approach the
 diffusion problem in such cases? Briefly discuss what kind of
 mathematical description would be needed.
 
-:::{.content-hidden unless-meta=“answer”}
+:::{.content-hidden unless-meta="answer"}
 
 Answer:
 

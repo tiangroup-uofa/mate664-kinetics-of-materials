@@ -455,3 +455,10 @@ Finding one representative example for each observed behavior is
 sufficient.
 :::
 
+:::{.content-hidden unless-meta="answer"}
+
+**Answer**:
+
+The simulated regimes will be very close to those seen in Lecture 20. However you can realize the implementation of a real solution free energy term in Cahn-Hilliard is more difficult.
+
+:::
