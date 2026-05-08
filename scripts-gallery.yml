@@ -44,7 +44,7 @@
   description: "**Assignment 1**: solving the ODE equation for entropy generation in an irreversible thermodynamic system."
   image: "screenshots/ex01-ode.png"
   path: "scripts/EX01_ode.html"
-  categories: [exercise]
+  categories: [exercise,editable]
 
 - title: "**Kirkendall Effect Demo**"
   description: "**Assignment 2**: demonstration of the Kirkendall effect using a random site exchange algorithm."
