@@ -86,6 +86,8 @@ def main() -> None:
 
         print(f"Run {' '.join(cmd)}...")
         subprocess.run(cmd, check=True, cwd=project_root)
+        # If successful, copy the py file to the folder as well
+        shutil.copy(py_file, temp_dir_path)
 
     # Replace QUARTO_PROJECT_OUTPUT_DIR/scripts with the freshly exported directory
     target_dir.parent.mkdir(parents=True, exist_ok=True)
