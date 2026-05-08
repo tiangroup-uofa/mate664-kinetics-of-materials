@@ -1,0 +1,77 @@
+- title: "**Activation Energy Explorer**"
+  description: "**Lecture 01**: demonstration of activation energy and temperature-dependent kinetics based on Boltzmann distribution."
+  image: "screenshots/l01-ea.png"
+  path: "scripts/L01_ea.html"
+  categories: [lecture]
+
+- title: "**Diffusion / Convection Length Scales**"
+  description: "**Lecture 04**: comparing diffusion and convection length scales. (Adapted from CHE 318)."
+  image: "screenshots/l04-diffusion-length.png"
+  path: "scripts/L04_diffusion_length.html"
+  categories: [lecture]
+
+- title: "**Diffusivity vs. Temperature**"
+  description: "**Lecture 04**: comparing diffusivity trends as a function of temperature. (Adapted from CHE 318)."
+  image: "screenshots/l04-diffusivity-demo.png"
+  path: "scripts/L04_diffusivity_demo.html"
+  categories: [lecture]
+
+- title: "**Steady-State Diffusion**"
+  description: "**Lecture 07**: demonstration of steady-state diffusion profiles in different geometries."
+  image: "screenshots/l07-steady-state-diff.png"
+  path: "scripts/L07-steady-state-diff.html"
+  categories: [lecture]
+
+- title: "**Half-and-Half Solution**"
+  description: "**Lecture 07**: time-dependent diffusion demonstration for initial composition profile in semi-finite NiCu diffusion couple."
+  image: "screenshots/l07-half-half-silution.png"
+  path: "scripts/L07_half_half_silution.html"
+  categories: [lecture]
+
+- title: "**Finite Difference Comparison**"
+  description: "**Lecture 08**: comparing various parameters in finite-difference approaches for solving diffusion problems."
+  image: "screenshots/l08-fd-comparison.png"
+  path: "scripts/L08_fd_comparison.html"
+  categories: [lecture]
+
+- title: "**Pb-Au Diffusion Fit**"
+  description: "**Lecture 08**: fitting diffusion data for Roberts-Austen's original experiments in Pb-Au system."
+  image: "screenshots/l08-pb-au-diff-fit.png"
+  path: "scripts/L08_pb_au_diff_fit.html"
+  categories: [lecture]
+
+- title: "**ODE Solver Demo**"
+  description: "**Assignment 1**: solving the ODE equation for entropy generation in an irreversible thermodynamic system."
+  image: "screenshots/ex01-ode.png"
+  path: "scripts/EX01_ode.html"
+  categories: [exercise]
+
+- title: "**Kirkendall Effect Demo**"
+  description: "**Assignment 2**: demonstration of the Kirkendall effect using a random site exchange algorithm."
+  image: "screenshots/ex02-demo-kirkendall.png"
+  path: "scripts/EX02-demo-kirkendall.html"
+  categories: [exercise,editable]
+
+- title: "**Interdiffusion Demo**"
+  description: "**Assignment 2**: solving location- and composition-dependent interdiffision problem using finite element."
+  image: "screenshots/ex02-inter-diffusion.png"
+  path: "scripts/EX02-inter-diffusion.html"
+  categories: [exercise]
+
+- title: "**Dual-Regime Arrhenius Fit**"
+  description: "**Assignment 3**: fitting Arrhenius behaviour with two temperature regimes of defects in ionic crystals."
+  image: "screenshots/ex03-dual-regime-arrhenius.png"
+  path: "scripts/EX03-dual-regime-arrhenius.html"
+  categories: [exercise,editable]
+
+- title: "**Cahn-Hilliard Demo**"
+  description: "**Assignment 4**: interactive Cahn-Hilliard simulation for composition evolution with free energy of regular mixture."
+  image: "screenshots/ex04-cahn-hilliard.png"
+  path: "scripts/EX04_cahn_hilliard.html"
+  categories: [exercise,editable]
+
+- title: "**Heterogeneous Nucleation Demo**"
+  description: "**Assignment 4**: heterogeneous nucleation free energy in a complex geometry."
+  image: "screenshots/ex04-hetero-nuc.png"
+  path: "scripts/EX04_hetero_nuc.html"
+  categories: [exercise,editable]

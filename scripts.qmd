@@ -3,22 +3,23 @@ title: "Interactive Demos"
 toc: false
 format:
   html
+resources:
+  - "scrennshot/*.png"
+  - "scripts/*.py"
+listing:
+  contents:
+    - scripts-gallery.yml
+  type: grid
+  sort: false
+  id: demos
 ---
 
 ### Why this?
 
-This page contains a collection of the interactive demonstrations written as playable [Marimo notebooks](https://docs.marimo.io). 
+This page contains a collection of the interactive demonstrations written as playable [Marimo notebooks](https://docs.marimo.io),  which we’ve been using in our lecture notes as well as assignments.  This page serves as a compilation of all the interactive examples. You **DO NOT** need to have a server in order to run these demos, as they are written in WebAssembly and accessible in your browser.
 
-These examples are designed to complement analytical derivations in mass transfer, by turning mathematical models into interactive components.
-
-### Examples in lecture notes
-
-- [(L01) Activation Energy](./scripts/L01_ea.html)
-- [(L04) Comparison of diffusivity in gas / solid / liquid](./scripts/L04_diffusivity_demo.html)
-- [(L04) Comparison between diffusion and convection length scales](./scripts/L04_diffusion_length.html)
+Many of the examples showcase how the equations in our class can be transformed in to simple simulations. Click a tile below to interact with them! 
 
 
-
-### Examples in assignments
-- [(EX01) ODE solution to kinetics](./scripts/EX01_ode.html)
-
+:::{#demos}
+:::
